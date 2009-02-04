@@ -34,12 +34,9 @@ namespace Octopus.CDIndex
 
         private string assemblyCopyright {
             get {
-                // Get all Copyright attributes on this assembly
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                // If there aren't any Copyright attributes, return an empty string
                 if (attributes.Length == 0)
                     return "";
-                // If there is a Copyright attribute, return its value
                 return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
             }
         }
@@ -52,14 +49,17 @@ namespace Octopus.CDIndex
 
         private string assemblyTitle {
             get {
-                // Get all Product attributes on this assembly
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                // If there aren't any Product attributes, return an empty string
                 if (attributes.Length == 0)
                     return "";
-                // If there is a Product attribute, return its value
                 return ((AssemblyTitleAttribute)attributes[0]).Title;
             }
+        }
+
+        private void llCodePlex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+            Process install = new Process();
+            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            install.Start();
         }
 
     }

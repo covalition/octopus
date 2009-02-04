@@ -26,29 +26,21 @@ namespace Octopus.CDIndex
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgAbout));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.llVersion = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.llSourceForge = new System.Windows.Forms.LinkLabel();
             this.llTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.llCopyright = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.llCodePlex = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnCancel
             // 
             resources.ApplyResources(this.btnCancel, "btnCancel");
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Octopus.CDIndex.Properties.Resources.GplLogoBmp;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
@@ -72,12 +64,12 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // linkLabel2
+            // llSourceForge
             // 
-            resources.ApplyResources(this.linkLabel2, "linkLabel2");
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            resources.ApplyResources(this.llSourceForge, "llSourceForge");
+            this.llSourceForge.Name = "llSourceForge";
+            this.llSourceForge.TabStop = true;
+            this.llSourceForge.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // llTitle
             // 
@@ -101,15 +93,22 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this.llCopyright, "llCopyright");
             this.llCopyright.Name = "llCopyright";
             // 
+            // llCodePlex
+            // 
+            resources.ApplyResources(this.llCodePlex, "llCodePlex");
+            this.llCodePlex.Name = "llCodePlex";
+            this.llCodePlex.TabStop = true;
+            this.llCodePlex.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llCodePlex_LinkClicked);
+            // 
             // DlgAbout
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.llCodePlex);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.llVersion);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.llSourceForge);
             this.Controls.Add(this.llTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
@@ -120,13 +119,12 @@ namespace Octopus.CDIndex
             this.Controls.SetChildIndex(this.linkLabel1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.llTitle, 0);
-            this.Controls.SetChildIndex(this.linkLabel2, 0);
+            this.Controls.SetChildIndex(this.llSourceForge, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.llVersion, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.pictureBox1, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.SetChildIndex(this.llCodePlex, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,15 +132,15 @@ namespace Octopus.CDIndex
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label llVersion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel llSourceForge;
         private System.Windows.Forms.Label llTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label llCopyright;
+        private System.Windows.Forms.LinkLabel llCodePlex;
     }
 }
