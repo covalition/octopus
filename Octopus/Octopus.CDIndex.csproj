@@ -309,6 +309,7 @@
     <None Include="Resources\Help.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="License.txt" />
     <Content Include="MainIcon.ico" />
     <None Include="Resources\dbs.ico" />
     <None Include="Resources\FillDownHS.png" />

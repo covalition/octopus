@@ -32,7 +32,7 @@ namespace Octopus.CDIndex
             this.llVersion = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.llTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.llCopyright = new System.Windows.Forms.Label();
@@ -79,10 +79,10 @@ namespace Octopus.CDIndex
             this.linkLabel2.TabStop = true;
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // label1
+            // llTitle
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.llTitle, "llTitle");
+            this.llTitle.Name = "llTitle";
             // 
             // label2
             // 
@@ -110,7 +110,7 @@ namespace Octopus.CDIndex
             this.Controls.Add(this.llVersion);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.llTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.llCopyright);
@@ -119,7 +119,7 @@ namespace Octopus.CDIndex
             this.Controls.SetChildIndex(this.llCopyright, 0);
             this.Controls.SetChildIndex(this.linkLabel1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.llTitle, 0);
             this.Controls.SetChildIndex(this.linkLabel2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.llVersion, 0);
@@ -140,7 +140,7 @@ namespace Octopus.CDIndex
         private System.Windows.Forms.Label llVersion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label llTitle;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label llCopyright;

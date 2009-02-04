@@ -17,6 +17,7 @@ namespace Octopus.CDIndex
             InitializeComponent();
             llCopyright.Text = assemblyCopyright;
             llVersion.Text = String.Format(llVersion.Text, assemblyVersion);
+            llTitle.Text = assemblyTitle;
         }
 
         private void linkLabel1_Click(object sender, EventArgs e) {
@@ -48,6 +49,19 @@ namespace Octopus.CDIndex
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }
         }
+
+        private string assemblyTitle {
+            get {
+                // Get all Product attributes on this assembly
+                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
+                // If there aren't any Product attributes, return an empty string
+                if (attributes.Length == 0)
+                    return "";
+                // If there is a Product attribute, return its value
+                return ((AssemblyTitleAttribute)attributes[0]).Title;
+            }
+        }
+
     }
 }
 
