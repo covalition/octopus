@@ -77,11 +77,11 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\OctIndexSetup.msi"
+        "OutputFilename" = "8:Release\\OctIndexSetup1.1.0.5.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
-        "Compression" = "3:2"
+        "Compression" = "3:3"
         "SignOutput" = "11:FALSE"
         "CertificateFile" = "8:"
         "PrivateKeyFile" = "8:"
@@ -96,6 +96,11 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Net.Framework.2.0"
+                    {
+                    "Name" = "8:.NET Framework 2.0"
+                    "ProductCode" = "8:Microsoft.Net.Framework.2.0"
+                    }
                 }
             }
         }
@@ -843,7 +848,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8102E2731B9A464A8C7E85AD3507C7A9"
             {
-            "SourcePath" = "8:..\\Octopus\\obj\\Debug\\Octopus.CDIndex.exe"
+            "SourcePath" = "8:..\\Octopus\\obj\\Release\\Octopus.CDIndex.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_585F5C0D9A1747198068A7FF8C462F6A"

@@ -67,20 +67,6 @@ namespace Octopus.CDIndex {
             return base.GetCsvLine() + "," + DriveFormat + "," + DriveType.ToString() + "," + TotalFreeSpace.ToString() + "," + TotalSize.ToString() + "," + VolumeLabel;
         }
 
-
     }
-
-	/*
-	sealed class CdDeserializationBinder : SerializationBinder {
-
-		public override Type BindToType(string assemblyName, string typeName) {
-			if (typeName == "Octopus.CDIndex.CdInDatabase")
-				return typeof(DiscInDatabase);
-			else
-				return Type.GetType(String.Format("{0}, {1}",
-			typeName, assemblyName));
-		}
-	}
-	 */
 
 }

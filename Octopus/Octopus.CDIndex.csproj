@@ -271,7 +271,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="SearchResultComparer.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="Shell.cs" />
   </ItemGroup>
   <ItemGroup>

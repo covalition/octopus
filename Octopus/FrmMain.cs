@@ -14,7 +14,7 @@ namespace Octopus.CDIndex {
 
 	public partial class FrmMain: Form {
 
-		private CDIndexManager cdIndexManager = new CDIndexManager();
+        private CDIndexManager cdIndexManager = new CDIndexManager();
 
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
 
@@ -75,11 +75,6 @@ namespace Octopus.CDIndex {
 				return null;
 		}
 
-		private void FrmMain_FormClosing(object sender, FormClosingEventArgs e) {
-			//cdIndexManager.SaveDatabase();
-			//Properties.Settings.Default.Save();
-		}
-
 		#region Menu commands and events
 
 		private void cmReadCd_Click(object sender, EventArgs e) {
@@ -101,17 +96,6 @@ namespace Octopus.CDIndex {
 					cdIndexManager.FolderProperties(selectedFolder());
 				}
 		}
-
-        /*
-		private void cmSortByLabels_Click(object sender, EventArgs e) {
-			cdIndexManager.SortByLabels();
-		}*/
-
-        /*
-		private void cmTree_Opening(object sender, CancelEventArgs e) {
-			MenuOpened(sender, EventArgs.Empty);
-
-		}*/
 
         private void updateCommands() {
             if (selectedDisc() != null) {
@@ -155,19 +139,6 @@ namespace Octopus.CDIndex {
             }
 		}
 
-        //private void tbFileMask_TextChanged(object sender, EventArgs e) {
-        //    updateSearchButton();
-        //}
-
-        //private void updateSearchButton() {
-        //    btnSearch.Enabled = tbFileMask.Text.Length > 0;
-        //}
-
-        //private void btnSearch_Click(object sender, EventArgs e) {
-        //    cdIndexManager.Search(tbFileMask.Text);
-        //}
-
-
 		private void cmFileProperties_Click(object sender, EventArgs e) {
 			if (selectedFile() != null)
 				cdIndexManager.FileProperties(selectedFile());
@@ -180,7 +151,6 @@ namespace Octopus.CDIndex {
 		}
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e) {
-
             FrmSplash splash = new FrmSplash();
             splash.llApplicationState.Text = Properties.Resources.Closing;
             splash.Show();
@@ -202,65 +172,6 @@ namespace Octopus.CDIndex {
             }
             
         }
-
-        //private void tbFileMask_KeyPress(object sender, KeyPressEventArgs e) {
-        //    if (e.KeyChar == (char)Keys.Return) {
-        //        btnSearch.PerformClick();
-        //        e.Handled = true;
-        //    }
-        //}
-
-        /*
-        private void cmCheckForUpdates_Click(object sender, EventArgs e) {
-
-            UpdateCheckInfo info = null;
-
-            if (ApplicationDeployment.IsNetworkDeployed) {
-                ApplicationDeployment ad = ApplicationDeployment.CurrentDeployment;
-
-                try {
-                    info = ad.CheckForDetailedUpdate();
-
-                }
-                catch (DeploymentDownloadException dde) {
-                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message);
-                    return;
-                }
-                catch (InvalidDeploymentException ide) {
-                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message);
-                    return;
-                }
-                catch (InvalidOperationException ioe) {
-                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message);
-                    return;
-                }
-
-                if (info.UpdateAvailable) {
-                    Boolean doUpdate = true;
-
-                    if (!info.IsUpdateRequired) {
-                        DialogResult dr = MessageBox.Show("An update is available. Would you like to update the application now?", "Update Available", MessageBoxButtons.OKCancel);
-                        if (!(DialogResult.OK == dr)) {
-                            doUpdate = false;
-                        }
-                    }
-
-                    if (doUpdate) {
-                        try {
-                            ad.Update();
-                            MessageBox.Show("The application has been upgraded, and will now restart.");
-                            Application.Restart();
-                        }
-                        catch (DeploymentDownloadException dde) {
-                            MessageBox.Show("Cannot install the latest version of the application. \n\nPlease check your network connection, or try again later. Error: " + dde);
-                            return;
-                        }
-                    }
-                }
-                else MessageBox.Show("An update is currently unavailable.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else MessageBox.Show("This application is not network deployed. An update information is unavailable.\n\n Check http://biostat.aspweb.cz/Octopus.htm for current version information.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-        } */
 
         private void tsbProperties_Click(object sender, EventArgs e) {
             if (tvDatabaseFolderTree.Focused) 
@@ -318,12 +229,6 @@ namespace Octopus.CDIndex {
             cdIndexManager.MergeDatabaseDlg();
         }
 
-        /*
-        private void filesSearchCriteriaPanel_SimpleSearchBtnClicked(object sender, Octopus.CDIndex.Components.SearchEventArgs e) {
-            cdIndexManager.Search(e.FileMask, searchResultList);
-            lvSearchResults.VirtualListSize = searchResultList.Count;
-        }*/
-
         private void filesSearchCriteriaPanel_SearchBtnClicked(object sender, Octopus.CDIndex.Components.SearchEventArgs e) {
             long? sizeFrom = null;
             long? sizeTo = null;
@@ -333,15 +238,7 @@ namespace Octopus.CDIndex {
                 sizeTo = (long)e.SizeTo * 1024;
 
             cdIndexManager.Search(e.FileMask, e.DateFrom, e.DateTo, sizeFrom, sizeTo, e.Keywords, e.AllKeywordsNeeded, searchResultList);
-            //lvSearchResults.Items.Clear();
-
-            // ================
-
-            //lvSearchResults.VirtualListSize = 0;
-            //lvSearchResults.VirtualListSize = searchResultList.Count;
             displaySearchList();
-
-            //Trace.WriteLine("After virt size set to " + lvSearchResults.VirtualListSize.ToString());
         }
 
         private void tsbOptions_Click(object sender, EventArgs e) {

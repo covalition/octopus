@@ -419,7 +419,7 @@ namespace Octopus.CDIndex
             this.Controls.Add(this.ssBottom);
             this.Name = "FrmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
+            
             this.scMain.Panel1.ResumeLayout(false);
             this.scMain.Panel2.ResumeLayout(false);
             this.scMain.ResumeLayout(false);

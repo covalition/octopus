@@ -168,7 +168,6 @@ namespace Octopus.CDIndex {
 
 		internal static bool ChangeItemProperties(ItemInDatabase itemInDatabase) {
 			DlgItemProperties dlg = new DlgItemProperties();
-            //Debug.WriteLine(dlg.GetType().AssemblyQualifiedName);
 			dlg.llItemName.Text = itemInDatabase.Name;
 			dlg.llVolumeUserName.Text = itemInDatabase.GetVolumeUserName();
 			dlg.llPath.Text = itemInDatabase.GetPath();

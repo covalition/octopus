@@ -10,25 +10,13 @@ namespace Octopus.CDIndex {
 	[Serializable]
 	class CdInDatabaseList: List<DiscInDatabase> {
 
-        /*
-		internal void InsertFilesToList(string fileMask, List<ListViewItem> list, ListView searchResultList) {
-			foreach (DiscInDatabase disc in this)
-				disc.InsertFilesToList(fileMask, list, searchResultList);
-		}
-
-		internal void InsertFilesToList(Regex regex, List<ListViewItem> list, ListView searchResultList) {
-			foreach (DiscInDatabase disc in this)
-				disc.InsertFilesToList(regex, list, searchResultList);
-		}*/
-        
         internal void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, List<string> keywordList, bool isAllKeywords, List<ListViewItem> list, ListView searchResultList) {
             foreach (DiscInDatabase disc in this)
                 disc.InsertFilesToList(regex, dateFrom, dateTo, sizeFrom, sizeTo, keywordList, isAllKeywords, list, searchResultList);
         }
         
         internal void MergeWith(CdInDatabaseList source) {
-            //foreach (DiscInDatabase disc in source)
-                this.AddRange(source);
+            this.AddRange(source);
         }
 
         internal void SaveAsCsv(string fileName) {

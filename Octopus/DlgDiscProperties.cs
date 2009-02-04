@@ -237,7 +237,6 @@ namespace Octopus.CDIndex {
 
 		internal static bool GetDiscName(out string discName, out string keywords, string drive) {
 			DlgDiscProperties dlg = new DlgDiscProperties();
-            //MessageBox.Show(dlg.GetType().FullName);
 			DriveInfo di = new DriveInfo(drive);
 			dlg.tbUserLabel.Text = dlg.llCdLabel.Text = di.VolumeLabel;
 			dlg.llDriveFormat.Text = di.DriveFormat;
