@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_B3D11DD7986F44928BC6628F6B0C1547"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DE0E55EFFB2E40B39FA3888D543B4997"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -121,6 +127,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B3D11DD7986F44928BC6628F6B0C1547"
+            {
+            "SourcePath" = "8:..\\Octopus\\License.rtf"
+            "TargetName" = "8:License.rtf"
+            "Tag" = "8:"
+            "Folder" = "8:_585F5C0D9A1747198068A7FF8C462F6A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DE0E55EFFB2E40B39FA3888D543B4997"
             {
             "SourcePath" = "8:..\\Octopus\\MainIcon.ico"
@@ -208,7 +234,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Octopus CD DVD Indexer"
         "ProductCode" = "8:{951C64D6-3A89-46AB-BB62-8636A87B2B2C}"
-        "PackageCode" = "8:{6554B282-06A1-4EE8-94AD-858858A8AA4D}"
+        "PackageCode" = "8:{6587CB31-7A3D-4038-87BB-B5543FBC9303}"
         "UpgradeCode" = "8:{1EECD51C-D81D-4364-929C-1FD18AFF3325}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
@@ -712,7 +738,8 @@
                             "Type" = "3:6"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:0"
+                            "Setting" = "3:2"
+                            "Value" = "8:_B3D11DD7986F44928BC6628F6B0C1547"
                             "UsePlugInResources" = "11:TRUE"
                             }
                             "Sunken"

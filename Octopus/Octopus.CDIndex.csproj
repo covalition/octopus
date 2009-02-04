@@ -311,6 +311,7 @@
   <ItemGroup>
     <Content Include="License.txt" />
     <Content Include="MainIcon.ico" />
+    <None Include="License.rtf" />
     <None Include="Resources\dbs.ico" />
     <None Include="Resources\FillDownHS.png" />
     <None Include="Resources\FindHS.png" />
