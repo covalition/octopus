@@ -153,6 +153,10 @@
   <data name="textBox1.Text" xml:space="preserve">
     <value>Change Log
 
+1.1.0.5
+- License info problem fixed
+- Localization issues fixed
+
 1.1 
 - Updated contact details, license and version info
 - Polish language version
@@ -453,6 +457,9 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Polish</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -466,6 +473,6 @@
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.1.0.5, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
