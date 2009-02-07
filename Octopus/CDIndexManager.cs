@@ -161,7 +161,7 @@ namespace Octopus.CDIndex
         private void updateStrip() {
             if ((FilesStrip != null) && (SizeStrip != null)) {
                 if ((ItemList != null) && (ItemList.SelectedItems.Count > 0)) {
-                    // zaznaczone elementy
+                    // selected items
                     FilesStrip.Text = Properties.Resources.SelectedFiles + ": " + ItemList.SelectedItems.Count.ToString();
                     long sum = 0;
                     foreach (ListViewItem lvi in ItemList.SelectedItems)
@@ -170,7 +170,7 @@ namespace Octopus.CDIndex
                 }
                 else
                     if ((FolderTree != null) && (FolderTree.SelectedNode != null)) {
-                        // nie zaznaczony ¿aden element
+                        // none is selected
                         FolderInDatabase fid = (FolderInDatabase)FolderTree.SelectedNode.Tag;
                         if (fid != null) {
                             FilesStrip.Text = Properties.Resources.Files + ": " + fid.Files.Count.ToString();
@@ -282,7 +282,7 @@ namespace Octopus.CDIndex
                 if (sfd.FilterIndex == 1) // 1 - based
                     serialize(sfd.FileName);
                 else
-                    // csv
+                    // 2 - csv
                     saveAsCsv(sfd.FileName);
             }
 

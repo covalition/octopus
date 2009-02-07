@@ -21,9 +21,8 @@ namespace Octopus.CDIndex
         {
             protected override void OnRenderToolStripBackground(ToolStripRenderEventArgs e) {
                 Graphics g = e.Graphics;
-
                 using (Brush b = new SolidBrush(Color.FromArgb(91, 91, 91))) {
-                    g.FillRectangle(b, e.Graphics.ClipBounds);
+                    g.FillRectangle(b, g.ClipBounds);
                 }
             }
 
@@ -40,7 +39,6 @@ namespace Octopus.CDIndex
 
             protected override void OnRenderItemText(ToolStripItemTextRenderEventArgs e) {
                 e.TextColor = Color.White;
-
                 base.OnRenderItemText(e);
             }
         }

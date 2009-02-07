@@ -60,7 +60,7 @@ namespace Octopus.CDIndex {
                 folder.InsertFilesToList(regex, dateFrom, dateTo, sizeFrom, sizeTo, keywordList, isAllKeywords, list, searchResultList);
         }
 
-        // na razie nie u¿ywana
+        // not used for now
         internal void InsertFilesToList(Regex regex, List<ListViewItem> list, ListView searchResultList) {
             if (regex.IsMatch(Name))
                 addFolderToList(list);

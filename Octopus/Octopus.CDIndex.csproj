@@ -98,9 +98,6 @@
     </Compile>
     <Compile Include="Components\SearchEventArgs.cs" />
     <Compile Include="Convert.cs" />
-    <Compile Include="CustomMenuStrip.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="DatabaseItemComparer.cs" />
     <Compile Include="DiscInDatabase.cs" />
     <Compile Include="DlgAbout.cs">

@@ -107,9 +107,9 @@ namespace Octopus.CDIndex {
                 cmVolumeFolderPropertiesPopup.Text = Properties.Resources.FolderProperties;
             }
             else {
+                // unknown item
                 cmDeleteCdInfoPopup.Text = "Delete";
                 cmVolumeFolderPropertiesPopup.Text = "Item Properties";
-
             }
             cmDeleteCdInfoPopup.Enabled = (selectedFolder() != null);
             cmVolumeFolderPropertiesPopup.Enabled = (selectedDisc() != null) || (selectedFolder() != null);
@@ -178,7 +178,7 @@ namespace Octopus.CDIndex {
                 cmVolumeFolderProperties_Click(sender, e);
             else
                 if(lvDatabaseItems.Focused)
-                cmFileProperties_Click(sender, e);
+                    cmFileProperties_Click(sender, e);
         }
 
         private void tsbDelete_Click(object sender, EventArgs e) {
@@ -268,6 +268,18 @@ namespace Octopus.CDIndex {
             if(searchListComparer != null)
                 searchResultList.Sort(searchListComparer);
             lvSearchResults.VirtualListSize = searchResultList.Count;
+        }
+
+        private void cmHomePage_Click(object sender, EventArgs e) {
+            Process install = new Process();
+            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            install.Start();
+        }
+
+        private void cmFeatureRequests_Click(object sender, EventArgs e) {
+            Process install = new Process();
+            install.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
+            install.Start();
         }
 
 	}

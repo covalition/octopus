@@ -23,6 +23,9 @@ namespace Octopus.CDIndex
                 base.OnRenderItemText(e);
             }
 
+            protected override void OnRenderDropDownButtonBackground(ToolStripItemRenderEventArgs e) {
+            }
+
             protected override void OnRenderButtonBackground(ToolStripItemRenderEventArgs e) {
                 if (!(e.Item.Selected)) {
                     base.OnRenderButtonBackground(e);
@@ -32,9 +35,7 @@ namespace Octopus.CDIndex
         }
 
         public RenderedToolStrip() {
-            GripStyle = ToolStripGripStyle.Hidden;
             Renderer = new NewRenderer();
-            BackgroundImage = Properties.Resources.BlueHeader; // BlueStripBitmap;
         }
     }
 }

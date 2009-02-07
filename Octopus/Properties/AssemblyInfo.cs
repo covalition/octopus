@@ -6,7 +6,7 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Octopus CD/DVD Index (C Edition)")]
+[assembly: AssemblyTitle("Octopus CD/DVD Index")]
 [assembly: AssemblyDescription("CD/DVD Indexer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Octopus")]
@@ -30,6 +30,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.1.0.5")]
-[assembly: AssemblyFileVersion("1.1.0.5")]
+[assembly: AssemblyVersion("1.1.1.0")]
+[assembly: AssemblyFileVersion("1.1.1.0")]
 [assembly: NeutralResourcesLanguageAttribute("")]

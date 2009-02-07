@@ -269,7 +269,7 @@
     <value>NoControl</value>
   </data>
   <data name="llSourceForge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 156</value>
+    <value>12, 172</value>
   </data>
   <data name="llSourceForge.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
@@ -428,7 +428,7 @@
     <value>NoControl</value>
   </data>
   <data name="llCodePlex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 172</value>
+    <value>12, 156</value>
   </data>
   <data name="llCodePlex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
@@ -456,9 +456,6 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Polish</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>

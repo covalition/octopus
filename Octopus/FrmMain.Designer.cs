@@ -73,7 +73,11 @@ namespace Octopus.CDIndex
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbOptions = new System.Windows.Forms.ToolStripButton();
-            this.tlsAbout = new System.Windows.Forms.ToolStripButton();
+            this.tlsAbout = new System.Windows.Forms.ToolStripDropDownButton();
+            this.cmHomePage = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmFeatureRequests = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.cmAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
@@ -405,10 +409,37 @@ namespace Octopus.CDIndex
             // 
             // tlsAbout
             // 
+            this.tlsAbout.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmHomePage,
+            this.cmFeatureRequests,
+            this.toolStripSeparator3,
+            this.cmAbout});
             this.tlsAbout.Image = global::Octopus.CDIndex.Properties.Resources.Help;
             resources.ApplyResources(this.tlsAbout, "tlsAbout");
             this.tlsAbout.Name = "tlsAbout";
-            this.tlsAbout.Click += new System.EventHandler(this.cmAbout_Click);
+            // 
+            // cmHomePage
+            // 
+            this.cmHomePage.Name = "cmHomePage";
+            resources.ApplyResources(this.cmHomePage, "cmHomePage");
+            this.cmHomePage.Click += new System.EventHandler(this.cmHomePage_Click);
+            // 
+            // cmFeatureRequests
+            // 
+            this.cmFeatureRequests.Name = "cmFeatureRequests";
+            resources.ApplyResources(this.cmFeatureRequests, "cmFeatureRequests");
+            this.cmFeatureRequests.Click += new System.EventHandler(this.cmFeatureRequests_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // cmAbout
+            // 
+            this.cmAbout.Name = "cmAbout";
+            resources.ApplyResources(this.cmAbout, "cmAbout");
+            this.cmAbout.Click += new System.EventHandler(this.cmAbout_Click);
             // 
             // FrmMain
             // 
@@ -419,7 +450,6 @@ namespace Octopus.CDIndex
             this.Controls.Add(this.ssBottom);
             this.Name = "FrmMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
-            
             this.scMain.Panel1.ResumeLayout(false);
             this.scMain.Panel2.ResumeLayout(false);
             this.scMain.ResumeLayout(false);
@@ -475,7 +505,6 @@ namespace Octopus.CDIndex
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ToolStripButton tlsAbout;
         private System.Windows.Forms.ToolStripDropDownButton tsbDatabase;
         private System.Windows.Forms.ToolStripMenuItem cmDatabaseExport;
         private System.Windows.Forms.ToolStripMenuItem cmDatabaseMerge;
@@ -485,6 +514,11 @@ namespace Octopus.CDIndex
         private System.Windows.Forms.ToolStripButton tsbOptions;
         private System.Windows.Forms.ImageList ilSystem;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ToolStripDropDownButton tlsAbout;
+        private System.Windows.Forms.ToolStripMenuItem cmHomePage;
+        private System.Windows.Forms.ToolStripMenuItem cmFeatureRequests;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem cmAbout;
 	}
 }
 
