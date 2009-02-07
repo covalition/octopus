@@ -14,7 +14,7 @@ namespace Octopus.CDIndex {
 
 	public partial class FrmMain: Form {
 
-        private CDIndexManager cdIndexManager = new CDIndexManager();
+        private CdIndexManager cdIndexManager = new CdIndexManager();
 
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
 
@@ -280,6 +280,10 @@ namespace Octopus.CDIndex {
             Process install = new Process();
             install.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
             install.Start();
+        }
+
+        private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
+            
         }
 
 	}

@@ -294,6 +294,7 @@ namespace Octopus.CDIndex
             this.lvSearchResults.UseCompatibleStateImageBehavior = false;
             this.lvSearchResults.View = System.Windows.Forms.View.Details;
             this.lvSearchResults.VirtualMode = true;
+            this.lvSearchResults.SelectedIndexChanged += new System.EventHandler(this.lvSearchResults_SelectedIndexChanged);
             this.lvSearchResults.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvSearchResults_ColumnClick);
             this.lvSearchResults.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.lvSearchResults_RetrieveVirtualItem);
             // 
