@@ -188,7 +188,7 @@
     <value>15, 25</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>350, 3</value>
+    <value>310, 3</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>

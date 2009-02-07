@@ -23,11 +23,12 @@ namespace Octopus.CDIndex {
         }
 
 		public FrmMain(Label statusLabel) {
+            
             statusLabel.Text = Properties.Resources.InitializingComponents;
             statusLabel.Refresh();
 
 			InitializeComponent();
-
+            Text = ProductName;
             statusLabel.Text = Properties.Resources.ReadingDatabase;
             statusLabel.Refresh();
             

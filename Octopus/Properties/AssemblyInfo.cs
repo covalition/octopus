@@ -6,11 +6,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Octopus CD/DVD Index")]
+[assembly: AssemblyTitle("Octopus CD/DVD Indexer")]
 [assembly: AssemblyDescription("CD/DVD Indexer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Octopus")]
-[assembly: AssemblyProduct("Octopus CD/DVD Index")]
+[assembly: AssemblyProduct("Octopus CD/DVD Indexer")]
 [assembly: AssemblyCopyright("Copyright © 2005-2009 Roman Kowaliszyn")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -17,7 +17,7 @@ namespace Octopus.CDIndex
             InitializeComponent();
             llCopyright.Text = assemblyCopyright;
             llVersion.Text = String.Format(llVersion.Text, assemblyVersion);
-            llTitle.Text = assemblyTitle;
+            llTitle.Text = ProductName;
         }
 
         private void linkLabel1_Click(object sender, EventArgs e) {
@@ -47,14 +47,14 @@ namespace Octopus.CDIndex
             }
         }
 
-        private string assemblyTitle {
-            get {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length == 0)
-                    return "";
-                return ((AssemblyTitleAttribute)attributes[0]).Title;
-            }
-        }
+        //private string assemblyTitle {
+        //    get {
+        //        object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
+        //        if (attributes.Length == 0)
+        //            return "";
+        //        return ((AssemblyTitleAttribute)attributes[0]).Title;
+        //    }
+        //}
 
         private void llCodePlex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process install = new Process();
