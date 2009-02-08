@@ -89,7 +89,6 @@
       <DependentUpon>FormDialogList.cs</DependentUpon>
     </Compile>
     <Compile Include="CdInDatabaseList.cs" />
-    <Compile Include="CdIndexManager.cs" />
     <Compile Include="Components\FilesSearchCriteriaPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
