@@ -12,7 +12,7 @@ using System.Collections.Specialized;
 
 namespace Octopus.CDIndex
 {
-
+    /*
     class CdIndexManager
     {
         #region UI controls
@@ -456,5 +456,5 @@ namespace Octopus.CDIndex
                 opt.Dispose();
             }
         }
-    }
+    } */
 }

@@ -9,18 +9,15 @@ using System.Deployment.Application;
 using System.IO;
 using System.Diagnostics;
 using System.Collections;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.RegularExpressions;
 
 namespace Octopus.CDIndex {
 
 	public partial class FrmMain: Form {
 
-        private CdIndexManager cdIndexManager = new CdIndexManager();
-
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
-
-        public FrmMain() {
-            InitializeComponent();
-        }
 
 		public FrmMain(Label statusLabel) {
             
@@ -33,18 +30,13 @@ namespace Octopus.CDIndex {
             statusLabel.Refresh();
             
             updateDatabaseDirectory();
-			cdIndexManager.ReadDatabase();
+			readDatabase();
 
             statusLabel.Text = Properties.Resources.FillingControls;
             statusLabel.Refresh();
 
-			cdIndexManager.FolderTree = tvDatabaseFolderTree;
-			cdIndexManager.ItemList = lvDatabaseItems;
-			cdIndexManager.FilesStrip = slFiles;
-			cdIndexManager.SizeStrip = slSize;
-			cdIndexManager.SearchResultList = lvSearchResults;
+            updateTree();
             updateCommands();
-
 		}
 
         private void updateDatabaseDirectory() {
@@ -79,7 +71,7 @@ namespace Octopus.CDIndex {
 		#region Menu commands and events
 
 		private void cmReadCd_Click(object sender, EventArgs e) {
-			cdIndexManager.ReadCd();
+			readCd();
 		}
 
 		private void cmChangeLabel2_Click(object sender, EventArgs e) {
@@ -88,15 +80,101 @@ namespace Octopus.CDIndex {
 
 		private void cmVolumeFolderProperties_Click(object sender, EventArgs e) {
 			if (selectedDisc() != null) {
-				if (cdIndexManager.ChangeUserLabel(selectedDisc()))
+				if (changeUserLabel(selectedDisc()))
 					// TODO: refactor
 					tvDatabaseFolderTree.SelectedNode.Text = (tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase).Name;
 			}
 			else
 				if (selectedFolder() != null) {
-					cdIndexManager.FolderProperties(selectedFolder());
+					folderProperties(selectedFolder());
 				}
 		}
+
+		private void cmDeleteCdInfo_Click(object sender, EventArgs e) {
+			if (selectedDisc() != null) {
+				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, selectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+					deleteCdInfo(selectedDisc());
+				}
+			}
+			else if (selectedFolder() != null) {
+                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFolder, selectedFolder().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+					deleteFolderInfo(selectedFolder());
+				}
+			}
+		}
+
+        private void cmAbout_Click(object sender, EventArgs e) {
+            using (DlgAbout dlg = new DlgAbout()) {
+                dlg.ShowDialog(this);
+            }
+        }
+
+        private void cmFileProperties_Click(object sender, EventArgs e) {
+            if (selectedFile() != null)
+                fileProperties(selectedFile());
+        }
+
+        private void cmDeleteFileInfoPopup_Click(object sender, EventArgs e) {
+            if (selectedFile() != null)
+                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFile, selectedFile().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    deleteFileInfo(selectedFile());
+        }
+
+        private void tsbProperties_Click(object sender, EventArgs e) {
+            if (tvDatabaseFolderTree.Focused)
+                cmVolumeFolderProperties_Click(sender, e);
+            else
+                if (lvDatabaseItems.Focused)
+                    cmFileProperties_Click(sender, e);
+        }
+
+        private void tsbDelete_Click(object sender, EventArgs e) {
+            if (tvDatabaseFolderTree.Focused)
+                cmDeleteCdInfo_Click(sender, e);
+            else
+                if (lvDatabaseItems.Focused)
+                    cmDeleteFileInfoPopup_Click(sender, e);
+        }
+
+        private void cmDatabaseExport_Click(object sender, EventArgs e) {
+            saveDatabaseDlg();
+        }
+
+        private void cmDatabaseMerge_Click(object sender, EventArgs e) {
+            mergeDatabaseDlg();
+        }
+
+        private void filesSearchCriteriaPanel_SearchBtnClicked(object sender, Octopus.CDIndex.Components.SearchEventArgs e) {
+            long? sizeFrom = null;
+            long? sizeTo = null;
+            if (e.SizeFrom != null)
+                sizeFrom = (long)e.SizeFrom * 1024;
+            if (e.SizeTo != null)
+                sizeTo = (long)e.SizeTo * 1024;
+
+            search(e.FileMask, e.DateFrom, e.DateTo, sizeFrom, sizeTo, e.Keywords, e.AllKeywordsNeeded, searchResultList);
+            displaySearchList();
+        }
+
+        private void tsbOptions_Click(object sender, EventArgs e) {
+            setOptionsDlg();
+        }
+
+        private void cmHomePage_Click(object sender, EventArgs e) {
+            Process install = new Process();
+            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            install.Start();
+        }
+
+        private void cmFeatureRequests_Click(object sender, EventArgs e) {
+            Process install = new Process();
+            install.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
+            install.Start();
+        }
+
+		#endregion
+
+        #region Updating controls
 
         private void updateCommands() {
             if (selectedDisc() != null) {
@@ -116,40 +194,88 @@ namespace Octopus.CDIndex {
             cmVolumeFolderPropertiesPopup.Enabled = (selectedDisc() != null) || (selectedFolder() != null);
 
             cmDeleteFileInfoPopup.Enabled = cmFilePropertiesPopup.Enabled = selectedFile() != null;
-            tsbDelete.Enabled = tsbProperties.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc () != null) || (selectedFolder() != null))) || (lvDatabaseItems.Focused && (selectedFile() != null));
+            tsbDelete.Enabled = tsbProperties.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc() != null) || (selectedFolder() != null))) || (lvDatabaseItems.Focused && (selectedFile() != null));
         }
 
-		private void cmDeleteCdInfo_Click(object sender, EventArgs e) {
-			if (selectedDisc() != null) {
-				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, selectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					cdIndexManager.DeleteCdInfo(selectedDisc());
-				}
-			}
-			else if (selectedFolder() != null) {
-                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFolder, selectedFolder().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					cdIndexManager.DeleteFolderInfo(selectedFolder());
-				}
-			}
-		}
+        private void updateList() {
+            lvDatabaseItems.Items.Clear();
+            if (tvDatabaseFolderTree.SelectedNode != null) {
+                FolderInDatabase fid = (FolderInDatabase)tvDatabaseFolderTree.SelectedNode.Tag;
+                if (fid != null) {
+                    Cursor c = Cursor.Current;
+                    Cursor.Current = Cursors.WaitCursor;
+                    lvDatabaseItems.BeginUpdate();
+                    try {
+                        foreach (FileInDatabase fileid in fid.Files) {
+                            ListViewItem lvi = new ListViewItem();
+                            lvi.Text = fileid.Name;
+                            lvi.Tag = fileid;
+                            lvi.ImageIndex = Shell.GetFileIconIndex(fileid.Name, Shell.FileIconSize.Small);
+                            lvi.SubItems.Add(CustomConvert.ToKB(fileid.Length));
+                            lvi.SubItems.Add(fileid.CreationTime.ToString("g"));
+                            lvi.SubItems.Add(fileid.Attributes.ToString());
+                            lvi.SubItems.Add(fileid.Keywords);
 
-		#endregion
-
-		private void cmAbout_Click(object sender, EventArgs e) {
-            using (DlgAbout dlg = new DlgAbout()) {
-                dlg.ShowDialog(this);
+                            lvDatabaseItems.Items.Add(lvi);
+                        }
+                        Shell.UpdateSystemImageList(lvDatabaseItems.SmallImageList, Shell.FileIconSize.Small, false);
+                    }
+                    finally {
+                        lvDatabaseItems.EndUpdate();
+                        Cursor.Current = c;
+                    }
+                }
             }
-		}
+            updateStrip();
+        }
 
-		private void cmFileProperties_Click(object sender, EventArgs e) {
-			if (selectedFile() != null)
-				cdIndexManager.FileProperties(selectedFile());
-		}
+        private void updateTree() {
+            tvDatabaseFolderTree.Nodes.Clear();
+            tvDatabaseFolderTree.BeginUpdate();
+            try {
+                foreach (FolderInDatabase fid in cdsInDatabase) {
+                    TreeNode tn = new TreeNode();
+                    fid.CopyToNode(tn);
+                    tn.ImageIndex = 0;
+                    tn.SelectedImageIndex = 0;
+                    tvDatabaseFolderTree.Nodes.Add(tn);
+                }
+            }
+            finally {
+                tvDatabaseFolderTree.EndUpdate();
+            }
+            updateList();
+        }
 
-		private void cmDeleteFileInfoPopup_Click(object sender, EventArgs e) {
-			if (selectedFile() != null)
-				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFile, selectedFile().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-					cdIndexManager.DeleteFileInfo(selectedFile());
-		}
+        private void updateStrip() {
+            if ((slFiles != null) && (slSize != null)) {
+                if (lvDatabaseItems.SelectedItems.Count > 0) {
+                    // selected items
+                    slFiles.Text = Properties.Resources.SelectedFiles + ": " + lvDatabaseItems.SelectedItems.Count.ToString();
+                    long sum = 0;
+                    foreach (ListViewItem lvi in lvDatabaseItems.SelectedItems)
+                        sum += (lvi.Tag as FileInDatabase).Length;
+                    slSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(sum);
+                }
+                else
+                    if (tvDatabaseFolderTree.SelectedNode != null) {
+                        // none is selected
+                        FolderInDatabase fid = (FolderInDatabase)tvDatabaseFolderTree.SelectedNode.Tag;
+                        if (fid != null) {
+                            slFiles.Text = Properties.Resources.Files + ": " + fid.Files.Count.ToString();
+                            slSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(fid.GetFilesSize());
+                        }
+                    }
+                    else {
+                        slFiles.Text = Properties.Resources.NoFiles;
+                        slSize.Text = "";
+                    }
+            }
+        }
+
+        #endregion
+
+        #region Form events
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e) {
             FrmSplash splash = new FrmSplash();
@@ -160,7 +286,7 @@ namespace Octopus.CDIndex {
                 splash.llStatus.Text = Properties.Resources.SavingDatabase;
                 splash.llStatus.Refresh();
 
-                cdIndexManager.SaveDatabaseIfModified();
+                saveDatabaseIfModified();
 
                 splash.llStatus.Text = Properties.Resources.SavingApplicationSettings;
                 splash.llStatus.Refresh();
@@ -171,30 +297,20 @@ namespace Octopus.CDIndex {
                 splash.Hide();
                 splash.Dispose();
             }
-            
+
         }
 
-        private void tsbProperties_Click(object sender, EventArgs e) {
-            if (tvDatabaseFolderTree.Focused) 
-                cmVolumeFolderProperties_Click(sender, e);
-            else
-                if(lvDatabaseItems.Focused)
-                    cmFileProperties_Click(sender, e);
-        }
+        #endregion
 
-        private void tsbDelete_Click(object sender, EventArgs e) {
-            if (tvDatabaseFolderTree.Focused)
-                cmDeleteCdInfo_Click(sender, e);
-            else
-                if (lvDatabaseItems.Focused)
-                    cmDeleteFileInfoPopup_Click(sender, e);
-        }
+        #region Control events
 
         private void tvDatabaseFolderTree_AfterSelect(object sender, TreeViewEventArgs e) {
+            updateList();
             updateCommands();
         }
 
         private void lvDatabaseItems_SelectedIndexChanged(object sender, EventArgs e) {
+            updateStrip();
             updateCommands();
         }
 
@@ -222,30 +338,6 @@ namespace Octopus.CDIndex {
                 AcceptButton = null;
         }
 
-        private void cmDatabaseExport_Click(object sender, EventArgs e) {
-            cdIndexManager.SaveDatabaseDlg();
-        }
-
-        private void cmDatabaseMerge_Click(object sender, EventArgs e) {
-            cdIndexManager.MergeDatabaseDlg();
-        }
-
-        private void filesSearchCriteriaPanel_SearchBtnClicked(object sender, Octopus.CDIndex.Components.SearchEventArgs e) {
-            long? sizeFrom = null;
-            long? sizeTo = null;
-            if (e.SizeFrom != null)
-                sizeFrom = (long)e.SizeFrom * 1024;
-            if (e.SizeTo != null)
-                sizeTo = (long)e.SizeTo * 1024;
-
-            cdIndexManager.Search(e.FileMask, e.DateFrom, e.DateTo, sizeFrom, sizeTo, e.Keywords, e.AllKeywordsNeeded, searchResultList);
-            displaySearchList();
-        }
-
-        private void tsbOptions_Click(object sender, EventArgs e) {
-            cdIndexManager.SetOptionsDlg();
-        }
-
         private void lvSearchResults_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e) {
             e.Item = searchResultList[e.ItemIndex];
         }
@@ -257,6 +349,8 @@ namespace Octopus.CDIndex {
         private void lvDatabaseItems_ColumnClick(object sender, ColumnClickEventArgs e) {
             lvDatabaseItems.ListViewItemSorter = new DatabaseItemComparer(e.Column);
         }
+
+        #endregion
 
         IComparer<ListViewItem> searchListComparer = null;
         private void lvSearchResults_ColumnClick(object sender, ColumnClickEventArgs e) {
@@ -271,20 +365,278 @@ namespace Octopus.CDIndex {
             lvSearchResults.VirtualListSize = searchResultList.Count;
         }
 
-        private void cmHomePage_Click(object sender, EventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
-            install.Start();
+        private void lvSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
+            updateStrip();
         }
 
-        private void cmFeatureRequests_Click(object sender, EventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
-            install.Start();
+        #region Read and Save database
+        private const string DATABASE_OCTOPUS = "database.octopus";
+
+        private string getFileName() {
+            return Path.Combine(Properties.Settings.Default.DatabaseLocation, DATABASE_OCTOPUS);
         }
 
-        private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
-            
+        private void readDatabase() {
+            cdsInDatabase = deserialize(getFileName());
+            if (cdsInDatabase == null)
+                cdsInDatabase = new CdInDatabaseList();
+        }
+
+        private CdInDatabaseList deserialize(string filePath) {
+            CdInDatabaseList cid = null;
+            Cursor oldCursor = Cursor.Current;
+            Cursor.Current = Cursors.WaitCursor;
+            try {
+                try {
+                    Stream stream = new FileStream(filePath, FileMode.Open);
+                    try {
+                        IFormatter formatter = new BinaryFormatter();
+                        cid = (CdInDatabaseList)formatter.Deserialize(stream);
+
+                    }
+                    finally {
+                        stream.Close();
+                    }
+                }
+                catch (Exception e) {
+                    Debug.WriteLine(e.Message);
+                }
+            }
+            finally {
+                Cursor.Current = oldCursor;
+            }
+            return cid;
+        }
+
+        private void mergeDatabaseDlg() {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = Properties.Resources.MergeDatabaseWith;
+            ofd.DefaultExt = "octopus";
+            ofd.Filter = Properties.Resources.MergeFilter;
+            if (ofd.ShowDialog() == DialogResult.OK) {
+                CdInDatabaseList cid = deserialize(ofd.FileName);
+                if (cid != null) {
+                    cdsInDatabase.MergeWith(cid);
+                    updateTree();
+                    setModified();
+                }
+
+            }
+        }
+
+        private void saveDatabase() {
+            string directory = Path.GetDirectoryName(getFileName());
+            if (!Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+            serialize(getFileName());
+        }
+
+        private void saveDatabaseIfModified() {
+            if (modified)
+                saveDatabase();
+        }
+
+        private void serialize(string filePath) {
+            Cursor oldCursor = Cursor.Current;
+            Cursor.Current = Cursors.WaitCursor;
+            try {
+                Stream stream = new FileStream(filePath, FileMode.Create);
+
+                try {
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(stream, cdsInDatabase);
+                }
+                finally {
+                    stream.Close();
+                }
+            }
+            finally {
+                Cursor.Current = oldCursor;
+            }
+        }
+
+        private void saveDatabaseDlg() {
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Title = Properties.Resources.ExportDatabaseTo;
+            sfd.DefaultExt = "octopus";
+            sfd.Filter = Properties.Resources.ExportFilter;
+            if (sfd.ShowDialog() == DialogResult.OK) {
+                if (sfd.FilterIndex == 1) // 1 - based
+                    serialize(sfd.FileName);
+                else
+                    // 2 - csv
+                    saveAsCsv(sfd.FileName);
+            }
+        }
+
+        private void saveAsCsv(string filePath) {
+            try {
+                cdsInDatabase.SaveAsCsv(filePath);
+            }
+            catch (Exception e) {
+                MessageBox.Show(string.Format(Properties.Resources.ErrorSavingFile, filePath, e.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region CD related
+
+        CdInDatabaseList cdsInDatabase;
+
+        private void readCd() {
+            string drive;
+            string cdName;
+            string keywords;
+            try {
+                if (selectedDrive(out drive) && gotCdName(out cdName, out keywords, drive))
+                    readCdOnDrive(drive, cdName, keywords);
+            }
+            catch (IOException e) {
+                MessageBox.Show(string.Format(Properties.Resources.ErrorIO, e.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool gotCdName(out string discName, out string keywords, string drive) {
+            return DlgDiscProperties.GetDiscName(out discName, out keywords, drive);
+        }
+
+        private void readCdOnDrive(string drive, string cdName, string keywords) {
+            DiscInDatabase cdRom = new DiscInDatabase();
+            cdRom.Name = cdName;
+            cdRom.Keywords = keywords;
+            Cursor c = Cursor.Current;
+            Cursor.Current = Cursors.WaitCursor;
+            try {
+                cdRom.ReadFrom(drive);
+                DriveInfo di = new DriveInfo(drive);
+                cdRom.DriveFormat = di.DriveFormat;
+                cdRom.DriveType = di.DriveType;
+                cdRom.TotalFreeSpace = di.TotalFreeSpace;
+                cdRom.TotalSize = di.TotalSize;
+                cdRom.VolumeLabel = di.VolumeLabel;
+
+                cdsInDatabase.Add(cdRom);
+                sortByLabels();
+                setModified();
+            }
+            finally {
+                Cursor.Current = c;
+            }
+        }
+
+        private bool selectedDrive(out string drive) {
+            return DlgSelectDrive.SelectDrive(out drive);
+        }
+
+        #endregion
+
+        #region Database related
+
+        private void sortByLabels() {
+            cdsInDatabase.Sort();
+            updateTree();
+        }
+
+        private bool changeUserLabel(DiscInDatabase discInDatabase) {
+            bool result = DlgDiscProperties.ChangeUserLabel(discInDatabase);
+            if (result)
+                setModified();
+            return result;
+        }
+
+        private void deleteCdInfo(DiscInDatabase cdInDatabase) {
+            cdsInDatabase.Remove(cdInDatabase);
+            updateTree();
+            setModified();
+        }
+
+        private void deleteFolderInfo(FolderInDatabase folderInDatabase) {
+            folderInDatabase.Parent.Folders.Remove(folderInDatabase);
+            updateTree();
+            setModified();
+        }
+
+        private void deleteFileInfo(FileInDatabase fileInDatabase) {
+            fileInDatabase.Parent.Files.Remove(fileInDatabase);
+            updateList();
+            setModified();
+        }
+
+        private void folderProperties(FolderInDatabase folderInDatabase) {
+            bool result = DlgItemProperties.ChangeItemProperties(folderInDatabase);
+            if (result)
+                setModified();
+        }
+
+        private void fileProperties(FileInDatabase fileInDatabase) {
+            bool result = DlgItemProperties.ChangeItemProperties(fileInDatabase);
+            if (result)
+                setModified();
+        }
+
+        #endregion
+
+        private void search(string fileMask, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, string keywords, bool allKeywordsNeeded, List<ListViewItem> list) {
+            Cursor oldCursor = Cursor.Current;
+            try {
+                Cursor.Current = Cursors.WaitCursor;
+
+                // usuwanie podtekstów ".*", gdy przed tekstem nie ma œrednika lub pocz¹tku tekstu, a za tekstem jest œrednik lub koniec tekstu
+                int i = 0;
+                while ((i = fileMask.IndexOf(".*", i)) > -1) {
+                    // i > -1
+                    if ((i > 0) && (fileMask[i - 1] != ';') && ((i == fileMask.Length - 2) || (fileMask[i + 2] == ';')))
+                        fileMask = fileMask.Substring(0, i) + fileMask.Substring(i + 2);
+                }
+
+                Regex r = new Regex(CustomConvert.ToRegex(fileMask), RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
+                List<string> keywordList = null;
+                if ((keywords != null) && (keywords.Length > 0)) {
+                    keywordList = new List<string>(keywords.Split(';'));
+                    keywordList.Sort();
+                }
+
+                list.Clear();
+                cdsInDatabase.InsertFilesToList(r, dateFrom, dateTo, sizeFrom, sizeTo, keywordList, allKeywordsNeeded, list, lvSearchResults);
+                updateSearchListImages();
+
+            }
+            finally {
+                Cursor.Current = oldCursor;
+            }
+        }
+
+        private void updateSearchListImages() {
+            Shell.UpdateSystemImageList(lvSearchResults.SmallImageList, Shell.FileIconSize.Small, false);
+        }
+
+        private bool modified = false;
+
+        private void setModified() {
+            modified = true;
+        }
+
+        private void setOptionsDlg() {
+            DlgOptions opt = new DlgOptions();
+            try {
+                string oldLocation = Properties.Settings.Default.DatabaseLocation;
+                opt.DatabaseLocation = oldLocation;
+                if ((opt.ShowDialog() == DialogResult.OK) && (opt.DatabaseLocation != oldLocation)) {
+                    Properties.Settings.Default.DatabaseLocation = opt.DatabaseLocation;
+                    try {
+                        saveDatabase();
+                    }
+                    catch {
+                        MessageBox.Show(String.Format("Error occured while saving database file in folder: {0}. Database folder restored to {1}.", Properties.Settings.Default.DatabaseLocation, oldLocation), "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        Properties.Settings.Default.DatabaseLocation = oldLocation;
+                    }
+                }
+            }
+            finally {
+                opt.Dispose();
+            }
         }
 
 	}
