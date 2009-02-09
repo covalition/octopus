@@ -19,8 +19,9 @@ namespace Octopus.CDIndex {
 
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
 
+        Label currentStatusLabel = null;
 		public FrmMain(Label statusLabel) {
-            
+            currentStatusLabel = statusLabel;
             statusLabel.Text = Properties.Resources.InitializingComponents;
             statusLabel.Refresh();
 
@@ -30,13 +31,14 @@ namespace Octopus.CDIndex {
             statusLabel.Refresh();
             
             updateDatabaseDirectory();
-			readDatabase();
+            readDatabase();
 
             statusLabel.Text = Properties.Resources.FillingControls;
             statusLabel.Refresh();
 
             updateTree();
             updateCommands();
+            currentStatusLabel = null;
 		}
 
         private void updateDatabaseDirectory() {
@@ -389,9 +391,11 @@ namespace Octopus.CDIndex {
             try {
                 try {
                     Stream stream = new FileStream(filePath, FileMode.Open);
+                    StreamWithEvents streamWithEvents = new StreamWithEvents(stream);
+                    streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
                     try {
                         IFormatter formatter = new BinaryFormatter();
-                        cid = (CdInDatabaseList)formatter.Deserialize(stream);
+                        cid = (CdInDatabaseList)formatter.Deserialize(streamWithEvents);
 
                     }
                     finally {
@@ -406,6 +410,13 @@ namespace Octopus.CDIndex {
                 Cursor.Current = oldCursor;
             }
             return cid;
+        }
+
+        void streamWithEvents_ProgressChanged(int progress) {
+            currentStatusLabel.Text = string.Format("Wczytywanie.... {0}%" , progress);
+            // currentStatusLabel.Update();
+            Application.DoEvents();
+            // currentStatusLabel.Refresh();
         }
 
         private void mergeDatabaseDlg() {

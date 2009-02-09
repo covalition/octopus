@@ -269,6 +269,7 @@
     <Compile Include="SearchResultComparer.cs" />
     <Compile Include="Properties\Settings.cs" />
     <Compile Include="Shell.cs" />
+    <Compile Include="StreamWithEvents.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">

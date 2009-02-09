@@ -22,7 +22,7 @@ namespace Octopus.CDIndex
             finally
             {
                 splash.Hide();
-                splash.Dispose();
+                // splash.Dispose();
             }
             //DlgWelcome dlgWelcome = new DlgWelcome();
             //dlgWelcome.ShowDialog();
