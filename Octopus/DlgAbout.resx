@@ -153,8 +153,9 @@
   <data name="textBox1.Text" xml:space="preserve">
     <value>Change Log
 
-1.1.1
-- HDs can be indexed 
+1.2
+- Status bar reflects selection changes
+- Hard disks can be indexed 
 - New commands under Help
 
 1.1.0.5
@@ -474,6 +475,6 @@
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.1.1.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.2.0.36800, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

@@ -250,7 +250,7 @@ namespace Octopus.CDIndex {
         }
 
         private void updateStrip() {
-            if ((slFiles != null) && (slSize != null)) {
+            if (tcMain.SelectedTab == tpDatabase) {
                 if (lvDatabaseItems.SelectedItems.Count > 0) {
                     // selected items
                     slFiles.Text = Properties.Resources.SelectedFiles + ": " + lvDatabaseItems.SelectedItems.Count.ToString();
@@ -272,6 +272,26 @@ namespace Octopus.CDIndex {
                         slFiles.Text = Properties.Resources.NoFiles;
                         slSize.Text = "";
                     }
+            }
+            else {
+                long sum = 0;
+                if (lvSearchResults.SelectedIndices.Count > 0) {
+                    // selected items
+                    slFiles.Text = Properties.Resources.SelectedFiles + ": " + lvSearchResults.SelectedIndices.Count.ToString();
+                    
+                    foreach (int index in lvSearchResults.SelectedIndices) {
+                        ListViewItem lvi = searchResultList[index];
+                        if (lvi.Tag is FileInDatabase)
+                            sum += (lvi.Tag as FileInDatabase).Length;
+                    }
+                }
+                else {
+                    slFiles.Text = Properties.Resources.Files + ": " + searchResultList.Count.ToString();
+                    foreach(ListViewItem lvi in searchResultList)
+                        if (lvi.Tag is FileInDatabase)
+                            sum += (lvi.Tag as FileInDatabase).Length;
+                }
+                slSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(sum);
             }
         }
 
@@ -338,6 +358,7 @@ namespace Octopus.CDIndex {
                 AcceptButton = filesSearchCriteriaPanel.BtnSearch;
             else
                 AcceptButton = null;
+            updateStrip();
         }
 
         private void lvSearchResults_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e) {
@@ -365,6 +386,7 @@ namespace Octopus.CDIndex {
             if(searchListComparer != null)
                 searchResultList.Sort(searchListComparer);
             lvSearchResults.VirtualListSize = searchResultList.Count;
+            updateStrip();
         }
 
         private void lvSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
@@ -416,10 +438,10 @@ namespace Octopus.CDIndex {
         }
 
         void streamWithEvents_ProgressChanged(int progress) {
-            currentStatusLabel.Text = string.Format(Properties.Resources.ReadingDatabasePercent, progress);
-            // currentStatusLabel.Update();
-            Application.DoEvents();
-            // currentStatusLabel.Refresh();
+            if (currentStatusLabel != null) {
+                currentStatusLabel.Text = string.Format(Properties.Resources.ReadingDatabasePercent, progress);
+                Application.DoEvents();
+            }
         }
 
         private void mergeDatabaseDlg() {
@@ -651,6 +673,10 @@ namespace Octopus.CDIndex {
             finally {
                 opt.Dispose();
             }
+        }
+
+        private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
+            updateStrip();
         }
 
 	}
