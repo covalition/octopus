@@ -9,7 +9,7 @@ namespace Octopus.CDIndex
 	{
 		public static string ToRoman(int number, bool upperCase)
 		{
-			if (number < 0)
+			if (number < 0) 
 				throw new ArgumentOutOfRangeException("number", number, "Liczba musi byæ wiêksza od zera.");
 			string[] romansUpper = new string[] {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
 			string[] romansLower = new string[] {"i", "iv", "v", "ix", "x", "xl", "l", "xc", "c", "cd", "d", "cm", "m"};

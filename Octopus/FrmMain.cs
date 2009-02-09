@@ -391,11 +391,14 @@ namespace Octopus.CDIndex {
             try {
                 try {
                     Stream stream = new FileStream(filePath, FileMode.Open);
-                    StreamWithEvents streamWithEvents = new StreamWithEvents(stream);
-                    streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
+                    if (stream.Length > 18000000) {
+                        StreamWithEvents streamWithEvents = new StreamWithEvents(stream);
+                        streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
+                        stream = streamWithEvents;
+                    }
                     try {
                         IFormatter formatter = new BinaryFormatter();
-                        cid = (CdInDatabaseList)formatter.Deserialize(streamWithEvents);
+                        cid = (CdInDatabaseList)formatter.Deserialize(stream);
 
                     }
                     finally {
