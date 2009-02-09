@@ -121,9 +121,8 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="llStatus.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;llStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;llApplicationState.Name" xml:space="preserve">
     <value>llApplicationState</value>
@@ -138,26 +137,20 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>355, 82</value>
   </data>
-  <data name="&gt;&gt;llProgramName.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmSplash</value>
   </data>
   <data name="llStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 55</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;llApplicationState.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FrmSplash</value>
   </data>
   <data name="&gt;&gt;llProgramName.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;llStatus.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="llApplicationState.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -165,17 +158,21 @@
   <data name="llStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
   </data>
+  <data name="llApplicationState.Text" xml:space="preserve">
+    <value>Initializing...</value>
+  </data>
   <data name="llApplicationState.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 32</value>
   </data>
   <data name="&gt;&gt;llStatus.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="llApplicationState.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;llProgramName.Name" xml:space="preserve">
-    <value>llProgramName</value>
+  <data name="&gt;&gt;llProgramName.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="llProgramName.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
@@ -189,8 +186,11 @@
   <data name="llApplicationState.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;llApplicationState.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;llApplicationState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;llProgramName.Name" xml:space="preserve">
+    <value>llProgramName</value>
   </data>
   <data name="llProgramName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -198,8 +198,8 @@
   <data name="llProgramName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="llApplicationState.Text" xml:space="preserve">
-    <value>Initializing...</value>
+  <data name="llStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;llStatus.Name" xml:space="preserve">
     <value>llStatus</value>
@@ -213,8 +213,8 @@
   <data name="llProgramName.Size" type="System.Drawing.Size, System.Drawing">
     <value>0, 13</value>
   </data>
-  <data name="&gt;&gt;llApplicationState.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;llApplicationState.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

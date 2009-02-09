@@ -183,6 +183,9 @@
   <data name="NoFiles" xml:space="preserve">
     <value>Brak wybranych plików.</value>
   </data>
+  <data name="NonRemoveableMsg" xml:space="preserve">
+    <value>Napęd {0} nie wygląda na napęd wymienny. Indexowanie tego nośniak może potrwać BARDZO długo. Czy chcesz kontunuować?</value>
+  </data>
   <data name="ReadingDatabase" xml:space="preserve">
     <value>Wczytywanie bazy danych...</value>
   </data>

@@ -349,6 +349,15 @@ namespace Octopus.CDIndex.Properties {
             }
         }
         
+        /// <summary>
+        ///   Looks up a localized string similar to Drive {0} seems to be non removeable media. Indexing will take LARGE ammount of time. Would you like to continue?.
+        /// </summary>
+        internal static string NonRemoveableMsg {
+            get {
+                return ResourceManager.GetString("NonRemoveableMsg", resourceCulture);
+            }
+        }
+        
         internal static System.Drawing.Bitmap openHS {
             get {
                 object obj = ResourceManager.GetObject("openHS", resourceCulture);

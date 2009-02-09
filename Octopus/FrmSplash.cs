@@ -13,6 +13,7 @@ namespace Octopus.CDIndex {
         public FrmSplash() {
             InitializeComponent();
             llProgramName.Text = assemblyProduct;
+            Text = ProductName;
         }
 
         private string assemblyProduct {

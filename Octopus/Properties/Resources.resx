@@ -253,4 +253,7 @@
   <data name="ErrorSavingFile" xml:space="preserve">
     <value>Error saving file "{0}". Error message: {1}</value>
   </data>
+  <data name="NonRemoveableMsg" xml:space="preserve">
+    <value>Drive {0} seems to be non removeable media. Indexing will take LARGE ammount of time. Would you like to continue?</value>
+  </data>
 </root>

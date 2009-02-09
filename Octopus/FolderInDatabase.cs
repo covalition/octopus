@@ -115,41 +115,45 @@ namespace Octopus.CDIndex {
         }
 
 		internal void ReadFrom(string folder) {
+            try {
+                System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(folder);
+                System.IO.DirectoryInfo[] subFolders = di.GetDirectories();
+                foreach (System.IO.DirectoryInfo subFolder in subFolders) {
+                    FolderInDatabase newFolder = new FolderInDatabase(this);
+                    newFolder.Name = subFolder.Name;
 
-			System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(folder);
-			System.IO.DirectoryInfo[] subFolders = di.GetDirectories();
-			foreach (System.IO.DirectoryInfo subFolder in subFolders) {
-				FolderInDatabase newFolder = new FolderInDatabase(this);
-				newFolder.Name = subFolder.Name;
+                    newFolder.Attributes = subFolder.Attributes;
+                    //newFolder.CreationTime = subFolder.CreationTime;
+                    newFolder.Extension = subFolder.Extension;
+                    newFolder.FullName = subFolder.FullName;
+                    //newFolder.LastAccessTime = subFolder.LastAccessTime;
+                    //newFolder.LastWriteTime = subFolder.LastWriteTime;
 
-				newFolder.Attributes = subFolder.Attributes;
-				//newFolder.CreationTime = subFolder.CreationTime;
-				newFolder.Extension = subFolder.Extension;
-				newFolder.FullName = subFolder.FullName;
-				//newFolder.LastAccessTime = subFolder.LastAccessTime;
-				//newFolder.LastWriteTime = subFolder.LastWriteTime;
+                    newFolder.ReadFrom(subFolder.FullName);
+                    folders.Add(newFolder);
 
-				newFolder.ReadFrom(subFolder.FullName);
-				folders.Add(newFolder);
-			}
+                }
 
-			System.IO.FileInfo[] filesInFolder = di.GetFiles();
-			foreach (System.IO.FileInfo fileInFolder in filesInFolder) {
-				FileInDatabase newFile = new FileInDatabase(this);
-				newFile.Name = fileInFolder.Name;
+                System.IO.FileInfo[] filesInFolder = di.GetFiles();
+                foreach (System.IO.FileInfo fileInFolder in filesInFolder) {
+                    FileInDatabase newFile = new FileInDatabase(this);
+                    newFile.Name = fileInFolder.Name;
 
-				newFile.Attributes = fileInFolder.Attributes;
-				newFile.CreationTime = fileInFolder.CreationTime;
-				newFile.Extension = fileInFolder.Extension;
-				newFile.FullName = fileInFolder.FullName;
-				newFile.LastAccessTime = fileInFolder.LastAccessTime;
-				newFile.LastWriteTime = fileInFolder.LastWriteTime;
-				newFile.IsReadOnly = fileInFolder.IsReadOnly;
-				newFile.Length = fileInFolder.Length;
+                    newFile.Attributes = fileInFolder.Attributes;
+                    newFile.CreationTime = fileInFolder.CreationTime;
+                    newFile.Extension = fileInFolder.Extension;
+                    newFile.FullName = fileInFolder.FullName;
+                    newFile.LastAccessTime = fileInFolder.LastAccessTime;
+                    newFile.LastWriteTime = fileInFolder.LastWriteTime;
+                    newFile.IsReadOnly = fileInFolder.IsReadOnly;
+                    newFile.Length = fileInFolder.Length;
 
-				files.Add(newFile);
-			}
-
+                    files.Add(newFile);
+                }
+            }
+            catch (UnauthorizedAccessException) {
+                // eat the exception
+            }
 		}
 
 		internal void CopyToNode(TreeNode treeNode) {

@@ -30,51 +30,33 @@ namespace Octopus.CDIndex {
             // 
             // btnOK
             // 
-            this.btnOK.AccessibleDescription = null;
-            this.btnOK.AccessibleName = null;
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.None;
             resources.ApplyResources(this.btnOK, "btnOK");
-            this.btnOK.BackgroundImage = null;
-            this.btnOK.Font = null;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleDescription = null;
-            this.btnCancel.AccessibleName = null;
             resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackgroundImage = null;
-            this.btnCancel.Font = null;
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // cbDrives
             // 
-            this.cbDrives.AccessibleDescription = null;
-            this.cbDrives.AccessibleName = null;
-            resources.ApplyResources(this.cbDrives, "cbDrives");
-            this.cbDrives.BackgroundImage = null;
             this.cbDrives.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDrives.Font = null;
             this.cbDrives.FormattingEnabled = true;
+            resources.ApplyResources(this.cbDrives, "cbDrives");
             this.cbDrives.Name = "cbDrives";
             // 
             // DlgSelectDrive
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = null;
             this.CancelButton = null;
             this.Controls.Add(this.cbDrives);
             this.Controls.Add(this.label1);
-            this.Font = null;
-            this.Icon = null;
             this.Name = "DlgSelectDrive";
             this.Load += new System.EventHandler(this.DlgSelectDrive_Load);
             this.Controls.SetChildIndex(this.label1, 0);

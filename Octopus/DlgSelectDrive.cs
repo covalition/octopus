@@ -35,14 +35,29 @@ namespace Octopus.CDIndex {
 
 		private void DlgSelectDrive_Load(object sender, EventArgs e) {
 			foreach(DriveInfo di in DriveInfo.GetDrives())
-				if ((di.DriveType == DriveType.CDRom) || (di.DriveType == DriveType.Removable) || (di.DriveType == DriveType.Unknown)) {
+				//if ((di.DriveType == DriveType.CDRom) || (di.DriveType == DriveType.Removable) || (di.DriveType == DriveType.Unknown)) {
 					cbDrives.Items.Add(di.Name);
-				}
+				///}
 
 			int i = cbDrives.Items.IndexOf(Properties.Settings.Default.LastDrive);
 			if (i < 0) i = 0;
 			cbDrives.SelectedIndex = i;
 			btnOK.Enabled = cbDrives.Items.Count > 0;
 		}
+
+        private void btnOK_Click(object sender, EventArgs e) {
+            string drive = cbDrives.Text;
+            DriveInfo di = new DriveInfo(drive);
+            if ((di.DriveType != DriveType.CDRom) && (di.DriveType != DriveType.Removable) && (di.DriveType != DriveType.Unknown)) {
+                if (MessageBox.Show(string.Format(Properties.Resources.NonRemoveableMsg, drive), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+
+                    DialogResult = DialogResult.OK;
+                else
+                    return;
+            }
+            else
+                DialogResult = DialogResult.OK;
+            Close();
+        }
 	}
 }
