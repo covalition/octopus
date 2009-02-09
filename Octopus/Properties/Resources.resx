@@ -254,6 +254,9 @@
     <value>Error saving file "{0}". Error message: {1}</value>
   </data>
   <data name="NonRemoveableMsg" xml:space="preserve">
-    <value>Drive {0} seems to be non removeable media. Indexing will take LARGE ammount of time. Would you like to continue?</value>
+    <value>Drive {0} looks like a non-removeable media. Indexing process will take a large amount of time. Would you like to continue?</value>
+  </data>
+  <data name="ReadingDatabasePercent" xml:space="preserve">
+    <value>Reading database... {0}%</value>
   </data>
 </root>

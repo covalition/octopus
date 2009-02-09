@@ -413,7 +413,7 @@ namespace Octopus.CDIndex {
         }
 
         void streamWithEvents_ProgressChanged(int progress) {
-            currentStatusLabel.Text = string.Format("Wczytywanie.... {0}%" , progress);
+            currentStatusLabel.Text = string.Format(Properties.Resources.ReadingDatabasePercent, progress);
             // currentStatusLabel.Update();
             Application.DoEvents();
             // currentStatusLabel.Refresh();

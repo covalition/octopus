@@ -184,10 +184,13 @@
     <value>Brak wybranych plików.</value>
   </data>
   <data name="NonRemoveableMsg" xml:space="preserve">
-    <value>Napęd {0} nie wygląda na napęd wymienny. Indexowanie tego nośniak może potrwać BARDZO długo. Czy chcesz kontunuować?</value>
+    <value>Napęd {0} nie wygląda na napęd wymienny. Indeksowanie tego nośnika może potrwać BARDZO długo. Czy chcesz kontunuować?</value>
   </data>
   <data name="ReadingDatabase" xml:space="preserve">
     <value>Wczytywanie bazy danych...</value>
+  </data>
+  <data name="ReadingDatabasePercent" xml:space="preserve">
+    <value>Wczytywanie bazy danych... {0}%</value>
   </data>
   <data name="SavingApplicationSettings" xml:space="preserve">
     <value>Zapis ustawień aplikacji...</value>

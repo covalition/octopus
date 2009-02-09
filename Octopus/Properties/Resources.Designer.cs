@@ -350,7 +350,7 @@ namespace Octopus.CDIndex.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Drive {0} seems to be non removeable media. Indexing will take LARGE ammount of time. Would you like to continue?.
+        ///   Looks up a localized string similar to Drive {0} looks like a non-removeable media. Indexing process will take a large amount of time. Would you like to continue?.
         /// </summary>
         internal static string NonRemoveableMsg {
             get {
@@ -385,6 +385,15 @@ namespace Octopus.CDIndex.Properties {
         internal static string ReadingDatabase {
             get {
                 return ResourceManager.GetString("ReadingDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reading database... {0}%.
+        /// </summary>
+        internal static string ReadingDatabasePercent {
+            get {
+                return ResourceManager.GetString("ReadingDatabasePercent", resourceCulture);
             }
         }
         

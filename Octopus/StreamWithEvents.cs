@@ -23,10 +23,10 @@ namespace Octopus.CDIndex
         public override int Read(byte[] buffer, int offset, int count) {
             int amountRead = stream.Read(buffer, offset, count);
             if ((progressChanged != null) && (length != 0)) {
-                int newProgress = (int)(Position * 25.0 / length); // 1..10
+                int newProgress = (int)(Position * 20.0 / length); // 1..10
                 if (newProgress > lastProgress) {
                     lastProgress = newProgress;
-                    progressChanged(newProgress * 4);
+                    progressChanged(newProgress * 5);
                 }
             }
             return amountRead;
