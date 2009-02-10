@@ -154,9 +154,10 @@
     <value>Change Log
 
 1.2
-- Status bar reflects selection changes
-- Hard disks can be indexed 
+- File count and file size are displayed in status bar in all cases
+- External hard disks can be indexed
 - New commands under Help
+- Name changed to Blue Mirror CD/DVD Indexer
 
 1.1.0.5
 - License info problem fixed
@@ -475,6 +476,6 @@
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.2.0.36800, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

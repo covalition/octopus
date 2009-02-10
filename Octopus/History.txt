@@ -1,0 +1,5 @@
+1.2
+- File count and file size are displayed in status bar in all cases
+- External hard disks can be indexed
+- New commands under Help
+- Name changed to Blue Mirror CD/DVD Indexer
