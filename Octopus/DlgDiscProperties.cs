@@ -21,6 +21,7 @@ namespace Octopus.CDIndex {
 		private Label label8;
 		private TextBox tbKeywords;
 		private Label label4;
+        private ToolTip toolTip1;
 		private System.ComponentModel.IContainer components = null;
 
 		public DlgDiscProperties() {
@@ -48,6 +49,7 @@ namespace Octopus.CDIndex {
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgDiscProperties));
             this.llCdLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,139 +65,102 @@ namespace Octopus.CDIndex {
             this.label8 = new System.Windows.Forms.Label();
             this.tbKeywords = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnOK
             // 
-            this.btnOK.AccessibleDescription = null;
-            this.btnOK.AccessibleName = null;
             resources.ApplyResources(this.btnOK, "btnOK");
-            this.btnOK.BackgroundImage = null;
-            this.btnOK.Font = null;
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleDescription = null;
-            this.btnCancel.AccessibleName = null;
             resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackgroundImage = null;
-            this.btnCancel.Font = null;
             // 
             // llCdLabel
             // 
-            this.llCdLabel.AccessibleDescription = null;
-            this.llCdLabel.AccessibleName = null;
             resources.ApplyResources(this.llCdLabel, "llCdLabel");
             this.llCdLabel.Name = "llCdLabel";
             // 
             // label2
             // 
-            this.label2.AccessibleDescription = null;
-            this.label2.AccessibleName = null;
             resources.ApplyResources(this.label2, "label2");
-            this.label2.Font = null;
             this.label2.Name = "label2";
             // 
             // tbUserLabel
             // 
-            this.tbUserLabel.AccessibleDescription = null;
-            this.tbUserLabel.AccessibleName = null;
             resources.ApplyResources(this.tbUserLabel, "tbUserLabel");
-            this.tbUserLabel.BackgroundImage = null;
-            this.tbUserLabel.Font = null;
             this.tbUserLabel.Name = "tbUserLabel";
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // label3
             // 
-            this.label3.AccessibleDescription = null;
-            this.label3.AccessibleName = null;
             resources.ApplyResources(this.label3, "label3");
-            this.label3.Font = null;
             this.label3.Name = "label3";
             // 
             // llDriveFormat
             // 
-            this.llDriveFormat.AccessibleDescription = null;
-            this.llDriveFormat.AccessibleName = null;
             resources.ApplyResources(this.llDriveFormat, "llDriveFormat");
             this.llDriveFormat.Name = "llDriveFormat";
             // 
             // llDriveType
             // 
-            this.llDriveType.AccessibleDescription = null;
-            this.llDriveType.AccessibleName = null;
             resources.ApplyResources(this.llDriveType, "llDriveType");
             this.llDriveType.Name = "llDriveType";
             // 
             // label5
             // 
-            this.label5.AccessibleDescription = null;
-            this.label5.AccessibleName = null;
             resources.ApplyResources(this.label5, "label5");
-            this.label5.Font = null;
             this.label5.Name = "label5";
             // 
             // llFreeSpace
             // 
-            this.llFreeSpace.AccessibleDescription = null;
-            this.llFreeSpace.AccessibleName = null;
             resources.ApplyResources(this.llFreeSpace, "llFreeSpace");
             this.llFreeSpace.Name = "llFreeSpace";
             // 
             // label6
             // 
-            this.label6.AccessibleDescription = null;
-            this.label6.AccessibleName = null;
             resources.ApplyResources(this.label6, "label6");
-            this.label6.Font = null;
             this.label6.Name = "label6";
             // 
             // llSize
             // 
-            this.llSize.AccessibleDescription = null;
-            this.llSize.AccessibleName = null;
             resources.ApplyResources(this.llSize, "llSize");
             this.llSize.Name = "llSize";
             // 
             // label8
             // 
-            this.label8.AccessibleDescription = null;
-            this.label8.AccessibleName = null;
             resources.ApplyResources(this.label8, "label8");
-            this.label8.Font = null;
             this.label8.Name = "label8";
             // 
             // tbKeywords
             // 
-            this.tbKeywords.AccessibleDescription = null;
-            this.tbKeywords.AccessibleName = null;
             resources.ApplyResources(this.tbKeywords, "tbKeywords");
-            this.tbKeywords.BackgroundImage = null;
-            this.tbKeywords.Font = null;
             this.tbKeywords.Name = "tbKeywords";
+            this.toolTip1.SetToolTip(this.tbKeywords, resources.GetString("tbKeywords.ToolTip"));
             // 
             // label4
             // 
-            this.label4.AccessibleDescription = null;
-            this.label4.AccessibleName = null;
             resources.ApplyResources(this.label4, "label4");
-            this.label4.Font = null;
             this.label4.Name = "label4";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 600;
+            this.toolTip1.AutoPopDelay = 6000;
+            this.toolTip1.InitialDelay = 60;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 120;
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Blue Mirror Info";
             // 
             // DlgDiscProperties
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
-            this.BackgroundImage = null;
             this.Controls.Add(this.tbKeywords);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.llSize);
@@ -210,8 +175,6 @@ namespace Octopus.CDIndex {
             this.Controls.Add(this.tbUserLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
-            this.Font = null;
-            this.Icon = null;
             this.Name = "DlgDiscProperties";
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label1, 0);

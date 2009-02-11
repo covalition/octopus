@@ -16,6 +16,7 @@ namespace Octopus.CDIndex {
 		private Label llPath;
 		private TextBox tbKeywords;
 		private Label label7;
+        private ToolTip toolTip1;
 		private System.ComponentModel.IContainer components = null;
 
 		public DlgItemProperties() {
@@ -43,6 +44,7 @@ namespace Octopus.CDIndex {
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgItemProperties));
             this.label1 = new System.Windows.Forms.Label();
             this.llItemName = new System.Windows.Forms.Label();
@@ -52,93 +54,73 @@ namespace Octopus.CDIndex {
             this.llPath = new System.Windows.Forms.Label();
             this.tbKeywords = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // btnOK
             // 
-            this.btnOK.AccessibleDescription = null;
-            this.btnOK.AccessibleName = null;
             resources.ApplyResources(this.btnOK, "btnOK");
-            this.btnOK.BackgroundImage = null;
-            this.btnOK.Font = null;
             // 
             // btnCancel
             // 
-            this.btnCancel.AccessibleDescription = null;
-            this.btnCancel.AccessibleName = null;
             resources.ApplyResources(this.btnCancel, "btnCancel");
-            this.btnCancel.BackgroundImage = null;
-            this.btnCancel.Font = null;
             // 
             // label1
             // 
-            this.label1.AccessibleDescription = null;
-            this.label1.AccessibleName = null;
             resources.ApplyResources(this.label1, "label1");
-            this.label1.Font = null;
             this.label1.Name = "label1";
             // 
             // llItemName
             // 
-            this.llItemName.AccessibleDescription = null;
-            this.llItemName.AccessibleName = null;
             resources.ApplyResources(this.llItemName, "llItemName");
             this.llItemName.Name = "llItemName";
             // 
             // label3
             // 
-            this.label3.AccessibleDescription = null;
-            this.label3.AccessibleName = null;
             resources.ApplyResources(this.label3, "label3");
-            this.label3.Font = null;
             this.label3.Name = "label3";
             // 
             // llVolumeUserName
             // 
-            this.llVolumeUserName.AccessibleDescription = null;
-            this.llVolumeUserName.AccessibleName = null;
             resources.ApplyResources(this.llVolumeUserName, "llVolumeUserName");
             this.llVolumeUserName.Name = "llVolumeUserName";
             // 
             // label5
             // 
-            this.label5.AccessibleDescription = null;
-            this.label5.AccessibleName = null;
             resources.ApplyResources(this.label5, "label5");
-            this.label5.Font = null;
             this.label5.Name = "label5";
             // 
             // llPath
             // 
-            this.llPath.AccessibleDescription = null;
-            this.llPath.AccessibleName = null;
-            resources.ApplyResources(this.llPath, "llPath");
             this.llPath.AutoEllipsis = true;
+            resources.ApplyResources(this.llPath, "llPath");
             this.llPath.Name = "llPath";
             // 
             // tbKeywords
             // 
-            this.tbKeywords.AccessibleDescription = null;
-            this.tbKeywords.AccessibleName = null;
             resources.ApplyResources(this.tbKeywords, "tbKeywords");
-            this.tbKeywords.BackgroundImage = null;
-            this.tbKeywords.Font = null;
             this.tbKeywords.Name = "tbKeywords";
+            this.toolTip1.SetToolTip(this.tbKeywords, resources.GetString("tbKeywords.ToolTip"));
             // 
             // label7
             // 
-            this.label7.AccessibleDescription = null;
-            this.label7.AccessibleName = null;
             resources.ApplyResources(this.label7, "label7");
-            this.label7.Font = null;
             this.label7.Name = "label7";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutomaticDelay = 600;
+            this.toolTip1.AutoPopDelay = 6000;
+            this.toolTip1.InitialDelay = 60;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 120;
+            this.toolTip1.ShowAlways = true;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTip1.ToolTipTitle = "Blue Mirror Info";
             // 
             // DlgItemProperties
             // 
-            this.AccessibleDescription = null;
-            this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
-            this.BackgroundImage = null;
             this.Controls.Add(this.tbKeywords);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.llPath);
@@ -147,8 +129,6 @@ namespace Octopus.CDIndex {
             this.Controls.Add(this.label3);
             this.Controls.Add(this.llItemName);
             this.Controls.Add(this.label1);
-            this.Font = null;
-            this.Icon = null;
             this.Name = "DlgItemProperties";
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.llItemName, 0);
