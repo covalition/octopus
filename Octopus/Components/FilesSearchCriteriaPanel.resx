@@ -587,6 +587,9 @@ multiple file masks, for example: "*.doc;*.xls".</value>
   <data name="&gt;&gt;btnChangeView.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>Polish</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

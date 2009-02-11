@@ -177,6 +177,10 @@
   <data name="tbKeywords.Size" type="System.Drawing.Size, System.Drawing">
     <value>294, 20</value>
   </data>
+  <data name="tbKeywords.ToolTip" xml:space="preserve">
+    <value>Użyj średników(;) aby rozdzielić słowa kluczowe. 
+W słowach kluczowych rozróżniane są duże i małe litery.</value>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 69</value>
   </data>
