@@ -10,6 +10,8 @@ namespace Octopus.CDIndex
 		[STAThread]
 		static void Main()
 		{
+            // Localization test
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru");
 			Application.EnableVisualStyles();
             FrmSplash splash = new FrmSplash();
             splash.Show();

@@ -159,6 +159,10 @@
       <DependentUpon>FormDialogBase.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogBase.ru.resx">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseDialogs\FormDialogList.de.resx">
       <DependentUpon>FormDialogList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -171,6 +175,10 @@
       <DependentUpon>FormDialogList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogList.ru.resx">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
@@ -178,6 +186,10 @@
     <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.ru.resx">
+      <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgAbout.pl.resx">
       <SubType>Designer</SubType>
@@ -187,11 +199,19 @@
       <SubType>Designer</SubType>
       <DependentUpon>DlgAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.ru.resx">
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgDiscProperties.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgDiscProperties.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgDiscProperties.resx">
+      <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscProperties.ru.resx">
       <DependentUpon>DlgDiscProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -203,6 +223,10 @@
       <DependentUpon>DlgItemProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgItemProperties.ru.resx">
+      <DependentUpon>DlgItemProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgOptions.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgOptions.cs</DependentUpon>
@@ -211,11 +235,19 @@
       <SubType>Designer</SubType>
       <DependentUpon>DlgOptions.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgOptions.ru.resx">
+      <DependentUpon>DlgOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgSelectDrive.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgSelectDrive.resx">
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectDrive.ru.resx">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -231,6 +263,10 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.ru.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSplash.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmSplash.cs</DependentUpon>
@@ -239,12 +275,19 @@
       <SubType>Designer</SubType>
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.ru.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ru.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">

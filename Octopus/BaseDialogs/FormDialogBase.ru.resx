@@ -117,66 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 401</value>
-  </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 162</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 3</value>
-  </data>
-  <data name="llVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 13</value>
-  </data>
-  <data name="llVersion.Text" xml:space="preserve">
-    <value>Wersja: {0}</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Strona internetowa:</value>
-  </data>
-  <data name="llSourceForge.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 172</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 86</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 29</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Komentarze, informacje o błędach, propozycje funkcjonalności proszę wysyłać do:</value>
-  </data>
-  <data name="llCodePlex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 156</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 162</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 168</value>
-  </data>
-  <data name="tpChangeLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 168</value>
-  </data>
-  <data name="tcAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 201</value>
-  </data>
-  <data name="tcAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>330, 194</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>343, 436</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>O programie</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
   </data>
 </root>
