@@ -163,15 +163,15 @@ namespace Octopus.CDIndex {
         }
 
         private void cmHomePage_Click(object sender, EventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
-            install.Start();
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            navigate.Start();
         }
 
         private void cmFeatureRequests_Click(object sender, EventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
-            install.Start();
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
+            navigate.Start();
         }
 
 		#endregion
@@ -677,6 +677,12 @@ namespace Octopus.CDIndex {
 
         private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
             updateStrip();
+        }
+
+        private void cmWhatsNew_Click(object sender, EventArgs e) {
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://develsblog.blogspot.com/";
+            navigate.Start();
         }
 
 	}

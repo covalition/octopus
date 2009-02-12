@@ -128,24 +128,6 @@
   <metadata name="cmTree.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>120, 17</value>
   </metadata>
-  <data name="cmVolumeFolderPropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="cmVolumeFolderPropertiesPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="cmVolumeFolderPropertiesPopup.Text" xml:space="preserve">
-    <value>Volume Properties</value>
-  </data>
-  <data name="cmDeleteCdInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="cmDeleteCdInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="cmDeleteCdInfoPopup.Text" xml:space="preserve">
-    <value>&amp;Delete CD Info...</value>
-  </data>
   <data name="cmTree.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 48</value>
   </data>
@@ -176,56 +158,56 @@
         AYwDSgGMA0oBjANKAYwDSgGMA0oBjANKAYsBQgJBAXMDGAEhAwABAUwAAa0BlQGKAf8BrQGVAYoB/wHd
         AdgB1AH/AecB5AHhAf8B6wHUAccB/wHpAccBuAH/AdsBvwGwAf8B0wHJAcIB/wGtAZUBigH/Aa0BlQGK
         Af9UAAHNAbEBqAH/Af0B0gG/Af8B/QHSAb8B/wH9AdIBvwH/Af0B0gG/Af8B/QHSAb8B/wH9AdIBvwH/
-        Af0B0gG/Af8B/QHSAb8B/wH9AdIBvwH/Af0B0gG/Af8BZwIcAfoDJgE5AwABAQGBAYQBjwH/AWEBgQGP
-        Af8BWwGBAYcB/wFSAoEB/wFJAV0BgQH/AT8BUQFcAf8BNAFDAU0B/wEpATUBPgH/ASABKQEwAf8BFgEd
-        ASQB/wEPARQBGQH/AQkBDQERAf8BCQEOARMB/xQAAa0BlQGKAf8B1gHNAcgB/wH3AfYB9Qn/AfcB5wHg
+        Af0B0gG/Af8B/QHSAb8B/wH9AdIBvwH/Af0B0gG/Af8BZgIcAfoDJgE5AwABAQGBAYQBjwH/AWABgQGP
+        Af8BWgGBAYcB/wFRAoEB/wFIAVwBgQH/AT4BUAFbAf8BMwFCAUwB/wEoATQBPQH/AR8BKAEvAf8BFQEc
+        ASMB/wEOARMBGAH/AQgBDAEQAf8BCAENARIB/xQAAa0BlQGKAf8B1gHNAcgB/wH3AfYB9Qn/AfcB5wHg
         Af8B8QHRAcEB/wHwAc8BwAH/AfEB6wHpAf8B9QHtAewB/wHYAdIBzgH/Aa0BlQGKAf8IAAGAAYQBjwH/
-        AVkBgQGPAf8BUwGBAYcB/wFKAWEBgQH/AUEBVQFiAf8BNwFJAVQB/wEsATsBRQH/ASEBLQE2Af8BGAEh
-        ASgB/wEOARUBHAH/AQcBDAERAf8BAQEFAQkB/wEBAQYBCwH/FAABzAG1AakB/wH7AeEBywH/AfsB3wHI
+        AVgBgQGPAf8BUgGBAYcB/wFJAWABgQH/AUABVAFhAf8BNgFIAVMB/wErAToBRAH/ASABLAE1Af8BFwEg
+        AScB/wENARQBGwH/AQYBCwEQAf8BAAEEAQgB/wEAAQUBCgH/FAABzAG1AakB/wH7AeEBywH/AfsB3wHI
         Af8B+wHeAcUB/wH6AdwBwgH/AfoB2gG+Af8B+wHYAbwB/wH6AdcBuQH/AfoB1AG2Af8B+gHTAbMB/wH5
-        AdIBsAH/AV8CIQH7AygBPAMAAQEBgQGHAZIB/wGJAaEBqwH/AWUBsgHUAf8BAAGPAc0B/wEAAY8BzQH/
-        AQABjwHNAf8BAAGMAccB/wEDAYgBvgH/AQoBggG0Af8BEAGBAakB/wEWAYEBnwH/ARoBgQGWAf8BRAFK
+        AdIBsAH/AV8CIQH7AygBPAMAAQEBgQGHAZIB/wGJAaEBqwH/AWQBsgHUAf8BAAGPAc0B/wEAAY8BzQH/
+        AQABjwHNAf8BAAGMAccB/wECAYgBvgH/AQkBggG0Af8BDwGBAakB/wEVAYEBnwH/ARkBgQGWAf8BRAFK
         AVsB/gMvAUoMAAGtAZUBigH/AdgB0AHKAf8B3QHPAcgB/wHpAd8B2wn/AfsB8QHtAf8B8wHWAckB/wHz
-        AeAB1wH/AfcB8wHyAv8C/gH/Af4C/AH/AdcB0AHMAf8BrQGVAYoB/wQAAYEBhwGSAf8BiQGhAasB/wFd
-        AbIB1AH/AQABjwHNAf8BAAGPAc0B/wEAAY8BzQH/AQABjAHHAf8BAAGIAb4B/wECAYIBtAH/AQgBgQGp
-        Af8BDgGBAZ8B/wESAWUBlgH/ARUBPgFPAf8BhwGiAasB/xAAAdABuAGsAf8B+wHkAc8B/wH7AeIBzAH/
+        AeAB1wH/AfcB8wHyAv8C/gH/Af4C/AH/AdcB0AHMAf8BrQGVAYoB/wQAAYEBhwGSAf8BiQGhAasB/wFc
+        AbIB1AH/AQABjwHNAf8BAAGPAc0B/wEAAY8BzQH/AQABjAHHAf8BAAGIAb4B/wEBAYIBtAH/AQcBgQGp
+        Af8BDQGBAZ8B/wERAWQBlgH/ARQBPQFOAf8BhwGiAasB/xAAAdABuAGsAf8B+wHkAc8B/wH7AeIBzAH/
         AfwB4AHJAf8B+wHeAcYB/wH7Ad0BwwH/AfoB2wHAAf8B+gHZAb0B/wH6AdcBugH/AfoB1gG3Af8B+gHT
-        AbMB/wFfAiEB+wMoATwDAAEBAYEBigGVAf8BgQG+AdMB/wGKAaQBrgH/AYEB3AL/AVoBzwL/AVABywL/
-        AUcBxAH6Af8BPAG8AfUB/wEyAbMB8AH/ASkBqgHrAf8BHwGgAeUB/wEOAYwB1AH/AR4BYgGBAf8BVgJV
+        AbMB/wFfAiEB+wMoATwDAAEBAYEBigGVAf8BgQG+AdMB/wGKAaQBrgH/AYEB3AL/AVkBzwL/AU8BywL/
+        AUYBxAH6Af8BOwG8AfUB/wExAbMB8AH/ASgBqgHrAf8BHgGgAeUB/wENAYwB1AH/AR0BYQGBAf8BVgJV
         AbQMAAGtAZUBigH/AeEB1wHRAf8B4AHUAc4B/wHdAc8ByAH/AfUB8QHvBf8B/AH3AfQB/wH1AdwB0AH/
         AfMB6wHnAf8B+wH6AfkF/wH5AfcB9gH/AcsBuAGuAf8BrQGVAYoB/wQAAYEBigGVAf8BgQG+AdMB/wGK
-        AaQBrgH/AYEB3AL/AVIBzwL/AUgBywL/AT8BxAH6Af8BNAG8AfUB/wEqAbMB8AH/ASEBqgHrAf8BFwGg
-        AeUB/wEGAYwB1AH/ARYBWgGBAf8BUQFcAWAB/xAAAdMBvAGvAf8B/AHmAdMB/wH8AeUB0AH/AfwB4wHO
+        AaQBrgH/AYEB3AL/AVEBzwL/AUcBywL/AT4BxAH6Af8BMwG8AfUB/wEpAbMB8AH/ASABqgHrAf8BFgGg
+        AeUB/wEFAYwB1AH/ARUBWQGBAf8BUAFbAV8B/xAAAdMBvAGvAf8B/AHmAdMB/wH8AeUB0AH/AfwB4wHO
         Af8B/AHgAcoB/wH7Ad8BxwH/AfsB3QHEAf8B+wHbAcEB/wH6AdoBvgH/AfoB2AG7Af8B+gHXAbgB/wFf
-        AiEB+wMoATwDAAEBAYEBjgGYAf8BgQHSAewB/wGLAaQBrQH/AYkBwgHOAf8BgQHYAv8BYAHTAv8BVwHO
-        Av8BTAHJAf4B/wFEAcEB+gH/AToBuQH1Af8BLwGwAe4B/wEkAagB6QH/AQsBhQHNAf8BHQFGAVYB/wMc
+        AiEB+wMoATwDAAEBAYEBjgGYAf8BgQHSAewB/wGLAaQBrQH/AYkBwgHOAf8BgQHYAv8BXwHTAv8BVgHO
+        Av8BSwHJAf4B/wFDAcEB+gH/ATkBuQH1Af8BLgGwAe4B/wEjAagB6QH/AQoBhQHNAf8BHAFFAVUB/wMc
         AScEAAGtAZUBigH/Ad8BygHGAf8B6gHMAckB/wHkAdkB1AH/AeAB1AHNAf8B2QHMAcYB/wHFAbkBrwH/
         AZkBhAGBAf8BkAKBAf8BswGkAZkB/wHwAe0B6wH/AfUB8QHvAf8B0AG/AbYB/wHAAagBnAH/AcUBtwGv
-        Af8BrQGVAYoB/wGBAY4BmAH/AYEB0gHsAf8BiwGkAa0B/wGJAcIBzgH/AWQB2AL/AVgB0wL/AU8BzgL/
-        AUQByQH+Af8BPAHBAfoB/wEyAbkB9QH/AScBsAHuAf8BHAGoAekB/wEDAYUBzQH/ARUBPgFOAf8BmAGy
+        Af8BrQGVAYoB/wGBAY4BmAH/AYEB0gHsAf8BiwGkAa0B/wGJAcIBzgH/AWMB2AL/AVcB0wL/AU4BzgL/
+        AUMByQH+Af8BOwHBAfoB/wExAbkB9QH/ASYBsAHuAf8BGwGoAekB/wECAYUBzQH/ARQBPQFNAf8BmAGy
         AboB/wwAAdgBwAGyAf8B/AHoAdcB/wH8AeYB1AH/AfwB5QHRAf8B+wHjAc4B/wH8AeEBywH/AfsB4AHI
         Af8B+wHeAcYB/wH7AdwBwgH/AfsB2gG/Af8B+gHYAbwB/wFfAiEB+wMoATwDAAEBAYEBkQGcAf8BgQHX
-        Ae8B/wGBAcUB4AH/AYwBpgGwAf8BgQHdAf4B/wFjAdMC/wFiAdQC/wFdAdEC/wFTAc0C/wFJAccB/AH/
-        AUEBvgH3Af8BNgG2AfIB/wEsAawB7AH/ASABZAGBAf8BTAJLAZAEAAGtAZUBigH/Ad0BsgGvAf8B5QGi
+        Ae8B/wGBAcUB4AH/AYwBpgGwAf8BgQHdAf4B/wFiAdMC/wFhAdQC/wFcAdEC/wFSAc0C/wFIAccB/AH/
+        AUABvgH3Af8BNQG2AfIB/wErAawB7AH/AR8BYwGBAf8BTAJLAZAEAAGtAZUBigH/Ad0BsgGvAf8B5QGi
         AaEB/wHlAagBpwH/AeMBvwG8Af8BvgGrAaAB/wG/Aa8BpAH/AesB4wHfAf8B5QHVAc0B/wG4AaoBnwH/
         AbABnwGTAf8BywG3Aa0B/wHHAbEBpgH/AcQBrQGgAf8BvwGsAaIB/wGtAZUBigH/AYEBkQGcAf8BgQHX
-        Ae8B/wGBAcUB4AH/AYwBpgGwAf8BgQHdAf4B/wFbAdMC/wFaAdQC/wFVAdEC/wFLAc0C/wFBAccB/AH/
-        ATkBvgH3Af8BLgG2AfIB/wEkAawB7AH/ARgBXAGBAf8BgQGVAaEB/wwAAdwBxAG0Af8B/QHrAdwB/wH8
+        Ae8B/wGBAcUB4AH/AYwBpgGwAf8BgQHdAf4B/wFaAdMC/wFZAdQC/wFUAdEC/wFKAc0C/wFAAccB/AH/
+        ATgBvgH3Af8BLQG2AfIB/wEjAawB7AH/ARcBWwGBAf8BgQGVAaEB/wwAAdwBxAG0Af8B/QHrAdwB/wH8
         AekB2QH/AfwB5wHWAf8B/AHmAdIB/wH7AeQBzwH/AfwB4gHMAf8B+wHgAcoB/wH7Ad4BxgH/AfsB3QHD
         Af8B+gHbAcAB/wFfAiEB+wMoATwDAAEBAYMBlQGfAf8BiQHcAfEB/wGMAeIC/wGNAagBsQH/AYwBugHH
-        Af8BgQHYAv8BYgHUAv8BYgHUAv8BYgHUAv8BWgHQAv8BTwHNAv8BRgHFAfwB/wE8AbsB9wH/ASkBogHb
+        Af8BgQHYAv8BYQHUAv8BYQHUAv8BYQHUAv8BWQHQAv8BTgHNAv8BRQHFAfwB/wE7AbsB9wH/ASgBogHb
         Af8DUwHxAx4BKwGtAZUBigH/AdQBngGdAf8B0QKVAf8B0AKTAf8B0QGSAZMB/wGqAY4BgQH/Ad8BxQHC
         Af8BjAKBAf8B+gLxAf8B0gG4AbEB/wGKAoEB/wHTAagBogH/AdIBmwGWAf8BzwGXAZAB/wHLAZIBiwH/
-        Aa0BlQGKAf8BgwGVAZ8B/wGJAdwB8QH/AYwB4gL/AY0BqAGxAf8BjAG6AccB/wFnAdgC/wFaAdQC/wFa
-        AdQC/wFaAdQC/wFSAdAC/wFHAc0C/wE+AcUB/AH/ATQBuwH3Af8BIQGiAdsB/wFEAVoBZwH/AZgBsgG6
+        Aa0BlQGKAf8BgwGVAZ8B/wGJAdwB8QH/AYwB4gL/AY0BqAGxAf8BjAG6AccB/wFmAdgC/wFZAdQC/wFZ
+        AdQC/wFZAdQC/wFRAdAC/wFGAc0C/wE9AcUB/AH/ATMBuwH3Af8BIAGiAdsB/wFDAVkBZgH/AZgBsgG6
         Af8IAAHfAccBtwH/Af0B7QHfAf8B/QHsAd0B/wH9AeoB2gH/AfwB6AHWAf8B/AHnAdMB/wH8AeUB0QH/
         AfwB4wHOAf8B+wHhAcsB/wH7Ad8ByAH/AfsB3gHEAf8BXwIhAfsDKAE8AwABAQGGAZoBowH/AZIB4QHy
         Af8BmAHoAf0B/wGBAcQB3gH/AY4BpwGwAf8BgQHeAf0B/wGEAeAC/wGEAeAC/wGEAeAC/wGEAeAC/wGB
-        Ad8C/wGBAd0C/wGBAdgC/wFmAdYC/wFRAakB0QH/A1EBogGtAZUBigH/AekCrgH/AekCqAH/AeMCogH/
+        Ad8C/wGBAd0C/wGBAdgC/wFlAdYC/wFQAakB0QH/A1EBogGtAZUBigH/AekCrgH/AekCqAH/AeMCogH/
         Ad8CngH/AbMBlwGJAf8B8AHlAeMB/wGoAZcBjgH/A4EB/wHaAbcBtAH/AY4CgQH/Ac0BhgGEAf8BywGC
         AYEB/wHMAoEB/wHIAYQBgQH/Aa0BlQGKAf8BhgGaAaMB/wGSAeEB8gH/AZgB6AH9Af8BgQHEAd4B/wGO
-        AacBsAH/AYEB3gH9Af8BhAHgAv8BhAHgAv8BhAHgAv8BhAHgAv8BgQHfAv8BgQHdAv8BZwHYAv8BXgHW
-        Av8BSQGpAdEB/wGPAZsBpAH/CAAB5AHMAbkB/wH9Ae8B5AH/Af0B7QHhAf8B/AHsAd4B/wH9AeoB2wH/
+        AacBsAH/AYEB3gH9Af8BhAHgAv8BhAHgAv8BhAHgAv8BhAHgAv8BgQHfAv8BgQHdAv8BZgHYAv8BXQHW
+        Av8BSAGpAdEB/wGPAZsBpAH/CAAB5AHMAbkB/wH9Ae8B5AH/Af0B7QHhAf8B/AHsAd4B/wH9AeoB2wH/
         Af0B6QHYAf8B/AHnAdQB/wH7AeUB0QH/AfwB5AHPAf8B/AHiAcwB/wH7AeAByQH/AV8CIQH7AygBPAMA
         AQEBiAGcAaUB/wGaAeYB8wH/AZ8B6wH7Af8BmAHoAf4B/wGLAawBuQH/AYsBrAG5Af8BigGqAbcB/wGI
         AaYBswH/AYYBowGvAf8BgwGfAaoB/wGBAZoBpgH/AYEBlQGhAf8BgQGRAZ0B/wGBAY4BmQH/AYEBiwGV
@@ -235,32 +217,32 @@
         AawBuQH/AYoBqgG3Af8BiAGmAbMB/wGGAaMBrwH/AYMBnwGqAf8BgQGaAaYB/wGBAZUBoQH/AYEBkQGd
         Af8BgQGOAZkB/wGBAYsBlQH/AYEBiAGTAf8IAAHoAdABvQH/Af0B8gHoAf8B/QHxAeUB/wH9Ae8B4gH/
         Af0B7AHfAf8B/QHrAdwB/wH9AekB2QH/AfwB5wHWAf8B/AHmAdMB/wH8AeQB0AH/AfsB4gHNAf8BXwIh
-        AfsDKAE8AwABAQGLAaABqAH/AaAB6gH2Af8BpgHuAfkB/wGfAesB+wH/AZgB6AH+Af8BgQHaAv8BYgHU
-        Av8BYgHUAv8BYgHUAv8BYgHUAv8BYgHUAv8BYgHUAv8BgQGIAZMB/wwAAa0BlQGKAf8B5wHWAdMB/wH6
+        AfsDKAE8AwABAQGLAaABqAH/AaAB6gH2Af8BpgHuAfkB/wGfAesB+wH/AZgB6AH+Af8BgQHaAv8BYQHU
+        Av8BYQHUAv8BYQHUAv8BYQHUAv8BYQHUAv8BYQHUAv8BgQGIAZMB/wwAAa0BlQGKAf8B5wHWAdMB/wH6
         AekB6AH/AfcB9AHzAf8B9AHuAewB/wHqAeAB2wH/AdIBvAGuAf8BtQGgAZAB/wGwAZ0BjwH/AcYBsAGj
         Af8B1gHGAb0B/wHZAcoBwgH/AdgBuQGzAf8B2QGiAZwB/wHSAbUBsAH/Aa0BlQGKAf8BiwGgAagB/wGg
-        AeoB9gH/AaYB7gH5Af8BnwHrAfsB/wGYAegB/gH/AYEB2gL/AVoB1AL/AVoB1AL/AVoB1AL/AVoB1AL/
-        AVoB1AL/AVoB1AL/AYEBiAGTAf8UAAHsAdQBwAH/Af0B9QHsAf8B/QHyAekB/wH+AfEB5gH/Af0B7wHj
+        AeoB9gH/AaYB7gH5Af8BnwHrAfsB/wGYAegB/gH/AYEB2gL/AVkB1AL/AVkB1AL/AVkB1AL/AVkB1AL/
+        AVkB1AL/AVkB1AL/AYEBiAGTAf8UAAHsAdQBwAH/Af0B9QHsAf8B/QHyAekB/wH+AfEB5gH/Af0B7wHj
         Af8B/QHtAeEB/wH9AesB3QH/AfwB6gHaAf8B/QHpAdcB/wH8AeYB1AH/AfsB5AHRAf8BXwIhAfsDKAE8
         AwABAQGOAaIBqwH/AacB7gH2Af8BqwHwAfcB/wGmAe4B+QH/AZ8B6wH7Af8BmAHoAf0B/wGBAdQB+wH/
         AYkBngGnAf8BhgGZAaMB/wGCAZQBnwH/AYEBkAGaAf8BgQGMAZcB/wGBAYgBkwH/EAABrQGVAYoB/wH5
         AfcB9gH/AfoC+AH/AfcB8gHxAf8B9gHhAdcB/wH1AeEB1gH/AfYB4AHVBf8B/QH6AfgB/wHxAdUByAH/
         AdwBzwHIAf8B2AHKAcIB/wHTAcQBuwH/Aa0BlQGKAf8EAAGOAaIBqwH/AacB7gH2Af8BqwHwAfcB/wGm
-        Ae4B+QH/AZ8B6wH7Af8BmAHoAf0B/wFkAdQB+wH/AYkBngGnAf8BhgGZAaMB/wGCAZQBnwH/AYEBkAGa
+        Ae4B+QH/AZ8B6wH7Af8BmAHoAf0B/wFjAdQB+wH/AYkBngGnAf8BhgGZAaMB/wGCAZQBnwH/AYEBkAGa
         Af8BgQGMAZcB/wGBAYgBkwH/FAAB8AHYAcMB/wH+AfYB8AH/Af0B9QHuAf8B/QH0AeoB/wH9AfEB6AH/
         Af0B7wHkAf8B/QHuAeEB/wH9AewB3gH/Af0B6gHbAf8B/AHoAdgB/wH8AecB1QH/AV8CIQH7AycBOwMA
         AQEBjwGkAawB/wGgAdIB2gH/AasB8AH3Af8BqwHwAfcB/wGmAe4B+QH/AZ8B6wH7Af8BjQGhAaoB/wNH
-        AYIUAAGOAWUBTgH/AZEBYwFKAf8BkwFiAUcB/wQAAa0BlQGKAf8B6AHkAeEB/wH9AfwB+gH/AfgB5wHg
+        AYIUAAGOAWQBTQH/AZEBYgFJAf8BkwFhAUYB/wQAAa0BlQGKAf8B6AHkAeEB/wH9AfwB+gH/AfgB5wHg
         Af8B+AHlAd0B/wH3AeQB2wH/AfcB5gHeCf8B+gHuAegB/wHuAdUByQH/AdwBzwHIAf8B1AHLAcUB/wGt
         AZUBigH/BAABjwGkAawB/wGgAdIB2gH/AasB8AH3Af8BqwHwAfcB/wGmAe4B+QH/AZ8B6wH7Af8BjQGh
         AaoB/wG1AcsB0AH/KAAB9AHcAccC/wH5AfUB/wH+AfgB8QH/Af4B9QHuAf8B/QH0AewB/wH+AfIB6QH/
         Af4B8AHmAf8B/QHvAeIB/wH9Ae0B4AH/AfcCswH/AfYBoQGiAf8BXwIhAfsDIwEzAwABAQM1AVcBjwGk
-        AawB/wGPAaQBrAH/AY8BpAGsAf8BjwGkAawB/wGPAaQBrAH/A0oBjRgAATECMAFNAY0BZgFPAf8BkAFk
-        AUoB/wgAAa0BlQGKAf8B5gHfAdsB/wH1AegB4QH/AfgB6QHiAf8B+AHnAeAB/wH5AewB5gr/Av4B/wHz
+        AawB/wGPAaQBrAH/AY8BpAGsAf8BjwGkAawB/wGPAaQBrAH/A0oBjRgAATECMAFNAY0BZQFOAf8BkAFj
+        AUkB/wgAAa0BlQGKAf8B5gHfAdsB/wH1AegB4QH/AfgB6QHiAf8B+AHnAeAB/wH5AewB5gr/Av4B/wHz
         AeEB1wH/AdsB0AHJAf8BrQGVAYoB/wgAAb0BzgHUAf8BjwGkAawB/wGPAaQBrAH/AY8BpAGsAf8BjwGk
         AawB/wGPAaQBrAH/AbUBywHQAf8sAAH4AeABygL/AfsB+QL/AfoB9gL/AfgB8wH/Af4B9wHwAf8B/gH1
-        Ae0B/wH+AfMB6gH/Af0B8QHnAf8B/QHvAeQC/wG9AYEB/wH8AaIBTAH/AUYCRQF/Aw8BFCgAAZUBgQFb
-        Af8DOAFcBAADEAEVAaYBkQGCAf8BNQI0AVUBlAGBAVoB/wwAAa0BlQGKAf8BrQGVAYoB/wHmAd4B2QH/
+        Ae0B/wH+AfMB6gH/Af0B8QHnAf8B/QHvAeQC/wG9AYEB/wH8AaIBSwH/AUYCRQF/Aw8BFCgAAZUBgQFa
+        Af8DOAFcBAADEAEVAaYBkQGCAf8BNQI0AVUBlAGBAVkB/wwAAa0BlQGKAf8BrQGVAYoB/wHmAd4B2QH/
         AesB3wHaAf8B9gHtAegB/wH5AfgB9wH/AewB6gHoAf8B4wHfAdwB/wGtAZUBigH/Aa0BlQGKAf9UAAH8
         AeQBzAL/Af4B/QL/AfwB+gL/AfoB9wH/Af4B+QH0Av8B9wHxAf8B/QH1Ae0B/wH9AfMB6gH/Af4B8QHn
         Av8B2AGWAf8DSAGGAxQBGwMAAQEoAAEsAisBQwGmAZEBgQH/AaEBiQGBAf8BqgGVAYcB/wFFAkQBfBwA
@@ -347,24 +329,6 @@
   <metadata name="cmList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>394, 17</value>
   </metadata>
-  <data name="cmFilePropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="cmFilePropertiesPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
-  </data>
-  <data name="cmFilePropertiesPopup.Text" xml:space="preserve">
-    <value>File Properties</value>
-  </data>
-  <data name="cmDeleteFileInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="cmDeleteFileInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
-  </data>
-  <data name="cmDeleteFileInfoPopup.Text" xml:space="preserve">
-    <value>&amp;Delete File Info...</value>
-  </data>
   <data name="cmList.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 48</value>
   </data>
@@ -440,21 +404,45 @@
   <data name="&gt;&gt;scMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="cmVolumeFolderPropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="cmVolumeFolderPropertiesPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="cmVolumeFolderPropertiesPopup.Text" xml:space="preserve">
+    <value>Volume Properties</value>
+  </data>
+  <data name="cmDeleteCdInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="cmDeleteCdInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="cmDeleteCdInfoPopup.Text" xml:space="preserve">
+    <value>&amp;Delete CD Info...</value>
+  </data>
+  <data name="cmFilePropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="cmFilePropertiesPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="cmFilePropertiesPopup.Text" xml:space="preserve">
+    <value>File Properties</value>
+  </data>
+  <data name="cmDeleteFileInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="cmDeleteFileInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="cmDeleteFileInfoPopup.Text" xml:space="preserve">
+    <value>&amp;Delete File Info...</value>
+  </data>
   <metadata name="ssBottom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>480, 17</value>
+    <value>0, 411</value>
   </metadata>
-  <data name="slFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
-  </data>
-  <data name="slFiles.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
-  </data>
-  <data name="slSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
-  </data>
-  <data name="slSize.Text" xml:space="preserve">
-    <value>toolStripStatusLabel2</value>
-  </data>
   <data name="ssBottom.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 411</value>
   </data>
@@ -478,6 +466,105 @@
   </data>
   <data name="&gt;&gt;ssBottom.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="slFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="slFiles.Text" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
+  </data>
+  <data name="slSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="slSize.Text" xml:space="preserve">
+    <value>toolStripStatusLabel2</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>698, 365</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Name" xml:space="preserve">
+    <value>tpDatabase</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
+  </data>
+  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>698, 365</value>
+  </data>
+  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tpDatabase.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 24</value>
@@ -504,6 +591,93 @@
     <value>tcMain</value>
   </data>
   <data name="&gt;&gt;tpDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Name" xml:space="preserve">
+    <value>filesSearchCriteriaPanel</value>
+  </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Type" xml:space="preserve">
+    <value>Octopus.CDIndex.Components.FilesSearchCriteriaPanel, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tpSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tpSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 337</value>
+  </data>
+  <data name="tpSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Name" xml:space="preserve">
+    <value>lvSearchResults</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Parent" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="searchBottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="searchBottomPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 69</value>
+  </data>
+  <data name="searchBottomPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>684, 265</value>
+  </data>
+  <data name="searchBottomPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="columnHeader5.Text" xml:space="preserve">
@@ -588,30 +762,6 @@
   <data name="&gt;&gt;lvSearchResults.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="searchBottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="searchBottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 69</value>
-  </data>
-  <data name="searchBottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>684, 265</value>
-  </data>
-  <data name="searchBottomPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
-    <value>searchBottomPanel</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
-    <value>tpSearch</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="filesSearchCriteriaPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -628,7 +778,7 @@
     <value>filesSearchCriteriaPanel</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.Components.FilesSearchCriteriaPanel, Octopus.CDIndex, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.Components.FilesSearchCriteriaPanel, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.Parent" xml:space="preserve">
     <value>tpSearch</value>
@@ -636,86 +786,8 @@
   <data name="&gt;&gt;filesSearchCriteriaPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tpSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
-  </data>
-  <data name="tpSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 337</value>
-  </data>
-  <data name="tpSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tpSearch.Text" xml:space="preserve">
-    <value>Search</value>
-  </data>
-  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
-    <value>tpSearch</value>
-  </data>
-  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
-    <value>tcMain</value>
-  </data>
-  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>7, 4</value>
-  </data>
-  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>698, 365</value>
-  </data>
-  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
-    <value>tcMain</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 46</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>698, 365</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="stripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>0, 0</value>
   </metadata>
   <data name="stripMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -728,24 +800,6 @@
         fr2YfoA/totttottgD++moC+moCAP7+bgr+bgoA/toxvtoxvgD/AnYTAnYSAP8CdhMCdhIA/uI9zuI9z
         gD/Cn4fCn4eAP8KgiMKgiIA/upF2upF2gD/DoorDooqAP8SjjMSjjIA/u5V6u5V6gD/Eo4zEo4yAPw==
 </value>
-  </data>
-  <data name="cmDatabaseMerge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="cmDatabaseMerge.Text" xml:space="preserve">
-    <value>&amp;Merge With...</value>
-  </data>
-  <data name="cmDatabaseMerge.ToolTipText" xml:space="preserve">
-    <value>Merge database with external source</value>
-  </data>
-  <data name="cmDatabaseExport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 22</value>
-  </data>
-  <data name="cmDatabaseExport.Text" xml:space="preserve">
-    <value>&amp;Export...</value>
-  </data>
-  <data name="cmDatabaseExport.ToolTipText" xml:space="preserve">
-    <value>Export all database to a file</value>
   </data>
   <data name="tsbDatabase.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -825,6 +879,12 @@
   <data name="cmFeatureRequests.Text" xml:space="preserve">
     <value>Feature Requests</value>
   </data>
+  <data name="cmWhatsNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
+  </data>
+  <data name="cmWhatsNew.Text" xml:space="preserve">
+    <value>What's new</value>
+  </data>
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 6</value>
   </data>
@@ -862,13 +922,31 @@
     <value>stripMain</value>
   </data>
   <data name="&gt;&gt;stripMain.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.RenderedToolStrip, Octopus.CDIndex, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.RenderedToolStrip, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;stripMain.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;stripMain.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="cmDatabaseMerge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="cmDatabaseMerge.Text" xml:space="preserve">
+    <value>&amp;Merge With...</value>
+  </data>
+  <data name="cmDatabaseMerge.ToolTipText" xml:space="preserve">
+    <value>Merge database with external source</value>
+  </data>
+  <data name="cmDatabaseExport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 22</value>
+  </data>
+  <data name="cmDatabaseExport.Text" xml:space="preserve">
+    <value>&amp;Export...</value>
+  </data>
+  <data name="cmDatabaseExport.ToolTipText" xml:space="preserve">
+    <value>Export all database to a file</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -914,7 +992,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Chestnut CD/DVD Index</value>
+    <value>CD/DVD Index</value>
   </data>
   <data name="&gt;&gt;cmVolumeFolderPropertiesPopup.Name" xml:space="preserve">
     <value>cmVolumeFolderPropertiesPopup</value>
@@ -1118,6 +1196,12 @@
     <value>cmAbout</value>
   </data>
   <data name="&gt;&gt;cmAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmWhatsNew.Name" xml:space="preserve">
+    <value>cmWhatsNew</value>
+  </data>
+  <data name="&gt;&gt;cmWhatsNew.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

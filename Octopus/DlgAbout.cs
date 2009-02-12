@@ -21,15 +21,15 @@ namespace Octopus.CDIndex
         }
 
         private void linkLabel1_Click(object sender, EventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "mailto:kowaliszyn@users.sourceforge.net";
-            install.Start();
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "mailto:kowaliszyn@users.sourceforge.net";
+            navigate.Start();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://sourceforge.net/projects/octoindex/";
-            install.Start();
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://sourceforge.net/projects/octoindex/";
+            navigate.Start();
         }
 
         private string assemblyCopyright {
@@ -57,9 +57,9 @@ namespace Octopus.CDIndex
         //}
 
         private void llCodePlex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
-            Process install = new Process();
-            install.StartInfo.FileName = "http://www.codeplex.com/octopi";
-            install.Start();
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            navigate.Start();
         }
 
     }

@@ -78,6 +78,7 @@ namespace Octopus.CDIndex
             this.cmFeatureRequests = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cmAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmWhatsNew = new System.Windows.Forms.ToolStripMenuItem();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
@@ -413,6 +414,7 @@ namespace Octopus.CDIndex
             this.tlsAbout.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmHomePage,
             this.cmFeatureRequests,
+            this.cmWhatsNew,
             this.toolStripSeparator3,
             this.cmAbout});
             this.tlsAbout.Image = global::Octopus.CDIndex.Properties.Resources.Help;
@@ -441,6 +443,12 @@ namespace Octopus.CDIndex
             this.cmAbout.Name = "cmAbout";
             resources.ApplyResources(this.cmAbout, "cmAbout");
             this.cmAbout.Click += new System.EventHandler(this.cmAbout_Click);
+            // 
+            // cmWhatsNew
+            // 
+            this.cmWhatsNew.Name = "cmWhatsNew";
+            resources.ApplyResources(this.cmWhatsNew, "cmWhatsNew");
+            this.cmWhatsNew.Click += new System.EventHandler(this.cmWhatsNew_Click);
             // 
             // FrmMain
             // 
@@ -520,6 +528,7 @@ namespace Octopus.CDIndex
         private System.Windows.Forms.ToolStripMenuItem cmFeatureRequests;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem cmAbout;
+        private System.Windows.Forms.ToolStripMenuItem cmWhatsNew;
 	}
 }
 
