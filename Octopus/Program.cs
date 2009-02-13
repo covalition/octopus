@@ -13,21 +13,12 @@ namespace Octopus.CDIndex
             // Localization test
             // System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru");
 			Application.EnableVisualStyles();
-            FrmSplash splash = new FrmSplash();
-            splash.Show();
-            splash.Refresh();
             FrmMain f;
-            try
-            {
+            using (FrmSplash splash = new FrmSplash()) {
+                splash.Show();
+                splash.Refresh();
                 f = new FrmMain(splash.llStatus);
             }
-            finally
-            {
-                splash.Hide();
-                // splash.Dispose();
-            }
-            //DlgWelcome dlgWelcome = new DlgWelcome();
-            //dlgWelcome.ShowDialog();
 			Application.Run(f);
 		}
 	}

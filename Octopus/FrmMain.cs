@@ -49,21 +49,21 @@ namespace Octopus.CDIndex {
                 Properties.Settings.Default.DatabaseLocation = Path.GetFullPath(databaseLocation);
         }
 
-		private DiscInDatabase selectedDisc() {
+		private DiscInDatabase getSelectedDisc() {
 			if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is DiscInDatabase))
 				return tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase;
 			else
 				return null;
 		}
 
-		private FolderInDatabase selectedFolder() {
+		private FolderInDatabase getSelectedFolder() {
 			if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is FolderInDatabase))
 				return tvDatabaseFolderTree.SelectedNode.Tag as FolderInDatabase;
 			else
 				return null;
 		}
 
-		private FileInDatabase selectedFile() {
+		private FileInDatabase getSelectedFile() {
 			if (lvDatabaseItems.SelectedItems.Count == 1)
 				return (lvDatabaseItems.SelectedItems[0].Tag as FileInDatabase);
 			else
@@ -81,26 +81,29 @@ namespace Octopus.CDIndex {
 		}
 
 		private void cmVolumeFolderProperties_Click(object sender, EventArgs e) {
-			if (selectedDisc() != null) {
-				if (changeUserLabel(selectedDisc()))
-					// TODO: refactor
-					tvDatabaseFolderTree.SelectedNode.Text = (tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase).Name;
-			}
-			else
-				if (selectedFolder() != null) {
-					folderProperties(selectedFolder());
-				}
+            DiscInDatabase selectedDisc = getSelectedDisc();
+            if (selectedDisc != null) {
+                if (changeUserLabel(selectedDisc))
+                    // TODO: refactor
+                    tvDatabaseFolderTree.SelectedNode.Text = (tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase).Name;
+            }
+            else {
+                FolderInDatabase selectedFolder = getSelectedFolder();
+                if (selectedFolder != null) {
+                    folderProperties(selectedFolder);
+                }
+            }
 		}
 
 		private void cmDeleteCdInfo_Click(object sender, EventArgs e) {
-			if (selectedDisc() != null) {
-				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, selectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					deleteCdInfo(selectedDisc());
+			if (getSelectedDisc() != null) {
+				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, getSelectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+					deleteCdInfo(getSelectedDisc());
 				}
 			}
-			else if (selectedFolder() != null) {
-                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFolder, selectedFolder().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					deleteFolderInfo(selectedFolder());
+			else if (getSelectedFolder() != null) {
+                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFolder, getSelectedFolder().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+					deleteFolderInfo(getSelectedFolder());
 				}
 			}
 		}
@@ -112,14 +115,14 @@ namespace Octopus.CDIndex {
         }
 
         private void cmFileProperties_Click(object sender, EventArgs e) {
-            if (selectedFile() != null)
-                fileProperties(selectedFile());
+            if (getSelectedFile() != null)
+                fileProperties(getSelectedFile());
         }
 
         private void cmDeleteFileInfoPopup_Click(object sender, EventArgs e) {
-            if (selectedFile() != null)
-                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFile, selectedFile().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    deleteFileInfo(selectedFile());
+            if (getSelectedFile() != null)
+                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFile, getSelectedFile().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    deleteFileInfo(getSelectedFile());
         }
 
         private void tsbProperties_Click(object sender, EventArgs e) {
@@ -174,16 +177,25 @@ namespace Octopus.CDIndex {
             navigate.Start();
         }
 
+        private void cmWhatsNew_Click(object sender, EventArgs e) {
+            Process navigate = new Process();
+            navigate.StartInfo.FileName = "http://develsblog.blogspot.com/";
+            navigate.Start();
+        }
+
 		#endregion
 
         #region Updating controls
 
         private void updateCommands() {
-            if (selectedDisc() != null) {
+            DiscInDatabase selectedDisc = getSelectedDisc();
+            FolderInDatabase selectedFolder = getSelectedFolder();
+            FileInDatabase selectedFile = getSelectedFile();
+            if (selectedDisc != null) {
                 cmDeleteCdInfoPopup.Text = Properties.Resources.DeleteVolume;
                 cmVolumeFolderPropertiesPopup.Text = Properties.Resources.VolumeProperties;
             }
-            else if (selectedFolder() != null) {
+            else if (selectedFolder != null) {
                 cmDeleteCdInfoPopup.Text = Properties.Resources.DeleteFolder;
                 cmVolumeFolderPropertiesPopup.Text = Properties.Resources.FolderProperties;
             }
@@ -192,11 +204,11 @@ namespace Octopus.CDIndex {
                 cmDeleteCdInfoPopup.Text = "Delete";
                 cmVolumeFolderPropertiesPopup.Text = "Item Properties";
             }
-            cmDeleteCdInfoPopup.Enabled = (selectedFolder() != null);
-            cmVolumeFolderPropertiesPopup.Enabled = (selectedDisc() != null) || (selectedFolder() != null);
+            cmDeleteCdInfoPopup.Enabled = (selectedFolder != null);
+            cmVolumeFolderPropertiesPopup.Enabled = (selectedDisc != null) || (selectedFolder != null);
 
-            cmDeleteFileInfoPopup.Enabled = cmFilePropertiesPopup.Enabled = selectedFile() != null;
-            tsbDelete.Enabled = tsbProperties.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc() != null) || (selectedFolder() != null))) || (lvDatabaseItems.Focused && (selectedFile() != null));
+            cmDeleteFileInfoPopup.Enabled = cmFilePropertiesPopup.Enabled = selectedFile != null;
+            tsbDelete.Enabled = tsbProperties.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && (selectedFile != null));
         }
 
         private void updateList() {
@@ -232,9 +244,9 @@ namespace Octopus.CDIndex {
         }
 
         private void updateTree() {
-            tvDatabaseFolderTree.Nodes.Clear();
             tvDatabaseFolderTree.BeginUpdate();
             try {
+                tvDatabaseFolderTree.Nodes.Clear();
                 foreach (FolderInDatabase fid in cdsInDatabase) {
                     TreeNode tn = new TreeNode();
                     fid.CopyToNode(tn);
@@ -679,11 +691,7 @@ namespace Octopus.CDIndex {
             updateStrip();
         }
 
-        private void cmWhatsNew_Click(object sender, EventArgs e) {
-            Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://develsblog.blogspot.com/";
-            navigate.Start();
-        }
+       
 
 	}
 }
