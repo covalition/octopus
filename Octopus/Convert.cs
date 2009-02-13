@@ -11,13 +11,13 @@ namespace Octopus.CDIndex
 		{
 			if (number < 0) 
 				throw new ArgumentOutOfRangeException("number", number, "Liczba musi byæ wiêksza od zera.");
-			string[] romansUpper = new string[] {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
-			string[] romansLower = new string[] {"i", "iv", "v", "ix", "x", "xl", "l", "xc", "c", "cd", "d", "cm", "m"};
+			string[] romans = new string[] {"I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"};
+			// string[] romansLower = new string[] {"i", "iv", "v", "ix", "x", "xl", "l", "xc", "c", "cd", "d", "cm", "m"};
 
 			int[] numbers = new int[] {1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000};
 			int j = 12;
 			string result = "";
-			string[] romans = upperCase? romansUpper: romansLower; // za romansUpper i romansLower powstawiac konstruktory tablic - new string[] {}
+			// string[] romans = upperCase? romansUpper: romansLower; // za romansUpper i romansLower powstawiac konstruktory tablic - new string[] {}
 			while(number != 0)
 			{
 				if(number >= numbers[j])
@@ -28,6 +28,8 @@ namespace Octopus.CDIndex
 				else
 					j--;
 			}
+            if (!upperCase)
+                result = result.ToLower();
 			return result;
 		}
 

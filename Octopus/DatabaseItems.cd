@@ -42,20 +42,4 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
   </Class>
-  <Class Name="Octopus.CDIndex.CDIndexManager" Collapsed="true">
-    <Position X="1.25" Y="8.25" Width="1.5" />
-    <TypeIdentifier>
-      <FileName>CDIndexManager.cs</FileName>
-      <HashCode>EABABwEAIQIAGAGgAIhAoIQMAkgIARIASAIEEEIgIIE=</HashCode>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="cdsInDatabase" />
-    </ShowAsCollectionAssociation>
-    <AssociationLine Name="cdsInDatabase" Type="Octopus.CDIndex.DiscInDatabase" ManuallyRouted="true">
-      <Path>
-        <Point X="2.75" Y="8.531" />
-        <Point X="3.75" Y="8.531" />
-      </Path>
-    </AssociationLine>
-  </Class>
 </ClassDiagram>

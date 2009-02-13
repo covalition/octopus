@@ -15,21 +15,22 @@ using System.Text.RegularExpressions;
 
 namespace Octopus.CDIndex {
 
-	public partial class FrmMain: Form {
+    public partial class FrmMain : Form {
 
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
 
         Label currentStatusLabel = null;
-		public FrmMain(Label statusLabel) {
+        public FrmMain(Label statusLabel) 
+        {
             currentStatusLabel = statusLabel;
             statusLabel.Text = Properties.Resources.InitializingComponents;
             statusLabel.Refresh();
 
-			InitializeComponent();
+            InitializeComponent();
             Text = ProductName;
             statusLabel.Text = Properties.Resources.ReadingDatabase;
             statusLabel.Refresh();
-            
+
             updateDatabaseDirectory();
             readDatabase();
 
@@ -39,7 +40,7 @@ namespace Octopus.CDIndex {
             updateTree();
             updateCommands();
             currentStatusLabel = null;
-		}
+        }
 
         private void updateDatabaseDirectory() {
             string databaseLocation = Properties.Settings.Default.DatabaseLocation;
@@ -49,38 +50,39 @@ namespace Octopus.CDIndex {
                 Properties.Settings.Default.DatabaseLocation = Path.GetFullPath(databaseLocation);
         }
 
-		private DiscInDatabase getSelectedDisc() {
-			if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is DiscInDatabase))
-				return tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase;
-			else
-				return null;
-		}
+        private DiscInDatabase getSelectedDisc() {
+            if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is DiscInDatabase))
+                return tvDatabaseFolderTree.SelectedNode.Tag as DiscInDatabase;
+            else
+                return null;
+        }
 
-		private FolderInDatabase getSelectedFolder() {
-			if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is FolderInDatabase))
-				return tvDatabaseFolderTree.SelectedNode.Tag as FolderInDatabase;
-			else
-				return null;
-		}
+        private FolderInDatabase getSelectedFolder() {
+            if ((tvDatabaseFolderTree.SelectedNode != null) && (tvDatabaseFolderTree.SelectedNode.Tag is FolderInDatabase))
+                return tvDatabaseFolderTree.SelectedNode.Tag as FolderInDatabase;
+            else
+                return null;
+        }
 
-		private FileInDatabase getSelectedFile() {
-			if (lvDatabaseItems.SelectedItems.Count == 1)
-				return (lvDatabaseItems.SelectedItems[0].Tag as FileInDatabase);
-			else
-				return null;
-		}
+        private FileInDatabase getSelectedFile() {
+            if (lvDatabaseItems.SelectedItems.Count == 1)
+                return (lvDatabaseItems.SelectedItems[0].Tag as FileInDatabase);
+            else
+                return null;
+        }
 
-		#region Menu commands and events
+        #region Menu commands and events
 
-		private void cmReadCd_Click(object sender, EventArgs e) {
-			readCd();
-		}
+        private void cmReadCd_Click(object sender, EventArgs e) {
+            readCd();
+        }
 
-		private void cmChangeLabel2_Click(object sender, EventArgs e) {
-			cmVolumeFolderProperties_Click(sender, e);
-		}
+        private void cmChangeLabel2_Click(object sender, EventArgs e) {
+            cmVolumeFolderProperties_Click(sender, e);
+        }
 
-		private void cmVolumeFolderProperties_Click(object sender, EventArgs e) {
+        private void cmVolumeFolderProperties_Click(object sender, EventArgs e) 
+        {
             DiscInDatabase selectedDisc = getSelectedDisc();
             if (selectedDisc != null) {
                 if (changeUserLabel(selectedDisc))
@@ -93,20 +95,20 @@ namespace Octopus.CDIndex {
                     folderProperties(selectedFolder);
                 }
             }
-		}
+        }
 
-		private void cmDeleteCdInfo_Click(object sender, EventArgs e) {
-			if (getSelectedDisc() != null) {
-				if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, getSelectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					deleteCdInfo(getSelectedDisc());
-				}
-			}
-			else if (getSelectedFolder() != null) {
+        private void cmDeleteCdInfo_Click(object sender, EventArgs e) {
+            if (getSelectedDisc() != null) {
+                if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteVolume, getSelectedDisc().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
+                    deleteCdInfo(getSelectedDisc());
+                }
+            }
+            else if (getSelectedFolder() != null) {
                 if (MessageBox.Show(String.Format(Properties.Resources.AreUSureToDeleteFolder, getSelectedFolder().Name), ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) {
-					deleteFolderInfo(getSelectedFolder());
-				}
-			}
-		}
+                    deleteFolderInfo(getSelectedFolder());
+                }
+            }
+        }
 
         private void cmAbout_Click(object sender, EventArgs e) {
             using (DlgAbout dlg = new DlgAbout()) {
@@ -183,7 +185,7 @@ namespace Octopus.CDIndex {
             navigate.Start();
         }
 
-		#endregion
+        #endregion
 
         #region Updating controls
 
@@ -290,7 +292,7 @@ namespace Octopus.CDIndex {
                 if (lvSearchResults.SelectedIndices.Count > 0) {
                     // selected items
                     slFiles.Text = Properties.Resources.SelectedFiles + ": " + lvSearchResults.SelectedIndices.Count.ToString();
-                    
+
                     foreach (int index in lvSearchResults.SelectedIndices) {
                         ListViewItem lvi = searchResultList[index];
                         if (lvi.Tag is FileInDatabase)
@@ -299,7 +301,7 @@ namespace Octopus.CDIndex {
                 }
                 else {
                     slFiles.Text = Properties.Resources.Files + ": " + searchResultList.Count.ToString();
-                    foreach(ListViewItem lvi in searchResultList)
+                    foreach (ListViewItem lvi in searchResultList)
                         if (lvi.Tag is FileInDatabase)
                             sum += (lvi.Tag as FileInDatabase).Length;
                 }
@@ -312,11 +314,11 @@ namespace Octopus.CDIndex {
         #region Form events
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e) {
-            FrmSplash splash = new FrmSplash();
-            splash.llApplicationState.Text = Properties.Resources.Closing;
-            splash.Show();
-            splash.Refresh();
-            try {
+            using (FrmSplash splash = new FrmSplash()) {
+                splash.llApplicationState.Text = Properties.Resources.Closing;
+                splash.Show();
+                splash.Refresh();
+
                 splash.llStatus.Text = Properties.Resources.SavingDatabase;
                 splash.llStatus.Refresh();
 
@@ -327,11 +329,6 @@ namespace Octopus.CDIndex {
 
                 Properties.Settings.Default.Save();
             }
-            finally {
-                splash.Hide();
-                splash.Dispose();
-            }
-
         }
 
         #endregion
@@ -395,7 +392,7 @@ namespace Octopus.CDIndex {
 
         private void displaySearchList() {
             lvSearchResults.VirtualListSize = 0;
-            if(searchListComparer != null)
+            if (searchListComparer != null)
                 searchResultList.Sort(searchListComparer);
             lvSearchResults.VirtualListSize = searchResultList.Count;
             updateStrip();
@@ -468,7 +465,6 @@ namespace Octopus.CDIndex {
                     updateTree();
                     setModified();
                 }
-
             }
         }
 
@@ -537,7 +533,7 @@ namespace Octopus.CDIndex {
             string cdName;
             string keywords;
             try {
-                if (selectedDrive(out drive) && gotCdName(out cdName, out keywords, drive))
+                if (selectedDrive(out drive) && gotCdProperties(out cdName, out keywords, drive))
                     readCdOnDrive(drive, cdName, keywords);
             }
             catch (IOException e) {
@@ -545,7 +541,7 @@ namespace Octopus.CDIndex {
             }
         }
 
-        private bool gotCdName(out string discName, out string keywords, string drive) {
+        private bool gotCdProperties(out string discName, out string keywords, string drive) {
             return DlgDiscProperties.GetDiscName(out discName, out keywords, drive);
         }
 
@@ -691,7 +687,5 @@ namespace Octopus.CDIndex {
             updateStrip();
         }
 
-       
-
-	}
+    }
 }
