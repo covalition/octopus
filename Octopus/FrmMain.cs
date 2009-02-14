@@ -19,7 +19,7 @@ namespace Octopus.CDIndex {
 
         private List<ListViewItem> searchResultList = new List<ListViewItem>();
 
-        Label currentStatusLabel = null;
+        Label currentStatusLabel = null; 
         public FrmMain(Label statusLabel) 
         {
             currentStatusLabel = statusLabel;
