@@ -153,6 +153,9 @@
   <data name="ExportFilter" xml:space="preserve">
     <value>Pliki programu (*.octopus)|*.octopus|Pliki CSV (*.csv)|*.csv</value>
   </data>
+  <data name="FileNotFoundInDatabase" xml:space="preserve">
+    <value>Nie znaleziono pliku w bazie danych.</value>
+  </data>
   <data name="Files" xml:space="preserve">
     <value>Pliki</value>
   </data>

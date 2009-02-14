@@ -232,6 +232,15 @@ namespace Octopus.CDIndex.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File not found in database..
+        /// </summary>
+        internal static string FileNotFoundInDatabase {
+            get {
+                return ResourceManager.GetString("FileNotFoundInDatabase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Files.
         /// </summary>
         internal static string Files {

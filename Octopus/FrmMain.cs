@@ -688,15 +688,11 @@ namespace Octopus.CDIndex {
         }
 
         private void cmFindInDatabase_Click(object sender, EventArgs e) {
-            //try {
-                if (lvSearchResults.SelectedIndices.Count == 1) {
-                    int index = lvSearchResults.SelectedIndices[0];
-                    ItemInDatabase itemInDatabase = searchResultList[index].Tag as ItemInDatabase;
-                    findInTree(itemInDatabase);
-                }
-            //}
-            //catch {
-            //}
+            if (lvSearchResults.SelectedIndices.Count == 1) {
+                int index = lvSearchResults.SelectedIndices[0];
+                ItemInDatabase itemInDatabase = searchResultList[index].Tag as ItemInDatabase;
+                findInTree(itemInDatabase);
+            }
         }
 
         private void findInTree(ItemInDatabase itemInDatabase) {
@@ -735,7 +731,7 @@ namespace Octopus.CDIndex {
                 }
             }
             if (!found)
-                MessageBox.Show("File not found in database.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show(Properties.Resources.FileNotFoundInDatabase, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
             else {
                 tcMain.SelectedTab = tpDatabase;
                 if (selectedItem != null) { // file found
