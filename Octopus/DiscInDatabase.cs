@@ -67,6 +67,10 @@ namespace Octopus.CDIndex {
             return base.GetCsvLine() + "," + DriveFormat + "," + DriveType.ToString() + "," + TotalFreeSpace.ToString() + "," + TotalSize.ToString() + "," + VolumeLabel;
         }
 
+        internal override string GetVolumeUserName() {
+            return Name;
+        }
+
     }
 
 }

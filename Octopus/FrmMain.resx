@@ -117,12 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
+  <data name="&gt;&gt;cmFilePropertiesPopup.Name" xml:space="preserve">
+    <value>cmFilePropertiesPopup</value>
   </data>
-  <data name="&gt;&gt;slSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader6.Text" xml:space="preserve">
+    <value>Size</value>
   </data>
   <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -134,14 +133,9 @@
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;scMain.Panel2.Name" xml:space="preserve">
-    <value>scMain.Panel2</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="ilSystem.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
-  </data>
-  <data name="&gt;&gt;cmFilePropertiesPopup.Name" xml:space="preserve">
-    <value>cmFilePropertiesPopup</value>
   </data>
   <data name="&gt;&gt;slFiles.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -163,82 +157,6 @@
   </data>
   <data name="&gt;&gt;cmWhatsNew.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ilSystem.Name" xml:space="preserve">
-    <value>ilSystem</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="&gt;&gt;tsbReadCD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tvDatabaseFolderTree.ImageIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="columnHeader6.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tlsAbout.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
-  </data>
-  <data name="&gt;&gt;tlsAbout.Name" xml:space="preserve">
-    <value>tlsAbout</value>
-  </data>
-  <data name="cmDatabaseMerge.Text" xml:space="preserve">
-    <value>&amp;Merge With...</value>
-  </data>
-  <data name="cmWhatsNew.Text" xml:space="preserve">
-    <value>What's new</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnHeader10.Text" xml:space="preserve">
-    <value>Path</value>
-  </data>
-  <data name="&gt;&gt;cmFilePropertiesPopup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cmDeleteCdInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 22</value>
-  </data>
-  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
-    <value>columnHeader10</value>
-  </data>
-  <data name="cmVolumeFolderPropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;ilMain.Name" xml:space="preserve">
-    <value>ilMain</value>
-  </data>
-  <data name="&gt;&gt;tsbDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="slSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 19</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 38</value>
-  </data>
-  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="cmDeleteFileInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 22</value>
-  </data>
-  <data name="tlsAbout.Text" xml:space="preserve">
-    <value>Help</value>
   </data>
   <data name="ilMain.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -347,8 +265,96 @@
         Af8BkAHgAQcC/wHAAQEB/wGDAfgBHwL/AcABDwL/FgAL
 </value>
   </data>
+  <data name="&gt;&gt;ilSystem.Name" xml:space="preserve">
+    <value>ilSystem</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="columnHeader7.Width" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="tvDatabaseFolderTree.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ssBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tlsAbout.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
+  </data>
+  <data name="cmDatabaseMerge.Text" xml:space="preserve">
+    <value>&amp;Merge With...</value>
+  </data>
+  <data name="cmWhatsNew.Text" xml:space="preserve">
+    <value>What's new</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader10.Text" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="&gt;&gt;cmFilePropertiesPopup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmDeleteCdInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 22</value>
+  </data>
+  <data name="ssBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 411</value>
+  </data>
+  <data name="&gt;&gt;columnHeader10.Name" xml:space="preserve">
+    <value>columnHeader10</value>
+  </data>
+  <data name="cmVolumeFolderPropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="columnHeader6.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;tsbDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="slSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 19</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 38</value>
+  </data>
+  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tpDatabase.Text" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="cmDeleteFileInfoPopup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 22</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="tlsAbout.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="&gt;&gt;ilMain.Name" xml:space="preserve">
+    <value>ilMain</value>
+  </data>
   <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>698, 365</value>
   </data>
   <data name="scMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -359,11 +365,8 @@
   <data name="&gt;&gt;lvDatabaseItems.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;cmHomePage.Name" xml:space="preserve">
-    <value>cmHomePage</value>
-  </data>
-  <data name="&gt;&gt;cmVolumeFolderPropertiesPopup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lvDatabaseItems.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -380,14 +383,11 @@
   <data name="columnHeader1.Width" type="System.Int32, mscorlib">
     <value>182</value>
   </data>
-  <data name="cmHomePage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+  <data name="&gt;&gt;tlsAbout.Name" xml:space="preserve">
+    <value>tlsAbout</value>
   </data>
-  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
-    <value>tcMain</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
-    <value>toolStripSeparator1</value>
+  <data name="tsbReadCD.Text" xml:space="preserve">
+    <value>Read Volume</value>
   </data>
   <data name="columnHeader12.Text" xml:space="preserve">
     <value>Keywords</value>
@@ -398,14 +398,11 @@
   <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="cmAbout.Text" xml:space="preserve">
-    <value>About</value>
-  </data>
   <data name="&gt;&gt;tsbProperties.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
-    <value>columnHeader7</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ssBottom.Text" xml:space="preserve">
     <value>statusStrip1</value>
@@ -413,17 +410,11 @@
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tsbReadCD.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
-  <data name="cmList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 48</value>
-  </data>
-  <data name="columnHeader7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;slFiles.Name" xml:space="preserve">
-    <value>slFiles</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="stripMain.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -446,9 +437,6 @@
   <data name="&gt;&gt;scMain.Panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="tpSearch.Text" xml:space="preserve">
     <value>Search</value>
   </data>
@@ -464,14 +452,11 @@
   <data name="&gt;&gt;ssBottom.Name" xml:space="preserve">
     <value>ssBottom</value>
   </data>
-  <data name="&gt;&gt;cmDeleteCdInfoPopup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CD/DVD Index</value>
   </data>
-  <data name="&gt;&gt;stripMain.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>690, 337</value>
   </data>
   <data name="columnHeader10.Width" type="System.Int32, mscorlib">
     <value>120</value>
@@ -503,8 +488,8 @@
   <data name="&gt;&gt;cmDeleteCdInfoPopup.Name" xml:space="preserve">
     <value>cmDeleteCdInfoPopup</value>
   </data>
-  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>690, 337</value>
+  <data name="&gt;&gt;columnHeader9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="columnHeader6.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
     <value>Right</value>
@@ -518,8 +503,8 @@
   <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
     <value>columnHeader8</value>
   </data>
-  <data name="&gt;&gt;tsbOptions.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;cmTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="scMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>684, 331</value>
@@ -527,11 +512,11 @@
   <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
     <value>toolStripSeparator3</value>
   </data>
-  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Created</value>
   </data>
-  <data name="scMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="columnHeader7.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
   </data>
   <data name="&gt;&gt;cmAbout.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -551,35 +536,38 @@
   <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
     <value>columnHeader5</value>
   </data>
+  <data name="cmDeleteCdInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
   <data name="cmWhatsNew.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 22</value>
   </data>
-  <data name="stripMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk3eAQAAAAAAADYAAAAoAAAAAgAAADUAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAApW9KpW9K
-        gD+tfVutfVuAP619W619W4A/p3FNp3FNgD+ufl6ufl6AP69/Xq9/XoA/qHNQqHNQgD+vgF+vgF+AP7CB
-        YbCBYYA/qXVSqXVSgD+xgmKxgmKAP7GDY7GDY4A/qnZTqnZTgD+yhWWyhWWAP7KFZbKFZYA/q3hWq3hW
-        gD+zhmizhmiAP7SHabSHaYA/rHpYrHpYgD+0iGq0iGqAP7WJbLWJbIA/rn1crn1cgD+2i222i22AP7aL
-        braLboA/rn5ern5egD+3jXC3jXCAP7eOcbeOcYA/sIFhsIFhgD+5kHO5kHOAP7mQdLmQdIA/sYNjsYNj
-        gD+6kne6kneAP7qTd7qTd4A/soVmsoVmgD+7lHm7lHmAP7yWe7yWe4A/tIhqtIhqgD+9l329l32AP72Y
-        fr2YfoA/totttottgD++moC+moCAP7+bgr+bgoA/toxvtoxvgD/AnYTAnYSAP8CdhMCdhIA/uI9zuI9z
-        gD/Cn4fCn4eAP8KgiMKgiIA/upF2upF2gD/DoorDooqAP8SjjMSjjIA/u5V6u5V6gD/Eo4zEo4yAPw==
-</value>
+  <data name="&gt;&gt;slFiles.Name" xml:space="preserve">
+    <value>slFiles</value>
   </data>
   <data name="cmFilePropertiesPopup.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 22</value>
   </data>
+  <data name="cmTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 48</value>
+  </data>
   <data name="&gt;&gt;lvSearchResults.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tpDatabase.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;tsbReadCD.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="scMain.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="tsbDelete.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 35</value>
+  </data>
+  <data name="&gt;&gt;cmVolumeFolderPropertiesPopup.Name" xml:space="preserve">
+    <value>cmVolumeFolderPropertiesPopup</value>
+  </data>
+  <data name="scMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="columnHeader5.Width" type="System.Int32, mscorlib">
     <value>182</value>
@@ -590,17 +578,11 @@
   <data name="columnHeader5.Text" xml:space="preserve">
     <value>File/Folder Name</value>
   </data>
-  <data name="lvSearchResults.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+  <data name="&gt;&gt;cmWhatsNew.Name" xml:space="preserve">
+    <value>cmWhatsNew</value>
   </data>
-  <data name="&gt;&gt;scMain.Panel1.Name" xml:space="preserve">
-    <value>scMain.Panel1</value>
-  </data>
-  <data name="&gt;&gt;tsbReadCD.Name" xml:space="preserve">
-    <value>tsbReadCD</value>
-  </data>
-  <data name="cmDatabaseMerge.ToolTipText" xml:space="preserve">
-    <value>Merge database with external source</value>
+  <data name="&gt;&gt;tsbDatabase.Name" xml:space="preserve">
+    <value>tsbDatabase</value>
   </data>
   <data name="tsbOptions.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
@@ -608,20 +590,17 @@
   <data name="tsbDelete.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
     <value>ImageAboveText</value>
   </data>
+  <data name="tpDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
   <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
-    <value>columnHeader9</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="searchBottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
-  </data>
-  <data name="stripMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;lvDatabaseItems.Parent" xml:space="preserve">
     <value>scMain.Panel2</value>
@@ -631,12 +610,6 @@
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="&gt;&gt;tsbOptions.Name" xml:space="preserve">
-    <value>tsbOptions</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -666,6 +639,9 @@
         AAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=
 </value>
   </data>
+  <data name="tsbProperties.Text" xml:space="preserve">
+    <value>Properties</value>
+  </data>
   <data name="tlsAbout.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -684,9 +660,6 @@
   <data name="&gt;&gt;lvSearchResults.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="searchBottomPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>684, 265</value>
   </data>
@@ -696,8 +669,8 @@
   <data name="tvDatabaseFolderTree.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="tsbProperties.Text" xml:space="preserve">
-    <value>Properties</value>
+  <data name="&gt;&gt;tsbOptions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -717,35 +690,35 @@
   <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
-    <value>101</value>
+  <data name="&gt;&gt;tlsAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tvDatabaseFolderTree.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="slFiles.Text" xml:space="preserve">
-    <value>toolStripStatusLabel1</value>
+  <data name="cmDatabaseMerge.ToolTipText" xml:space="preserve">
+    <value>Merge database with external source</value>
   </data>
   <data name="&gt;&gt;scMain.Panel2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;cmWhatsNew.Name" xml:space="preserve">
-    <value>cmWhatsNew</value>
-  </data>
   <data name="columnHeader11.Text" xml:space="preserve">
     <value>Keywords</value>
+  </data>
+  <data name="slFiles.Text" xml:space="preserve">
+    <value>toolStripStatusLabel1</value>
   </data>
   <data name="cmDatabaseExport.Size" type="System.Drawing.Size, System.Drawing">
     <value>145, 22</value>
   </data>
-  <data name="cmDeleteFileInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="tpDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tsbProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 35</value>
+  <data name="&gt;&gt;cmDeleteCdInfoPopup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;cmDeleteFileInfoPopup.Name" xml:space="preserve">
-    <value>cmDeleteFileInfoPopup</value>
+  <data name="tsbProperties.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageAboveText</value>
   </data>
   <data name="tsbOptions.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -753,8 +726,15 @@
   <data name="lvDatabaseItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>494, 331</value>
   </data>
-  <data name="ssBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="lvSearchResults.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
+        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
+        AwAAAAZWb2x1bWUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
+        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZWb2x1bWUL
+</value>
   </data>
   <data name="&gt;&gt;lvDatabaseItems.Name" xml:space="preserve">
     <value>lvDatabaseItems</value>
@@ -762,8 +742,8 @@
   <data name="&gt;&gt;lvDatabaseItems.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tsbProperties.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
+  <data name="&gt;&gt;cmDeleteFileInfoPopup.Name" xml:space="preserve">
+    <value>cmDeleteFileInfoPopup</value>
   </data>
   <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
     <value>tcMain</value>
@@ -774,8 +754,8 @@
   <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 6</value>
   </data>
-  <data name="&gt;&gt;stripMain.Name" xml:space="preserve">
-    <value>stripMain</value>
+  <data name="&gt;&gt;stripMain.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;columnHeader12.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -786,11 +766,14 @@
   <data name="&gt;&gt;stripMain.Type" xml:space="preserve">
     <value>Octopus.CDIndex.RenderedToolStrip, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Attributes</value>
+  </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>
   </data>
-  <data name="cmDatabaseExport.Text" xml:space="preserve">
-    <value>&amp;Export...</value>
+  <data name="&gt;&gt;tsbReadCD.Name" xml:space="preserve">
+    <value>tsbReadCD</value>
   </data>
   <data name="tsbReadCD.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -816,20 +799,17 @@
   <data name="columnHeader9.Text" xml:space="preserve">
     <value>Volume</value>
   </data>
-  <data name="&gt;&gt;ilSystem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="filesSearchCriteriaPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
+    <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
     <value>columnHeader4</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>698, 435</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
   <data name="&gt;&gt;cmFeatureRequests.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -837,8 +817,20 @@
   <data name="&gt;&gt;cmDatabaseMerge.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tsbDatabase.Name" xml:space="preserve">
-    <value>tsbDatabase</value>
+  <data name="cmDatabaseExport.Text" xml:space="preserve">
+    <value>&amp;Export...</value>
+  </data>
+  <data name="stripMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk3eAQAAAAAAADYAAAAoAAAAAgAAADUAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAApW9KpW9K
+        EgCtfVutfVsSAK19W619WxIAp3FNp3FNEgCufl6ufl4SAK9/Xq9/XhIAqHNQqHNQEgCvgF+vgF8SALCB
+        YbCBYRIAqXVSqXVSEgCxgmKxgmISALGDY7GDYxIAqnZTqnZTEgCyhWWyhWUSALKFZbKFZRIAq3hWq3hW
+        EgCzhmizhmgSALSHabSHaRIArHpYrHpYEgC0iGq0iGoSALWJbLWJbBIArn1crn1cEgC2i222i20SALaL
+        braLbhIArn5ern5eEgC3jXC3jXASALeOcbeOcRIAsIFhsIFhEgC5kHO5kHMSALmQdLmQdBIAsYNjsYNj
+        EgC6kne6kncSALqTd7qTdxIAsoVmsoVmEgC7lHm7lHkSALyWe7yWexIAtIhqtIhqEgC9l329l30SAL2Y
+        fr2YfhIAtotttottEgC+moC+moASAL+bgr+bghIAtoxvtoxvEgDAnYTAnYQSAMCdhMCdhBIAuI9zuI9z
+        EgDCn4fCn4cSAMKgiMKgiBIAupF2upF2EgDDoorDoooSAMSjjMSjjBIAu5V6u5V6EgDEo4zEo4wSAA==
+</value>
   </data>
   <data name="lvDatabaseItems.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -855,8 +847,8 @@
   <data name="searchBottomPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 69</value>
   </data>
-  <data name="tsbReadCD.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
-    <value>ImageAboveText</value>
+  <data name="&gt;&gt;tsbOptions.Name" xml:space="preserve">
+    <value>tsbOptions</value>
   </data>
   <data name="tsbDatabase.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -864,17 +856,17 @@
   <data name="&gt;&gt;ssBottom.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Name" xml:space="preserve">
+    <value>filesSearchCriteriaPanel</value>
+  </data>
   <data name="&gt;&gt;stripMain.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;cmVolumeFolderPropertiesPopup.Name" xml:space="preserve">
-    <value>cmVolumeFolderPropertiesPopup</value>
+  <data name="&gt;&gt;columnHeader9.Name" xml:space="preserve">
+    <value>columnHeader9</value>
   </data>
   <data name="&gt;&gt;cmList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lvSearchResults.Size" type="System.Drawing.Size, System.Drawing">
     <value>684, 265</value>
@@ -891,11 +883,8 @@
   <data name="columnHeader11.Width" type="System.Int32, mscorlib">
     <value>100</value>
   </data>
-  <data name="cmFilePropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;ilSystem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;panel1.Name" xml:space="preserve">
     <value>panel1</value>
@@ -906,8 +895,8 @@
   <data name="cmVolumeFolderPropertiesPopup.Text" xml:space="preserve">
     <value>Volume Properties</value>
   </data>
-  <data name="tpDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+  <data name="&gt;&gt;stripMain.Name" xml:space="preserve">
+    <value>stripMain</value>
   </data>
   <data name="slSize.Text" xml:space="preserve">
     <value>toolStripStatusLabel2</value>
@@ -915,21 +904,14 @@
   <data name="tsbOptions.Text" xml:space="preserve">
     <value>Options</value>
   </data>
-  <data name="lvSearchResults.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
-        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACJTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5MaXN0Vmlld0dyb3VwBAAAAAZIZWFkZXIPSGVhZGVyQWxpZ25tZW50A1Rh
-        ZwROYW1lAQQCAShTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AgAAAAIAAAAG
-        AwAAAAZWb2x1bWUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAA
-        AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZWb2x1bWUL
-</value>
+  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="tvDatabaseFolderTree.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;cmVolumeFolderPropertiesPopup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;slSize.Name" xml:space="preserve">
     <value>slSize</value>
@@ -943,17 +925,17 @@
   <data name="&gt;&gt;tpDatabase.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;scMain.Name" xml:space="preserve">
-    <value>scMain</value>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>70</value>
   </data>
-  <data name="&gt;&gt;cmTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 46</value>
   </data>
-  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>698, 365</value>
+  <data name="cmHomePage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 22</value>
   </data>
   <data name="cmDeleteFileInfoPopup.Text" xml:space="preserve">
     <value>&amp;Delete File Info...</value>
@@ -961,14 +943,23 @@
   <data name="filesSearchCriteriaPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>684, 66</value>
   </data>
+  <data name="lvSearchResults.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
   <data name="filesSearchCriteriaPanel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;scMain.Name" xml:space="preserve">
+    <value>scMain</value>
   </data>
   <data name="cmFeatureRequests.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 22</value>
   </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>Attributes</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>698, 435</value>
+  </data>
+  <data name="filesSearchCriteriaPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
   </data>
   <data name="tvDatabaseFolderTree.SelectedImageIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -982,11 +973,14 @@
   <data name="&gt;&gt;tvDatabaseFolderTree.Type" xml:space="preserve">
     <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cmTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 48</value>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>101</value>
   </data>
-  <data name="tpDatabase.Text" xml:space="preserve">
-    <value>Database</value>
+  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
+  </data>
+  <data name="&gt;&gt;slSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="scMain.Text" xml:space="preserve">
     <value>splitContainer1</value>
@@ -997,14 +991,14 @@
   <data name="tsbDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="&gt;&gt;filesSearchCriteriaPanel.Name" xml:space="preserve">
-    <value>filesSearchCriteriaPanel</value>
+  <data name="&gt;&gt;scMain.Panel2.Name" xml:space="preserve">
+    <value>scMain.Panel2</value>
   </data>
-  <data name="cmDeleteCdInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
+  <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tsbReadCD.Text" xml:space="preserve">
-    <value>Read Volume</value>
+  <data name="stripMain.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="&gt;&gt;cmHomePage.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1012,11 +1006,11 @@
   <data name="stripMain.Size" type="System.Drawing.Size, System.Drawing">
     <value>698, 46</value>
   </data>
-  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
-    <value>tcMain</value>
+  <data name="&gt;&gt;columnHeader11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>Created</value>
+  <data name="tsbProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 35</value>
   </data>
   <data name="&gt;&gt;ilMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1024,8 +1018,8 @@
   <data name="tsbOptions.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 35</value>
   </data>
-  <data name="ssBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 411</value>
+  <data name="&gt;&gt;cmHomePage.Name" xml:space="preserve">
+    <value>cmHomePage</value>
   </data>
   <data name="cmFilePropertiesPopup.Text" xml:space="preserve">
     <value>File Properties</value>
@@ -1036,11 +1030,14 @@
   <data name="tlsAbout.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 35</value>
   </data>
-  <data name="&gt;&gt;tlsAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tvDatabaseFolderTree.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
-    <value>searchBottomPanel</value>
+  <data name="&gt;&gt;scMain.Panel1.Name" xml:space="preserve">
+    <value>scMain.Panel1</value>
+  </data>
+  <data name="cmFilePropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
   </data>
   <data name="tsbDelete.Text" xml:space="preserve">
     <value>Delete</value>
@@ -1060,14 +1057,17 @@
   <data name="&gt;&gt;filesSearchCriteriaPanel.Parent" xml:space="preserve">
     <value>tpSearch</value>
   </data>
+  <data name="cmDeleteFileInfoPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
   <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 38</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
+    <value>columnHeader7</value>
   </data>
   <data name="&gt;&gt;columnHeader11.Name" xml:space="preserve">
     <value>columnHeader11</value>
@@ -1084,20 +1084,20 @@
   <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
     <value>panel1</value>
   </data>
-  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
-    <value>columnHeader6</value>
+  <data name="tvDatabaseFolderTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 331</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.Type" xml:space="preserve">
     <value>Octopus.CDIndex.Components.FilesSearchCriteriaPanel, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="tvDatabaseFolderTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 331</value>
+  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
+    <value>tcMain</value>
   </data>
-  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>7, 4</value>
+  <data name="cmList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 48</value>
   </data>
-  <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Right</value>
+  <data name="cmAbout.Text" xml:space="preserve">
+    <value>About</value>
   </data>
   <data name="columnHeader4.Text" xml:space="preserve">
     <value>Size</value>
@@ -1108,8 +1108,8 @@
   <data name="columnHeader4.Width" type="System.Int32, mscorlib">
     <value>70</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
+    <value>columnHeader6</value>
   </data>
   <data name="searchBottomPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1127,7 +1127,7 @@
     <value>True</value>
   </metadata>
   <metadata name="ssBottom.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 411</value>
+    <value>480, 17</value>
   </metadata>
   <metadata name="cmList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>394, 17</value>
@@ -1136,9 +1136,6 @@
     <value>212, 17</value>
   </metadata>
   <metadata name="stripMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Polish</value>
+    <value>17, 17</value>
   </metadata>
 </root>

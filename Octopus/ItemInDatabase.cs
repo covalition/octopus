@@ -94,12 +94,11 @@ namespace Octopus.CDIndex {
 		}
 
 
-		internal string GetVolumeUserName() {
-
-			if (this is DiscInDatabase)
-				return Name;
-			else
-				return parent.GetVolumeUserName();
+		internal virtual string GetVolumeUserName() {
+            //if (this is DiscInDatabase)
+            //    return Name;
+            //else
+			return parent.GetVolumeUserName();
 		}
 
 		internal string GetPath() {
