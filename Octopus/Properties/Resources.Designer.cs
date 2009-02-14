@@ -156,6 +156,13 @@ namespace Octopus.CDIndex.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Control_TreeView {
+            get {
+                object obj = ResourceManager.GetObject("Control_TreeView", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap dbs {
             get {
                 object obj = ResourceManager.GetObject("dbs", resourceCulture);
@@ -261,13 +268,6 @@ namespace Octopus.CDIndex.Properties {
         internal static System.Drawing.Bitmap gear_1 {
             get {
                 object obj = ResourceManager.GetObject("gear_1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        internal static System.Drawing.Bitmap GplLogoBmp {
-            get {
-                object obj = ResourceManager.GetObject("GplLogoBmp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

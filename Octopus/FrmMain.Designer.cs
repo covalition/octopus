@@ -62,6 +62,8 @@ namespace Octopus.CDIndex
             this.columnHeader9 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader10 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
+            this.cmsSearchList = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmFindInDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.filesSearchCriteriaPanel = new Octopus.CDIndex.Components.FilesSearchCriteriaPanel();
             this.stripMain = new Octopus.CDIndex.RenderedToolStrip();
             this.tsbDatabase = new System.Windows.Forms.ToolStripDropDownButton();
@@ -79,8 +81,6 @@ namespace Octopus.CDIndex
             this.cmWhatsNew = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cmAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsSearchList = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmFindInDatabase = new System.Windows.Forms.ToolStripMenuItem();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
@@ -92,8 +92,8 @@ namespace Octopus.CDIndex
             this.tpDatabase.SuspendLayout();
             this.tpSearch.SuspendLayout();
             this.searchBottomPanel.SuspendLayout();
-            this.stripMain.SuspendLayout();
             this.cmsSearchList.SuspendLayout();
+            this.stripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // scMain
@@ -331,6 +331,21 @@ namespace Octopus.CDIndex
             // 
             resources.ApplyResources(this.columnHeader11, "columnHeader11");
             // 
+            // cmsSearchList
+            // 
+            this.cmsSearchList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmFindInDatabase});
+            this.cmsSearchList.Name = "cmsSearchList";
+            resources.ApplyResources(this.cmsSearchList, "cmsSearchList");
+            this.cmsSearchList.Opening += new System.ComponentModel.CancelEventHandler(this.cmsSearchList_Opening);
+            // 
+            // cmFindInDatabase
+            // 
+            this.cmFindInDatabase.Image = global::Octopus.CDIndex.Properties.Resources.Control_TreeView;
+            resources.ApplyResources(this.cmFindInDatabase, "cmFindInDatabase");
+            this.cmFindInDatabase.Name = "cmFindInDatabase";
+            this.cmFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabase_Click);
+            // 
             // filesSearchCriteriaPanel
             // 
             resources.ApplyResources(this.filesSearchCriteriaPanel, "filesSearchCriteriaPanel");
@@ -454,20 +469,6 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this.cmAbout, "cmAbout");
             this.cmAbout.Click += new System.EventHandler(this.cmAbout_Click);
             // 
-            // cmsSearchList
-            // 
-            this.cmsSearchList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmFindInDatabase});
-            this.cmsSearchList.Name = "cmsSearchList";
-            resources.ApplyResources(this.cmsSearchList, "cmsSearchList");
-            this.cmsSearchList.Opening += new System.ComponentModel.CancelEventHandler(this.cmsSearchList_Opening);
-            // 
-            // cmFindInDatabase
-            // 
-            this.cmFindInDatabase.Name = "cmFindInDatabase";
-            resources.ApplyResources(this.cmFindInDatabase, "cmFindInDatabase");
-            this.cmFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabase_Click);
-            // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -489,9 +490,9 @@ namespace Octopus.CDIndex
             this.tpDatabase.ResumeLayout(false);
             this.tpSearch.ResumeLayout(false);
             this.searchBottomPanel.ResumeLayout(false);
+            this.cmsSearchList.ResumeLayout(false);
             this.stripMain.ResumeLayout(false);
             this.stripMain.PerformLayout();
-            this.cmsSearchList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

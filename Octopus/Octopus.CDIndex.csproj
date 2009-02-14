@@ -357,6 +357,7 @@
     <None Include="Resources\FindHS.png" />
     <None Include="Resources\FillUpHS.png" />
     <None Include="Resources\BlueHeader.bmp" />
+    <None Include="Resources\Control_TreeView.bmp" />
     <Content Include="Resources\gplv3-127x51.png" />
     <Content Include="Resources\MainIcon.ico" />
     <None Include="Resources\OptionsHS.png" />

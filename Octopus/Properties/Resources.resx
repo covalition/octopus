@@ -118,145 +118,145 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="saveHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saveHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="networkConnections" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\networkConnections.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FindBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FindHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ArrowDownBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FillDownHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Properties" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Properties.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AudioHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AudioHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="gear_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gear_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dbs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dbs.ico;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ArrowUpBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FillUpHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CD_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CD_16.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="openHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\openHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Collapsed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Collapsed.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OptionsHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OptionsHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BlueHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BlueHeader.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GplLogoBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gplv3-127x51.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AreUSureToDeleteFile" xml:space="preserve">
-    <value>Are you sure to delete the "{0}" file information?</value>
-  </data>
-  <data name="AreUSureToDeleteVolume" xml:space="preserve">
-    <value>Are you sure to delete the "{0}" volume information?</value>
-  </data>
-  <data name="Closing" xml:space="preserve">
-    <value>Closing...</value>
-  </data>
-  <data name="DeleteFolder" xml:space="preserve">
-    <value>&amp;Delete Folder...</value>
-  </data>
-  <data name="DeleteVolume" xml:space="preserve">
-    <value>&amp;Delete Volume...</value>
-  </data>
-  <data name="FillingControls" xml:space="preserve">
-    <value>Filling controls...</value>
+  <data name="NoFiles" xml:space="preserve">
+    <value>No files selected.</value>
   </data>
   <data name="FolderProperties" xml:space="preserve">
     <value>Folder &amp;Properties</value>
   </data>
-  <data name="InitializingComponents" xml:space="preserve">
-    <value>Initializing components...</value>
-  </data>
-  <data name="ReadingDatabase" xml:space="preserve">
-    <value>Reading database...</value>
+  <data name="InvalidNumberFormat" xml:space="preserve">
+    <value>Invalid format. Enter a number.</value>
   </data>
   <data name="SavingApplicationSettings" xml:space="preserve">
     <value>Saving application settings...</value>
   </data>
-  <data name="SavingDatabase" xml:space="preserve">
-    <value>Saving database...</value>
+  <data name="Files" xml:space="preserve">
+    <value>Files</value>
   </data>
-  <data name="VolumeProperties" xml:space="preserve">
-    <value>Volume &amp;Properties</value>
+  <data name="AreUSureToDeleteVolume" xml:space="preserve">
+    <value>Are you sure to delete the "{0}" volume information?</value>
+  </data>
+  <data name="ArrowDownBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FillDownHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="networkConnections" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\networkConnections.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Advanced" xml:space="preserve">
     <value>&amp;Advanced</value>
   </data>
-  <data name="AreUSureToDeleteFolder" xml:space="preserve">
-    <value>Are you sure to delete the "{0}" folder information?</value>
-  </data>
-  <data name="Basic" xml:space="preserve">
-    <value>&amp;Basic</value>
-  </data>
-  <data name="ExportDatabaseTo" xml:space="preserve">
-    <value>Export Database To</value>
-  </data>
-  <data name="ExportFilter" xml:space="preserve">
-    <value>Octopus Files (*.octopus)|*.octopus|Comma separated values (*.csv)|*.csv</value>
-  </data>
-  <data name="Files" xml:space="preserve">
-    <value>Files</value>
-  </data>
-  <data name="InvalidDateRange" xml:space="preserve">
-    <value>Invalid date range.</value>
-  </data>
-  <data name="InvalidNumberFormat" xml:space="preserve">
-    <value>Invalid format. Enter a number.</value>
+  <data name="MergeDatabaseWith" xml:space="preserve">
+    <value>Merge Database With</value>
   </data>
   <data name="InvalidSizeRange" xml:space="preserve">
     <value>Invalid size range.</value>
   </data>
-  <data name="MergeDatabaseWith" xml:space="preserve">
-    <value>Merge Database With</value>
-  </data>
-  <data name="MergeFilter" xml:space="preserve">
-    <value>Octopus Files (*.octopus)|*.octopus</value>
-  </data>
-  <data name="NoFiles" xml:space="preserve">
-    <value>No files selected.</value>
-  </data>
-  <data name="SelectedFiles" xml:space="preserve">
-    <value>Selected files</value>
-  </data>
-  <data name="Size" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="ErrorIO" xml:space="preserve">
-    <value>An IO error occured: {0}</value>
+  <data name="ReadingDatabase" xml:space="preserve">
+    <value>Reading database...</value>
   </data>
   <data name="ErrorSavingFile" xml:space="preserve">
     <value>Error saving file "{0}". Error message: {1}</value>
   </data>
+  <data name="AreUSureToDeleteFolder" xml:space="preserve">
+    <value>Are you sure to delete the "{0}" folder information?</value>
+  </data>
+  <data name="FillingControls" xml:space="preserve">
+    <value>Filling controls...</value>
+  </data>
+  <data name="gear_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gear_1.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExportFilter" xml:space="preserve">
+    <value>Octopus Files (*.octopus)|*.octopus|Comma separated values (*.csv)|*.csv</value>
+  </data>
+  <data name="DeleteVolume" xml:space="preserve">
+    <value>&amp;Delete Volume...</value>
+  </data>
+  <data name="SelectedFiles" xml:space="preserve">
+    <value>Selected files</value>
+  </data>
+  <data name="Basic" xml:space="preserve">
+    <value>&amp;Basic</value>
+  </data>
+  <data name="VolumeProperties" xml:space="preserve">
+    <value>Volume &amp;Properties</value>
+  </data>
   <data name="NonRemoveableMsg" xml:space="preserve">
     <value>Drive {0} looks like a non-removeable media. Indexing process will take a large amount of time. Would you like to continue?</value>
   </data>
+  <data name="BlueHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BlueHeader.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArrowUpBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FillUpHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InvalidDateRange" xml:space="preserve">
+    <value>Invalid date range.</value>
+  </data>
+  <data name="MergeFilter" xml:space="preserve">
+    <value>Octopus Files (*.octopus)|*.octopus</value>
+  </data>
+  <data name="FindBmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FindHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ReadingDatabasePercent" xml:space="preserve">
     <value>Reading database... {0}%</value>
+  </data>
+  <data name="ExportDatabaseTo" xml:space="preserve">
+    <value>Export Database To</value>
+  </data>
+  <data name="AreUSureToDeleteFile" xml:space="preserve">
+    <value>Are you sure to delete the "{0}" file information?</value>
+  </data>
+  <data name="saveHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saveHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InitializingComponents" xml:space="preserve">
+    <value>Initializing components...</value>
+  </data>
+  <data name="ErrorIO" xml:space="preserve">
+    <value>An IO error occured: {0}</value>
+  </data>
+  <data name="Properties" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Properties.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="openHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\openHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>&amp;Delete Folder...</value>
+  </data>
+  <data name="Closing" xml:space="preserve">
+    <value>Closing...</value>
+  </data>
+  <data name="SavingDatabase" xml:space="preserve">
+    <value>Saving database...</value>
+  </data>
+  <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OptionsHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OptionsHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Collapsed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Collapsed.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CD_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CD_16.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Control_TreeView" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Control_TreeView.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

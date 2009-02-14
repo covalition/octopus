@@ -688,15 +688,15 @@ namespace Octopus.CDIndex {
         }
 
         private void cmFindInDatabase_Click(object sender, EventArgs e) {
-            try {
+            //try {
                 if (lvSearchResults.SelectedIndices.Count == 1) {
                     int index = lvSearchResults.SelectedIndices[0];
                     ItemInDatabase itemInDatabase = searchResultList[index].Tag as ItemInDatabase;
                     findInTree(itemInDatabase);
                 }
-            }
-            catch {
-            }
+            //}
+            //catch {
+            //}
         }
 
         private void findInTree(ItemInDatabase itemInDatabase) {
@@ -734,14 +734,21 @@ namespace Octopus.CDIndex {
                     }
                 }
             }
-            tcMain.SelectedTab = tpDatabase;
             if (!found)
                 MessageBox.Show("File not found in database.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
             else {
-                lvDatabaseItems.Focus();
-                selectedItem.Selected = true;
-                selectedItem.Focused = true;
-                selectedItem.EnsureVisible();
+                tcMain.SelectedTab = tpDatabase;
+                if (selectedItem != null) { // file found
+                    lvDatabaseItems.Focus();
+                    selectedItem.Selected = true;
+                    selectedItem.Focused = true;
+                    selectedItem.EnsureVisible();
+                }
+                else { // folder found
+                    tvDatabaseFolderTree.Focus();
+                    tvDatabaseFolderTree.SelectedNode = lastNode; // set SelectedNode again, otherwise the node doesn't get focus
+                    lastNode.EnsureVisible();
+                }
             }
         }
 
