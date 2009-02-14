@@ -102,7 +102,7 @@ namespace Octopus.CDIndex {
 		}
 
 		internal string GetPath() {
-			if ((parent != null) && !(parent is DiscInDatabase))
+			if ((parent != null) && !(parent is DiscInDatabase)) // inheritance
 				return parent.GetPath() + parent.Name + "\\";
 			else
 				return "\\";
@@ -149,5 +149,10 @@ namespace Octopus.CDIndex {
 
         protected abstract string GetItemType();
 
+        internal void GetPath(List<ItemInDatabase> pathList) {
+            if (parent != null)
+                parent.GetPath(pathList);
+            pathList.Add(this);
+        }
     }
 }

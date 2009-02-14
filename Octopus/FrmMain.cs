@@ -687,5 +687,67 @@ namespace Octopus.CDIndex {
             updateStrip();
         }
 
+        private void cmFindInDatabase_Click(object sender, EventArgs e) {
+            try {
+                if (lvSearchResults.SelectedIndices.Count == 1) {
+                    int index = lvSearchResults.SelectedIndices[0];
+                    ItemInDatabase itemInDatabase = searchResultList[index].Tag as ItemInDatabase;
+                    findInTree(itemInDatabase);
+                }
+            }
+            catch {
+            }
+        }
+
+        private void findInTree(ItemInDatabase itemInDatabase) {
+            List<ItemInDatabase> pathList = new List<ItemInDatabase>();
+            itemInDatabase.GetPath(pathList);
+            TreeNode lastNode = null;
+            bool found = false;
+            ListViewItem selectedItem = null;
+            foreach (ItemInDatabase itemInPathList in pathList) {
+                if (itemInPathList is FolderInDatabase) {
+                    TreeNodeCollection nodes;
+                    if (lastNode == null)
+                        nodes = tvDatabaseFolderTree.Nodes;
+                    else
+                        nodes = lastNode.Nodes;
+                    foreach (TreeNode node in nodes)
+                        if (node.Tag == itemInPathList) {
+                            lastNode = node;
+                            found = true;
+                            break;
+                        }
+                }
+                else if (itemInPathList is FileInDatabase) {
+                    if (lastNode != null)
+                        tvDatabaseFolderTree.SelectedNode = lastNode;
+                    if (found) { // folder found
+                        found = false;
+                        foreach (ListViewItem item in lvDatabaseItems.Items) {
+                            if (item.Tag == itemInPathList) {
+                                selectedItem = item;
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+            tcMain.SelectedTab = tpDatabase;
+            if (!found)
+                MessageBox.Show("File not found in database.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            else {
+                lvDatabaseItems.Focus();
+                selectedItem.Selected = true;
+                selectedItem.Focused = true;
+                selectedItem.EnsureVisible();
+            }
+        }
+
+        private void cmsSearchList_Opening(object sender, CancelEventArgs e) {
+            cmFindInDatabase.Enabled = lvSearchResults.SelectedIndices.Count == 1;
+        }
+
     }
 }
