@@ -12,7 +12,6 @@ namespace Octopus.CDIndex {
 			: base(parent) {
 		}
 
-		[OptionalField]
 		bool isReadOnly = false;
 
 		public bool IsReadOnly {
@@ -20,7 +19,6 @@ namespace Octopus.CDIndex {
 			set { isReadOnly = value; }
 		}
 
-		[OptionalField]
 		long length = 0;
 
 		public long Length {

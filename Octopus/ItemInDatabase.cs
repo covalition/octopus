@@ -20,7 +20,6 @@ namespace Octopus.CDIndex {
 			get { return parent; }
 		}
 
-		[OptionalField]
 		private string keywords = "";
 
 		public string Keywords {
@@ -28,7 +27,6 @@ namespace Octopus.CDIndex {
 			set { keywords = value; }
 		}
 
-		[OptionalField]
 		string description = "";
 
 		public string Description {
@@ -43,7 +41,6 @@ namespace Octopus.CDIndex {
 			set { name = value; }
 		}
 
-		[OptionalField]
 		string fullName = "";
 
 		public string FullName {
@@ -51,7 +48,6 @@ namespace Octopus.CDIndex {
 			set { fullName = value; }
 		}
 
-		[OptionalField]
 		FileAttributes attributes = FileAttributes.Normal;
 
 		public FileAttributes Attributes {
@@ -59,7 +55,6 @@ namespace Octopus.CDIndex {
 			set { attributes = value; }
 		}
 
-		[OptionalField]
 		DateTime creationTime = DateTime.Now;
 
 		public DateTime CreationTime {
@@ -67,7 +62,6 @@ namespace Octopus.CDIndex {
 			set { creationTime = value; }
 		}
 
-		[OptionalField]
 		string extension = "";
 
 		public string Extension {
@@ -75,8 +69,6 @@ namespace Octopus.CDIndex {
 			set { extension = value; }
 		}
 
-
-		[OptionalField]
 		DateTime lastAccessTime = DateTime.Now;
 
 		public DateTime LastAccessTime {
@@ -84,8 +76,6 @@ namespace Octopus.CDIndex {
 			set { lastAccessTime = value; }
 		}
 
-
-		[OptionalField]
 		DateTime lastWriteTime = DateTime.Now;
 
 		public DateTime LastWriteTime {
@@ -93,11 +83,7 @@ namespace Octopus.CDIndex {
 			set { lastWriteTime = value; }
 		}
 
-
 		internal virtual string GetVolumeUserName() {
-            //if (this is DiscInDatabase)
-            //    return Name;
-            //else
 			return parent.GetVolumeUserName();
 		}
 

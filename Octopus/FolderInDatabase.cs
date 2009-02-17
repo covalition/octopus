@@ -92,7 +92,6 @@ namespace Octopus.CDIndex {
             ListViewItem lvi = new ListViewItem();
             lvi.Text = file.Name;
             lvi.Tag = file;
-            //lvi.ImageIndex = 2;
             lvi.ImageIndex = Shell.GetFileIconIndex(file.Name, Shell.FileIconSize.Small);
             lvi.SubItems.Add(CustomConvert.ToKB(file.Length));
             lvi.SubItems.Add(file.CreationTime.ToString("g"));
