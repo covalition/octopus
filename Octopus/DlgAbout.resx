@@ -154,7 +154,11 @@
     <value>111</value>
   </data>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>1.2
+    <value>1.3
+- Russian language version
+- "Find in Database" command available in the search view
+
+1.2
 - File count and file size are displayed in status bar in all cases
 - External hard disks can be indexed
 - New commands under Help
@@ -591,6 +595,6 @@ Russian: Boris Vasilenko</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.3.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.3.0.1, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

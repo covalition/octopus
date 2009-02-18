@@ -736,6 +736,7 @@ namespace Octopus.CDIndex {
                 tcMain.SelectedTab = tpDatabase;
                 if (selectedItem != null) { // file found
                     lvDatabaseItems.Focus();
+                    lvDatabaseItems.SelectedItems.Clear();
                     selectedItem.Selected = true;
                     selectedItem.Focused = true;
                     selectedItem.EnsureVisible();
