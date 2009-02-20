@@ -1,5 +1,6 @@
 1.3
 - Russian language version
+- German language version
 - "Find in Database" command available in the search view
 
 1.2
@@ -7,3 +8,19 @@
 - External hard disks can be indexed
 - New commands under Help
 - Name changed to Blue Mirror CD/DVD Indexer
+
+1.1.0.5
+- License info problem fixed
+- Localization issues fixed
+
+1.1 
+- Updated contact details, license and version info
+- Polish language version
+
+1.0 Beta
+- Minor bugs removed
+- Database file location can be set by the user
+- Export database using csv format
+- New search definitions implemented
+- Import/export added
+- New AboutBox

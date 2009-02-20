@@ -153,15 +153,16 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Kommentare, Fehlerberichte und Featureanfragen an:</value>
   </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Autoren</value>
+  </data>
   <data name="textBox2.Text" xml:space="preserve">
     <value>Übersetzer
 
+Deutsch: Clemens-Alexander Brust
 Polnisch: Roman Kowaliszyn
 Russisch: Boris Vasilenko
-Deutsch: Clemens-Alexander Brust</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Autoren</value>
+</value>
   </data>
   <data name="tpChangeLog.Text" xml:space="preserve">
     <value>Changelog</value>
