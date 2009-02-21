@@ -155,6 +155,10 @@
       <DependentUpon>FormDialogBase.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogBase.pt-BR.resx">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseDialogs\FormDialogBase.resx">
       <DependentUpon>FormDialogBase.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -168,6 +172,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseDialogs\FormDialogList.pl.resx">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogList.pt-BR.resx">
       <DependentUpon>FormDialogList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -186,6 +194,10 @@
     <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.pt-BR.resx">
+      <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.resx">
       <SubType>Designer</SubType>
