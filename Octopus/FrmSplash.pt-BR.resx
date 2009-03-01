@@ -117,46 +117,111 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>1.3
-- Russian language version
-- German language version
-- Portuguese (Brasil) language version
-- "Find in Database" command available in the search view
-
-1.2
-- Contagem de arquivo e tamanho do arquivo săo exibidos na barra de status em todos os casos
-- Discos (HDs) externos podem ser indexados
-- Novos comandos em Ajuda
-- Nome alterado para Blue Mirror CD/DVD Indexer
-
-1.1.0.5
-- Problema com informaçăo de Licença consertado
-- Localizaçăo de defeito consertada
-
-1.1 
-- Atualizados detalhes de contato, licença e informaçăo de versăo
-- Versăo em Polonęs
-
-1.0 Beta
-- Pequenos bugs removidos
-- Localizaçăo da base de dados pode ser configurada pelo usuário
-- Exportar base de dados usando formato csv 
-- Novas definiçőes de busca implementedas
-- Adicionados Importar/Exportar
-- Nova caixa Sobre</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;llStatus.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;llApplicationState.Name" xml:space="preserve">
+    <value>llApplicationState</value>
+  </data>
+  <data name="&gt;&gt;llStatus.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 13</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Comentários, erros, requsiçăo de funcionalidades envie para:</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>355, 82</value>
   </data>
-  <data name="tpChangeLog.Text" xml:space="preserve">
-    <value>Log de Mudança</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmSplash</value>
+  </data>
+  <data name="llStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 55</value>
+  </data>
+  <data name="&gt;&gt;llApplicationState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;llProgramName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="llApplicationState.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="llStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="llApplicationState.Text" xml:space="preserve">
+    <!-- <value>Initializing...</value> -->
+    <value>Iniciando...</value>
+  </data>
+  <data name="llApplicationState.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 32</value>
+  </data>
+  <data name="&gt;&gt;llStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="llApplicationState.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;llProgramName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="llProgramName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Sobre</value>
+    <value>FrmSplash</value>
   </data>
+  <data name="llProgramName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="llApplicationState.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;llApplicationState.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;llProgramName.Name" xml:space="preserve">
+    <value>llProgramName</value>
+  </data>
+  <data name="llProgramName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="llProgramName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="llStatus.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;llStatus.Name" xml:space="preserve">
+    <value>llStatus</value>
+  </data>
+  <data name="llStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;llProgramName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="llProgramName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="&gt;&gt;llApplicationState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <!-- <value>Polish</value> -->
+    <value>Portuguese</value>
+  </metadata>
 </root>

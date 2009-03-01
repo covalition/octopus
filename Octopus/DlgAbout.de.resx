@@ -118,7 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBox1.Text" xml:space="preserve">
-    <value>1.2
+    <value>1.3
+- Russian language version
+- German language version
+- Portuguese (Brasil) language version
+- "Find in Database" command available in the search view
+
+1.2
 - Dateigröße und -Anzahl wird in jedem Fall in der Statusleiste angezeigt
 - Externe Festplatten können indiziert werden
 - Neue Befehle unter "Hilfe"
@@ -155,14 +161,6 @@
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>Autoren</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Übersetzer
-
-Deutsch: Clemens-Alexander Brust
-Polnisch: Roman Kowaliszyn
-Russisch: Boris Vasilenko
-</value>
   </data>
   <data name="tpChangeLog.Text" xml:space="preserve">
     <value>Changelog</value>

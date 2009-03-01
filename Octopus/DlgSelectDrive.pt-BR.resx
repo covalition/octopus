@@ -117,46 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>1.3
-- Russian language version
-- German language version
-- Portuguese (Brasil) language version
-- "Find in Database" command available in the search view
-
-1.2
-- Contagem de arquivo e tamanho do arquivo săo exibidos na barra de status em todos os casos
-- Discos (HDs) externos podem ser indexados
-- Novos comandos em Ajuda
-- Nome alterado para Blue Mirror CD/DVD Indexer
-
-1.1.0.5
-- Problema com informaçăo de Licença consertado
-- Localizaçăo de defeito consertada
-
-1.1 
-- Atualizados detalhes de contato, licença e informaçăo de versăo
-- Versăo em Polonęs
-
-1.0 Beta
-- Pequenos bugs removidos
-- Localizaçăo da base de dados pode ser configurada pelo usuário
-- Exportar base de dados usando formato csv 
-- Novas definiçőes de busca implementedas
-- Adicionados Importar/Exportar
-- Nova caixa Sobre</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 13</value>
+  <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>145, 44</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Comentários, erros, requsiçăo de funcionalidades envie para:</value>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>226, 44</value>
   </data>
-  <data name="tpChangeLog.Text" xml:space="preserve">
-    <value>Log de Mudança</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 13</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Selecione a Unidade de Leitura:</value>
+  </data>
+  <data name="cbDrives.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 16</value>
+  </data>
+  <data name="cbDrives.Size" type="System.Drawing.Size, System.Drawing">
+    <value>124, 21</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>313, 79</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Sobre</value>
+    <value>Selecione a Unidade de Leitura:</value>
   </data>
 </root>

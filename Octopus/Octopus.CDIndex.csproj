@@ -123,12 +123,6 @@
     <Compile Include="DlgSelectDrive.Designer.cs">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgWelcome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DlgWelcome.Designer.cs">
-      <DependentUpon>DlgWelcome.cs</DependentUpon>
-    </Compile>
     <Compile Include="FileInDatabase.cs" />
     <Compile Include="FileSizeUnit.cs" />
     <Compile Include="FolderInDatabase.cs" />
@@ -295,6 +289,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectDrive.pt-BR.resx">
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgSelectDrive.resx">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -303,10 +301,6 @@
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="DlgWelcome.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>DlgWelcome.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.de.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -314,6 +308,10 @@
     <EmbeddedResource Include="FrmMain.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.pt-BR.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -330,6 +328,10 @@
     <EmbeddedResource Include="FrmSplash.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.pt-BR.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSplash.resx">
       <SubType>Designer</SubType>

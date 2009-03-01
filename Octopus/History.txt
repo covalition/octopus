@@ -1,6 +1,7 @@
 1.3
 - Russian language version
 - German language version
+- Portuguese (Brasil) language version
 - "Find in Database" command available in the search view
 
 1.2
