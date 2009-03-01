@@ -215,6 +215,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>DlgAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.pt-BR.resx">
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgAbout.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgAbout.cs</DependentUpon>
@@ -230,6 +234,10 @@
     <EmbeddedResource Include="DlgDiscProperties.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscProperties.pt-BR.resx">
+      <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgDiscProperties.resx">
       <DependentUpon>DlgDiscProperties.cs</DependentUpon>
@@ -247,6 +255,10 @@
       <SubType>Designer</SubType>
       <DependentUpon>DlgItemProperties.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgItemProperties.pt-BR.resx">
+      <DependentUpon>DlgItemProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgItemProperties.resx">
       <DependentUpon>DlgItemProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -262,6 +274,10 @@
     <EmbeddedResource Include="DlgOptions.pl.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DlgOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgOptions.pt-BR.resx">
+      <DependentUpon>DlgOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgOptions.resx">
       <SubType>Designer</SubType>

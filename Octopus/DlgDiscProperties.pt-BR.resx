@@ -117,62 +117,102 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnOK.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="btnCancel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 181</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>336, 181</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="llCdLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="llCdLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 9</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 13</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Etiqueta de volume:</value>
+  </data>
+  <data name="tbUserLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="tbUserLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 30</value>
+  </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+    <value>103, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Name des Eintrags:</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="llItemName.ToolTip" xml:space="preserve">
-    <value />
+    <value>&amp;Etiqueta de Usuário:</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 13</value>
+    <value>91, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>Benutzertitel:</value>
+    <value>Formato do Drive:</value>
   </data>
-  <data name="label3.ToolTip" xml:space="preserve">
-    <value />
+  <data name="llDriveFormat.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="llVolumeUserName.ToolTip" xml:space="preserve">
-    <value />
+  <data name="llDriveFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 57</value>
+  </data>
+  <data name="llDriveType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="llDriveType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 81</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+    <value>74, 13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
-    <value>Dateipfad:</value>
+    <value>Tipo de Drive:</value>
   </data>
-  <data name="label5.ToolTip" xml:space="preserve">
-    <value />
+  <data name="llFreeSpace.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
-  <data name="llPath.ToolTip" xml:space="preserve">
-    <value />
+  <data name="llFreeSpace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 105</value>
   </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 13</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 13</value>
   </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Stichwörter:</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Espaço livre:</value>
   </data>
-  <data name="label7.ToolTip" xml:space="preserve">
-    <value />
+  <data name="llSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="llSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 129</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 13</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Tamanho total:</value>
+  </data>
+  <data name="tbKeywords.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="tbKeywords.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 150</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 13</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>&amp;Palavras-chaves:</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>421, 212</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Eintragseigenschaften</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
+    <value>Propriedades do Disco</value>
   </data>
 </root>
