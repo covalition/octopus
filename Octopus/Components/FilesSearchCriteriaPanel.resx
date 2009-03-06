@@ -154,7 +154,7 @@
     <value>*.*</value>
   </data>
   <data name="btnChangeView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 122</value>
+    <value>560, 122</value>
   </data>
   <data name="comboOneAll.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 21</value>
@@ -244,7 +244,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="gbSearchCriteria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 142</value>
+    <value>545, 142</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>25, 13</value>
@@ -373,7 +373,7 @@
     <value>301, 113</value>
   </data>
   <data name="BtnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 3</value>
+    <value>560, 3</value>
   </data>
   <data name="gbSearchCriteria.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -441,7 +441,7 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>1</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>511, 154</value>
+    <value>656, 154</value>
   </data>
   <data name="llFileMask.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 13</value>
@@ -453,7 +453,7 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>68, 19</value>
   </data>
   <data name="tbKeywords.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FilesSearchCriteriaPanel</value>
@@ -498,7 +498,7 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tbFileMask.Size" type="System.Drawing.Size, System.Drawing">
-    <value>326, 20</value>
+    <value>471, 20</value>
   </data>
   <data name="&gt;&gt;gbSearchCriteria.Name" xml:space="preserve">
     <value>gbSearchCriteria</value>
@@ -657,6 +657,6 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>German</value>
+    <value>Dutch</value>
   </metadata>
 </root>

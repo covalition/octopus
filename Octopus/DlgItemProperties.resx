@@ -315,7 +315,7 @@
     <value>llVolumeUserName</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogBase, Octopus.CDIndex, Version=1.3.0.2, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogBase, Octopus.CDIndex, Version=1.3.0.3, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="llPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -430,6 +430,6 @@
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>Portuguese (Brazil)</value>
+    <value>Dutch</value>
   </metadata>
 </root>
