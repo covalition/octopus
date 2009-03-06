@@ -89,13 +89,13 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this, "$this");
             this.BackgroundImage = null;
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbDatabaseFolder);
             this.Controls.Add(this.btnBrowse);
+            this.Controls.Add(this.tbDatabaseFolder);
             this.Font = null;
             this.Icon = null;
             this.Name = "DlgOptions";
-            this.Controls.SetChildIndex(this.btnBrowse, 0);
             this.Controls.SetChildIndex(this.tbDatabaseFolder, 0);
+            this.Controls.SetChildIndex(this.btnBrowse, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.btnOK, 0);
             this.Controls.SetChildIndex(this.btnCancel, 0);

@@ -165,6 +165,10 @@
       <DependentUpon>FormDialogBase.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogBase.tr.resx">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseDialogs\FormDialogList.de.resx">
       <DependentUpon>FormDialogList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -186,6 +190,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BaseDialogs\FormDialogList.ru.resx">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogList.tr.resx">
       <DependentUpon>FormDialogList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -213,6 +221,10 @@
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.tr.resx">
+      <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgAbout.de.resx">
       <DependentUpon>DlgAbout.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -234,6 +246,10 @@
       <DependentUpon>DlgAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgAbout.ru.resx">
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.tr.resx">
       <DependentUpon>DlgAbout.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -261,6 +277,10 @@
       <DependentUpon>DlgDiscProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscProperties.tr.resx">
+      <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgItemProperties.de.resx">
       <DependentUpon>DlgItemProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -282,6 +302,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgItemProperties.ru.resx">
+      <DependentUpon>DlgItemProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgItemProperties.tr.resx">
       <DependentUpon>DlgItemProperties.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -309,6 +333,10 @@
       <DependentUpon>DlgOptions.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="DlgOptions.tr.resx">
+      <DependentUpon>DlgOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgSelectDrive.de.resx">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -330,6 +358,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DlgSelectDrive.ru.resx">
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectDrive.tr.resx">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -357,6 +389,10 @@
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.tr.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSplash.de.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -381,6 +417,10 @@
       <DependentUpon>FrmSplash.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.tr.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.de.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -399,6 +439,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.ru.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.tr.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
