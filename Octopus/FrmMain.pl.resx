@@ -316,18 +316,6 @@
   <data name="tpSearch.Text" xml:space="preserve">
     <value>Znajdź</value>
   </data>
-  <data name="stripMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk3eAQAAAAAAADYAAAAoAAAAAgAAADUAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAApW9KpW9K
-        gD+tfVutfVuAP619W619W4A/p3FNp3FNgD+ufl6ufl6AP69/Xq9/XoA/qHNQqHNQgD+vgF+vgF+AP7CB
-        YbCBYYA/qXVSqXVSgD+xgmKxgmKAP7GDY7GDY4A/qnZTqnZTgD+yhWWyhWWAP7KFZbKFZYA/q3hWq3hW
-        gD+zhmizhmiAP7SHabSHaYA/rHpYrHpYgD+0iGq0iGqAP7WJbLWJbIA/rn1crn1cgD+2i222i22AP7aL
-        braLboA/rn5ern5egD+3jXC3jXCAP7eOcbeOcYA/sIFhsIFhgD+5kHO5kHOAP7mQdLmQdIA/sYNjsYNj
-        gD+6kne6kneAP7qTd7qTd4A/soVmsoVmgD+7lHm7lHmAP7yWe7yWe4A/tIhqtIhqgD+9l329l32AP72Y
-        fr2YfoA/totttottgD++moC+moCAP7+bgr+bgoA/toxvtoxvgD/AnYTAnYSAP8CdhMCdhIA/uI9zuI9z
-        gD/Cn4fCn4eAP8KgiMKgiIA/upF2upF2gD/DoorDooqAP8SjjMSjjIA/u5V6u5V6gD/Eo4zEo4yAPw==
-</value>
-  </data>
   <data name="cmDatabaseMerge.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>

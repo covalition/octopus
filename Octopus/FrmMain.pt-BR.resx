@@ -304,18 +304,6 @@
         AAd2YWx1ZV9fAAgCAAAAAAAAAAoGBQAAAAZWb2x1bWUL
 </value>
   </data>
-  <data name="stripMain.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk3eAQAAAAAAADYAAAAoAAAAAgAAADUAAAABABgAAAAAAAAAAADEDgAAxA4AAAAAAAAAAAAApW9KpW9K
-        EgCtfVutfVsSAK19W619WxIAp3FNp3FNEgCufl6ufl4SAK9/Xq9/XhIAqHNQqHNQEgCvgF+vgF8SALCB
-        YbCBYRIAqXVSqXVSEgCxgmKxgmISALGDY7GDYxIAqnZTqnZTEgCyhWWyhWUSALKFZbKFZRIAq3hWq3hW
-        EgCzhmizhmgSALSHabSHaRIArHpYrHpYEgC0iGq0iGoSALWJbLWJbBIArn1crn1cEgC2i222i20SALaL
-        braLbhIArn5ern5eEgC3jXC3jXASALeOcbeOcRIAsIFhsIFhEgC5kHO5kHMSALmQdLmQdBIAsYNjsYNj
-        EgC6kne6kncSALqTd7qTdxIAsoVmsoVmEgC7lHm7lHkSALyWe7yWexIAtIhqtIhqEgC9l329l30SAL2Y
-        fr2YfhIAtotttottEgC+moC+moASAL+bgr+bghIAtoxvtoxvEgDAnYTAnYQSAMCdhMCdhBIAuI9zuI9z
-        EgDCn4fCn4cSAMKgiMKgiBIAupF2upF2EgDDoorDoooSAMSjjMSjjBIAu5V6u5V6EgDEo4zEo4wSAA==
-</value>
-  </data>
   <data name="tsbDatabase.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 35</value>
   </data>
