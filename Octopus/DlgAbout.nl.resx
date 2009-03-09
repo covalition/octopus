@@ -165,9 +165,6 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Opmerkingen, bugs, functie aanvragen stuur je naar:</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Auteurs</value>
-  </data>
   <data name="textBox2.Text" xml:space="preserve">
     <value>Vertalers
 
@@ -176,6 +173,9 @@ Nederlands: Filip Cornelissen
 Pools: Roman Kowaliszyn
 Portugees (Brazilië): Leonardo Frigo Da Purificação
 Russisch: Boris Vasilenko</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Auteurs</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Over</value>

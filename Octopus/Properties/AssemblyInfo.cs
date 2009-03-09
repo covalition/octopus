@@ -9,7 +9,7 @@ using System.Resources;
 [assembly: AssemblyTitle("Blue Mirror CD/DVD Indexer")]
 [assembly: AssemblyDescription("CD/DVD Indexer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Blue Mirror Software")]
+[assembly: AssemblyCompany("Blue Mirror")]
 [assembly: AssemblyProduct("Blue Mirror CD/DVD Indexer")]
 [assembly: AssemblyCopyright("Copyright © 2005-2009 Blue Mirror")]
 [assembly: AssemblyTrademark("")]
@@ -30,6 +30,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.3.0.3")]
-[assembly: AssemblyFileVersion("1.3.0.3")]
+[assembly: AssemblyVersion("1.4.0.0")]
+[assembly: AssemblyFileVersion("1.4.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("")]

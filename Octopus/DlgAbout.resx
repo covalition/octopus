@@ -166,9 +166,6 @@
   <data name="&gt;&gt;llTitle.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="llSourceForge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 16</value>
-  </data>
   <data name="llCopyright.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 13</value>
   </data>
@@ -181,9 +178,6 @@
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;llCopyright.Name" xml:space="preserve">
-    <value>llCopyright</value>
-  </data>
   <data name="llTitle.Text" xml:space="preserve">
     <value>Octopus CD/DVD Index</value>
   </data>
@@ -194,8 +188,8 @@
   <data name="llSourceForge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
@@ -221,6 +215,9 @@
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
   </data>
+  <data name="tpChangeLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>337, 442</value>
   </data>
@@ -233,8 +230,8 @@
   <data name="&gt;&gt;llTitle.Name" xml:space="preserve">
     <value>llTitle</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;llSourceForge.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="llSourceForge.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -257,8 +254,8 @@
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 168</value>
   </data>
-  <data name="&gt;&gt;tcAbout.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>About</value>
@@ -268,9 +265,6 @@
   </data>
   <data name="llCodePlex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;tpChangeLog.Name" xml:space="preserve">
-    <value>tpChangeLog</value>
   </data>
   <data name="llSourceForge.Text" xml:space="preserve">
     <value>http://sourceforge.net/projects/octoindex/</value>
@@ -305,8 +299,8 @@
   <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="llCodePlex.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
     <value>linkLabel1</value>
@@ -316,6 +310,9 @@
   </data>
   <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 100</value>
@@ -344,8 +341,8 @@
   <data name="label2.Text" xml:space="preserve">
     <value>Comments, bugs, feature requests send to:</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="tpChangeLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 174</value>
@@ -362,8 +359,8 @@
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
+  <data name="&gt;&gt;tpChangeLog.Name" xml:space="preserve">
+    <value>tpChangeLog</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 13</value>
@@ -374,14 +371,14 @@
   <data name="label3.Text" xml:space="preserve">
     <value>Web site:</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 168</value>
   </data>
   <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="llSourceForge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 16</value>
   </data>
   <data name="llVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -389,8 +386,8 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="tpChangeLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;tcAbout.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="llVersion.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -409,6 +406,9 @@
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
+  </data>
+  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+    <value>tpChangeLog</value>
   </data>
   <data name="&gt;&gt;llVersion.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -431,17 +431,20 @@
   <data name="&gt;&gt;panel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;llSourceForge.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;llCodePlex.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.3.0.2, Culture=neutral, PublicKeyToken=null</value>
+    <value>Octopus.CDIndex.BaseDialogs.FormDialogList, Octopus.CDIndex, Version=1.3.0.3, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>tpChangeLog</value>
+  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
+  </data>
+  <data name="&gt;&gt;llCodePlex.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="linkLabel1.Text" xml:space="preserve">
     <value>kowaliszyn@users.sourceforge.net</value>
@@ -464,17 +467,14 @@
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>320, 174</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="llSourceForge.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
   <data name="tpChangeLog.Text" xml:space="preserve">
     <value>Change Log</value>
   </data>
-  <data name="tcAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>113</value>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
@@ -488,17 +488,14 @@
   <data name="&gt;&gt;llCopyright.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 168</value>
-  </data>
   <data name="llVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 65</value>
   </data>
-  <data name="llCodePlex.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
+  <data name="&gt;&gt;llCopyright.Name" xml:space="preserve">
+    <value>llCopyright</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 143</value>
+  <data name="llTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="llCodePlex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
@@ -512,7 +509,10 @@
   <data name="llCopyright.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 42</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.Parent" xml:space="preserve">
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 143</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="llSourceForge.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -578,16 +578,18 @@
   <data name="textBox2.Text" xml:space="preserve">
     <value>Translators
 
+Dutch: Filip Cornelissen
 German: Clemens-Alexander Brust
 Polish: Roman Kowaliszyn
 Portuguese (Brasil): Leonardo Frigo Da Purificação
-Russian: Boris Vasilenko</value>
+Russian: Boris Vasilenko
+Turkish: Polat Pinar</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="llTitle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="tcAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
   </data>
   <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
     <value>btnCancel</value>
@@ -599,6 +601,6 @@ Russian: Boris Vasilenko</value>
     <value>True</value>
   </metadata>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>German</value>
+    <value>Dutch</value>
   </metadata>
 </root>
