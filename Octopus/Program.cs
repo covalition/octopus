@@ -11,7 +11,7 @@ namespace Octopus.CDIndex
 		static void Main()
 		{
             // Localization test
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("pl");
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
 			Application.EnableVisualStyles();
             FrmMain f;
             using (FrmSplash splash = new FrmSplash()) {
