@@ -64,6 +64,7 @@ namespace Octopus.CDIndex
             this.columnHeader11 = new System.Windows.Forms.ColumnHeader();
             this.cmsSearchList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmFindInDatabase = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
             this.filesSearchCriteriaPanel = new Octopus.CDIndex.Components.FilesSearchCriteriaPanel();
             this.stripMain = new Octopus.CDIndex.RenderedToolStrip();
             this.tsbDatabase = new System.Windows.Forms.ToolStripDropDownButton();
@@ -81,6 +82,7 @@ namespace Octopus.CDIndex
             this.cmWhatsNew = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.cmAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnHeader14 = new System.Windows.Forms.ColumnHeader();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
@@ -159,7 +161,8 @@ namespace Octopus.CDIndex
             this.columnHeader4,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader12});
+            this.columnHeader12,
+            this.columnHeader13});
             this.lvDatabaseItems.ContextMenuStrip = this.cmList;
             resources.ApplyResources(this.lvDatabaseItems, "lvDatabaseItems");
             this.lvDatabaseItems.HideSelection = false;
@@ -287,7 +290,8 @@ namespace Octopus.CDIndex
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader10,
-            this.columnHeader11});
+            this.columnHeader11,
+            this.columnHeader14});
             this.lvSearchResults.ContextMenuStrip = this.cmsSearchList;
             resources.ApplyResources(this.lvSearchResults, "lvSearchResults");
             this.lvSearchResults.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
@@ -345,6 +349,10 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this.cmFindInDatabase, "cmFindInDatabase");
             this.cmFindInDatabase.Name = "cmFindInDatabase";
             this.cmFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabase_Click);
+            // 
+            // columnHeader13
+            // 
+            resources.ApplyResources(this.columnHeader13, "columnHeader13");
             // 
             // filesSearchCriteriaPanel
             // 
@@ -469,6 +477,10 @@ namespace Octopus.CDIndex
             resources.ApplyResources(this.cmAbout, "cmAbout");
             this.cmAbout.Click += new System.EventHandler(this.cmAbout_Click);
             // 
+            // columnHeader14
+            // 
+            resources.ApplyResources(this.columnHeader14, "columnHeader14");
+            // 
             // FrmMain
             // 
             resources.ApplyResources(this, "$this");
@@ -551,6 +563,8 @@ namespace Octopus.CDIndex
         private System.Windows.Forms.ToolStripMenuItem cmWhatsNew;
         private System.Windows.Forms.ContextMenuStrip cmsSearchList;
         private System.Windows.Forms.ToolStripMenuItem cmFindInDatabase;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
 	}
 }
 

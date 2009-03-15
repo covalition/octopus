@@ -37,7 +37,8 @@ namespace Octopus.CDIndex
                 case 3:
                 case 4:
                 case 5:
-                case 6: return String.Compare(x.SubItems[col].Text, y.SubItems[col].Text);
+                case 6:
+                case 7: return String.Compare(x.SubItems[col].Text, y.SubItems[col].Text);
                 case 1: return length(x) > length(y) ? 1 : (length(x) == length(y) ? 0 : -1);
                 case 2: return item(x).CreationTime > item(y).CreationTime ? 1 : (item(x).CreationTime == item(y).CreationTime ? 0 : -1);
                 default: return 0;

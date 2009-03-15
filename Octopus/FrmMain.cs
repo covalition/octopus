@@ -231,6 +231,7 @@ namespace Octopus.CDIndex {
                             lvi.SubItems.Add(fileid.CreationTime.ToString("g"));
                             lvi.SubItems.Add(fileid.Attributes.ToString());
                             lvi.SubItems.Add(fileid.Keywords);
+                            lvi.SubItems.Add(fileid.Extension);
 
                             lvDatabaseItems.Items.Add(lvi);
                         }

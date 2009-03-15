@@ -85,6 +85,7 @@ namespace Octopus.CDIndex {
             lvi.SubItems.Add(GetVolumeUserName());
             lvi.SubItems.Add(GetPath());
             lvi.SubItems.Add(Keywords);
+            lvi.SubItems.Add(Extension);
             list.Add(lvi);
         }
 
@@ -99,6 +100,7 @@ namespace Octopus.CDIndex {
             lvi.SubItems.Add(file.GetVolumeUserName());
             lvi.SubItems.Add(file.GetPath());
             lvi.SubItems.Add(file.Keywords);
+            lvi.SubItems.Add(file.Extension);
             // TODO: sprawdziæ wyœwietlanie grup
             // sprawdŸ czy jest grupa
             /*
