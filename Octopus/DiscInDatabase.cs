@@ -51,6 +51,14 @@ namespace Octopus.CDIndex {
 			set { volumeLabel = value; }
 		}
 
+        [OptionalField]
+        string physicalLocation;
+
+        public string PhysicalLocation {
+            get { return physicalLocation; }
+            set { physicalLocation = value; }
+        }
+
 		#region IComparable<DiscInDatabase> Members
 
 		int IComparable<DiscInDatabase>.CompareTo(DiscInDatabase other) {

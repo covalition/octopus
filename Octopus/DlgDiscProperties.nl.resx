@@ -119,16 +119,16 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 190</value>
+    <value>219, 201</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 190</value>
+    <value>305, 201</value>
   </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Annuleren</value>
   </data>
   <data name="llCdLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 9</value>
+    <value>106, 9</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
@@ -137,7 +137,7 @@
     <value>Volumelabel:</value>
   </data>
   <data name="tbUserLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 30</value>
+    <value>106, 30</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 13</value>
@@ -152,13 +152,13 @@
     <value>Drive formaat:</value>
   </data>
   <data name="llDriveFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 57</value>
+    <value>106, 57</value>
   </data>
   <data name="llDriveType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 81</value>
+    <value>106, 81</value>
   </data>
   <data name="llFreeSpace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 105</value>
+    <value>106, 105</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>61, 13</value>
@@ -167,7 +167,7 @@
     <value>Vrije ruimte:</value>
   </data>
   <data name="llSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 129</value>
+    <value>106, 129</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 13</value>
@@ -176,7 +176,7 @@
     <value>Totale grootte:</value>
   </data>
   <data name="tbKeywords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>101, 150</value>
+    <value>106, 150</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 13</value>
@@ -184,8 +184,11 @@
   <data name="label4.Text" xml:space="preserve">
     <value>&amp;Sleutelwoorden:</value>
   </data>
+  <data name="tbPhysicalLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>106, 174</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>406, 221</value>
+    <value>390, 232</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Disk Eigenschappen</value>

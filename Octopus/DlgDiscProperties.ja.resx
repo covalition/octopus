@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>224, 179</value>
+    <value>205, 201</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 179</value>
+    <value>291, 201</value>
   </data>
   <data name="llCdLabel.Font" type="System.Drawing.Font, System.Drawing">
     <value>MS UI Gothic, 9pt, style=Bold</value>
@@ -241,8 +241,20 @@
   <data name="label4.Text" xml:space="preserve">
     <value>キーワード(&amp;K):</value>
   </data>
+  <data name="tbPhysicalLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 174</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>37, 177</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 13</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Location:</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>395, 210</value>
+    <value>376, 232</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ディスクプロパティ</value>

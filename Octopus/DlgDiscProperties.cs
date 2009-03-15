@@ -22,6 +22,8 @@ namespace Octopus.CDIndex {
 		private TextBox tbKeywords;
 		private Label label4;
         private ToolTip toolTip1;
+        private TextBox tbPhysicalLocation;
+        private Label label7;
 		private System.ComponentModel.IContainer components = null;
 
 		public DlgDiscProperties() {
@@ -66,6 +68,8 @@ namespace Octopus.CDIndex {
             this.tbKeywords = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.tbPhysicalLocation = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOK
@@ -220,12 +224,33 @@ namespace Octopus.CDIndex {
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "Blue Mirror Info";
             // 
+            // tbPhysicalLocation
+            // 
+            this.tbPhysicalLocation.AccessibleDescription = null;
+            this.tbPhysicalLocation.AccessibleName = null;
+            resources.ApplyResources(this.tbPhysicalLocation, "tbPhysicalLocation");
+            this.tbPhysicalLocation.BackgroundImage = null;
+            this.tbPhysicalLocation.Font = null;
+            this.tbPhysicalLocation.Name = "tbPhysicalLocation";
+            this.toolTip1.SetToolTip(this.tbPhysicalLocation, resources.GetString("tbPhysicalLocation.ToolTip"));
+            // 
+            // label7
+            // 
+            this.label7.AccessibleDescription = null;
+            this.label7.AccessibleName = null;
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Font = null;
+            this.label7.Name = "label7";
+            this.toolTip1.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
+            // 
             // DlgDiscProperties
             // 
             this.AccessibleDescription = null;
             this.AccessibleName = null;
             resources.ApplyResources(this, "$this");
             this.BackgroundImage = null;
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tbPhysicalLocation);
             this.Controls.Add(this.tbKeywords);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.llSize);
@@ -260,13 +285,15 @@ namespace Octopus.CDIndex {
             this.Controls.SetChildIndex(this.llSize, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.tbKeywords, 0);
+            this.Controls.SetChildIndex(this.tbPhysicalLocation, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
 		}
 		#endregion
 
-		internal static bool GetDiscName(out string discName, out string keywords, string drive) {
+		internal static bool GetDiscName(out string discName, out string keywords, out string physicalLocation, string drive) {
 			DlgDiscProperties dlg = new DlgDiscProperties();
 			DriveInfo di = new DriveInfo(drive);
 			dlg.tbUserLabel.Text = dlg.llCdLabel.Text = di.VolumeLabel;
@@ -275,14 +302,15 @@ namespace Octopus.CDIndex {
 			dlg.llFreeSpace.Text = CustomConvert.ToKB(di.TotalFreeSpace);
 			dlg.llSize.Text = CustomConvert.ToKB(di.TotalSize);
 			dlg.tbKeywords.Text = "";
-
+            dlg.tbPhysicalLocation.Text = "";
 			if (dlg.ShowDialog() == DialogResult.OK) {
 				discName = dlg.tbUserLabel.Text;
 				keywords = dlg.tbKeywords.Text;
+                physicalLocation = dlg.tbPhysicalLocation.Text;
 				return true;
 			}
 			else {
-				discName = keywords = "";
+				physicalLocation = discName = keywords = "";
 				return false;
 			}
 		}
@@ -296,10 +324,11 @@ namespace Octopus.CDIndex {
 			dlg.llFreeSpace.Text = CustomConvert.ToKB(discInDatabase.TotalFreeSpace);
 			dlg.llSize.Text = CustomConvert.ToKB(discInDatabase.TotalSize);
 			dlg.tbKeywords.Text = discInDatabase.Keywords;
-
+            dlg.tbPhysicalLocation.Text = discInDatabase.PhysicalLocation;
 			if (dlg.ShowDialog() == DialogResult.OK) {
 				discInDatabase.Name = dlg.tbUserLabel.Text;
 				discInDatabase.Keywords = dlg.tbKeywords.Text;
+                discInDatabase.PhysicalLocation = dlg.tbPhysicalLocation.Text;
 				return true;
 			}
 			else

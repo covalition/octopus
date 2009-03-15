@@ -190,6 +190,12 @@
   <data name="label4.Text" xml:space="preserve">
     <value>Stichwörter:</value>
   </data>
+  <data name="tbPhysicalLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 174</value>
+  </data>
+  <data name="tbPhysicalLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 20</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CD-Eigenschaften</value>
   </data>

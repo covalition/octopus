@@ -121,59 +121,44 @@
     <value>Отмена</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="llCdLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 16</value>
-  </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 15</value>
+    <value>67, 13</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Имя (сист.):</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 15</value>
+    <value>32, 13</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>&amp;Имя:</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 15</value>
+    <value>52, 13</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Формат:</value>
   </data>
-  <data name="llDriveFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 16</value>
-  </data>
-  <data name="llDriveType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 16</value>
-  </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 15</value>
+    <value>29, 13</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Тип:</value>
   </data>
-  <data name="llFreeSpace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 16</value>
-  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 15</value>
+    <value>59, 13</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Свободно:</value>
   </data>
-  <data name="llSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 16</value>
-  </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 15</value>
+    <value>45, 13</value>
   </data>
   <data name="label8.Text" xml:space="preserve">
     <value>Объем:</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 15</value>
+    <value>59, 13</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>&amp;Кл. слова:</value>

@@ -532,23 +532,25 @@ namespace Octopus.CDIndex {
             string drive;
             string cdName;
             string keywords;
+            string physicalLocation;
             try {
-                if (selectedDrive(out drive) && gotCdProperties(out cdName, out keywords, drive))
-                    readCdOnDrive(drive, cdName, keywords);
+                if (selectedDrive(out drive) && gotCdProperties(out cdName, out keywords, out physicalLocation, drive))
+                    readCdOnDrive(drive, cdName, keywords, physicalLocation);
             }
             catch (IOException e) {
                 MessageBox.Show(string.Format(Properties.Resources.ErrorIO, e.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private bool gotCdProperties(out string discName, out string keywords, string drive) {
-            return DlgDiscProperties.GetDiscName(out discName, out keywords, drive);
+        private bool gotCdProperties(out string discName, out string keywords, out string physicalLocation, string drive) {
+            return DlgDiscProperties.GetDiscName(out discName, out keywords, out physicalLocation, drive);
         }
 
-        private void readCdOnDrive(string drive, string cdName, string keywords) {
+        private void readCdOnDrive(string drive, string cdName, string keywords, string physicalLocation) {
             DiscInDatabase cdRom = new DiscInDatabase();
             cdRom.Name = cdName;
             cdRom.Keywords = keywords;
+            cdRom.PhysicalLocation = physicalLocation;
             Cursor c = Cursor.Current;
             Cursor.Current = Cursors.WaitCursor;
             try {
@@ -559,7 +561,7 @@ namespace Octopus.CDIndex {
                 cdRom.TotalFreeSpace = di.TotalFreeSpace;
                 cdRom.TotalSize = di.TotalSize;
                 cdRom.VolumeLabel = di.VolumeLabel;
-
+                
                 cdsInDatabase.Add(cdRom);
                 sortByLabels();
                 setModified();
