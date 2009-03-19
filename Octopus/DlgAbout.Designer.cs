@@ -180,11 +180,12 @@ namespace Octopus.CDIndex
             this.tpChangeLog.AccessibleDescription = null;
             this.tpChangeLog.AccessibleName = null;
             resources.ApplyResources(this.tpChangeLog, "tpChangeLog");
-            this.tpChangeLog.BackColor = System.Drawing.SystemColors.Control;
+            this.tpChangeLog.BackColor = System.Drawing.Color.Transparent;
             this.tpChangeLog.BackgroundImage = null;
             this.tpChangeLog.Controls.Add(this.textBox1);
             this.tpChangeLog.Font = null;
             this.tpChangeLog.Name = "tpChangeLog";
+            this.tpChangeLog.UseVisualStyleBackColor = true;
             // 
             // DlgAbout
             // 

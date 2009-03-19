@@ -117,35 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>1.3
-- Russian language version
-- German language version
-- Portuguese (Brasil) language version
-- "Find in Database" command available in the search view
-
-1.2
-- Dateigröße und -Anzahl wird in jedem Fall in der Statusleiste angezeigt
-- Externe Festplatten können indiziert werden
-- Neue Befehle unter "Hilfe"
-- Namensänderung: Blue Mirror CD/DVD Indexer
-
-1.1.0.5
-- Problem mit Lizenzinformationen gelöst
-- Localisierungsprobleme gelöst
-
-1.1 
-- Aktualisierte Kontakt-, Lizenz- und Versionsinformationen
-- Polnische Version
-
-1.0 Beta
-- Kleine Bugs entfernt
-- Ort der Datenbankdatei kann vom Benutzer festgelegt werden
-- CSV-Export der Datenbank
-- Neue Suchdefinitionen implementiert
-- Import- und Exportfunktionen hinzugefügt
-- Neuer Über-Dialog</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>49, 13</value>

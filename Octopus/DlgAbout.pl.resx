@@ -164,8 +164,14 @@
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
     <value>322, 168</value>
   </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
   <data name="tpChangeLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>322, 168</value>
+  </data>
+  <data name="tpChangeLog.Text" xml:space="preserve">
+    <value>Historia zmian</value>
   </data>
   <data name="tcAbout.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 201</value>

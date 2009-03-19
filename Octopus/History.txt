@@ -1,4 +1,7 @@
 1.4
+- New column in the list view: File Extension
+- You can store the physical location of CD/DVD
+- Japanese language version
 - Turkish language version
 - Dutch language version
 

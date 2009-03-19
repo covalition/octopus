@@ -120,38 +120,6 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Sluiten</value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
-    <value>1.4
-- Nederlandse versie
-
-1.3
-- Russische versie
-- Duitse versie
-- Portugeese (Brazilië) versie
-- "Zoek in Database" commando beschikbaar in de zoek functie
-
-1.2
-- Aantal bestanden en bestand grootte zijn altijd weergegeven in de status bar
-- Externe harde schijven kunnen worden geïndexeerd
-- Nieuwe commando's in Help
-- Naam veranderd naar Blue Mirror CD/DVD Indexer
-
-1.1.0.5 
-- Licentie info probleem opgelost 
-- Lokalisatie problemen opgelost 
-
-1.1 
-- Updated contactgegevens, licentie en versie info 
-- Poolse versie 
-
-1.0 Beta 
-- Kleine bugs verwijderd 
-- Database-bestandslocatie kan worden ingesteld door de gebruiker 
-- Export database naar CSV-formaat 
-- Nieuwe zoekopdracht definities uitgevoerd 
-- Import / export toegevoegd 
-- Nieuwe "Over"</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="llVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>56, 13</value>
