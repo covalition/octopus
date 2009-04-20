@@ -1,4 +1,5 @@
 1.4
+- BUG: Folder creation time was read incorrectly 
 - New column in the list view: File Extension
 - You can store the physical location of CD/DVD
 - Japanese language version

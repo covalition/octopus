@@ -122,13 +122,12 @@ namespace Octopus.CDIndex {
                 foreach (System.IO.DirectoryInfo subFolder in subFolders) {
                     FolderInDatabase newFolder = new FolderInDatabase(this);
                     newFolder.Name = subFolder.Name;
-
                     newFolder.Attributes = subFolder.Attributes;
-                    //newFolder.CreationTime = subFolder.CreationTime;
+                    newFolder.CreationTime = subFolder.CreationTime;
                     newFolder.Extension = subFolder.Extension;
                     newFolder.FullName = subFolder.FullName;
-                    //newFolder.LastAccessTime = subFolder.LastAccessTime;
-                    //newFolder.LastWriteTime = subFolder.LastWriteTime;
+                    newFolder.LastAccessTime = subFolder.LastAccessTime;
+                    newFolder.LastWriteTime = subFolder.LastWriteTime;
 
                     newFolder.ReadFrom(subFolder.FullName);
                     folders.Add(newFolder);
