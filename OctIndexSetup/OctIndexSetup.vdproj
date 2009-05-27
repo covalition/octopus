@@ -239,7 +239,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Blue Mirror CD DVD Indexer"
         "ProductCode" = "8:{951C64D6-3A89-46AB-BB62-8636A87B2B2C}"
-        "PackageCode" = "8:{BE093918-1092-4C99-BDFF-371FD84F2140}"
+        "PackageCode" = "8:{9A1C8479-028C-45BE-B65F-D1BEDDA43AD5}"
         "UpgradeCode" = "8:{1EECD51C-D81D-4364-929C-1FD18AFF3325}"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
@@ -848,7 +848,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8102E2731B9A464A8C7E85AD3507C7A9"
             {
-            "SourcePath" = "8:..\\Octopus\\obj\\Debug\\Octopus.CDIndex.exe"
+            "SourcePath" = "8:..\\Octopus\\obj\\Release\\Octopus.CDIndex.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_585F5C0D9A1747198068A7FF8C462F6A"

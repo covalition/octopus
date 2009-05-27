@@ -27,8 +27,8 @@
     </AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationIcon>MainIcon.ico</ApplicationIcon>
-    <PublishUrl>sss\</PublishUrl>
-    <Install>false</Install>
+    <PublishUrl>C:\Publish\</PublishUrl>
+    <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
@@ -37,11 +37,12 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <SupportUrl>http://biostat.aspweb.cz/OctopusInfo.htm</SupportUrl>
-    <ProductName>Octopus CD DVD Index</ProductName>
-    <PublisherName>Roman Kowaliszyn</PublisherName>
-    <WebPage>Octopus.htm</WebPage>
-    <ApplicationVersion>1.0.5.0</ApplicationVersion>
+    <SupportUrl>http://octopi.codeplex.com/</SupportUrl>
+    <ProductName>Blue Mirror CD DVD Indexer</ProductName>
+    <PublisherName>Blue Mirror</PublisherName>
+    <WebPage>
+    </WebPage>
+    <ApplicationVersion>1.4.0.2</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
