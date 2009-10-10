@@ -1,0 +1,408 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{609D5C00-59C9-495D-A9A0-AF9170FD6CCA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlueMirrorIndexer</RootNamespace>
+    <AssemblyName>BlueMirrorIndexer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>D821792C915549224DE4825FA003AD4C85D35E1A</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Octopus.CDIndex_1_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <TargetZone>LocalIntranet</TargetZone>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>sss\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Background</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://biostat.aspweb.cz/OctopusInfo.htm</SupportUrl>
+    <ProductName>Octopus CD DVD Index</ProductName>
+    <PublisherName>Roman Kowaliszyn</PublisherName>
+    <WebPage>Octopus.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.5.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunFxCop>false</RunFxCop>
+    <FxCopRules>
+    </FxCopRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbortException.cs" />
+    <Compile Include="BaseDialogs\FormDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDialogs\FormDialogBase.Designer.cs">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseDialogs\FormDialogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseDialogs\FormDialogList.Designer.cs">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FolderImpl.cs" />
+    <Compile Include="Components\LogicalFoldersTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VolumeDatabase.cs" />
+    <Compile Include="Components\FilesSearchCriteriaPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\FilesSearchCriteriaPanel.Designer.cs">
+      <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ListViewVista.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\SearchEventArgs.cs" />
+    <Compile Include="Components\TreeViewVista.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompressedFile.cs" />
+    <Compile Include="Convert.cs" />
+    <Compile Include="Crc32.cs" />
+    <Compile Include="DatabaseItemComparer.cs" />
+    <Compile Include="DiscInDatabase.cs" />
+    <Compile Include="DlgAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAbout.Designer.cs">
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgDiscProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgReadingProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgReadingProgress.Designer.cs">
+      <DependentUpon>DlgReadingProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgReadVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgReadVolume.Designer.cs">
+      <DependentUpon>DlgReadVolume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSelectLogicalFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSelectLogicalFolder.Designer.cs">
+      <DependentUpon>DlgSelectLogicalFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgFileProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFileProperties.Designer.cs">
+      <DependentUpon>DlgFileProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgFolderProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgFolderProperties.Designer.cs">
+      <DependentUpon>DlgFolderProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgItemProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEditLogicalFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEditLogicalFolder.Designer.cs">
+      <DependentUpon>DlgEditLogicalFolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgProgress.Designer.cs">
+      <DependentUpon>DlgProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgSelectDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgSelectDrive.Designer.cs">
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropInfo.cs" />
+    <Compile Include="FileComparer.cs" />
+    <Compile Include="FileInDatabase.cs" />
+    <Compile Include="FileSizeUnit.cs" />
+    <Compile Include="FolderInDatabase.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IFolder.cs" />
+    <Compile Include="ItemInDatabase.cs" />
+    <Compile Include="KeywordMatcher.cs" />
+    <Compile Include="LogicalFolder.cs" />
+    <Compile Include="LogicalFolderInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgressInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseDialogs\FormDialogBase.pl.resx">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogBase.resx">
+      <DependentUpon>FormDialogBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogList.pl.resx">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseDialogs\FormDialogList.resx">
+      <DependentUpon>FormDialogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscProperties.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDiscProperties.resx">
+      <DependentUpon>DlgDiscProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEditLogicalFolder.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgEditLogicalFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgReadingProgress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgReadingProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgReadVolume.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgReadVolume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectLogicalFolder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgSelectLogicalFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFileProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgFileProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgFolderProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgFolderProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgItemProperties.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgItemProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgItemProperties.resx">
+      <DependentUpon>DlgItemProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEditLogicalFolder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgEditLogicalFolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgProgress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectDrive.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgSelectDrive.resx">
+      <DependentUpon>DlgSelectDrive.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.pl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\LogicalFoldersTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogicalFoldersTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.pl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcItemFolderClassification.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UcItemFolderClassification.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DatabaseItems.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RenderedToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchResultComparer.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="UcItemFolderClassification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcItemFolderClassification.Designer.cs">
+      <DependentUpon>UcItemFolderClassification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unrar.cs" />
+    <Compile Include="Win32.cs" />
+    <Compile Include="StreamWithEvents.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CD_16.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="History.txt" />
+    <Content Include="MainIcon.ico" />
+    <None Include="License.rtf" />
+    <None Include="Resources\FindHS.png" />
+    <Content Include="Resources\MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agt_action_fail1.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\folder_page.png" />
+    <None Include="Resources\page.png" />
+    <None Include="Resources\world_go.png" />
+    <None Include="Resources\delete1.png" />
+    <None Include="Resources\folder_find.png" />
+    <None Include="Resources\tag_blue_edit.png" />
+    <None Include="Resources\folder_add.png" />
+    <None Include="Resources\folder_delete.png" />
+    <None Include="Resources\folder_edit.png" />
+    <None Include="Resources\folder_go.png" />
+    <Content Include="unrar.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

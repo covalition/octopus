@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="PeterDakanIndexer.ItemInDatabase">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ItemInDatabase.cs</FileName>
+      <HashCode>AICgACAEYAAgAIBCIECAQwRQCAAGEUCQACFAwAEAoEA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="logicalFolders" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="PeterDakanIndexer.FileInDatabase">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>FileInDatabase.cs</FileName>
+      <HashCode>AIAgQAAEAAAAAAAQAAAAAQEAAEIAAABSAAgACAEIIEA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="PeterDakanIndexer.DiscInDatabase">
+    <Position X="3.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>DiscInDatabase.cs</FileName>
+      <HashCode>A4QAAFEFACEwAUAkIgAAAUEAABFACAASASQAAAEAAAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeterDakanIndexer.FolderInDatabase">
+    <Position X="3.5" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>FolderInDatabase.cs</FileName>
+      <HashCode>BoIAgAQEAIAAAUAAAQAQIQEBCAAAAAAAAAAAgAEAAIA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeterDakanIndexer.CompressedFile">
+    <Position X="0.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>CompressedFile.cs</FileName>
+      <HashCode>BoIAgAAEAoAgAUAAAAAQIQEBCAABQAQAAEIAkIEAAIA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PeterDakanIndexer.LogicalFolder">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>LogicalFolder.cs</FileName>
+      <HashCode>EAIAARAAAEIAiABAQIgAQAUAgAEEQAAGAAAABAACACA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="items" />
+    </ShowAsCollectionAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Interface Name="PeterDakanIndexer.IFolder">
+    <Position X="6" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IFolder.cs</FileName>
+      <HashCode>BAIAAAAEAIAAAUAAAAAQIAQBCAACAAAAACAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+</ClassDiagram>
