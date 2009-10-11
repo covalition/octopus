@@ -15,12 +15,10 @@ namespace BlueMirrorIndexer
         }
 
         bool useSize;
-        //DateTime started;
         public DlgReadingProgress(string title, string currentStatus, bool useSize)
             : base(title, currentStatus) {
             InitializeComponent();
             this.useSize = useSize;
-            //started = DateTime.Now;
         }
 
         public void SetReadingProgress(long runningFileCount, long runningFileSize, string currentItemName, string operation) {
@@ -40,21 +38,9 @@ namespace BlueMirrorIndexer
                 llFileCount.Text = runningFileCount.ToString();
                 llFileSize.Text = CustomConvert.ToKBAndB(runningFileSize);
             }
-            //llOperation.Text = operation;
             SetProgress(progress, currentItemName);
-            //TimeSpan elapsed = LastTick - started;
-            //if (progress > 0.0) {
-            //    TimeSpan estimated = new TimeSpan(0, 0, (int)(elapsed.TotalSeconds / progress));
-            //    llElapsedTime.Text = timeToString(elapsed) + " / " + timeToString(estimated);
-            //}
-            //else
-            //    llElapsedTime.Text = timeToString(elapsed);
             llOperation.Text = operation;
         }
-
-        //private static string timeToString(TimeSpan time) {
-        //    return time.Hours + ":" + time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00");
-        //}
 
     }
 }
