@@ -121,6 +121,15 @@
     <value>220, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pmTree.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 48</value>
+  </data>
+  <data name="&gt;&gt;pmTree.Name" xml:space="preserve">
+    <value>pmTree</value>
+  </data>
+  <data name="&gt;&gt;pmTree.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cmTreeItemPropertiesPopup.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -138,15 +147,6 @@
   </data>
   <data name="cmDeleteTreeItemPopup.Text" xml:space="preserve">
     <value>&amp;Delete Info...</value>
-  </data>
-  <data name="pmTree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 48</value>
-  </data>
-  <data name="&gt;&gt;pmTree.Name" xml:space="preserve">
-    <value>pmTree</value>
-  </data>
-  <data name="&gt;&gt;pmTree.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="ilTree.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>313, 17</value>
@@ -201,6 +201,15 @@
   <metadata name="pmList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>491, 17</value>
   </metadata>
+  <data name="pmList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 48</value>
+  </data>
+  <data name="&gt;&gt;pmList.Name" xml:space="preserve">
+    <value>pmList</value>
+  </data>
+  <data name="&gt;&gt;pmList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cmItemPropertiesFromList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
@@ -222,15 +231,6 @@
   <data name="cmDeleteListItemPopup.Text" xml:space="preserve">
     <value>&amp;Delete File...</value>
   </data>
-  <data name="pmList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 48</value>
-  </data>
-  <data name="&gt;&gt;pmList.Name" xml:space="preserve">
-    <value>pmList</value>
-  </data>
-  <data name="&gt;&gt;pmList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="ilSystem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>394, 17</value>
   </metadata>
@@ -240,6 +240,15 @@
   <metadata name="pmSearchList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>579, 17</value>
   </metadata>
+  <data name="pmSearchList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 48</value>
+  </data>
+  <data name="&gt;&gt;pmSearchList.Name" xml:space="preserve">
+    <value>pmSearchList</value>
+  </data>
+  <data name="&gt;&gt;pmSearchList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cmItemPropertiesFromSearch.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -258,18 +267,37 @@
   <data name="cmFindInDatabase.Text" xml:space="preserve">
     <value>Find in Database</value>
   </data>
-  <data name="pmSearchList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 48</value>
-  </data>
-  <data name="&gt;&gt;pmSearchList.Name" xml:space="preserve">
-    <value>pmSearchList</value>
-  </data>
-  <data name="&gt;&gt;pmSearchList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <metadata name="menuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 0</value>
   </metadata>
+  <data name="menuMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="menuMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 24</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="menuMain.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;menuMain.Name" xml:space="preserve">
+    <value>menuMain</value>
+  </data>
+  <data name="&gt;&gt;menuMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;menuMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;menuMain.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
   <data name="cmNew.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
   </data>
@@ -315,11 +343,11 @@
   <data name="cmExit.Text" xml:space="preserve">
     <value>&amp;Exit</value>
   </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
+  <data name="volumeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 20</value>
   </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;File</value>
+  <data name="volumeToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Volume</value>
   </data>
   <data name="cmReadVolume.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 22</value>
@@ -327,23 +355,23 @@
   <data name="cmReadVolume.Text" xml:space="preserve">
     <value>&amp;Read...</value>
   </data>
-  <data name="aToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
-  </data>
-  <data name="aToolStripMenuItem.Text" xml:space="preserve">
-    <value>A:</value>
-  </data>
   <data name="pmVolumes.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 22</value>
   </data>
   <data name="pmVolumes.Text" xml:space="preserve">
     <value>Read From</value>
   </data>
-  <data name="volumeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
+  <data name="aToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 22</value>
   </data>
-  <data name="volumeToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Volume</value>
+  <data name="aToolStripMenuItem.Text" xml:space="preserve">
+    <value>A:</value>
+  </data>
+  <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 20</value>
+  </data>
+  <data name="itemToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Item</value>
   </data>
   <data name="cmPropertiesFrm.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 22</value>
@@ -369,11 +397,11 @@
   <data name="cmMainRemoveFromFolder.Text" xml:space="preserve">
     <value>&amp;Remove from Folder</value>
   </data>
-  <data name="itemToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 20</value>
+  <data name="pmMainLogicalFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 20</value>
   </data>
-  <data name="itemToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Item</value>
+  <data name="pmMainLogicalFolders.Text" xml:space="preserve">
+    <value>&amp;Logical Folder</value>
   </data>
   <data name="cmMainNewFolder.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 22</value>
@@ -393,11 +421,11 @@
   <data name="cmMainDeleteFolder.Text" xml:space="preserve">
     <value>&amp;Delete...</value>
   </data>
-  <data name="pmMainLogicalFolders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 20</value>
+  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
   </data>
-  <data name="pmMainLogicalFolders.Text" xml:space="preserve">
-    <value>&amp;Logical Folder</value>
+  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Options</value>
   </data>
   <data name="cmScanNewMedia.Size" type="System.Drawing.Size, System.Drawing">
     <value>239, 22</value>
@@ -405,11 +433,11 @@
   <data name="cmScanNewMedia.Text" xml:space="preserve">
     <value>Automatically Scan New Media</value>
   </data>
-  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
   </data>
-  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Options</value>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>&amp;Help</value>
   </data>
   <data name="homePageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>158, 22</value>
@@ -438,46 +466,12 @@
   <data name="aboutToolStripMenuItem.Text" xml:space="preserve">
     <value>&amp;About</value>
   </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Help</value>
-  </data>
-  <data name="menuMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="menuMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 24</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="menuMain.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;menuMain.Name" xml:space="preserve">
-    <value>menuMain</value>
-  </data>
-  <data name="&gt;&gt;menuMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuMain.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <metadata name="niBackgroundProcess.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
   <metadata name="pmIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>127, 17</value>
   </metadata>
-  <data name="cmRestoreWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 22</value>
-  </data>
-  <data name="cmRestoreWindow.Text" xml:space="preserve">
-    <value>Restore Window</value>
-  </data>
   <data name="pmIcon.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 26</value>
   </data>
@@ -515,9 +509,24 @@
         AAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=
 </value>
   </data>
+  <data name="cmRestoreWindow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 22</value>
+  </data>
+  <data name="cmRestoreWindow.Text" xml:space="preserve">
+    <value>Restore Window</value>
+  </data>
   <metadata name="pmItems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>185, 56</value>
   </metadata>
+  <data name="pmItems.Size" type="System.Drawing.Size, System.Drawing">
+    <value>223, 70</value>
+  </data>
+  <data name="&gt;&gt;pmItems.Name" xml:space="preserve">
+    <value>pmItems</value>
+  </data>
+  <data name="&gt;&gt;pmItems.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cmItemPropertiesFromFolders.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
   </data>
@@ -544,15 +553,6 @@
   </data>
   <data name="cmRemoveFromFolder.Text" xml:space="preserve">
     <value>Remove Item(s) from Folder</value>
-  </data>
-  <data name="pmItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 70</value>
-  </data>
-  <data name="&gt;&gt;pmItems.Name" xml:space="preserve">
-    <value>pmItems</value>
-  </data>
-  <data name="&gt;&gt;pmItems.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="columnHeader16.Text" xml:space="preserve">
     <value>File Name</value>
@@ -596,7 +596,7 @@
         AfYB/wHLAbgBrgH/Aa0BlQGKAf9EAANXAb8DvAH/A98B/wOqAf8D3wH/A8QB/wP3Af8D3QH/A68B/wMA
         Af8DAAH/AwAB/wMAAf8DtQH/A+AB/wNBAfkNAAGkAQAB/wEAAdYBAAH/AQABwgEAAv8B7AHZAv8B6wHX
         Av8B6AHSAf8BAAGNAQAB/wEAAdYBAAH/AwAB/wMUARwMAAGtAZUBigH/Ad8BygHGAf8B6gHMAckB/wHk
-        AdkB1AH/AeAB1AHNAf8B2QHMAcYB/wHFAbkBrwH/AZkBhAFEAf8BkAFIATcB/wGzAaQBmQH/AfAB7QHr
+        AdkB1AH/AeAB1AHNAf8B2QHMAcYB/wHFAbkBrwH/AZkBhAFBAf8BkAFFATQB/wGzAaQBmQH/AfAB7QHr
         Af8B9QHxAe8B/wHQAb8BtgH/AcABqAGcAf8BxQG3Aa8B/wGtAZUBigH/QAADVwG/A74B/wPjAf8DqwH/
         A+MB/wO1Af8D9wH/A8YB/wORAf8DAAH/AwAB/wMAAf8DAAH/A5EB/wPXAf8BXgFYAVYB+RAAAVkBXQFZ
         AdIBAAGVAQAB/wIAAaEB/wEAAYABzAH/AQABgAHMAf8CAAGpAf8BVgFXAVYB6AMoATwQAAGtAZUBigH/
@@ -604,12 +604,12 @@
         Ac0B/wG4AaoBnwH/AbABnwGTAf8BywG3Aa0B/wHHAbEBpgH/AcQBrQGgAf8BvwGsAaIB/wGtAZUBigH/
         QAADVwG/A8AB/wPnAf8DrQH/A+cB/wOiAf8D9wH/A8sB/wMAAf8DAAH/AY4CAAH/AcACAAH/AwAB/wMA
         Af8DzgH/A00B+hQAAUICWQH1AQABlgH5Af8BAAGZAv8BAAGYAf0B/wEAAZQB9QH/AgABygH/A1ABmgMN
-        AREMAAGtAZUBigH/AdQBngGdAf8B0QKVAf8B0AKTAf8B0QGSAZMB/wGqAY4BgQH/Ad8BxQHCAf8BjAFK
-        AT4B/wH6AvEB/wHSAbgBsQH/AYoBPgEtAf8B0wGoAaIB/wHSAZsBlgH/Ac8BlwGQAf8BywGSAYsB/wGt
+        AREMAAGtAZUBigH/AdQBngGdAf8B0QKVAf8B0AKTAf8B0QGSAZMB/wGqAY4BgQH/Ad8BxQHCAf8BjAFH
+        ATsB/wH6AvEB/wHSAbgBsQH/AYoBOwEqAf8B0wGoAaIB/wHSAZsBlgH/Ac8BlwGQAf8BywGSAYsB/wGt
         AZUBigH/QAADVwG/A8IB/wPsAf8DrgH/A+wB/wO1Af8D9wH/A80B/wO5Af8DAAH/AwAB/wMAAf8DAAH/
         AwAB/wPFAf8DAAH/EAADCQEMAQABngL/AQABoQL/AQABoQL/AQABoQL/AQABoQL/AQABnAL/ATYBUQFt
         AfcDMAFMDAABrQGVAYoB/wHpAq4B/wHpAqgB/wHjAqIB/wHfAp4B/wGzAZcBiQH/AfAB5QHjAf8BqAGX
-        AY4B/wFKATYBKAH/AdoBtwG0Af8BjgE/AS4B/wHNAYYBhAH/AcsBggGAAf8BzAGBAU8B/wHIAYQBgAH/
+        AY4B/wFHATMBJQH/AdoBtwG0Af8BjgE8ASsB/wHNAYYBhAH/AcsBggGAAf8BzAGBAUwB/wHIAYQBgAH/
         Aa0BlQGKAf9AAANXAb8DxQH/A/EB/wOvAf8D8QH/A8QB/wP3Af8DvAH/A+YB/wMAAf8DAAH/AwAB/wOC
         Af8D0AH/A7wB/wMAAf8QAANKAYwBAAGoAv8BAAGqAv8BAAGqAv8BAAGqAv8BAAGqAv8BAAGmAv8BAAGW
         AewB/wNGAYAMAAGtAZUBigH/Ae0BwAG+Af8B+QG0AbUB/wH1AbsBvAH/AfAB0AHOAf8BzgG/AbYB/wHe
@@ -710,6 +710,15 @@
   <metadata name="pmDrop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>381, 56</value>
   </metadata>
+  <data name="pmDrop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 76</value>
+  </data>
+  <data name="&gt;&gt;pmDrop.Name" xml:space="preserve">
+    <value>pmDrop</value>
+  </data>
+  <data name="&gt;&gt;pmDrop.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="cmDropFolderAsItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
   </data>
@@ -731,15 +740,6 @@
   <data name="cancelToolStripMenuItem.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="pmDrop.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 76</value>
-  </data>
-  <data name="&gt;&gt;pmDrop.Name" xml:space="preserve">
-    <value>pmDrop</value>
-  </data>
-  <data name="&gt;&gt;pmDrop.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="scMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -749,6 +749,183 @@
   </data>
   <data name="scMain.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Name" xml:space="preserve">
+    <value>tpDatabase</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
+    <value>7, 4</value>
+  </data>
+  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 250</value>
+  </data>
+  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
+    <value>scMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel1.Name" xml:space="preserve">
+    <value>scMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel1.Parent" xml:space="preserve">
+    <value>scMain</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="scMain.Panel1MinSize" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;tpLogicalFolders.Name" xml:space="preserve">
+    <value>tpLogicalFolders</value>
+  </data>
+  <data name="&gt;&gt;tpLogicalFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpLogicalFolders.Parent" xml:space="preserve">
+    <value>tcBottom</value>
+  </data>
+  <data name="&gt;&gt;tpLogicalFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tcBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tcBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tcBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 127</value>
+  </data>
+  <data name="tcBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tcBottom.Name" xml:space="preserve">
+    <value>tcBottom</value>
+  </data>
+  <data name="&gt;&gt;tcBottom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcBottom.Parent" xml:space="preserve">
+    <value>scMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;tcBottom.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel2.Name" xml:space="preserve">
+    <value>scMain.Panel2</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel2.Parent" xml:space="preserve">
+    <value>scMain</value>
+  </data>
+  <data name="&gt;&gt;scMain.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="scMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>753, 380</value>
+  </data>
+  <data name="scMain.SplitterDistance" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="scMain.SplitterWidth" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="scMain.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;scMain.Name" xml:space="preserve">
+    <value>scMain</value>
+  </data>
+  <data name="&gt;&gt;scMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;scMain.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;scDatabase.Name" xml:space="preserve">
+    <value>scDatabase</value>
+  </data>
+  <data name="&gt;&gt;scDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scDatabase.Parent" xml:space="preserve">
+    <value>tpDatabase</value>
+  </data>
+  <data name="&gt;&gt;scDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpDatabase.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tpDatabase.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 222</value>
+  </data>
+  <data name="tpDatabase.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tpDatabase.Text" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Name" xml:space="preserve">
+    <value>tpDatabase</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;tpDatabase.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="scDatabase.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -947,31 +1124,91 @@
   <data name="&gt;&gt;scDatabase.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tpDatabase.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
+    <value>searchBottomPanel</value>
   </data>
-  <data name="tpDatabase.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tpDatabase.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 222</value>
+  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
   </data>
-  <data name="tpDatabase.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tpDatabase.Text" xml:space="preserve">
-    <value>Database</value>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Name" xml:space="preserve">
+    <value>filesSearchCriteriaPanel</value>
   </data>
-  <data name="&gt;&gt;tpDatabase.Name" xml:space="preserve">
-    <value>tpDatabase</value>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Type" xml:space="preserve">
+    <value>BlueMirrorIndexer.Components.FilesSearchCriteriaPanel, BlueMirrorIndexer, Version=2.0.0.2, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;tpDatabase.Type" xml:space="preserve">
+  <data name="&gt;&gt;filesSearchCriteriaPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;filesSearchCriteriaPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tpSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 24</value>
+  </data>
+  <data name="tpSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 222</value>
+  </data>
+  <data name="tpSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tpSearch.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tpDatabase.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
     <value>tcMain</value>
   </data>
-  <data name="&gt;&gt;tpDatabase.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Name" xml:space="preserve">
+    <value>lvSearchResults</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Type" xml:space="preserve">
+    <value>BlueMirrorIndexer.Components.ListViewVista, BlueMirrorIndexer, Version=2.0.0.2, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.Parent" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="&gt;&gt;lvSearchResults.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="searchBottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="searchBottomPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 101</value>
+  </data>
+  <data name="searchBottomPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>739, 118</value>
+  </data>
+  <data name="searchBottomPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
+    <value>searchBottomPanel</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
+    <value>tpSearch</value>
+  </data>
+  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="lvSearchResults.ColumnOrderArray" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -1094,30 +1331,6 @@
   <data name="&gt;&gt;lvSearchResults.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="searchBottomPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="searchBottomPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 101</value>
-  </data>
-  <data name="searchBottomPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>739, 118</value>
-  </data>
-  <data name="searchBottomPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Name" xml:space="preserve">
-    <value>searchBottomPanel</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.Parent" xml:space="preserve">
-    <value>tpSearch</value>
-  </data>
-  <data name="&gt;&gt;searchBottomPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="filesSearchCriteriaPanel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1148,74 +1361,44 @@
   <data name="&gt;&gt;filesSearchCriteriaPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tpSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 24</value>
+  <data name="&gt;&gt;scFolders.Name" xml:space="preserve">
+    <value>scFolders</value>
   </data>
-  <data name="tpSearch.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="&gt;&gt;scFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;scFolders.Parent" xml:space="preserve">
+    <value>tpLogicalFolders</value>
+  </data>
+  <data name="&gt;&gt;scFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tpLogicalFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tpLogicalFolders.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="tpSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 222</value>
+  <data name="tpLogicalFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>745, 101</value>
   </data>
-  <data name="tpSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="tpLogicalFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="tpSearch.Text" xml:space="preserve">
-    <value>Search</value>
+  <data name="tpLogicalFolders.Text" xml:space="preserve">
+    <value>Logical Folders</value>
   </data>
-  <data name="&gt;&gt;tpSearch.Name" xml:space="preserve">
-    <value>tpSearch</value>
+  <data name="&gt;&gt;tpLogicalFolders.Name" xml:space="preserve">
+    <value>tpLogicalFolders</value>
   </data>
-  <data name="&gt;&gt;tpSearch.Type" xml:space="preserve">
+  <data name="&gt;&gt;tpLogicalFolders.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tpSearch.Parent" xml:space="preserve">
-    <value>tcMain</value>
+  <data name="&gt;&gt;tpLogicalFolders.Parent" xml:space="preserve">
+    <value>tcBottom</value>
   </data>
-  <data name="&gt;&gt;tpSearch.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tcMain.Padding" type="System.Drawing.Point, System.Drawing">
-    <value>7, 4</value>
-  </data>
-  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 250</value>
-  </data>
-  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
-    <value>tcMain</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
-    <value>scMain.Panel1</value>
-  </data>
-  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tpLogicalFolders.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel1.Name" xml:space="preserve">
-    <value>scMain.Panel1</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel1.Parent" xml:space="preserve">
-    <value>scMain</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="scMain.Panel1MinSize" type="System.Int32, mscorlib">
-    <value>98</value>
   </data>
   <data name="scFolders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1408,105 +1591,9 @@
   <data name="&gt;&gt;scFolders.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tpLogicalFolders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tpLogicalFolders.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpLogicalFolders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>745, 101</value>
-  </data>
-  <data name="tpLogicalFolders.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tpLogicalFolders.Text" xml:space="preserve">
-    <value>Logical Folders</value>
-  </data>
-  <data name="&gt;&gt;tpLogicalFolders.Name" xml:space="preserve">
-    <value>tpLogicalFolders</value>
-  </data>
-  <data name="&gt;&gt;tpLogicalFolders.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpLogicalFolders.Parent" xml:space="preserve">
-    <value>tcBottom</value>
-  </data>
-  <data name="&gt;&gt;tpLogicalFolders.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tcBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tcBottom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tcBottom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 127</value>
-  </data>
-  <data name="tcBottom.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;tcBottom.Name" xml:space="preserve">
-    <value>tcBottom</value>
-  </data>
-  <data name="&gt;&gt;tcBottom.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcBottom.Parent" xml:space="preserve">
-    <value>scMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;tcBottom.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel2.Name" xml:space="preserve">
-    <value>scMain.Panel2</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel2.Parent" xml:space="preserve">
-    <value>scMain</value>
-  </data>
-  <data name="&gt;&gt;scMain.Panel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="scMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>753, 380</value>
-  </data>
-  <data name="scMain.SplitterDistance" type="System.Int32, mscorlib">
-    <value>250</value>
-  </data>
-  <data name="scMain.SplitterWidth" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="scMain.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;scMain.Name" xml:space="preserve">
-    <value>scMain</value>
-  </data>
-  <data name="&gt;&gt;scMain.Type" xml:space="preserve">
-    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;scMain.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;scMain.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 429</value>
   </metadata>
-  <data name="sbFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
-  </data>
-  <data name="sbFiles.Text" xml:space="preserve">
-    <value>No files</value>
-  </data>
-  <data name="sbSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>4, 19</value>
-  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 429</value>
   </data>
@@ -1530,6 +1617,15 @@
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="sbFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 19</value>
+  </data>
+  <data name="sbFiles.Text" xml:space="preserve">
+    <value>No files</value>
+  </data>
+  <data name="sbSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>4, 19</value>
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>0, 24</value>
@@ -1572,6 +1668,45 @@
   </data>
   <data name="btnReadVolume.ToolTipText" xml:space="preserve">
     <value>Read...</value>
+  </data>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>6, 25</value>
+  </data>
+  <data name="btnProperties.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnProperties.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="btnProperties.ToolTipText" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="btnDelete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Delete...</value>
+  </data>
+  <data name="btnFindInDatabase.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnFindInDatabase.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="btnFindInDatabase.Text" xml:space="preserve">
+    <value>Find In Database</value>
+  </data>
+  <data name="btnRemoveFromFolder.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="btnRemoveFromFolder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>23, 22</value>
+  </data>
+  <data name="btnRemoveFromFolder.Text" xml:space="preserve">
+    <value>Remove from Folde</value>
   </data>
   <data name="toolStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
@@ -2179,6 +2314,36 @@
   </data>
   <data name="&gt;&gt;btnReadVolume.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Name" xml:space="preserve">
+    <value>toolStripSeparator3</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnProperties.Name" xml:space="preserve">
+    <value>btnProperties</value>
+  </data>
+  <data name="&gt;&gt;btnProperties.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnFindInDatabase.Name" xml:space="preserve">
+    <value>btnFindInDatabase</value>
+  </data>
+  <data name="&gt;&gt;btnFindInDatabase.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromFolder.Name" xml:space="preserve">
+    <value>btnRemoveFromFolder</value>
+  </data>
+  <data name="&gt;&gt;btnRemoveFromFolder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>

@@ -176,7 +176,7 @@
     <value>(no label)</value>
   </data>
   <data name="IndexerFilesFilter" xml:space="preserve">
-    <value>Peter Dakan Indexer|*.pdin</value>
+    <value>Blue Mirror CD/DVD Indexer|*.bmin</value>
   </data>
   <data name="InvalidSizeRange" xml:space="preserve">
     <value>Invalid size range.</value>

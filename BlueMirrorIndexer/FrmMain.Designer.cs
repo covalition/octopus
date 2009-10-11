@@ -144,6 +144,11 @@ namespace BlueMirrorIndexer
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnReadVolume = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnProperties = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnFindInDatabase = new System.Windows.Forms.ToolStripButton();
+            this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -974,7 +979,12 @@ namespace BlueMirrorIndexer
             this.btnOpen,
             this.btnSave,
             this.toolStripSeparator2,
-            this.btnReadVolume});
+            this.btnReadVolume,
+            this.toolStripSeparator3,
+            this.btnProperties,
+            this.btnDelete,
+            this.btnFindInDatabase,
+            this.btnRemoveFromFolder});
             resources.ApplyResources(this.toolStrip1, "toolStrip1");
             this.toolStrip1.Name = "toolStrip1";
             // 
@@ -1014,6 +1024,43 @@ namespace BlueMirrorIndexer
             resources.ApplyResources(this.btnReadVolume, "btnReadVolume");
             this.btnReadVolume.Name = "btnReadVolume";
             this.btnReadVolume.ButtonClick += new System.EventHandler(this.cmReadVolume_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // btnProperties
+            // 
+            this.btnProperties.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnProperties.Image = global::BlueMirrorIndexer.Properties.Resources.tag_blue_edit;
+            resources.ApplyResources(this.btnProperties, "btnProperties");
+            this.btnProperties.Name = "btnProperties";
+            this.btnProperties.Click += new System.EventHandler(this.cmProperties_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = global::BlueMirrorIndexer.Properties.Resources.delete;
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Click += new System.EventHandler(this.cmDelete_Click);
+            // 
+            // btnFindInDatabase
+            // 
+            this.btnFindInDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFindInDatabase.Image = global::BlueMirrorIndexer.Properties.Resources.folder_find;
+            resources.ApplyResources(this.btnFindInDatabase, "btnFindInDatabase");
+            this.btnFindInDatabase.Name = "btnFindInDatabase";
+            this.btnFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabaseFrm_Click);
+            // 
+            // btnRemoveFromFolder
+            // 
+            this.btnRemoveFromFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRemoveFromFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_go;
+            resources.ApplyResources(this.btnRemoveFromFolder, "btnRemoveFromFolder");
+            this.btnRemoveFromFolder.Name = "btnRemoveFromFolder";
+            this.btnRemoveFromFolder.Click += new System.EventHandler(this.cmRemoveFromFolder_Click);
             // 
             // FrmMain
             // 
@@ -1179,6 +1226,11 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.ToolStripButton btnSave;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSplitButton btnReadVolume;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton btnProperties;
+        private System.Windows.Forms.ToolStripButton btnDelete;
+        private System.Windows.Forms.ToolStripButton btnFindInDatabase;
+        private System.Windows.Forms.ToolStripButton btnRemoveFromFolder;
 	}
 }
 

@@ -307,7 +307,7 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Peter Dakan Indexer|*.pdin.
+        ///   Looks up a localized string similar to Blue Mirror CD/DVD Indexer|*.bmin.
         /// </summary>
         internal static string IndexerFilesFilter {
             get {

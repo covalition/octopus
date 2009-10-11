@@ -233,23 +233,14 @@ namespace BlueMirrorIndexer
 
             cmItemPropertiesFromList.Enabled = selectedFile != null;
             cmDeleteListItemPopup.Enabled = filesSelected;
-            cmPropertiesFrm.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && (selectedFile != null)) || (lvFolderElements.Focused && (selectedElementInFolders != null)) || (lvSearchResults.Focused && (selectedItemInSearch != null));
+            btnProperties.Enabled = cmPropertiesFrm.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && (selectedFile != null)) || (lvFolderElements.Focused && (selectedElementInFolders != null)) || (lvSearchResults.Focused && (selectedItemInSearch != null));
 
-            cmFindInDatabaseFrm.Enabled = (lvFolderElements.Focused && (selectedElementInFolders != null)) || (lvSearchResults.Focused && (selectedItemInSearch != null));
+            btnFindInDatabase.Enabled = cmFindInDatabaseFrm.Enabled = (lvFolderElements.Focused && (selectedElementInFolders != null)) || (lvSearchResults.Focused && (selectedItemInSearch != null));
 
-            cmDeleteFrm.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && filesSelected);
+            btnDelete.Enabled = cmDeleteFrm.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && filesSelected);
 
-            cmRemoveFromFolder.Enabled = cmItemPropertiesFromFolders.Enabled = cmFindInDatabaseFromFolders.Enabled = lvFolderElements.SelectedItems.Count > 0;
-            //TreeNode selectedLogicalFolder = getSelectedLogicalFolderTvItem();
-            //cmNewFolderDlg.Enabled = cmEditFolder.Enabled = selectedLogicalFolder != null;
-            // cmDeleteFolder.Enabled = (selectedLogicalFolder != null) && (selectedLogicalFolder.Parent != null);
-            // cmNewFolder.Visible = selectedLogicalFolder != null;
-            //if (selectedLogicalFolder != null) {
-            //    // cmNewFolder.Text = string.Format("New General Folder (under '{0}')", selectedLogicalFolder.Text);
-            //    cmNewFolder.Visible = true;
-            //}
-            //else
-            //    cmNewFolder.Visible = false;
+            cmMainRemoveFromFolder.Enabled = btnRemoveFromFolder.Enabled = lvFolderElements.Focused && (lvFolderElements.SelectedItems.Count > 0);
+             cmRemoveFromFolder.Enabled = cmItemPropertiesFromFolders.Enabled = cmFindInDatabaseFromFolders.Enabled = lvFolderElements.SelectedItems.Count > 0;
         }
 
         private ItemInDatabase getSelectedElementInFolder() {
