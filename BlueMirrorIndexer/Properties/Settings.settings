@@ -44,5 +44,8 @@
     <Setting Name="SearchResultsColumnWidth" Type="System.Collections.ArrayList" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="Updated" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

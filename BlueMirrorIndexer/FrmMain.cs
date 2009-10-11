@@ -26,6 +26,10 @@ namespace BlueMirrorIndexer
 
         public FrmMain() {
             InitializeComponent();
+            if (!Properties.Settings.Default.Updated) {
+                Properties.Settings.Default.Upgrade();
+                Properties.Settings.Default.Updated = true;
+            }
             cmScanNewMedia.Checked = Properties.Settings.Default.ScanNewMedia;
             Text = ProductName;
             btnSave.Enabled = cmSave.Enabled = false;

@@ -49,10 +49,10 @@
     <ErrorReportUrl>http://octopi.codeplex.com/WorkItem/List.aspx</ErrorReportUrl>
     <ProductName>Blue Mirror CD DVD Indexer 2.0</ProductName>
     <PublisherName>Blue Mirror</PublisherName>
-    <SuiteName>Blue Mirror CD DVD Indexer 2.0</SuiteName>
+    <SuiteName>CD DVD Indexer</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

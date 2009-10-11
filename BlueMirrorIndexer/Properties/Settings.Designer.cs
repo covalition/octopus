@@ -184,5 +184,17 @@ namespace BlueMirrorIndexer.Properties {
                 this["SearchResultsColumnWidth"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Updated {
+            get {
+                return ((bool)(this["Updated"]));
+            }
+            set {
+                this["Updated"] = value;
+            }
+        }
     }
 }
