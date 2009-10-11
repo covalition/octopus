@@ -119,9 +119,9 @@ namespace BlueMirrorIndexer
             this.scFolders = new System.Windows.Forms.SplitContainer();
             this.tvLogicalFolders = new BlueMirrorIndexer.Components.LogicalFoldersTreeView();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btnNewFolder = new System.Windows.Forms.ToolStripButton();
+            this.btnEditFolder = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteFolder = new System.Windows.Forms.ToolStripButton();
             this.lvFolderElements = new BlueMirrorIndexer.Components.ListViewVista();
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
@@ -203,8 +203,8 @@ namespace BlueMirrorIndexer
             // 
             this.ilTree.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilTree.ImageStream")));
             this.ilTree.TransparentColor = System.Drawing.Color.Magenta;
-            this.ilTree.Images.SetKeyName(0, "cd.bmp");
-            this.ilTree.Images.SetKeyName(1, "OpenFolder.bmp");
+            this.ilTree.Images.SetKeyName(0, "cd.png");
+            this.ilTree.Images.SetKeyName(1, "folder.png");
             // 
             // pmList
             // 
@@ -835,32 +835,35 @@ namespace BlueMirrorIndexer
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.btnNewFolder,
+            this.btnEditFolder,
+            this.btnDeleteFolder});
             resources.ApplyResources(this.toolStrip2, "toolStrip2");
             this.toolStrip2.Name = "toolStrip2";
             // 
-            // toolStripButton1
+            // btnNewFolder
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::BlueMirrorIndexer.Properties.Resources.folder_add;
-            resources.ApplyResources(this.toolStripButton1, "toolStripButton1");
-            this.toolStripButton1.Name = "toolStripButton1";
+            this.btnNewFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnNewFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_add;
+            resources.ApplyResources(this.btnNewFolder, "btnNewFolder");
+            this.btnNewFolder.Name = "btnNewFolder";
+            this.btnNewFolder.Click += new System.EventHandler(this.btnNewFolder_Click);
             // 
-            // toolStripButton2
+            // btnEditFolder
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::BlueMirrorIndexer.Properties.Resources.folder_edit;
-            resources.ApplyResources(this.toolStripButton2, "toolStripButton2");
-            this.toolStripButton2.Name = "toolStripButton2";
+            this.btnEditFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEditFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_edit;
+            resources.ApplyResources(this.btnEditFolder, "btnEditFolder");
+            this.btnEditFolder.Name = "btnEditFolder";
+            this.btnEditFolder.Click += new System.EventHandler(this.btnEditFolder_Click);
             // 
-            // toolStripButton3
+            // btnDeleteFolder
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = global::BlueMirrorIndexer.Properties.Resources.folder_delete;
-            resources.ApplyResources(this.toolStripButton3, "toolStripButton3");
-            this.toolStripButton3.Name = "toolStripButton3";
+            this.btnDeleteFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDeleteFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_delete;
+            resources.ApplyResources(this.btnDeleteFolder, "btnDeleteFolder");
+            this.btnDeleteFolder.Name = "btnDeleteFolder";
+            this.btnDeleteFolder.Click += new System.EventHandler(this.btnDeleteFolder_Click);
             // 
             // lvFolderElements
             // 
@@ -1237,9 +1240,9 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.ToolStripButton btnFindInDatabase;
         private System.Windows.Forms.ToolStripButton btnRemoveFromFolder;
         private System.Windows.Forms.ToolStrip toolStrip2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btnNewFolder;
+        private System.Windows.Forms.ToolStripButton btnEditFolder;
+        private System.Windows.Forms.ToolStripButton btnDeleteFolder;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnWhatsNew;
 	}

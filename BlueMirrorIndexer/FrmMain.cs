@@ -1816,5 +1816,17 @@ namespace BlueMirrorIndexer
             UpdateLogicalElements();
             UpdateCommands();
         }
+
+        private void btnNewFolder_Click(object sender, EventArgs e) {
+            tvLogicalFolders.NewFolder();
+        }
+
+        private void btnEditFolder_Click(object sender, EventArgs e) {
+            tvLogicalFolders.EditFolder();
+        }
+
+        private void btnDeleteFolder_Click(object sender, EventArgs e) {
+            tvLogicalFolders.DeleteFolder();
+        }
     }
 }

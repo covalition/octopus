@@ -144,6 +144,10 @@ namespace BlueMirrorIndexer.Components
                 logicalFolderDeleted(this, EventArgs.Empty);
         }
 
+        public void NewFolder() {
+            cmNewFolder_Click(this, EventArgs.Empty);
+        }
+
         void cmNewFolder_Click(object sender, EventArgs e) {
             TreeNode selectedNode = SelectedNode;
             if (selectedNode != null) {
@@ -164,6 +168,10 @@ namespace BlueMirrorIndexer.Components
             newNode.EnsureVisible();
             SelectedNode = newNode;
             return newNode;
+        }
+
+        public void EditFolder() {
+            cmEditFolder_Click(this, EventArgs.Empty);
         }
 
         void cmEditFolder_Click(object sender, EventArgs e) {
@@ -195,6 +203,10 @@ namespace BlueMirrorIndexer.Components
         private static void updateSelectedNodeProperties(TreeNode selectedNode, LogicalFolder changedFolder) {
             selectedNode.Text = changedFolder.Name;
             selectedNode.ImageIndex = selectedNode.SelectedImageIndex = (int)changedFolder.FolderType;
+        }
+
+        public void DeleteFolder() {
+            cmDeleteFolder_Click(this, EventArgs.Empty);
         }
 
         void cmDeleteFolder_Click(object sender, EventArgs e) {
@@ -250,12 +262,6 @@ namespace BlueMirrorIndexer.Components
             if ((selectedNode != null) && (e.KeyData == Keys.F2))
                 selectedNode.BeginEdit();
         }
-
-        //internal ImageList ImageList {
-        //    get {
-        //        return ilFolders;
-        //    }
-        //}
 
     }
 }
