@@ -22,14 +22,14 @@ namespace BlueMirrorIndexer
         }
 
         VolumeDatabase database;
-        internal static DiscInDatabase GetOptions(List<string> excludedFolders, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace, ImageList folderImages) {
+        internal static DiscInDatabase GetOptions(List<string> excludedFolders, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace) {
             DlgReadVolume dlg = new DlgReadVolume(drive);
             Cursor oldCursor = parentForm.Cursor;
             parentForm.Cursor = Cursors.WaitCursor;
             try {
                 discToReplace = null;
                 dlg.database = database;
-                dlg.ucItemFolderClassification.ImageList = folderImages;
+                //dlg.ucItemFolderClassification.ImageList = folderImages;
 
                 DriveInfo di = new DriveInfo(drive);
                 dlg.tbUserLabel.Text = dlg.llCdLabel.Text = di.VolumeLabel;

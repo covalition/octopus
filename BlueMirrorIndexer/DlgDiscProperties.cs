@@ -45,7 +45,7 @@ namespace BlueMirrorIndexer {
 		}
 
         DiscInDatabase discInDatabase;
-        public DlgDiscProperties(DiscInDatabase discInDatabase, ImageList folderImages)
+        public DlgDiscProperties(DiscInDatabase discInDatabase)
             : this() {
             this.discInDatabase = discInDatabase;
             tbUserLabel.Text = discInDatabase.Name;
@@ -68,7 +68,7 @@ namespace BlueMirrorIndexer {
                 llDriveName.Text = discInDatabase.FromDrive;
             if (discInDatabase.LogicalFolders != null)
                 ucItemFolderClassification.LogicalFolders = discInDatabase.LogicalFolders.ToArray();
-            ucItemFolderClassification.ImageList = folderImages;
+            // ucItemFolderClassification.ImageList = folderImages;
         }
 
 		/// <summary>

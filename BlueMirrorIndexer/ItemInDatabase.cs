@@ -95,12 +95,12 @@ namespace BlueMirrorIndexer {
 				return "\\";
 		}
 
-        protected virtual Form CreateDialog(ImageList folderImages) {
-            return new DlgItemProperties(this, folderImages);
+        protected virtual Form CreateDialog() {
+            return new DlgItemProperties(this);
         }
 
-        public bool EditPropertiesDlg(ImageList folderImages) {
-            return (CreateDialog(folderImages).ShowDialog() == DialogResult.OK);
+        public bool EditPropertiesDlg() {
+            return (CreateDialog().ShowDialog() == DialogResult.OK);
         }
 
         public void WriteToStream(System.IO.StreamWriter sw) {

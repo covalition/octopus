@@ -141,8 +141,8 @@ namespace BlueMirrorIndexer {
             return Name;
         }
 
-        protected override Form CreateDialog(ImageList folderImages) {
-            return new DlgDiscProperties(this, folderImages);
+        protected override Form CreateDialog() {
+            return new DlgDiscProperties(this);
         }
 
         public override string ToString() {

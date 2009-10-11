@@ -10,8 +10,8 @@ namespace BlueMirrorIndexer
 {
     public partial class DlgFolderProperties : DlgItemProperties
     {
-        public DlgFolderProperties(FolderInDatabase folderInDatabase, ImageList folderImages)
-            : base(folderInDatabase, folderImages) {
+        public DlgFolderProperties(FolderInDatabase folderInDatabase)
+            : base(folderInDatabase) {
             InitializeComponent();
         }
         

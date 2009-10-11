@@ -31,11 +31,11 @@ namespace BlueMirrorIndexer
             }
         }
 
-        public ImageList ImageList {
-            set {
-                lvFolders.SmallImageList = value;
-            }
-        }
+        //public ImageList ImageList {
+        //    set {
+        //        lvFolders.SmallImageList = value;
+        //    }
+        //}
 
         private void updateListView() {
             foreach (LogicalFolder folder in logicalFolders) {

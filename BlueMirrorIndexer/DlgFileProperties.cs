@@ -11,8 +11,8 @@ namespace BlueMirrorIndexer
     public partial class DlgFileProperties : DlgItemProperties
     {
 
-        public DlgFileProperties(FileInDatabase fileInDatabase, ImageList folderImages)
-            : base(fileInDatabase, folderImages) {
+        public DlgFileProperties(FileInDatabase fileInDatabase)
+            : base(fileInDatabase) {
             InitializeComponent();
             if (fileInDatabase.Crc != 0)
                 llCrc.Text = fileInDatabase.Crc.ToString("X");

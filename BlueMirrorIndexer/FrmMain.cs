@@ -666,7 +666,7 @@ namespace BlueMirrorIndexer
                 List<string> excludedFolders = new List<string>();
                 LogicalFolder[] logicalFolders;
                 DiscInDatabase discToReplace;
-                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedFolders, drive, out logicalFolders, this, Database, out discToReplace, ilFolders);
+                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedFolders, drive, out logicalFolders, this, Database, out discToReplace);
                 if (discInDatabase != null) {
                     readCdOnDrive(drive, discInDatabase, excludedFolders, logicalFolders, discToReplace);
                     if (Properties.Settings.Default.AutoEject)
@@ -841,7 +841,7 @@ namespace BlueMirrorIndexer
         #region Show properties
         
         private bool showItemProperties(ItemInDatabase itemInDatabase) {
-            bool result = itemInDatabase.EditPropertiesDlg(ilFolders);
+            bool result = itemInDatabase.EditPropertiesDlg();
             if (result) {
                 Modified = true;
                 UpdateLogicalElements();
@@ -1311,6 +1311,7 @@ namespace BlueMirrorIndexer
         }
 
         private void cmScanNewMedia_Click(object sender, EventArgs e) {
+            cmScanNewMedia.Checked = !cmScanNewMedia.Checked;
             Properties.Settings.Default.ScanNewMedia = cmScanNewMedia.Checked;
         }
 

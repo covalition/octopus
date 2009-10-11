@@ -28,14 +28,14 @@ namespace BlueMirrorIndexer {
         }
 
         ItemInDatabase itemInDatabase;
-        public DlgItemProperties(ItemInDatabase itemInDatabase, ImageList folderImages): this() {
+        public DlgItemProperties(ItemInDatabase itemInDatabase): this() {
             tbItemName.Text = itemInDatabase.Name;
             llVolumeUserName.Text = itemInDatabase.GetVolumeUserName();
             tbPath.Text = itemInDatabase.GetPath();
             tbKeywords.Text = itemInDatabase.Keywords;
             if(itemInDatabase.LogicalFolders != null) // na wszelki wypadek
                 ucItemFolderClassification.LogicalFolders = itemInDatabase.LogicalFolders.ToArray();
-            ucItemFolderClassification.ImageList = folderImages;
+            //ucItemFolderClassification.ImageList = folderImages;
             
             this.itemInDatabase = itemInDatabase;
 		}

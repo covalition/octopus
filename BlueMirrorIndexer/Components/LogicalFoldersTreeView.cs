@@ -251,5 +251,11 @@ namespace BlueMirrorIndexer.Components
                 selectedNode.BeginEdit();
         }
 
+        //internal ImageList ImageList {
+        //    get {
+        //        return ilFolders;
+        //    }
+        //}
+
     }
 }

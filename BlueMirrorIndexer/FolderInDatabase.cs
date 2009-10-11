@@ -170,8 +170,8 @@ namespace BlueMirrorIndexer {
             return "Folder";
         }
 
-        protected override Form CreateDialog(ImageList folderImages) {
-            return new DlgFolderProperties(this, folderImages);
+        protected override Form CreateDialog() {
+            return new DlgFolderProperties(this);
         }
 
         public override void RemoveFromDatabase() {

@@ -92,8 +92,8 @@ namespace BlueMirrorIndexer {
             return lvi;
         }
 
-        protected override Form CreateDialog(ImageList folderImages) {
-            return new DlgFileProperties(this, folderImages);
+        protected override Form CreateDialog() {
+            return new DlgFileProperties(this);
         }
 
         public override void RemoveFromDatabase() {

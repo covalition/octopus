@@ -25,12 +25,15 @@ namespace BlueMirrorIndexer
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcItemFolderClassification));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.lvFolders = new BlueMirrorIndexer.Components.ListViewVista();
             this.chFolderName = new System.Windows.Forms.ColumnHeader();
+            this.ilFolders = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,11 +89,14 @@ namespace BlueMirrorIndexer
             this.lvFolders.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvFolders.ColumnOrderArray = ((System.Collections.ArrayList)(resources.GetObject("lvFolders.ColumnOrderArray")));
             this.lvFolders.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chFolderName});
+            this.lvFolders.ColumnWidthArray = ((System.Collections.ArrayList)(resources.GetObject("lvFolders.ColumnWidthArray")));
             this.lvFolders.Location = new System.Drawing.Point(6, 19);
             this.lvFolders.Name = "lvFolders";
             this.lvFolders.Size = new System.Drawing.Size(300, 143);
+            this.lvFolders.SmallImageList = this.ilFolders;
             this.lvFolders.TabIndex = 0;
             this.lvFolders.UseCompatibleStateImageBehavior = false;
             this.lvFolders.View = System.Windows.Forms.View.Details;
@@ -100,6 +106,18 @@ namespace BlueMirrorIndexer
             // 
             this.chFolderName.Text = "Folder Name";
             this.chFolderName.Width = 300;
+            // 
+            // ilFolders
+            // 
+            this.ilFolders.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilFolders.ImageStream")));
+            this.ilFolders.TransparentColor = System.Drawing.Color.Magenta;
+            this.ilFolders.Images.SetKeyName(0, "VSFolder_open.bmp");
+            this.ilFolders.Images.SetKeyName(1, "cab.ico");
+            this.ilFolders.Images.SetKeyName(2, "Flag_redHS.png");
+            this.ilFolders.Images.SetKeyName(3, "cd.bmp");
+            this.ilFolders.Images.SetKeyName(4, "camera.ico");
+            this.ilFolders.Images.SetKeyName(5, "user.ico");
+            this.ilFolders.Images.SetKeyName(6, "CD_16.bmp");
             // 
             // UcItemFolderClassification
             // 
@@ -122,6 +140,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.Button btnNew;
         private BlueMirrorIndexer.Components.ListViewVista lvFolders;
         private System.Windows.Forms.ColumnHeader chFolderName;
+        private System.Windows.Forms.ImageList ilFolders;
 
     }
 }
