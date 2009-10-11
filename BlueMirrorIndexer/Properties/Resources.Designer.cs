@@ -112,6 +112,13 @@ namespace BlueMirrorIndexer.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap CD {
+            get {
+                object obj = ResourceManager.GetObject("CD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap CD_16 {
             get {
                 object obj = ResourceManager.GetObject("CD_16", resourceCulture);

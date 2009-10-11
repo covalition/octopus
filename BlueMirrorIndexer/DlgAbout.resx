@@ -476,6 +476,34 @@
   <data name="&gt;&gt;llCodePlex.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 168</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Created by:
+Roman Kowaliszyn
+
+Translators (version 1):
+Dutch: Filip Cornelissen
+German: Clemens-Alexander Brust
+Japanese: TILT
+Polish: Roman Kowaliszyn
+Portuguese (Brasil): Leonardo Frigo Da Purificação
+Russian: Boris Vasilenko
+Turkish: Polat Pinar</value>
+  </data>
   <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
     <value>textBox2</value>
   </data>
@@ -563,49 +591,6 @@
   <data name="&gt;&gt;tcAbout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 168</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Created by:
-Roman Kowaliszyn
-
-Translators (1.*):
-Dutch: Filip Cornelissen
-German: Clemens-Alexander Brust
-Japanese: TILT
-Polish: Roman Kowaliszyn
-Portuguese (Brasil): Leonardo Frigo Da Purificação
-Russian: Boris Vasilenko
-Turkish: Polat Pinar</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -622,6 +607,6 @@ Turkish: Polat Pinar</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.20073, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.2, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

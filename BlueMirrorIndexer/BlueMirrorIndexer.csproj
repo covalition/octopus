@@ -19,7 +19,7 @@
     </SccProvider>
     <SignManifests>true</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>C0CA4DCD916FD70EA5BDA2D3FD6D7CA222DF6585</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
     <ManifestKeyFile>BlueMirrorIndexer_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <SignAssembly>false</SignAssembly>
@@ -33,12 +33,13 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
     <PublishUrl>ftp://ftp.componentfield.com/wwwroot/bluemirror/CdDvdIndexer/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
-    <UpdateInterval>2</UpdateInterval>
+    <UpdateInterval>3</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
@@ -56,7 +57,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -399,6 +399,7 @@
     <Content Include="Resources\MainIcon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BlueMirrorIndexer_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Resources\agt_action_fail1.png" />
     <None Include="Resources\disk.png" />
@@ -412,6 +413,7 @@
     <None Include="Resources\folder_delete.png" />
     <None Include="Resources\folder_edit.png" />
     <None Include="Resources\folder_go.png" />
+    <None Include="Resources\CD.png" />
     <Content Include="unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

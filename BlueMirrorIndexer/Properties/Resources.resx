@@ -120,19 +120,16 @@
   <data name="ExportFilesFilter" xml:space="preserve">
     <value>Comma Separated Values (*.csv)|*.csv</value>
   </data>
-  <data name="NoDrive" xml:space="preserve">
-    <value>(no drive)</value>
-  </data>
   <data name="NoFiles" xml:space="preserve">
     <value>No files selected.</value>
   </data>
   <data name="FolderProperties" xml:space="preserve">
     <value>Folder &amp;Properties</value>
   </data>
-  <data name="NoLabel" xml:space="preserve">
-    <value>(no label)</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FindHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FindHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\page.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,14 +148,20 @@
   <data name="folder_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_add.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SelectedFiles" xml:space="preserve">
+    <value>Selected files</value>
+  </data>
   <data name="agt_action_fail1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agt_action_fail1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="folder_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_go.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DeleteFolder" xml:space="preserve">
-    <value>&amp;Delete Folder...</value>
+  <data name="world_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\world_go.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ErrorSavingFile" xml:space="preserve">
+    <value>Error saving file "{0}". Error message: {1}</value>
   </data>
   <data name="Advanced" xml:space="preserve">
     <value>&amp;Advanced</value>
@@ -169,6 +172,9 @@
   <data name="folder_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_page.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NoLabel" xml:space="preserve">
+    <value>(no label)</value>
+  </data>
   <data name="IndexerFilesFilter" xml:space="preserve">
     <value>Peter Dakan Indexer|*.pdin</value>
   </data>
@@ -177,9 +183,6 @@
   </data>
   <data name="ReadingDatabase" xml:space="preserve">
     <value>Reading database...</value>
-  </data>
-  <data name="ErrorSavingFile" xml:space="preserve">
-    <value>Error saving file "{0}". Error message: {1}</value>
   </data>
   <data name="AreUSureToDeleteFolder" xml:space="preserve">
     <value>Are you sure to delete the "{0}" folder information?</value>
@@ -198,6 +201,9 @@
   </data>
   <data name="DeleteVolume" xml:space="preserve">
     <value>&amp;Delete Volume...</value>
+  </data>
+  <data name="disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\disk.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Basic" xml:space="preserve">
     <value>&amp;Basic</value>
@@ -226,8 +232,8 @@
   <data name="ExportDatabaseTo" xml:space="preserve">
     <value>Export Database To</value>
   </data>
-  <data name="world_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\world_go.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="folder_go" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\folder_go.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AreUSureToDeleteFile" xml:space="preserve">
     <value>Are you sure to delete the "{0}" file information?</value>
@@ -238,17 +244,14 @@
   <data name="InitializingComponents" xml:space="preserve">
     <value>Initializing components...</value>
   </data>
-  <data name="folder_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\folder_delete.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ErrorIO" xml:space="preserve">
     <value>An IO error occured: {0}</value>
   </data>
   <data name="folder_find" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_find.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SelectedFiles" xml:space="preserve">
-    <value>Selected files</value>
+  <data name="DeleteFolder" xml:space="preserve">
+    <value>&amp;Delete Folder...</value>
   </data>
   <data name="Closing" xml:space="preserve">
     <value>Closing...</value>
@@ -259,8 +262,8 @@
   <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="disk" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\disk.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NoDrive" xml:space="preserve">
+    <value>(no drive)</value>
   </data>
   <data name="folder_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\folder_edit.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,7 +271,7 @@
   <data name="CD_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CD_16.bmp;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FindHS" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FindHS.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CD.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

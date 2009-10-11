@@ -28,7 +28,7 @@ namespace BlueMirrorIndexer
             InitializeComponent();
             cmScanNewMedia.Checked = Properties.Settings.Default.ScanNewMedia;
             Text = ProductName;
-            cmSave.Enabled = false;
+            btnSave.Enabled = cmSave.Enabled = false;
         }
 
         private void updateControls() {
@@ -240,7 +240,7 @@ namespace BlueMirrorIndexer
             cmDeleteFrm.Enabled = (tvDatabaseFolderTree.Focused && ((selectedDisc != null) || (selectedFolder != null))) || (lvDatabaseItems.Focused && filesSelected);
 
             cmRemoveFromFolder.Enabled = cmItemPropertiesFromFolders.Enabled = cmFindInDatabaseFromFolders.Enabled = lvFolderElements.SelectedItems.Count > 0;
-            TreeNode selectedLogicalFolder = getSelectedLogicalFolderTvItem();
+            //TreeNode selectedLogicalFolder = getSelectedLogicalFolderTvItem();
             //cmNewFolderDlg.Enabled = cmEditFolder.Enabled = selectedLogicalFolder != null;
             // cmDeleteFolder.Enabled = (selectedLogicalFolder != null) && (selectedLogicalFolder.Parent != null);
             // cmNewFolder.Visible = selectedLogicalFolder != null;
@@ -390,22 +390,22 @@ namespace BlueMirrorIndexer
 
         private void updateVolumeButtons() {
             pmVolumes.DropDownItems.Clear();
+            btnReadVolume.DropDownItems.Clear();
             DriveInfo[] drives = DriveInfo.GetDrives();
             foreach (DriveInfo di in drives) {
-                ToolStripMenuItem bi = new ToolStripMenuItem();
-                bi.Text = di.Name;
-                // bi.ImagePosition = eImagePosition.Top;
-                // bi.Icon = Win32.GetFileIcon(di.Name, Win32.FileIconSize.Large);
-                bi.Image = Win32.GetFileIconAsImage(di.Name, Win32.FileIconSize.Small);
-                // bi.ImageSmall = Win32.GetFileIconAsImage(di.Name, Win32.FileIconSize.Small);
-                bi.Tag = di.Name;
-                bi.Click += new EventHandler(cmReadVolumeFromButtonTag_Click);
-                bi.ToolTipText = string.Format("Read from {0}", di.Name);
+                ToolStripMenuItem bi1 = new ToolStripMenuItem(), bi2 = new ToolStripMenuItem();
+                bi2.Text = bi1.Text = di.Name;
+                bi2.Image = bi1.Image = Win32.GetFileIconAsImage(di.Name, Win32.FileIconSize.Small);
+                bi2.Tag = bi1.Tag = di.Name;
+                bi1.Click += new EventHandler(cmReadVolume_Click);
+                bi2.Click += new EventHandler(cmReadVolume_Click);
+                bi2.ToolTipText = bi1.ToolTipText = string.Format("Read from {0}", di.Name);
                 try {
-                    bi.Name = createReadVolumeBtnName(di.Name);
+                    bi1.Name = createReadVolumeBtnName(di.Name);
                 }
                 catch { }
-                pmVolumes.DropDownItems.Add(bi);
+                pmVolumes.DropDownItems.Add(bi1);
+                btnReadVolume.DropDownItems.Add(bi2);
             }
             UpdateReadVolumeButton();
         }
@@ -418,22 +418,17 @@ namespace BlueMirrorIndexer
         internal void UpdateReadVolumeButton() {
             string drive = Properties.Settings.Default.LastDrive;
             if ((cmReadVolume.Tag == null) || (drive.ToUpper() != cmReadVolume.Tag.ToString().ToUpper())) {
-                //cmReadVolume.Text = string.Format("<span>Read&nbsp;{0}&nbsp;</span><expand/>", drive);
-                cmReadVolume.Text = string.Format("Read {0}...", drive);
-                //cmReadVolume.Icon = Win32.GetFileIcon(drive, Win32.FileIconSize.Small);
-                // cmReadVolume.Icon = null;
-                cmReadVolume.Image = Win32.GetFileIconAsImage(drive, Win32.FileIconSize.Small);
-                cmReadVolume.Tag = drive;
-                //cmReadVolume.Tooltip = string.Format("Read from {0}", drive);
-                //rpGeneral.PerformLayout();
+                btnReadVolume.ToolTipText = cmReadVolume.Text = string.Format("Read {0}...", drive);
+                btnReadVolume.Image = cmReadVolume.Image = Win32.GetFileIconAsImage(drive, Win32.FileIconSize.Small);
+                btnReadVolume.Tag = cmReadVolume.Tag = drive;
             }
         }
 
-        void cmReadVolumeFromButtonTag_Click(object sender, EventArgs e) {
-            readVolumeFromButtonTag(sender as ToolStripMenuItem);
+        void cmReadVolume_Click(object sender, EventArgs e) {
+            readVolumeFromToolStripItemTag(sender as ToolStripItem);
         }
 
-        private void readVolumeFromButtonTag(ToolStripMenuItem buttonItem) {
+        private void readVolumeFromToolStripItemTag(ToolStripItem buttonItem) {
             if ((buttonItem.Tag != null) && (buttonItem.Tag is string)) {
                 string drive = buttonItem.Tag as string;
                 Properties.Settings.Default.LastDrive = drive;
@@ -971,7 +966,7 @@ namespace BlueMirrorIndexer
             set {
                 if (modified != value) {
                     modified = value;
-                    cmSave.Enabled = value;
+                    btnSave.Enabled = cmSave.Enabled = value;
                     updateTitle();
                 }
             }
