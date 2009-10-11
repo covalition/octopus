@@ -53,11 +53,7 @@ namespace BlueMirrorIndexer
                 TreeNode node = new TreeNode();
                 node.Tag = di;
                 node.Text = di.Name.Replace(@"\", "");
-                //node.CheckBoxVisible = true;
                 node.Checked = true;
-                // node.Image = global::TreeControl.Properties.Resources.Harddrive;
-                //node.Cells.Add(new Cell("Local Disk"));
-                //node.Cells.Add(new Cell());
                 dlg.tvFileTree.Nodes.Add(node);
                 addLoadingString(node);
             }

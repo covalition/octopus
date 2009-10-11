@@ -63,8 +63,8 @@ namespace BlueMirrorIndexer
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tvFileTree = new BlueMirrorIndexer.Components.TreeViewVista();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -534,6 +534,17 @@ namespace BlueMirrorIndexer
             this.tabPage2.Text = "Folders & Files";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tvFileTree
+            // 
+            this.tvFileTree.CheckBoxes = true;
+            this.tvFileTree.Location = new System.Drawing.Point(8, 6);
+            this.tvFileTree.Name = "tvFileTree";
+            this.tvFileTree.ShowLines = false;
+            this.tvFileTree.Size = new System.Drawing.Size(403, 276);
+            this.tvFileTree.TabIndex = 0;
+            this.tvFileTree.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.tvFileTree_AfterCheck);
+            this.tvFileTree.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvFileTree_BeforeExpand);
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.ucItemFolderClassification);
@@ -548,16 +559,6 @@ namespace BlueMirrorIndexer
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Classification";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tvFileTree
-            // 
-            this.tvFileTree.CheckBoxes = true;
-            this.tvFileTree.Location = new System.Drawing.Point(8, 6);
-            this.tvFileTree.Name = "tvFileTree";
-            this.tvFileTree.Size = new System.Drawing.Size(403, 276);
-            this.tvFileTree.TabIndex = 0;
-            this.tvFileTree.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.tvFileTree_AfterCheck);
-            this.tvFileTree.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvFileTree_BeforeExpand);
             // 
             // DlgReadVolume
             // 

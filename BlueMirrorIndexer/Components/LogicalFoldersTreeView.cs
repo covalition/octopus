@@ -80,6 +80,7 @@ namespace BlueMirrorIndexer.Components
             this.ImageList = this.ilFolders;
             this.LabelEdit = true;
             this.SelectedImageIndex = 0;
+            this.ShowLines = false;
             this.AfterLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.LogicalFoldersTreeView_AfterLabelEdit);
             this.BeforeLabelEdit += new System.Windows.Forms.NodeLabelEditEventHandler(this.LogicalFoldersTreeView_BeforeLabelEdit);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LogicalFoldersTreeView_KeyDown);
