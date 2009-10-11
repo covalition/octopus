@@ -12,7 +12,6 @@ namespace BlueMirrorIndexer.BaseDialogs
     {
         public FormDialogList() {
             InitializeComponent();
-            //EnableGlass = !Properties.Settings.Default.UseStyleMessageBoxes;
         }
         
     }

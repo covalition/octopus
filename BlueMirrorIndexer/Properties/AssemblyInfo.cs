@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Blue Mirror")]
 [assembly: AssemblyProduct("Blue Mirror CD/DVD Indexer")]
-[assembly: AssemblyCopyright("Copyright © 2009 Roman Kowaliszyn")]
+[assembly: AssemblyCopyright("Copyright © 2006 - 2009 Roman Kowaliszyn")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,6 +30,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("2.0.0.3")]
-[assembly: AssemblyFileVersion("2.0.0.3")]
+[assembly: AssemblyVersion("2.0.0.5")]
+[assembly: AssemblyFileVersion("2.0.0.5")]
 [assembly: NeutralResourcesLanguageAttribute("")]

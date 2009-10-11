@@ -33,7 +33,7 @@ namespace BlueMirrorIndexer
             this.btnNew = new System.Windows.Forms.Button();
             this.lvFolders = new BlueMirrorIndexer.Components.ListViewVista();
             this.chFolderName = new System.Windows.Forms.ColumnHeader();
-            this.ilFolders = new System.Windows.Forms.ImageList(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@ namespace BlueMirrorIndexer
             this.lvFolders.Location = new System.Drawing.Point(6, 19);
             this.lvFolders.Name = "lvFolders";
             this.lvFolders.Size = new System.Drawing.Size(300, 143);
-            this.lvFolders.SmallImageList = this.ilFolders;
+            this.lvFolders.SmallImageList = this.imageList1;
             this.lvFolders.TabIndex = 0;
             this.lvFolders.UseCompatibleStateImageBehavior = false;
             this.lvFolders.View = System.Windows.Forms.View.Details;
@@ -107,17 +107,17 @@ namespace BlueMirrorIndexer
             this.chFolderName.Text = "Folder Name";
             this.chFolderName.Width = 300;
             // 
-            // ilFolders
+            // imageList1
             // 
-            this.ilFolders.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilFolders.ImageStream")));
-            this.ilFolders.TransparentColor = System.Drawing.Color.Magenta;
-            this.ilFolders.Images.SetKeyName(0, "VSFolder_open.bmp");
-            this.ilFolders.Images.SetKeyName(1, "cab.ico");
-            this.ilFolders.Images.SetKeyName(2, "Flag_redHS.png");
-            this.ilFolders.Images.SetKeyName(3, "cd.bmp");
-            this.ilFolders.Images.SetKeyName(4, "camera.ico");
-            this.ilFolders.Images.SetKeyName(5, "user.ico");
-            this.ilFolders.Images.SetKeyName(6, "CD_16.bmp");
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Magenta;
+            this.imageList1.Images.SetKeyName(0, "folder.png");
+            this.imageList1.Images.SetKeyName(1, "house.png");
+            this.imageList1.Images.SetKeyName(2, "flag_red.png");
+            this.imageList1.Images.SetKeyName(3, "cd.png");
+            this.imageList1.Images.SetKeyName(4, "camera.png");
+            this.imageList1.Images.SetKeyName(5, "user.png");
+            this.imageList1.Images.SetKeyName(6, "cd_burn.png");
             // 
             // UcItemFolderClassification
             // 
@@ -140,7 +140,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.Button btnNew;
         private BlueMirrorIndexer.Components.ListViewVista lvFolders;
         private System.Windows.Forms.ColumnHeader chFolderName;
-        private System.Windows.Forms.ImageList ilFolders;
+        private System.Windows.Forms.ImageList imageList1;
 
     }
 }

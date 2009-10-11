@@ -31,13 +31,13 @@ namespace BlueMirrorIndexer.Components
             // 
             this.ilFolders.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilFolders.ImageStream")));
             this.ilFolders.TransparentColor = System.Drawing.Color.Magenta;
-            this.ilFolders.Images.SetKeyName(0, "VSFolder_open.bmp");
-            this.ilFolders.Images.SetKeyName(1, "cab.ico");
-            this.ilFolders.Images.SetKeyName(2, "Flag_redHS.png");
-            this.ilFolders.Images.SetKeyName(3, "cd.bmp");
-            this.ilFolders.Images.SetKeyName(4, "camera.ico");
-            this.ilFolders.Images.SetKeyName(5, "user.ico");
-            this.ilFolders.Images.SetKeyName(6, "CD_16.bmp");
+            this.ilFolders.Images.SetKeyName(0, "folder.png");
+            this.ilFolders.Images.SetKeyName(1, "house.png");
+            this.ilFolders.Images.SetKeyName(2, "flag_red.png");
+            this.ilFolders.Images.SetKeyName(3, "cd.png");
+            this.ilFolders.Images.SetKeyName(4, "camera.png");
+            this.ilFolders.Images.SetKeyName(5, "user.png");
+            this.ilFolders.Images.SetKeyName(6, "cd_burn.png");
             // 
             // pmLogicalFolders
             // 
