@@ -22,15 +22,13 @@ namespace BlueMirrorIndexer
         }
 
         VolumeDatabase database;
-        internal static DiscInDatabase GetOptions(List<string> excludedFolders, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace) {
+        internal static DiscInDatabase GetOptions(List<string> elementsToRead, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace) {
             DlgReadVolume dlg = new DlgReadVolume(drive);
             Cursor oldCursor = parentForm.Cursor;
             parentForm.Cursor = Cursors.WaitCursor;
             try {
                 discToReplace = null;
                 dlg.database = database;
-                //dlg.ucItemFolderClassification.ImageList = folderImages;
-
                 DriveInfo di = new DriveInfo(drive);
                 dlg.tbUserLabel.Text = dlg.llCdLabel.Text = di.VolumeLabel;
                 if (dlg.tbUserLabel.Text == string.Empty)
@@ -41,8 +39,8 @@ namespace BlueMirrorIndexer
                 dlg.llDriveType.Text = di.DriveType.ToString();
                 dlg.llFreeSpace.Text = CustomConvert.ToKBAndB(di.TotalFreeSpace);
                 dlg.llSize.Text = CustomConvert.ToKBAndB(di.TotalSize);
-                dlg.tbKeywords.Text = "";
-                dlg.tbPhysicalLocation.Text = "";
+                dlg.tbKeywords.Text = string.Empty;
+                dlg.tbPhysicalLocation.Text = string.Empty;
                 dlg.cbAutoEject.Checked = Properties.Settings.Default.AutoEject;
                 dlg.cbReadFileVersion.Checked = Properties.Settings.Default.ReadFileInfo;
                 dlg.llSerialNumber.Text = Win32.GetVolumeSerialNumber(drive);
@@ -73,7 +71,10 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.ComputeCrc = dlg.cbComputeCrc.Checked;
                 Properties.Settings.Default.AutosaveAfterReading = dlg.cbAutosaveAfterReading.Checked;
                 Properties.Settings.Default.BrowseInsideCompressed = dlg.cbBrowseZippedFiles.Checked;
-                getExcluded(excludedFolders, dlg.tvFileTree.Nodes);
+                if (!dlg.cbReadFromSelected.Checked)
+                    elementsToRead.Add(drive);
+                else
+                    getElementsToRead(elementsToRead, dlg.tvFileTree.Nodes);
                 discToReplace = dlg.returnDiscToReplace();
                 return discInDatabase;
             }
@@ -94,17 +95,37 @@ namespace BlueMirrorIndexer
                 return null;
         }
 
-        private static void getExcluded(List<string> excluded, TreeNodeCollection nodeCollection) {
+        //private static void getExcluded(List<string> excluded, TreeNodeCollection nodeCollection) {
+        //    foreach (TreeNode node in nodeCollection) {
+        //        if (!node.Checked) {
+        //            if (node.Tag is DriveInfo)
+        //                excluded.Add(((DriveInfo)node.Tag).Name.ToLower());
+        //            else
+        //                if (node.Tag is DirectoryInfo)
+        //                    excluded.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+        //        }
+        //        getExcluded(excluded, node.Nodes);
+        //    }
+        //}
+
+        private static void getElementsToRead(List<string> elementsToRead, TreeNodeCollection nodeCollection) {
             foreach (TreeNode node in nodeCollection) {
-                if (!node.Checked) {
-                    if (node.Tag is DriveInfo)
-                        excluded.Add(((DriveInfo)node.Tag).Name.ToLower());
+                if (node.Checked) {
+                    if ((node.Tag is DriveInfo) && (!expanded(node)))
+                        elementsToRead.Add(((DriveInfo)node.Tag).Name.ToLower());
                     else
-                        if (node.Tag is DirectoryInfo)
-                            excluded.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+                        if ((node.Tag is DirectoryInfo) && (!expanded(node)))
+                            elementsToRead.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+                        else
+                            if (node.Tag is FileInfo)
+                                elementsToRead.Add(((FileInfo)node.Tag).FullName.ToLower());
                 }
-                getExcluded(excluded, node.Nodes);
+                getElementsToRead(elementsToRead, node.Nodes);
             }
+        }
+
+        private static bool expanded(TreeNode node) {
+            return !((node.Nodes.Count == 1) && (node.Nodes[0].Tag == null));
         }
 
         private void LoadDirectories(TreeNode parent, DirectoryInfo directoryInfo) {
@@ -115,12 +136,7 @@ namespace BlueMirrorIndexer
                     node.Tag = dir;
                     node.Text = dir.Name;
                     addLoadingString(node);
-                    if (parent.Checked)
-                        node.Checked = true;
-                    else 
-                        node.Checked = false;
-                    
-                    // node.SelectedImageIndex = node.ImageIndex = Win32.GetFileIconIndex(dir.FullName + "\\", Win32.FileIconSize.Small);
+                    node.Checked = parent.Checked;
                     node.SelectedImageIndex = node.ImageIndex = 1;
                     node.ToolTipText = dir.FullName;
                     parent.Nodes.Add(node);
@@ -130,10 +146,7 @@ namespace BlueMirrorIndexer
                     TreeNode node = new TreeNode();
                     node.Tag = file;
                     node.Text = file.Name;
-                    if (parent.Checked)
-                        node.Checked = true;
-                    else
-                        node.Checked = false;
+                    node.Checked = parent.Checked;
                     node.SelectedImageIndex = node.ImageIndex = Win32.GetFileIconIndex(file.Name, Win32.FileIconSize.Small);
                     node.ToolTipText = file.FullName;
                     parent.Nodes.Add(node);
@@ -145,24 +158,24 @@ namespace BlueMirrorIndexer
             }
         }
 
-        private void updateCheckState(TreeNode node) {
-            if (node != null) {
-                bool allChecked = true;
-                bool allUnchecked = true;
-                foreach (TreeNode childNode in node.Nodes) {
-                    if (!childNode.Checked)
-                        allChecked = false;
-                    else
-                    //if (childNode.CheckState != CheckState.Unchecked)
-                        allUnchecked = false;
-                    if (!allChecked && !allUnchecked)
-                        break;
-                }
-                // node.CheckState = allChecked ? CheckState.Checked : (allUnchecked ? CheckState.Unchecked : CheckState.Indeterminate);
-                node.Checked = allChecked;
-                updateCheckState(node.Parent);
-            }
-        }
+        //private void updateCheckState(TreeNode node) {
+        //    if (node != null) {
+        //        bool allChecked = true;
+        //        bool allUnchecked = true;
+        //        foreach (TreeNode childNode in node.Nodes) {
+        //            if (!childNode.Checked)
+        //                allChecked = false;
+        //            else
+        //            //if (childNode.CheckState != CheckState.Unchecked)
+        //                allUnchecked = false;
+        //            if (!allChecked && !allUnchecked)
+        //                break;
+        //        }
+        //        // node.CheckState = allChecked ? CheckState.Checked : (allUnchecked ? CheckState.Unchecked : CheckState.Indeterminate);
+        //        node.Checked = allChecked;
+        //        updateCheckState(node.Parent);
+        //    }
+        //}
 
         protected override void WndProc(ref Message m) {
             if (m.Msg == FrmMain.QueryCancelAutoPlay) {
@@ -238,7 +251,6 @@ namespace BlueMirrorIndexer
                     try {
                         DriveInfo driveInfo = (DriveInfo)parent.Tag;
                         LoadDirectories(parent, driveInfo.RootDirectory);
-                        // parent.ExpandVisibility = eNodeExpandVisibility.Auto;
                     }
                     finally {
                         tvFileTree.EndUpdate();

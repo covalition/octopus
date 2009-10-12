@@ -19,7 +19,7 @@ namespace BlueMirrorIndexer
             this.ascending = ascending;
         }
 
-        private FileInDatabase item(object o) {
+        private static FileInDatabase item(object o) {
             return ((ListViewItem)o).Tag as FileInDatabase;
         }
 

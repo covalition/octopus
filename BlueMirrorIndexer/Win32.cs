@@ -231,7 +231,7 @@ namespace System
             StringBuilder volLabel = new StringBuilder(256);
             uint volFlags = 0;
             StringBuilder fileSystemName = new StringBuilder(256);
-            long ret = GetVolumeInformation(drive, volLabel, volLabel.Capacity, ref serNum, ref maxCompLen, ref volFlags, fileSystemName, fileSystemName.Capacity);
+            /* long ret = */ GetVolumeInformation(drive, volLabel, volLabel.Capacity, ref serNum, ref maxCompLen, ref volFlags, fileSystemName, fileSystemName.Capacity);
 
             string serialNumberAsString = serNum.ToString("X");
             serialNumberAsString.PadLeft(8, '0');

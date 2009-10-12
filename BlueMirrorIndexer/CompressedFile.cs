@@ -229,7 +229,7 @@ namespace BlueMirrorIndexer
             }
         }
 
-        private IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, RARFileInfo rarEntry) {
+        private static IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, RARFileInfo rarEntry) {
             foreach (IFolder folder in searchInFolder.Folders)
                 if ((folder as ItemInDatabase).Name == folderName) {
                     return folder;
@@ -246,7 +246,7 @@ namespace BlueMirrorIndexer
             return newFolder;
         }
 
-        private IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, ZipEntry zipEntry) {
+        private static IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, ZipEntry zipEntry) {
             foreach (IFolder folder in searchInFolder.Folders)
                 if ((folder as ItemInDatabase).Name == folderName) {
                     return folder;
@@ -263,7 +263,7 @@ namespace BlueMirrorIndexer
             return newFolder;
         }
 
-        private IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, TarEntry tarEntry) {
+        private static IFolder findOrCreateFolder(string folderName, IFolder searchInFolder, TarEntry tarEntry) {
             foreach (IFolder folder in searchInFolder.Folders)
                 if ((folder as ItemInDatabase).Name == folderName) {
                     return folder;

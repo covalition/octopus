@@ -12,13 +12,13 @@ namespace BlueMirrorIndexer
         List<string> searchingKeywordList = null;
         bool allKeywordsNeeded;
         bool caseSensitiveKeywords;
-        bool treatAsWildCard;
+        // bool treatAsWildCard;
         List<Regex> searchingKeywordRegexList = null;
 
         public KeywordMatcher(string keywords, bool allKeywordsNeeded, bool caseSensitiveKeywords, bool treatAsWildCard) {
             this.allKeywordsNeeded = allKeywordsNeeded;
             this.caseSensitiveKeywords = caseSensitiveKeywords;
-            this.treatAsWildCard = treatAsWildCard;
+            // this.treatAsWildCard = treatAsWildCard;
             if ((keywords != null) && (keywords.Length > 0)) {
                 if (treatAsWildCard) {
                     searchingKeywordList = new List<string>(keywords.Split(';'));

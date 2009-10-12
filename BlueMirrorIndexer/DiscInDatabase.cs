@@ -149,8 +149,8 @@ namespace BlueMirrorIndexer {
             return Name;
         }
 
-        internal void ReadFromDrive(string drive, List<string> excludedFolders, ref long runningFileCount, ref long runningFileSize, bool useSize, DlgReadingProgress dlgReadingProgress, DiscInDatabase discToReplace) {
-            ReadFromFolder(drive, excludedFolders, ref runningFileCount, ref runningFileSize, useSize, dlgReadingProgress, discToReplace);
+        internal void ReadFromDrive(string drive, List<string> elementsToRead, ref long runningFileCount, ref long runningFileSize, bool useSize, DlgReadingProgress dlgReadingProgress, DiscInDatabase discToReplace) {
+            ReadFromFolder(drive, elementsToRead, ref runningFileCount, ref runningFileSize, useSize, dlgReadingProgress, discToReplace);
             DriveInfo di = new DriveInfo(drive);
             driveFormat = di.DriveFormat;
             driveType = di.DriveType;

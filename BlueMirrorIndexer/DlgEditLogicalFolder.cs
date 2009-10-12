@@ -150,7 +150,7 @@ namespace BlueMirrorIndexer
                 return 0;
         }
 
-        private long getDiscSize(int selectedIndex) {
+        private static long getDiscSize(int selectedIndex) {
             switch (selectedIndex) {
                 case 1: return SIZE_DVD_MINUS_SL;
                 case 2: return SIZE_DVD_PLUS_SL;

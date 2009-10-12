@@ -19,20 +19,11 @@ namespace BlueMirrorIndexer
             this.ascending = ascending;
         }
 
-        private ItemInDatabase item(ListViewItem o) {
-            return o.Tag as ItemInDatabase;
-        }
-
-        //private long length(ItemInDatabase itemInDatabase) {
-        //    // ItemInDatabase itemInDatabase = item(o);
-        //    if (itemInDatabase is FileInDatabase)
-        //        return (itemInDatabase as FileInDatabase).Length;
-        //    else
-        //        return 0;
+        //private static ItemInDatabase item(ListViewItem o) {
+        //    return o.Tag as ItemInDatabase;
         //}
 
         private ulong crc(ItemInDatabase itemInDatabase) {
-            // ItemInDatabase itemInDatabase = item(o);
             if (itemInDatabase is FileInDatabase)
                 return (itemInDatabase as FileInDatabase).Crc;
             else

@@ -32,7 +32,7 @@ namespace BlueMirrorIndexer
             navigate.Start();
         }
 
-        private string assemblyCopyright {
+        private static string assemblyCopyright {
             get {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
                 if (attributes.Length == 0)
@@ -41,7 +41,7 @@ namespace BlueMirrorIndexer
             }
         }
 
-        private string assemblyVersion {
+        private static string assemblyVersion {
             get {
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
             }

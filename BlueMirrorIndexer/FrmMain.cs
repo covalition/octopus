@@ -405,7 +405,7 @@ namespace BlueMirrorIndexer
             UpdateReadVolumeButton();
         }
 
-        private string createReadVolumeBtnName(string drive) {
+        private static string createReadVolumeBtnName(string drive) {
             drive = drive.Trim(':', '\\');
             return "cmReadVolumeFromDrive" + drive;
         }
@@ -663,12 +663,12 @@ namespace BlueMirrorIndexer
                 return;
             try {
                 duringRead = true;
-                List<string> excludedFolders = new List<string>();
+                List<string> elementsToRead = new List<string>();
                 LogicalFolder[] logicalFolders;
                 DiscInDatabase discToReplace;
-                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedFolders, drive, out logicalFolders, this, Database, out discToReplace);
+                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(elementsToRead, drive, out logicalFolders, this, Database, out discToReplace);
                 if (discInDatabase != null) {
-                    readCdOnDrive(drive, discInDatabase, excludedFolders, logicalFolders, discToReplace);
+                    readCdOnDrive(drive, discInDatabase, elementsToRead, logicalFolders, discToReplace);
                     if (Properties.Settings.Default.AutoEject)
                         ejectCd(drive);
                     if (Properties.Settings.Default.AutosaveAfterReading)
@@ -695,25 +695,25 @@ namespace BlueMirrorIndexer
         }
 
         internal ProgressInfo ProgressInfo = null;
-        private void readCdOnDrive(string drive, DiscInDatabase discToScan, List<string> excludedFolders, LogicalFolder[] logicalFolders, DiscInDatabase discToReplace) {
+        private void readCdOnDrive(string drive, DiscInDatabase discToScan, List<string> elementsToRead, LogicalFolder[] logicalFolders, DiscInDatabase discToReplace) {
             Cursor c = Cursor.Current;
             Cursor.Current = Cursors.WaitCursor;
             try {
-                excludedFolders.Sort();
+                elementsToRead.Sort();
 
                 Enabled = false;
                 ProgressInfo = null;
-                startCalculatingProgressInfo(drive, excludedFolders);
+                startCalculatingProgressInfo(drive, elementsToRead);
                 // bool useSize = Properties.Settings.Default.ComputeCrc || Properties.Settings.Default.BrowseInsideCompressed;
                 bool useSize = Properties.Settings.Default.ComputeCrc;
                 openProgressDialog = new DlgReadingProgress("Reading Volume...", null, useSize);
                 openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
                 try {
-                    if (!excludedFolders.Contains(drive.ToLower())) {
+                    if (!elementsToRead.Contains(drive.ToLower())) {
                         long runningFileCount = 0;
                         long runningFileSize = 0;
                         try {
-                            discToScan.ReadFromDrive(drive, excludedFolders, ref runningFileCount, ref runningFileSize, useSize, openProgressDialog as DlgReadingProgress, discToReplace);
+                            discToScan.ReadFromDrive(drive, elementsToRead, ref runningFileCount, ref runningFileSize, useSize, openProgressDialog as DlgReadingProgress, discToReplace);
                             openProgressDialog.SetProgress(100, "Adding: " + discToScan.VolumeLabel);
                             Database.AddDisc(discToScan);
                         }
@@ -1256,7 +1256,7 @@ namespace BlueMirrorIndexer
             base.WndProc(ref m);
         }
 
-        private string getDriveFromMask(int mask) {
+        private static string getDriveFromMask(int mask) {
             try {
                 int i = 0;
                 for (; i < 26; ++i) {
@@ -1581,7 +1581,7 @@ namespace BlueMirrorIndexer
         private void startDragging(MouseEventArgs e, Control control) {
             if ((e.Button == MouseButtons.Left) || (e.Button == MouseButtons.Right)) {
                 if (dragBoxFromMouseDown != Rectangle.Empty && !dragBoxFromMouseDown.Contains(e.X, e.Y)) {
-                    DragDropEffects dropEffect = control.DoDragDrop(itemsToDrag, DragDropEffects.All | DragDropEffects.Link);
+                    /* DragDropEffects dropEffect = */ control.DoDragDrop(itemsToDrag, DragDropEffects.All | DragDropEffects.Link);
                 }
             }
         }

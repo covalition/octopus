@@ -17,6 +17,8 @@ using System.Collections;
  *  some time in building your own products.
  */
 
+// Modified 2009 by Blue Mirror
+
 namespace Schematrix
 {
 	#region Event Delegate Definitions
@@ -441,7 +443,7 @@ namespace Schematrix
 			// Check result
 			if(result!=0)
 			{
-				ProcessFileError(result);
+				processFileError(result);
 			}
 			else
 			{
@@ -629,7 +631,7 @@ namespace Schematrix
 			// Check result
 			if(result!=0)
 			{
-				ProcessFileError(result);
+				processFileError(result);
 			}
 		}
 
@@ -644,7 +646,7 @@ namespace Schematrix
 			// Check result
 			if(result!=0)
 			{
-				ProcessFileError(result);
+				processFileError(result);
 			}
 		}
 
@@ -688,7 +690,7 @@ namespace Schematrix
 			// Check result
 			if(result!=0)
 			{
-				ProcessFileError(result);
+				processFileError(result);
 			}
 		}
 
@@ -713,7 +715,7 @@ namespace Schematrix
 			return new DateTime(year, month, day, hour, minute, second);
 		}
 
-		private void ProcessFileError(int result)
+		private static void processFileError(int result)
 		{
 			switch((RarError)result)
 			{
