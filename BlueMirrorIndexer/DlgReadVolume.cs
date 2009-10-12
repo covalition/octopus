@@ -54,6 +54,8 @@ namespace BlueMirrorIndexer
                 node.Tag = di;
                 node.Text = di.Name.Replace(@"\", "");
                 node.Checked = true;
+                node.SelectedImageIndex = node.ImageIndex = Win32.GetFileIconIndex(di.Name, Win32.FileIconSize.Small);
+                Win32.UpdateSystemImageList(dlg.tvFileTree.ImageList, Win32.FileIconSize.Small, false, Properties.Resources.delete);
                 dlg.tvFileTree.Nodes.Add(node);
                 addLoadingString(node);
             }
@@ -112,20 +114,31 @@ namespace BlueMirrorIndexer
                     TreeNode node = new TreeNode();
                     node.Tag = dir;
                     node.Text = dir.Name;
-                    // node.Image = global::TreeControl.Properties.Resources.FolderClosed;
-                    // node.ImageExpanded = global::TreeControl.Properties.Resources.FolderOpen;
-                    //node.Cells.Add(new Cell("Local Folder"));
-                    //node.Cells.Add(new Cell());
-                    // node.ExpandVisibility = eNodeExpandVisibility.Visible;
                     addLoadingString(node);
-                    // node.CheckBoxVisible = true;
                     if (parent.Checked)
                         node.Checked = true;
                     else 
                         node.Checked = false;
-
+                    
+                    // node.SelectedImageIndex = node.ImageIndex = Win32.GetFileIconIndex(dir.FullName + "\\", Win32.FileIconSize.Small);
+                    node.SelectedImageIndex = node.ImageIndex = 1;
+                    node.ToolTipText = dir.FullName;
                     parent.Nodes.Add(node);
                 }
+                FileInfo[] files = directoryInfo.GetFiles();
+                foreach (FileInfo file in files) {
+                    TreeNode node = new TreeNode();
+                    node.Tag = file;
+                    node.Text = file.Name;
+                    if (parent.Checked)
+                        node.Checked = true;
+                    else
+                        node.Checked = false;
+                    node.SelectedImageIndex = node.ImageIndex = Win32.GetFileIconIndex(file.Name, Win32.FileIconSize.Small);
+                    node.ToolTipText = file.FullName;
+                    parent.Nodes.Add(node);
+                }
+                Win32.UpdateSystemImageList(tvFileTree.ImageList, Win32.FileIconSize.Small, false, Properties.Resources.delete);
             }
             catch (Exception ex) {
                 MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -160,6 +173,7 @@ namespace BlueMirrorIndexer
         }
 
         private void DlgReadVolume_Load(object sender, EventArgs e) {
+            updateFolderTree();
             lookForOldDiscs();
             if (tbUserLabel.Enabled)
                 tbUserLabel.Focus();
@@ -237,14 +251,22 @@ namespace BlueMirrorIndexer
         }
 
         private void tvFileTree_AfterCheck(object sender, TreeViewEventArgs e) {
-            //TreeNode node = e.Node;
-            //if (node.Checked)
-            //    foreach (TreeNode childNode in node.Nodes)
-            //        childNode.Checked = true;
-            //else 
-            //    foreach (TreeNode childNode in node.Nodes)
-            //        childNode.Checked = false;
-            //updateCheckState(node.Parent);
+            TreeNode node = e.Node;
+            if (node.Checked)
+                foreach (TreeNode childNode in node.Nodes)
+                    childNode.Checked = true;
+            else
+                foreach (TreeNode childNode in node.Nodes)
+                    childNode.Checked = false;
+            // updateCheckState(node.Parent);
+        }
+
+        private void cbReadFromSelected_CheckedChanged(object sender, EventArgs e) {
+            updateFolderTree();
+        }
+
+        private void updateFolderTree() {
+            tvFileTree.Enabled = cbReadFromSelected.Checked;
         }
 
     }

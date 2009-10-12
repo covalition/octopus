@@ -25,6 +25,7 @@ namespace BlueMirrorIndexer
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbReadFileVersion = new System.Windows.Forms.CheckBox();
             this.cbBrowseZippedFiles = new System.Windows.Forms.CheckBox();
@@ -63,7 +64,9 @@ namespace BlueMirrorIndexer
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cbReadFromSelected = new System.Windows.Forms.CheckBox();
             this.tvFileTree = new BlueMirrorIndexer.Components.TreeViewVista();
+            this.ilSystem = new System.Windows.Forms.ImageList(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -525,6 +528,7 @@ namespace BlueMirrorIndexer
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.cbReadFromSelected);
             this.tabPage2.Controls.Add(this.tvFileTree);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -534,16 +538,37 @@ namespace BlueMirrorIndexer
             this.tabPage2.Text = "Folders & Files";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cbReadFromSelected
+            // 
+            this.cbReadFromSelected.AutoSize = true;
+            this.cbReadFromSelected.Location = new System.Drawing.Point(8, 6);
+            this.cbReadFromSelected.Name = "cbReadFromSelected";
+            this.cbReadFromSelected.Size = new System.Drawing.Size(174, 17);
+            this.cbReadFromSelected.TabIndex = 1;
+            this.cbReadFromSelected.Text = "Read from selected folders only";
+            this.cbReadFromSelected.UseVisualStyleBackColor = true;
+            this.cbReadFromSelected.CheckedChanged += new System.EventHandler(this.cbReadFromSelected_CheckedChanged);
+            // 
             // tvFileTree
             // 
             this.tvFileTree.CheckBoxes = true;
-            this.tvFileTree.Location = new System.Drawing.Point(8, 6);
+            this.tvFileTree.ImageIndex = 0;
+            this.tvFileTree.ImageList = this.ilSystem;
+            this.tvFileTree.Location = new System.Drawing.Point(8, 29);
             this.tvFileTree.Name = "tvFileTree";
+            this.tvFileTree.SelectedImageIndex = 0;
             this.tvFileTree.ShowLines = false;
-            this.tvFileTree.Size = new System.Drawing.Size(403, 276);
+            this.tvFileTree.ShowNodeToolTips = true;
+            this.tvFileTree.Size = new System.Drawing.Size(403, 253);
             this.tvFileTree.TabIndex = 0;
             this.tvFileTree.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.tvFileTree_AfterCheck);
             this.tvFileTree.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.tvFileTree_BeforeExpand);
+            // 
+            // ilSystem
+            // 
+            this.ilSystem.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.ilSystem.ImageSize = new System.Drawing.Size(16, 16);
+            this.ilSystem.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // tabPage3
             // 
@@ -581,6 +606,7 @@ namespace BlueMirrorIndexer
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
@@ -629,5 +655,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private BlueMirrorIndexer.Components.TreeViewVista tvFileTree;
+        private System.Windows.Forms.CheckBox cbReadFromSelected;
+        private System.Windows.Forms.ImageList ilSystem;
     }
 }
