@@ -19,10 +19,6 @@ namespace BlueMirrorIndexer
             this.ascending = ascending;
         }
 
-        //private static ItemInDatabase item(ListViewItem o) {
-        //    return o.Tag as ItemInDatabase;
-        //}
-
         private ulong crc(ItemInDatabase itemInDatabase) {
             if (itemInDatabase is FileInDatabase)
                 return (itemInDatabase as FileInDatabase).Crc;
@@ -41,8 +37,8 @@ namespace BlueMirrorIndexer
                 case 3: res = x.Attributes.CompareTo(y.Attributes); break;
                 case 4: res = x.Keywords.CompareTo(y.Keywords); break;
                 case 5: res = x.Extension.CompareTo(y.Extension); break;
-                case 6: res = x.FileDescription.CompareTo(y.FileDescription); break;
-                case 7: res = x.FileVersion.CompareTo(y.FileVersion); break;
+                case 6: res = string.Compare(x.FileDescription, y.FileDescription); break;
+                case 7: res = string.Compare(x.FileVersion, y.FileVersion); break;
                 case 8: res = x.GetVolumeUserName().CompareTo(y.GetVolumeUserName()); break;
                 case 9: res = x.GetPath().CompareTo(y.GetPath()); break;
                 case 10: res = crc(x).CompareTo(crc(y)); break;
