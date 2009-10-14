@@ -1,19 +1,19 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.Deployment.Application;
-using System.IO;
 using System.Diagnostics;
-using System.Collections;
+using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace BlueMirrorIndexer
 {

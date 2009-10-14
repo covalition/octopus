@@ -22,6 +22,8 @@ namespace BlueMirrorIndexer
             if ((keywords != null) && (keywords.Length > 0)) {
                 if (treatAsWildCard) {
                     searchingKeywordList = new List<string>(keywords.Split(';'));
+                    for(int i = 0; i < searchingKeywordList.Count; i++)
+                        searchingKeywordList[i] = searchingKeywordList[i].Trim();
                     searchingKeywordRegexList = new List<Regex>();
                     RegexOptions regexOptions;
                     if (caseSensitiveKeywords)

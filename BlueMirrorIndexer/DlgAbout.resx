@@ -495,6 +495,9 @@
     <value>Created by:
 Roman Kowaliszyn
 
+Icons:
+(c) www.famfamfam.com
+
 Translators (version 1):
 Dutch: Filip Cornelissen
 German: Clemens-Alexander Brust
@@ -607,6 +610,6 @@ Turkish: Polat Pinar</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.2, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.8, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
