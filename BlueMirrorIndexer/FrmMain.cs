@@ -663,12 +663,12 @@ namespace BlueMirrorIndexer
                 return;
             try {
                 duringRead = true;
-                List<string> elementsToRead = new List<string>();
+                List<string> excludedElements = new List<string>();
                 LogicalFolder[] logicalFolders;
                 DiscInDatabase discToReplace;
-                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(elementsToRead, drive, out logicalFolders, this, Database, out discToReplace);
+                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedElements, drive, out logicalFolders, this, Database, out discToReplace);
                 if (discInDatabase != null) {
-                    readCdOnDrive(drive, discInDatabase, elementsToRead, logicalFolders, discToReplace);
+                    readCdOnDrive(drive, discInDatabase, excludedElements, logicalFolders, discToReplace);
                     if (Properties.Settings.Default.AutoEject)
                         ejectCd(drive);
                     if (Properties.Settings.Default.AutosaveAfterReading)
@@ -695,25 +695,25 @@ namespace BlueMirrorIndexer
         }
 
         internal ProgressInfo ProgressInfo = null;
-        private void readCdOnDrive(string drive, DiscInDatabase discToScan, List<string> elementsToRead, LogicalFolder[] logicalFolders, DiscInDatabase discToReplace) {
+        private void readCdOnDrive(string drive, DiscInDatabase discToScan, List<string> excludedElements, LogicalFolder[] logicalFolders, DiscInDatabase discToReplace) {
             Cursor c = Cursor.Current;
             Cursor.Current = Cursors.WaitCursor;
             try {
-                elementsToRead.Sort();
+                excludedElements.Sort();
 
                 Enabled = false;
                 ProgressInfo = null;
-                startCalculatingProgressInfo(drive, elementsToRead);
+                startCalculatingProgressInfo(drive, excludedElements);
                 // bool useSize = Properties.Settings.Default.ComputeCrc || Properties.Settings.Default.BrowseInsideCompressed;
                 bool useSize = Properties.Settings.Default.ComputeCrc;
                 openProgressDialog = new DlgReadingProgress("Reading Volume...", null, useSize);
                 openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
                 try {
-                    if (!elementsToRead.Contains(drive.ToLower())) {
+                    if (!excludedElements.Contains(drive.ToLower())) {
                         long runningFileCount = 0;
                         long runningFileSize = 0;
                         try {
-                            discToScan.ReadFromDrive(drive, elementsToRead, ref runningFileCount, ref runningFileSize, useSize, openProgressDialog as DlgReadingProgress, discToReplace);
+                            discToScan.ReadFromDrive(drive, excludedElements, ref runningFileCount, ref runningFileSize, useSize, openProgressDialog as DlgReadingProgress, discToReplace);
                             openProgressDialog.SetProgress(100, "Adding: " + discToScan.VolumeLabel);
                             Database.AddDisc(discToScan);
                         }
@@ -742,10 +742,10 @@ namespace BlueMirrorIndexer
         }
 
         string calculatingDrive;
-        List<string> calculatingExcludedFolders;
+        List<string> calculatingExcludedElements;
         private void startCalculatingProgressInfo(string drive, List<string> excludedFolders) {
             calculatingDrive = drive;
-            calculatingExcludedFolders = excludedFolders;
+            calculatingExcludedElements = excludedFolders;
             breakCalculating = false;
             ThreadStart calculateDelegate = new ThreadStart(calculateProgressInfo);
             Thread thread = new Thread(calculateDelegate);
@@ -756,7 +756,7 @@ namespace BlueMirrorIndexer
             long fileCount = 0;
             long fileSizeSum = 0;
             try {
-                calculateProgressInfo(calculatingDrive, calculatingExcludedFolders, ref fileCount, ref fileSizeSum);
+                calculateProgressInfo(calculatingDrive, calculatingExcludedElements, ref fileCount, ref fileSizeSum);
                 lock (this) {
                     ProgressInfo = new ProgressInfo(fileCount, fileSizeSum);
                 }
@@ -767,7 +767,7 @@ namespace BlueMirrorIndexer
         }
 
         bool breakCalculating = false;
-        private void calculateProgressInfo(string calculatingFolder, List<string> calculatingExcludedFolders, ref long fileCount, ref long fileSizeSum) {
+        private void calculateProgressInfo(string calculatingFolder, List<string> calculatingExcludedElements, ref long fileCount, ref long fileSizeSum) {
             try {
                 if (breakCalculating)
                     throw new AbortException();
@@ -775,15 +775,17 @@ namespace BlueMirrorIndexer
                 System.IO.DirectoryInfo[] subFolders = di.GetDirectories();
                 foreach (System.IO.DirectoryInfo subFolder in subFolders) {
                     string subFolderName = subFolder.FullName.ToLower();
-                    if (!calculatingExcludedFolders.Contains(subFolderName)) {
-                        calculateProgressInfo(subFolderName, calculatingExcludedFolders, ref fileCount, ref fileSizeSum);
+                    if (!calculatingExcludedElements.Contains(subFolderName)) {
+                        calculateProgressInfo(subFolderName, calculatingExcludedElements, ref fileCount, ref fileSizeSum);
                     }
                 }
 
                 System.IO.FileInfo[] filesInFolder = di.GetFiles();
                 foreach (System.IO.FileInfo fileInFolder in filesInFolder) {
-                    fileCount++;
-                    fileSizeSum += fileInFolder.Length;
+                    if (!calculatingExcludedElements.Contains(fileInFolder.FullName.ToLower())) {
+                        fileCount++;
+                        fileSizeSum += fileInFolder.Length;
+                    }
                 }
             }
             catch (UnauthorizedAccessException) {

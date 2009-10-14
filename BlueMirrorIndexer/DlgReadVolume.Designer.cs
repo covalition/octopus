@@ -555,6 +555,7 @@ namespace BlueMirrorIndexer
             this.tvFileTree.ImageIndex = 0;
             this.tvFileTree.ImageList = this.ilSystem;
             this.tvFileTree.Location = new System.Drawing.Point(8, 29);
+            this.tvFileTree.MultiSelect = true;
             this.tvFileTree.Name = "tvFileTree";
             this.tvFileTree.SelectedImageIndex = 0;
             this.tvFileTree.ShowLines = false;

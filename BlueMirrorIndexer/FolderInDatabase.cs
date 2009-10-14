@@ -75,74 +75,76 @@ namespace BlueMirrorIndexer {
 
                 System.IO.FileInfo[] filesInFolder = di.GetFiles();
                 foreach (System.IO.FileInfo fileInFolder in filesInFolder) {
-                    FileInDatabase newFile;
-                    FileInDatabase fileToReplace;
-                    if (folderToReplace != null)
-                        fileToReplace = folderToReplace.findFile(fileInFolder.Name);
-                    else
-                        fileToReplace = null;
-                    if (Properties.Settings.Default.BrowseInsideCompressed && (CompressedFile.IsCompressedFile(fileInFolder.Name))) {
-                        CompressedFile compressedFile = new CompressedFile(this);
-                        try {
-                            compressedFile.BrowseFiles(fileInFolder.FullName, fileToReplace as CompressedFile);
+                    if (!excludedFolders.Contains(fileInFolder.FullName.ToLower())) {
+                        FileInDatabase newFile;
+                        FileInDatabase fileToReplace;
+                        if (folderToReplace != null)
+                            fileToReplace = folderToReplace.findFile(fileInFolder.Name);
+                        else
+                            fileToReplace = null;
+                        if (Properties.Settings.Default.BrowseInsideCompressed && (CompressedFile.IsCompressedFile(fileInFolder.Name))) {
+                            CompressedFile compressedFile = new CompressedFile(this);
+                            try {
+                                compressedFile.BrowseFiles(fileInFolder.FullName, fileToReplace as CompressedFile);
+                            }
+                            catch (Exception ex) {
+                                compressedFile.Comments = ex.Message;
+                            }
+                            // tu idzie jako katalog
+                            folderImpl.AddToFolders(compressedFile);
+
+                            // a teraz jako plik
+                            newFile = compressedFile;
                         }
-                        catch (Exception ex) {
-                            compressedFile.Comments = ex.Message;
+                        else {
+                            newFile = new FileInDatabase(this);
+                            newFile.FullName = fileInFolder.FullName;
                         }
-                        // tu idzie jako katalog
-                        folderImpl.AddToFolders(compressedFile);
 
-                        // a teraz jako plik
-                        newFile = compressedFile;
-                    }
-                    else {
-                        newFile = new FileInDatabase(this);
-                        newFile.FullName = fileInFolder.FullName;
-                    }
+                        newFile.Name = fileInFolder.Name;
+                        newFile.Attributes = fileInFolder.Attributes;
+                        newFile.CreationTime = fileInFolder.CreationTime;
+                        newFile.Extension = fileInFolder.Extension;
 
-                    newFile.Name = fileInFolder.Name;
-                    newFile.Attributes = fileInFolder.Attributes;
-                    newFile.CreationTime = fileInFolder.CreationTime;
-                    newFile.Extension = fileInFolder.Extension;
-                    
-                    newFile.LastAccessTime = fileInFolder.LastAccessTime;
-                    newFile.LastWriteTime = fileInFolder.LastWriteTime;
-                    newFile.IsReadOnly = fileInFolder.IsReadOnly;
-                    newFile.Length = fileInFolder.Length;
-                    if (Properties.Settings.Default.ReadFileInfo) {
-                        FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(fileInFolder.FullName);
-                        newFile.Comments = fvi.Comments;
-                        newFile.CompanyName = fvi.CompanyName;
-                        newFile.FileVersion = fvi.FileVersion;
-                        newFile.FileDescription = fvi.FileDescription;
-                        newFile.LegalCopyright = fvi.LegalCopyright;
-                        newFile.ProductName = fvi.ProductName;
-                    }
+                        newFile.LastAccessTime = fileInFolder.LastAccessTime;
+                        newFile.LastWriteTime = fileInFolder.LastWriteTime;
+                        newFile.IsReadOnly = fileInFolder.IsReadOnly;
+                        newFile.Length = fileInFolder.Length;
+                        if (Properties.Settings.Default.ReadFileInfo) {
+                            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(fileInFolder.FullName);
+                            newFile.Comments = fvi.Comments;
+                            newFile.CompanyName = fvi.CompanyName;
+                            newFile.FileVersion = fvi.FileVersion;
+                            newFile.FileDescription = fvi.FileDescription;
+                            newFile.LegalCopyright = fvi.LegalCopyright;
+                            newFile.ProductName = fvi.ProductName;
+                        }
 
-                    if (Properties.Settings.Default.ComputeCrc) {
-                        Crc32 crc32 = new Crc32(dlgReadingProgress, runningFileCount, runningFileSize, newFile.FullName);
-                        try {
-                            using (FileStream inputStream = new FileStream(newFile.FullName, FileMode.Open, FileAccess.Read)) {
-                                crc32.ComputeHash(inputStream);
-                                newFile.Crc = crc32.CrcValue;
+                        if (Properties.Settings.Default.ComputeCrc) {
+                            Crc32 crc32 = new Crc32(dlgReadingProgress, runningFileCount, runningFileSize, newFile.FullName);
+                            try {
+                                using (FileStream inputStream = new FileStream(newFile.FullName, FileMode.Open, FileAccess.Read)) {
+                                    crc32.ComputeHash(inputStream);
+                                    newFile.Crc = crc32.CrcValue;
+                                }
+                            }
+                            catch (IOException) {
+                                // eat the exception
                             }
                         }
-                        catch (IOException) {
-                            // eat the exception
+
+                        if (fileToReplace != null) {
+                            newFile.Keywords = fileToReplace.Keywords;
+                            foreach (LogicalFolder logicalFolder in fileToReplace.LogicalFolders)
+                                logicalFolder.AddItem(newFile);
                         }
-                    }
-                    
-                    if (fileToReplace != null) {
-                        newFile.Keywords = fileToReplace.Keywords;
-                        foreach (LogicalFolder logicalFolder in fileToReplace.LogicalFolders)
-                            logicalFolder.AddItem(newFile);
-                    }
 
-                    folderImpl.AddToFiles(newFile);
+                        folderImpl.AddToFiles(newFile);
 
-                    runningFileCount++;
-                    runningFileSize += fileInFolder.Length;
-                    dlgReadingProgress.SetReadingProgress(runningFileCount, runningFileSize, newFile.FullName, "Adding...");
+                        runningFileCount++;
+                        runningFileSize += fileInFolder.Length;
+                        dlgReadingProgress.SetReadingProgress(runningFileCount, runningFileSize, newFile.FullName, "Adding...");
+                    }
                 }
             }
             catch (UnauthorizedAccessException) {

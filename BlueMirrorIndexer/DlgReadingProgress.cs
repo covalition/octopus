@@ -38,6 +38,8 @@ namespace BlueMirrorIndexer
                 llFileCount.Text = runningFileCount.ToString();
                 llFileSize.Text = CustomConvert.ToKBAndB(runningFileSize);
             }
+            if (progress > 100)
+                progress = 100;
             SetProgress(progress, currentItemName);
             llOperation.Text = operation;
         }

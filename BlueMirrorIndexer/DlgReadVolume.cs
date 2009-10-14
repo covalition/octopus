@@ -22,7 +22,7 @@ namespace BlueMirrorIndexer
         }
 
         VolumeDatabase database;
-        internal static DiscInDatabase GetOptions(List<string> elementsToRead, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace) {
+        internal static DiscInDatabase GetOptions(List<string> exludedElements, string drive, out LogicalFolder[] logicalFolders, Form parentForm, VolumeDatabase database, out DiscInDatabase discToReplace) {
             DlgReadVolume dlg = new DlgReadVolume(drive);
             Cursor oldCursor = parentForm.Cursor;
             parentForm.Cursor = Cursors.WaitCursor;
@@ -71,10 +71,8 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.ComputeCrc = dlg.cbComputeCrc.Checked;
                 Properties.Settings.Default.AutosaveAfterReading = dlg.cbAutosaveAfterReading.Checked;
                 Properties.Settings.Default.BrowseInsideCompressed = dlg.cbBrowseZippedFiles.Checked;
-                if (!dlg.cbReadFromSelected.Checked)
-                    elementsToRead.Add(drive);
-                else
-                    getElementsToRead(elementsToRead, dlg.tvFileTree.Nodes);
+                if (dlg.cbReadFromSelected.Checked)
+                    getExcludedElements(exludedElements, dlg.tvFileTree.Nodes);
                 discToReplace = dlg.returnDiscToReplace();
                 return discInDatabase;
             }
@@ -95,37 +93,45 @@ namespace BlueMirrorIndexer
                 return null;
         }
 
-        //private static void getExcluded(List<string> excluded, TreeNodeCollection nodeCollection) {
-        //    foreach (TreeNode node in nodeCollection) {
-        //        if (!node.Checked) {
-        //            if (node.Tag is DriveInfo)
-        //                excluded.Add(((DriveInfo)node.Tag).Name.ToLower());
-        //            else
-        //                if (node.Tag is DirectoryInfo)
-        //                    excluded.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
-        //        }
-        //        getExcluded(excluded, node.Nodes);
-        //    }
-        //}
-
-        private static void getElementsToRead(List<string> elementsToRead, TreeNodeCollection nodeCollection) {
+        private static void getExcludedElements(List<string> excluded, TreeNodeCollection nodeCollection) {
             foreach (TreeNode node in nodeCollection) {
-                if (node.Checked) {
-                    if ((node.Tag is DriveInfo) && (!expanded(node)))
-                        elementsToRead.Add(((DriveInfo)node.Tag).Name.ToLower());
-                    else
-                        if ((node.Tag is DirectoryInfo) && (!expanded(node)))
-                            elementsToRead.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+                if (!node.Checked) {
+                    // for DriveInfo and DirectoryInfo
+                    if (wasntExpanded(node)) {
+                        if (node.Tag is DriveInfo)
+                            excluded.Add(((DriveInfo)node.Tag).Name.ToLower());
                         else
-                            if (node.Tag is FileInfo)
-                                elementsToRead.Add(((FileInfo)node.Tag).FullName.ToLower());
+                            if (node.Tag is DirectoryInfo)
+                                excluded.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+                    }
+                    // for FileInfo
+                    if (node.Tag is FileInfo)
+                        excluded.Add(((FileInfo)node.Tag).FullName.ToLower());
                 }
-                getElementsToRead(elementsToRead, node.Nodes);
+                // call when folder node wasn't expanded
+                if (!wasntExpanded(node))
+                    getExcludedElements(excluded, node.Nodes);
             }
         }
 
-        private static bool expanded(TreeNode node) {
-            return !((node.Nodes.Count == 1) && (node.Nodes[0].Tag == null));
+        //private static void getExcludedElements(List<string> excludedElements, TreeNodeCollection nodeCollection) { // TODO poprawiæ:
+        //    foreach (TreeNode node in nodeCollection) {
+        //        if (node.Checked) {
+        //            if ((node.Tag is DriveInfo) && (!expanded(node)))
+        //                excludedElements.Add(((DriveInfo)node.Tag).Name.ToLower());
+        //            else
+        //                if ((node.Tag is DirectoryInfo) && (!expanded(node)))
+        //                    excludedElements.Add(((DirectoryInfo)node.Tag).FullName.ToLower());
+        //                else
+        //                    if (node.Tag is FileInfo)
+        //                        excludedElements.Add(((FileInfo)node.Tag).FullName.ToLower());
+        //        }
+        //        getExcludedElements(excludedElements, node.Nodes);
+        //    }
+        //}
+
+        private static bool wasntExpanded(TreeNode node) {
+            return (node.Nodes.Count == 1) && (node.Nodes[0].Tag == null);
         }
 
         private void LoadDirectories(TreeNode parent, DirectoryInfo directoryInfo) {
