@@ -54,7 +54,7 @@
     <SuiteName>CD DVD Indexer</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -116,6 +116,7 @@
     <Compile Include="Components\LogicalFoldersTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="HourGlass.cs" />
     <Compile Include="VolumeDatabase.cs" />
     <Compile Include="Components\FilesSearchCriteriaPanel.cs">
       <SubType>UserControl</SubType>
@@ -399,7 +400,6 @@
     <Content Include="Resources\MainIcon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BlueMirrorIndexer_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Resources\agt_action_fail1.png" />
     <None Include="Resources\disk.png" />

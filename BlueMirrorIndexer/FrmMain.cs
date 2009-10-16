@@ -31,7 +31,7 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.Updated = true;
             }
             cmScanNewMedia.Checked = Properties.Settings.Default.ScanNewMedia;
-            Text = ProductName;
+            Text = string.Format("{0} {1}", ProductName, ProductVersion);
             btnSave.Enabled = cmSave.Enabled = false;
         }
 
@@ -291,12 +291,14 @@ namespace BlueMirrorIndexer
             tvDatabaseFolderTree.BeginUpdate();
             try {
                 tvDatabaseFolderTree.Nodes.Clear();
-                foreach (DiscInDatabase fid in Database.GetDiscs()) {
-                    TreeNode tn = new TreeNode();
-                    fid.CopyToNode(tn);
-                    tn.ImageIndex = 0;
-                    tn.SelectedImageIndex = 0;
-                    tvDatabaseFolderTree.Nodes.Add(tn);
+                using (new HourGlass()) {
+                    foreach (DiscInDatabase fid in Database.GetDiscs()) {
+                        TreeNode tn = new TreeNode();
+                        fid.CopyToNode(tn);
+                        tn.ImageIndex = 0;
+                        tn.SelectedImageIndex = 0;
+                        tvDatabaseFolderTree.Nodes.Add(tn);
+                    }
                 }
             }
             finally {
@@ -356,12 +358,7 @@ namespace BlueMirrorIndexer
 
         public static uint QueryCancelAutoPlay = 0;
         private void FrmMain_Load(object sender, EventArgs e) {
-            //setScheme(Properties.Settings.Default.ColorScheme, true);
-            //if (Properties.Settings.Default.UseCustomColorScheme)
-            //    setCustomColorScheme(Properties.Settings.Default.CustomColorScheme, true);
-            updateVolumeButtons(); // przed ustawianiem layouta ribbona
-            /* if (Properties.Settings.Default.RibbonLayout != string.Empty)
-                ribbonControl.QatLayout = Properties.Settings.Default.RibbonLayout; */
+            updateVolumeButtons();
 
             lvDatabaseItems.ColumnOrderArray = Properties.Settings.Default.DatabaseItemsColumnOrder;
             lvDatabaseItems.ColumnWidthArray = Properties.Settings.Default.DatabaseItemsColumnWidth;
@@ -435,18 +432,22 @@ namespace BlueMirrorIndexer
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e) {
-            breakCalculating = true;
-            Properties.Settings.Default.DatabaseItemsColumnOrder = lvDatabaseItems.ColumnOrderArray;
-            Properties.Settings.Default.FolderElementsColumnOrder = lvFolderElements.ColumnOrderArray;
-            Properties.Settings.Default.SearchResultsColumnOrder = lvSearchResults.ColumnOrderArray;
+            try {
+                breakCalculating = true;
+                Properties.Settings.Default.DatabaseItemsColumnOrder = lvDatabaseItems.ColumnOrderArray;
+                Properties.Settings.Default.FolderElementsColumnOrder = lvFolderElements.ColumnOrderArray;
+                Properties.Settings.Default.SearchResultsColumnOrder = lvSearchResults.ColumnOrderArray;
 
-            Properties.Settings.Default.DatabaseItemsColumnWidth = lvDatabaseItems.ColumnWidthArray;
-            Properties.Settings.Default.FolderElementsColumnWidth = lvFolderElements.ColumnWidthArray;
-            Properties.Settings.Default.SearchResultsColumnWidth = lvSearchResults.ColumnWidthArray;
+                Properties.Settings.Default.DatabaseItemsColumnWidth = lvDatabaseItems.ColumnWidthArray;
+                Properties.Settings.Default.FolderElementsColumnWidth = lvFolderElements.ColumnWidthArray;
+                Properties.Settings.Default.SearchResultsColumnWidth = lvSearchResults.ColumnWidthArray;
 
-            //Properties.Settings.Default.RibbonLayout = ribbonControl.QatLayout;
-            Properties.Settings.Default.LastOpenedFile = DatabaseFileName;
-            Properties.Settings.Default.Save();
+                Properties.Settings.Default.LastOpenedFile = DatabaseFileName;
+                Properties.Settings.Default.Save();
+            }
+            catch (Exception ex) {
+                MessageBox.Show(string.Format("Error occurred: {0}", ex.Message), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
@@ -1059,7 +1060,7 @@ namespace BlueMirrorIndexer
         }
 
         private void updateTitle() {
-            Text = string.Format("{0} [{1}{2}]", ProductName, databaseFileName == null ? "untitled" : databaseFileName, modified ? " *" : string.Empty);
+            Text = string.Format("{0} {1} [{2}{3}]", ProductName, ProductVersion, databaseFileName == null ? "untitled" : databaseFileName, modified ? " *" : string.Empty);
         }
 
         # region Export

@@ -177,7 +177,7 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An IO error occured: {0}.
+        ///   Looks up a localized string similar to An IO error occurred: {0}.
         /// </summary>
         internal static string ErrorIO {
             get {
