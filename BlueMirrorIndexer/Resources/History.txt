@@ -1,3 +1,15 @@
+2.0.0.12
+- Indexing subdirectories 
+- Indexing of compressed files and archives: zip, rar, jar, gzip, tar, bzip2
+- Calculating CRC
+- Automatically adding files and folders from CD/DVD when new volume is inserted into a drive
+- Enhanced search options
+- Save, Save as, Open, and New commands are available when dealing with database file
+- Opening (at start up) last closed database file
+- Auto eject option
+- Searching by keywords can be case sensitive or case insensitive
+- Auto update (ClickOnce technology)
+
 1.4
 - New column in the list view: File Extension
 - You can store the physical location of CD/DVD
