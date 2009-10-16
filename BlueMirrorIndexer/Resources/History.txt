@@ -1,8 +1,11 @@
+2.0.0.13
+- FIXED: Compressed files appear twice in the search result list. 
+
 2.0.0.12
 - Indexing subdirectories 
-- Indexing of compressed files and archives: zip, rar, jar, gzip, tar, bzip2
+- Indexing compressed files and archives: zip, rar, jar, gzip, tar, bzip2
 - Calculating CRC
-- Automatically adding files and folders from CD/DVD when new volume is inserted into a drive
+- Automatically add files and folders from CD/DVD when new volume is inserted into a drive
 - Enhanced search options
 - Save, Save as, Open, and New commands are available when dealing with database file
 - Opening (at start up) last closed database file

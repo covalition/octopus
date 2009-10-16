@@ -104,7 +104,7 @@ namespace BlueMirrorIndexer
 
         public void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<ItemInDatabase> list) {
 
-            if (regex.IsMatch(owner.Name)
+            if (!(owner is CompressedFile) && regex.IsMatch(owner.Name)
                     && ((dateFrom == null) || ((owner.CreationTime >= dateFrom) && (owner.CreationTime <= dateTo)))
                     && (keywordMatcher.IsMatch(owner.Keywords))) {
                 list.Add(owner);

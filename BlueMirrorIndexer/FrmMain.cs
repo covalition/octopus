@@ -39,6 +39,12 @@ namespace BlueMirrorIndexer
             updateTree();
             updateLogicalFolders();
             UpdateCommands();
+            clearSearchList();
+        }
+
+        private void clearSearchList() {
+            searchResultList.Clear();
+            displaySearchList();
         }
 
         private void updateVolumesInSearchCriterias() {
@@ -446,7 +452,7 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex) {
-                MessageBox.Show(string.Format("Error occurred: {0}", ex.Message), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("Error occurred during saving canfiguration: {0}", ex.Message), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
