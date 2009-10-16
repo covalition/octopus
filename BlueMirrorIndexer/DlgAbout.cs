@@ -18,6 +18,7 @@ namespace BlueMirrorIndexer
             llCopyright.Text = assemblyCopyright;
             llVersion.Text = String.Format(llVersion.Text, assemblyVersion);
             llTitle.Text = ProductName;
+            tbHistory.Text = Properties.Resources.History;
         }
 
         private void linkLabel1_Click(object sender, EventArgs e) {

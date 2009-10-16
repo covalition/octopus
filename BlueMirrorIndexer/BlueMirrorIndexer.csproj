@@ -41,7 +41,7 @@
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
-    <UpdateInterval>3</UpdateInterval>
+    <UpdateInterval>4</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
@@ -54,7 +54,7 @@
     <SuiteName>CD DVD Indexer</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationRevision>12</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -393,7 +393,7 @@
     <None Include="Resources\CD_16.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="History.txt" />
+    <Content Include="Resources\History.txt" />
     <Content Include="MainIcon.ico" />
     <None Include="License.rtf" />
     <None Include="Resources\FindHS.png" />

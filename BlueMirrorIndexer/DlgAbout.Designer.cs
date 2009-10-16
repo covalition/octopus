@@ -26,7 +26,7 @@ namespace BlueMirrorIndexer
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgAbout));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbHistory = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.llVersion = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,11 +49,11 @@ namespace BlueMirrorIndexer
             // 
             resources.ApplyResources(this.btnCancel, "btnCancel");
             // 
-            // textBox1
+            // tbHistory
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
+            resources.ApplyResources(this.tbHistory, "tbHistory");
+            this.tbHistory.Name = "tbHistory";
+            this.tbHistory.ReadOnly = true;
             // 
             // panel1
             // 
@@ -131,7 +131,7 @@ namespace BlueMirrorIndexer
             // tpChangeLog
             // 
             this.tpChangeLog.BackColor = System.Drawing.Color.Transparent;
-            this.tpChangeLog.Controls.Add(this.textBox1);
+            this.tpChangeLog.Controls.Add(this.tbHistory);
             resources.ApplyResources(this.tpChangeLog, "tpChangeLog");
             this.tpChangeLog.Name = "tpChangeLog";
             this.tpChangeLog.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbHistory;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label llVersion;
         private System.Windows.Forms.Label label3;

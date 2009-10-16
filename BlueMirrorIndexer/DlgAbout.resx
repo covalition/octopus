@@ -134,26 +134,26 @@
     <value>10</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="tbHistory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tbHistory.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBox1.Multiline" type="System.Boolean, mscorlib">
+  <data name="tbHistory.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="textBox1.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+  <data name="tbHistory.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
     <value>Both</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tbHistory.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 168</value>
   </data>
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tbHistory.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
   </data>
-  <data name="textBox1.Text" xml:space="preserve">
+  <data name="tbHistory.Text" xml:space="preserve">
     <value>2.0
 
 1.4
@@ -191,16 +191,16 @@
 - Import/export added
 - New AboutBox</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;tbHistory.Name" xml:space="preserve">
+    <value>tbHistory</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tbHistory.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tbHistory.Parent" xml:space="preserve">
     <value>tpChangeLog</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tbHistory.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
@@ -476,37 +476,6 @@
   <data name="&gt;&gt;llCodePlex.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 168</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Created by:
-Roman Kowaliszyn
-
-Icons:
-(c) www.famfamfam.com
-
-Translators (version 1):
-Dutch: Filip Cornelissen
-German: Clemens-Alexander Brust
-Japanese: TILT
-Polish: Roman Kowaliszyn
-Portuguese (Brasil): Leonardo Frigo Da Purificação
-Russian: Boris Vasilenko
-Turkish: Polat Pinar</value>
-  </data>
   <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
     <value>textBox2</value>
   </data>
@@ -594,6 +563,49 @@ Turkish: Polat Pinar</value>
   <data name="&gt;&gt;tcAbout.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>314, 168</value>
+  </data>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Created by:
+Roman Kowaliszyn
+
+Icons:
+(c) www.famfamfam.com
+
+Translators (version 1):
+Dutch: Filip Cornelissen
+German: Clemens-Alexander Brust
+Japanese: TILT
+Polish: Roman Kowaliszyn
+Portuguese (Brasil): Leonardo Frigo Da Purificação
+Russian: Boris Vasilenko
+Turkish: Polat Pinar</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
+    <value>textBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -610,6 +622,6 @@ Turkish: Polat Pinar</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.8, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirrorIndexer.BaseDialogs.FormDialogList, BlueMirrorIndexer, Version=2.0.0.11, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>
