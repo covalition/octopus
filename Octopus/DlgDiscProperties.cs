@@ -30,7 +30,6 @@ namespace Octopus.CDIndex {
 			// This call is required by the Windows Form Designer.
 			InitializeComponent();
 
-			// TODO: Add any initialization after the InitializeComponent call
 		}
 
 		/// <summary>

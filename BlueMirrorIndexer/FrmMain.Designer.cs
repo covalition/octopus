@@ -150,6 +150,7 @@ namespace BlueMirrorIndexer
             this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
+            this.cmImportFrom1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -276,6 +277,7 @@ namespace BlueMirrorIndexer
             this.mergeWithFileToolStripMenuItem,
             this.cmSave,
             this.cmSaveAs,
+            this.cmImportFrom1,
             this.cmExport,
             this.toolStripSeparator1,
             this.cmExit});
@@ -1072,6 +1074,12 @@ namespace BlueMirrorIndexer
             this.btnWhatsNew.Name = "btnWhatsNew";
             this.btnWhatsNew.Click += new System.EventHandler(this.cmWhatsNew_Click);
             // 
+            // cmImportFrom1
+            // 
+            this.cmImportFrom1.Name = "cmImportFrom1";
+            resources.ApplyResources(this.cmImportFrom1, "cmImportFrom1");
+            this.cmImportFrom1.Click += new System.EventHandler(this.cmImportFrom1_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1245,6 +1253,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.ToolStripButton btnDeleteFolder;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnWhatsNew;
+        private System.Windows.Forms.ToolStripMenuItem cmImportFrom1;
 	}
 }
 

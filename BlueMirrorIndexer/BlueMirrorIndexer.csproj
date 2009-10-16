@@ -418,5 +418,11 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BlueMirror.Importer\BlueMirror.Importer.csproj">
+      <Project>{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}</Project>
+      <Name>BlueMirror.Importer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

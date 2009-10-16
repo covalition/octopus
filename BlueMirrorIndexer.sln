@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirrorIndexer", "BlueMirrorIndexer\BlueMirrorIndexer.csproj", "{609D5C00-59C9-495D-A9A0-AF9170FD6CCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octopus.CDIndex", "Octopus\Octopus.CDIndex.csproj", "{1FF1D1B1-C2DA-41BB-88F0-1E36A06C3604}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Importer", "BlueMirror.Importer\BlueMirror.Importer.csproj", "{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{609D5C00-59C9-495D-A9A0-AF9170FD6CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{609D5C00-59C9-495D-A9A0-AF9170FD6CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{609D5C00-59C9-495D-A9A0-AF9170FD6CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FF1D1B1-C2DA-41BB-88F0-1E36A06C3604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FF1D1B1-C2DA-41BB-88F0-1E36A06C3604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FF1D1B1-C2DA-41BB-88F0-1E36A06C3604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FF1D1B1-C2DA-41BB-88F0-1E36A06C3604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

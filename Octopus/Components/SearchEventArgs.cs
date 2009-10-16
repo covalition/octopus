@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Octopus.CDIndex.Components
 {
-    class SearchEventArgs
+    public class SearchEventArgs
     {
 
         public SearchEventArgs(string fileMask, DateTime? dateFrom, DateTime? dateTo, float? sizeFrom, float? sizeTo, string keywords, bool allKeywordsNeeded) {

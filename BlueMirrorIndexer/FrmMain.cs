@@ -1837,5 +1837,25 @@ namespace BlueMirrorIndexer
         private void btnDeleteFolder_Click(object sender, EventArgs e) {
             tvLogicalFolders.DeleteFolder();
         }
+
+        # region Importing from Octopus / Blue Mirror 1.x
+        private void cmImportFrom1_Click(object sender, EventArgs e) {
+            if (saveFileWithAsk()) {
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Title = Properties.Resources.OpenFile;
+                ofd.DefaultExt = "octopus";
+                ofd.Filter = "Octopus (Blue Mirror 1.x) Database|*.octopus";
+                if (ofd.ShowDialog() == DialogResult.OK) {
+                    newFile();
+                    importFrom1(ofd.FileName);
+                }
+
+            }
+        }
+
+        private void importFrom1(string databasePath) {
+
+        }
+        #endregion
     }
 }

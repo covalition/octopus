@@ -68,7 +68,12 @@ namespace BlueMirrorIndexer
 
         internal void MergeWith(VolumeDatabase source) {
             discs.AddRange(source.GetDiscs());
-            logicalFolders.AddRange(source.GetLogicalFolders());
+            mergeLogicalFolders(source.GetLogicalFolders());
+        }
+
+        private void mergeLogicalFolders(List<LogicalFolder> sourceLogicalFolders) {
+            // TODO: implement
+            logicalFolders.AddRange(sourceLogicalFolders);
         }
 
         internal void SaveAsCsv(string fileName) {
