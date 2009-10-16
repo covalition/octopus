@@ -7,7 +7,7 @@ using System.Text;
 namespace Octopus.CDIndex {
 
 	[Serializable]
-	class FileInDatabase : ItemInDatabase {
+	public class FileInDatabase : ItemInDatabase {
 		public FileInDatabase(FolderInDatabase parent)
 			: base(parent) {
 		}

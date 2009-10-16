@@ -1846,15 +1846,78 @@ namespace BlueMirrorIndexer
                 ofd.DefaultExt = "octopus";
                 ofd.Filter = "Octopus (Blue Mirror 1.x) Database|*.octopus";
                 if (ofd.ShowDialog() == DialogResult.OK) {
-                    newFile();
+                    //newFile();
+                    createNewVolumeDatabase();
                     importFrom1(ofd.FileName);
+                    updateControls();
+                    Modified = true;
                 }
 
             }
         }
 
-        private void importFrom1(string databasePath) {
+        private void importFrom1(string octopusDatabasePath) {
+            try {
+                using (new HourGlass()) {
+                    BlueMirror.Importer.OctopusImporter importer = new BlueMirror.Importer.OctopusImporter();
+                    Octopus.CDIndex.CdInDatabaseList octopusDatabase = importer.Deserialize(octopusDatabasePath);
+                    if(octopusDatabase != null) 
+                    foreach (Octopus.CDIndex.DiscInDatabase octopusDisc in octopusDatabase) {
+                        DiscInDatabase newDisc = new DiscInDatabase();
+                        newDisc.Attributes = octopusDisc.Attributes;
+                        newDisc.CreationTime = octopusDisc.CreationTime;
+                        newDisc.Description = octopusDisc.Description;
+                        newDisc.DriveFormat = octopusDisc.DriveFormat;
+                        newDisc.DriveType = octopusDisc.DriveType;
+                        newDisc.Extension = octopusDisc.Extension;
+                        newDisc.FullName = octopusDisc.FullName;
+                        newDisc.Keywords = octopusDisc.Keywords;
+                        newDisc.LastAccessTime = octopusDisc.LastAccessTime;
+                        newDisc.LastWriteTime = octopusDisc.LastWriteTime;
+                        newDisc.Name = octopusDisc.Name;
+                        newDisc.PhysicalLocation = octopusDisc.PhysicalLocation;
+                        newDisc.TotalFreeSpace = octopusDisc.TotalFreeSpace;
+                        newDisc.TotalSize = octopusDisc.TotalSize;
+                        newDisc.VolumeLabel = octopusDisc.VolumeLabel;
+                        copyFoldersAndFiles(newDisc, octopusDisc);
+                        Database.AddDisc(newDisc);
+                    }
+                    else
+                        MessageBox.Show(string.Format("Can't read database file {0}", octopusDatabasePath), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void copyFoldersAndFiles(IFolder newFolder, Octopus.CDIndex.FolderInDatabase octopusFolder) {
+            foreach(Octopus.CDIndex.FolderInDatabase octopusSubFolder in octopusFolder.Folders) {
+                FolderInDatabase newSubFolder = new FolderInDatabase(newFolder);
+                copyProperties(newSubFolder, octopusSubFolder);
+                copyFoldersAndFiles(newSubFolder, octopusSubFolder);
+                newFolder.AddToFolders(newSubFolder);
+            }
+
+            foreach (Octopus.CDIndex.FileInDatabase octopusFile in octopusFolder.Files) {
+                FileInDatabase newFile = new FileInDatabase(newFolder);
+                copyProperties(newFile, octopusFile);
+                newFile.IsReadOnly = octopusFile.IsReadOnly;
+                newFile.Length = octopusFile.Length;
+                newFolder.AddToFiles(newFile);
+            }
+        }
+
+        private static void copyProperties(ItemInDatabase newItem, Octopus.CDIndex.ItemInDatabase octopusItem) {
+            newItem.Attributes = octopusItem.Attributes;
+            newItem.CreationTime = octopusItem.CreationTime;
+            newItem.Description = octopusItem.Description;
+            newItem.Extension = octopusItem.Extension;
+            newItem.FullName = octopusItem.FullName;
+            newItem.Keywords = octopusItem.Keywords;
+            newItem.LastAccessTime = octopusItem.LastAccessTime;
+            newItem.LastWriteTime = octopusItem.LastWriteTime;
+            newItem.Name = octopusItem.Name;
         }
         #endregion
     }

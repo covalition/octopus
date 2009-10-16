@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 namespace Octopus.CDIndex {
 
 	[Serializable]
-	class FolderInDatabase : ItemInDatabase {
+	public class FolderInDatabase : ItemInDatabase {
 
 		public FolderInDatabase(FolderInDatabase parent): base(parent) {
 		}
@@ -20,7 +20,7 @@ namespace Octopus.CDIndex {
 		#region Files
 		List<FileInDatabase> files = new List<FileInDatabase>();
 
-		internal List<FileInDatabase> Files {
+		public List<FileInDatabase> Files {
 			get { return files; }
 
 		}
@@ -29,7 +29,7 @@ namespace Octopus.CDIndex {
 		#region Folders
 		List<FolderInDatabase> folders = new List<FolderInDatabase>();
 
-		internal List<FolderInDatabase> Folders {
+		public List<FolderInDatabase> Folders {
 			get { return folders; }
 
 		}

@@ -48,6 +48,7 @@ namespace BlueMirrorIndexer
             this.mergeWithFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmSave = new System.Windows.Forms.ToolStripMenuItem();
             this.cmSaveAs = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmImportFrom1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cmExport = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.cmExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -150,7 +151,6 @@ namespace BlueMirrorIndexer
             this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
-            this.cmImportFrom1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -316,6 +316,13 @@ namespace BlueMirrorIndexer
             this.cmSaveAs.Name = "cmSaveAs";
             resources.ApplyResources(this.cmSaveAs, "cmSaveAs");
             this.cmSaveAs.Click += new System.EventHandler(this.cmSaveAs_Click);
+            // 
+            // cmImportFrom1
+            // 
+            this.cmImportFrom1.Image = global::BlueMirrorIndexer.Properties.Resources.database_go;
+            this.cmImportFrom1.Name = "cmImportFrom1";
+            resources.ApplyResources(this.cmImportFrom1, "cmImportFrom1");
+            this.cmImportFrom1.Click += new System.EventHandler(this.cmImportFrom1_Click);
             // 
             // cmExport
             // 
@@ -1073,12 +1080,6 @@ namespace BlueMirrorIndexer
             resources.ApplyResources(this.btnWhatsNew, "btnWhatsNew");
             this.btnWhatsNew.Name = "btnWhatsNew";
             this.btnWhatsNew.Click += new System.EventHandler(this.cmWhatsNew_Click);
-            // 
-            // cmImportFrom1
-            // 
-            this.cmImportFrom1.Name = "cmImportFrom1";
-            resources.ApplyResources(this.cmImportFrom1, "cmImportFrom1");
-            this.cmImportFrom1.Click += new System.EventHandler(this.cmImportFrom1_Click);
             // 
             // FrmMain
             // 

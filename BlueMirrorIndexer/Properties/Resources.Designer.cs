@@ -135,6 +135,13 @@ namespace BlueMirrorIndexer.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap database_go {
+            get {
+                object obj = ResourceManager.GetObject("database_go", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -307,24 +314,19 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1.4
-        ///- New column in the list view: File Extension
-        ///- You can store the physical location of CD/DVD
-        ///- Japanese language version
-        ///- Turkish language version
-        ///- Dutch language version
+        ///   Looks up a localized string similar to 2.0.0.13
+        ///- FIXED: Compressed files appear twice in the search result list. 
         ///
-        ///1.3
-        ///- Russian language version
-        ///- German language version
-        ///- Portuguese (Brasil) language version
-        ///- &quot;Find in Database&quot; command available in the search view
-        ///
-        ///1.2
-        ///- File count and file size are displayed in status bar in all cases
-        ///- External hard disks can be indexed
-        ///- New commands under Help
-        ///- Name changed to Blue Mir [rest of string was truncated]&quot;;.
+        ///2.0.0.12
+        ///- Indexing subdirectories 
+        ///- Indexing compressed files and archives: zip, rar, jar, gzip, tar, bzip2
+        ///- Calculating CRC
+        ///- Automatically add files and folders from CD/DVD when new volume is inserted into a drive
+        ///- Enhanced search options
+        ///- Save, Save as, Open, and New commands are available when dealing with database file
+        ///- Opening (at start up) last closed database file
+        ///- Auto eject option
+        ///- Searching by keyword [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string History {
             get {

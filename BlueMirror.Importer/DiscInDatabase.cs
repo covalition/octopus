@@ -10,7 +10,7 @@ using System.Text;
 namespace Octopus.CDIndex {
 
 	[Serializable]
-	class DiscInDatabase : FolderInDatabase, IComparable<DiscInDatabase> {
+	public class DiscInDatabase : FolderInDatabase, IComparable<DiscInDatabase> {
 
 		public DiscInDatabase()
 			: base(null) {

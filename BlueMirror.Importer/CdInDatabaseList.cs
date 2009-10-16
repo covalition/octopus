@@ -8,7 +8,7 @@ using System.IO;
 namespace Octopus.CDIndex {
 
 	[Serializable]
-	class CdInDatabaseList: List<DiscInDatabase> {
+	public class CdInDatabaseList: List<DiscInDatabase> {
 
         //internal void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, List<string> keywordList, bool isAllKeywords, List<ListViewItem> list, ListView searchResultList) {
         //    foreach (DiscInDatabase disc in this)

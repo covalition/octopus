@@ -414,6 +414,7 @@
     <None Include="Resources\folder_edit.png" />
     <None Include="Resources\folder_go.png" />
     <None Include="Resources\CD.png" />
+    <None Include="Resources\database_go.png" />
     <Content Include="unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
