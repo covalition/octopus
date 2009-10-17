@@ -45,7 +45,8 @@ namespace BlueMirrorIndexer
                 default: res = 0; break;
             }
             if (!ascending)
-                res = res < 0 ? 1 : res > 0 ? -1 : 0; // byæ mo¿e najbardziej optymalnie
+                // res = res < 0 ? 1 : res > 0 ? -1 : 0; // byæ mo¿e najbardziej optymalnie
+                res = -res;
             return res;
         }
 

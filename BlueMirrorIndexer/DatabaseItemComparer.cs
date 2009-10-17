@@ -32,6 +32,8 @@ namespace BlueMirrorIndexer
                 case 1: res = item(x).Length > item(y).Length ? 1 : (item(x).Length == item(y).Length ? 0 : -1); break;
                 case 2: res = item(x).CreationTime > item(y).CreationTime ? 1 : (item(x).CreationTime == item(y).CreationTime ? 0 : -1); break;
                 case 5: res = item(x).Extension.CompareTo(item(y).Extension); break;
+                case 6: res = string.Compare(item(x).FileDescription, item(y).FileDescription); break;
+                case 7: res = string.Compare(item(x).FileVersion, item(y).FileVersion); break;
                 default: res = 0; break;
             }
             if (!ascending)
