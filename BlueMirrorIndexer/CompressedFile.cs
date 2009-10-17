@@ -9,6 +9,7 @@ using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Tar;
 using ICSharpCode.SharpZipLib.BZip2;
 using Schematrix;
+using BlueMirror.Commons;
 
 namespace BlueMirrorIndexer
 {

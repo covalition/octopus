@@ -87,8 +87,8 @@ namespace BlueMirrorIndexer
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpDatabase = new System.Windows.Forms.TabPage();
             this.scDatabase = new System.Windows.Forms.SplitContainer();
-            this.tvDatabaseFolderTree = new BlueMirrorIndexer.Components.TreeViewVista();
-            this.lvDatabaseItems = new BlueMirrorIndexer.Components.ListViewVista();
+            this.tvDatabaseFolderTree = new BlueMirror.Commons.Controls.TreeViewVista();
+            this.lvDatabaseItems = new BlueMirror.Commons.Controls.ListViewVista();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -102,7 +102,7 @@ namespace BlueMirrorIndexer
             this.chDiCrc = new System.Windows.Forms.ColumnHeader();
             this.tpSearch = new System.Windows.Forms.TabPage();
             this.searchBottomPanel = new System.Windows.Forms.Panel();
-            this.lvSearchResults = new BlueMirrorIndexer.Components.ListViewVista();
+            this.lvSearchResults = new BlueMirror.Commons.Controls.ListViewVista();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
@@ -123,7 +123,7 @@ namespace BlueMirrorIndexer
             this.btnNewFolder = new System.Windows.Forms.ToolStripButton();
             this.btnEditFolder = new System.Windows.Forms.ToolStripButton();
             this.btnDeleteFolder = new System.Windows.Forms.ToolStripButton();
-            this.lvFolderElements = new BlueMirrorIndexer.Components.ListViewVista();
+            this.lvFolderElements = new BlueMirror.Commons.Controls.ListViewVista();
             this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
@@ -1144,14 +1144,14 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.TabControl tcMain;
         private System.Windows.Forms.TabPage tpDatabase;
         private System.Windows.Forms.SplitContainer scDatabase;
-        private BlueMirrorIndexer.Components.TreeViewVista tvDatabaseFolderTree;
-        private BlueMirrorIndexer.Components.ListViewVista lvDatabaseItems;
+        private BlueMirror.Commons.Controls.TreeViewVista tvDatabaseFolderTree;
+        private BlueMirror.Commons.Controls.ListViewVista lvDatabaseItems;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.TabPage tpSearch;
-        private BlueMirrorIndexer.Components.ListViewVista lvSearchResults;
+        private BlueMirror.Commons.Controls.ListViewVista lvSearchResults;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
@@ -1176,7 +1176,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.SplitContainer scMain;
         private System.Windows.Forms.SplitContainer scFolders;
         private BlueMirrorIndexer.Components.LogicalFoldersTreeView tvLogicalFolders;
-        private BlueMirrorIndexer.Components.ListViewVista lvFolderElements;
+        private BlueMirror.Commons.Controls.ListViewVista lvFolderElements;
         private System.Windows.Forms.ColumnHeader columnHeader18;
         private System.Windows.Forms.ColumnHeader columnHeader19;
         private System.Windows.Forms.ColumnHeader columnHeader20;

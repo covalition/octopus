@@ -65,7 +65,7 @@ namespace BlueMirrorIndexer
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.cbReadFromSelected = new System.Windows.Forms.CheckBox();
-            this.tvFileTree = new BlueMirrorIndexer.Components.TreeViewVista();
+            this.tvFileTree = new BlueMirror.Commons.Controls.TreeViewVista();
             this.ilSystem = new System.Windows.Forms.ImageList(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3.SuspendLayout();
@@ -655,7 +655,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private BlueMirrorIndexer.Components.TreeViewVista tvFileTree;
+        private BlueMirror.Commons.Controls.TreeViewVista tvFileTree;
         private System.Windows.Forms.CheckBox cbReadFromSelected;
         private System.Windows.Forms.ImageList ilSystem;
     }

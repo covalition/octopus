@@ -18,6 +18,7 @@ using System.Windows.Forms;
 namespace BlueMirrorIndexer
 {
     using Components;
+    using BlueMirror.Commons;
 
     public partial class FrmMain : Form
     {
@@ -1846,48 +1847,43 @@ namespace BlueMirrorIndexer
                 ofd.DefaultExt = "octopus";
                 ofd.Filter = "Octopus (Blue Mirror 1.x) Database|*.octopus";
                 if (ofd.ShowDialog() == DialogResult.OK) {
-                    //newFile();
-                    createNewVolumeDatabase();
-                    importFrom1(ofd.FileName);
-                    updateControls();
-                    Modified = true;
+                    try {
+                        importFrom1(ofd.FileName);
+                        Modified = true;
+                    }
+                    catch (Exception ex) {
+                        MessageBox.Show(string.Format("Error occurred while importing: {0}", ex.Message), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
             }
         }
 
         private void importFrom1(string octopusDatabasePath) {
-            try {
-                using (new HourGlass()) {
-                    BlueMirror.Importer.OctopusImporter importer = new BlueMirror.Importer.OctopusImporter();
-                    Octopus.CDIndex.CdInDatabaseList octopusDatabase = importer.Deserialize(octopusDatabasePath);
-                    if(octopusDatabase != null) 
-                    foreach (Octopus.CDIndex.DiscInDatabase octopusDisc in octopusDatabase) {
-                        DiscInDatabase newDisc = new DiscInDatabase();
-                        newDisc.Attributes = octopusDisc.Attributes;
-                        newDisc.CreationTime = octopusDisc.CreationTime;
-                        newDisc.Description = octopusDisc.Description;
-                        newDisc.DriveFormat = octopusDisc.DriveFormat;
-                        newDisc.DriveType = octopusDisc.DriveType;
-                        newDisc.Extension = octopusDisc.Extension;
-                        newDisc.FullName = octopusDisc.FullName;
-                        newDisc.Keywords = octopusDisc.Keywords;
-                        newDisc.LastAccessTime = octopusDisc.LastAccessTime;
-                        newDisc.LastWriteTime = octopusDisc.LastWriteTime;
-                        newDisc.Name = octopusDisc.Name;
-                        newDisc.PhysicalLocation = octopusDisc.PhysicalLocation;
-                        newDisc.TotalFreeSpace = octopusDisc.TotalFreeSpace;
-                        newDisc.TotalSize = octopusDisc.TotalSize;
-                        newDisc.VolumeLabel = octopusDisc.VolumeLabel;
-                        copyFoldersAndFiles(newDisc, octopusDisc);
-                        Database.AddDisc(newDisc);
-                    }
-                    else
-                        MessageBox.Show(string.Format("Can't read database file {0}", octopusDatabasePath), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            using (new HourGlass()) {
+                newFile();
+                BlueMirror.Importer.OctopusImporter importer = new BlueMirror.Importer.OctopusImporter();
+                Octopus.CDIndex.CdInDatabaseList octopusDatabase = importer.Deserialize(octopusDatabasePath);
+                foreach (Octopus.CDIndex.DiscInDatabase octopusDisc in octopusDatabase) {
+                    DiscInDatabase newDisc = new DiscInDatabase();
+                    newDisc.Attributes = octopusDisc.Attributes;
+                    newDisc.CreationTime = octopusDisc.CreationTime;
+                    newDisc.Description = octopusDisc.Description;
+                    newDisc.DriveFormat = octopusDisc.DriveFormat;
+                    newDisc.DriveType = octopusDisc.DriveType;
+                    newDisc.Extension = octopusDisc.Extension;
+                    newDisc.FullName = octopusDisc.FullName;
+                    newDisc.Keywords = octopusDisc.Keywords;
+                    newDisc.LastAccessTime = octopusDisc.LastAccessTime;
+                    newDisc.LastWriteTime = octopusDisc.LastWriteTime;
+                    newDisc.Name = octopusDisc.Name;
+                    newDisc.PhysicalLocation = octopusDisc.PhysicalLocation;
+                    newDisc.TotalFreeSpace = octopusDisc.TotalFreeSpace;
+                    newDisc.TotalSize = octopusDisc.TotalSize;
+                    newDisc.VolumeLabel = octopusDisc.VolumeLabel;
+                    copyFoldersAndFiles(newDisc, octopusDisc);
+                    Database.AddDisc(newDisc);
                 }
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message);
+                updateControls();
             }
         }
 

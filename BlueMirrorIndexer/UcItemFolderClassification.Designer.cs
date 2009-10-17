@@ -31,7 +31,7 @@ namespace BlueMirrorIndexer
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.lvFolders = new BlueMirrorIndexer.Components.ListViewVista();
+            this.lvFolders = new BlueMirror.Commons.Controls.ListViewVista();
             this.chFolderName = new System.Windows.Forms.ColumnHeader();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
@@ -138,7 +138,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnNew;
-        private BlueMirrorIndexer.Components.ListViewVista lvFolders;
+        private BlueMirror.Commons.Controls.ListViewVista lvFolders;
         private System.Windows.Forms.ColumnHeader chFolderName;
         private System.Windows.Forms.ImageList imageList1;
 

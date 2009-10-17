@@ -30,7 +30,7 @@ namespace BlueMirror.Importer
 
         public CdInDatabaseList Deserialize(string filePath) {
             CdInDatabaseList cid = null;
-            try {
+            //try {
                 Stream stream = new FileStream(filePath, FileMode.Open);
                 try {
                     IFormatter formatter = new BinaryFormatter();
@@ -40,10 +40,10 @@ namespace BlueMirror.Importer
                 finally {
                     stream.Close();
                 }
-            }
-            catch (Exception e) {
-                Debug.WriteLine(e.Message);
-            }
+            //}
+            //catch (Exception e) {
+            //    Debug.WriteLine(e.Message);
+            //}
             return cid;
         }
 

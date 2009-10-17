@@ -54,7 +54,7 @@
     <SuiteName>CD DVD Indexer</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>14</ApplicationRevision>
+    <ApplicationRevision>15</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -124,13 +124,7 @@
     <Compile Include="Components\FilesSearchCriteriaPanel.Designer.cs">
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Components\ListViewVista.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Components\SearchEventArgs.cs" />
-    <Compile Include="Components\TreeViewVista.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="CompressedFile.cs" />
     <Compile Include="Convert.cs" />
     <Compile Include="Crc32.cs" />
@@ -351,7 +345,6 @@
       <DependentUpon>UcItemFolderClassification.cs</DependentUpon>
     </Compile>
     <Compile Include="Unrar.cs" />
-    <Compile Include="Win32.cs" />
     <Compile Include="StreamWithEvents.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -420,6 +413,10 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BlueMirror.Commons\BlueMirror.Commons.csproj">
+      <Project>{6020286F-8C27-4E12-90B4-D3980814CB04}</Project>
+      <Name>BlueMirror.Commons</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BlueMirror.Importer\BlueMirror.Importer.csproj">
       <Project>{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}</Project>
       <Name>BlueMirror.Importer</Name>

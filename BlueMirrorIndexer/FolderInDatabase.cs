@@ -8,6 +8,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using BlueMirror.Commons;
 
 namespace BlueMirrorIndexer {
 
