@@ -1,3 +1,6 @@
+2.0.0.14
+- Name changed from "Blue Mirror CD/DVD Indexer"
+
 2.0.0.13
 - Import from Octopus / Blue Mirror 1.x implemented
 - FIXED: Compressed files appear twice in the search result list. 

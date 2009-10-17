@@ -49,12 +49,12 @@
     <InstallUrl>http://www.componentfield.com/BlueMirror/CdDvdIndexer/</InstallUrl>
     <SupportUrl>http://octopi.codeplex.com/</SupportUrl>
     <ErrorReportUrl>http://octopi.codeplex.com/WorkItem/List.aspx</ErrorReportUrl>
-    <ProductName>Blue Mirror CD DVD Indexer 2.0</ProductName>
+    <ProductName>Blue Mirror DVD CD Indexer 2.0</ProductName>
     <PublisherName>Blue Mirror</PublisherName>
     <SuiteName>CD DVD Indexer</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>

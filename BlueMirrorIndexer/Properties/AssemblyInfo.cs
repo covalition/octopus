@@ -6,11 +6,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Blue Mirror CD/DVD Indexer")]
-[assembly: AssemblyDescription("CD/DVD Indexer")]
+[assembly: AssemblyTitle("Blue Mirror DVD/CD Indexer")]
+[assembly: AssemblyDescription("DVD/CD Indexer")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Blue Mirror")]
-[assembly: AssemblyProduct("Blue Mirror CD/DVD Indexer")]
+[assembly: AssemblyProduct("Blue Mirror DVD/CD Indexer")]
 [assembly: AssemblyCopyright("Copyright © 2006 - 2009 Roman Kowaliszyn")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -30,6 +30,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("2.0.0.13")]
-[assembly: AssemblyFileVersion("2.0.0.13")]
+[assembly: AssemblyVersion("2.0.0.14")]
+[assembly: AssemblyFileVersion("2.0.0.14")]
 [assembly: NeutralResourcesLanguageAttribute("")]
