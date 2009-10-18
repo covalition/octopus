@@ -5,11 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer
 {
 
-    public partial class DlgEditLogicalFolder : BaseDialogs.FormDialogBase
+    public partial class DlgEditLogicalFolder : FormDialogBase
     {
 
         const long SIZE_DVD_MINUS_SL = 4707319808;

@@ -5,10 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer
 {
-    public partial class DlgSelectLogicalFolder : BaseDialogs.FormDialogBase
+    public partial class DlgSelectLogicalFolder : FormDialogBase
     {
         public DlgSelectLogicalFolder() {
             InitializeComponent();

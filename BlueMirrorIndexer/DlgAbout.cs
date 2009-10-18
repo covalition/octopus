@@ -7,10 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer
 {
-    public partial class DlgAbout : BaseDialogs.FormDialogList
+    public partial class DlgAbout : FormDialogList
     {
         
         public DlgAbout() {

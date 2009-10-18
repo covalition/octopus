@@ -100,18 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbortException.cs" />
-    <Compile Include="BaseDialogs\FormDialogBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseDialogs\FormDialogBase.Designer.cs">
-      <DependentUpon>FormDialogBase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BaseDialogs\FormDialogList.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BaseDialogs\FormDialogList.Designer.cs">
-      <DependentUpon>FormDialogList.cs</DependentUpon>
-    </Compile>
     <Compile Include="FolderImpl.cs" />
     <Compile Include="Components\LogicalFoldersTreeView.cs">
       <SubType>Component</SubType>
@@ -209,22 +197,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgressInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaseDialogs\FormDialogBase.pl.resx">
-      <DependentUpon>FormDialogBase.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseDialogs\FormDialogBase.resx">
-      <DependentUpon>FormDialogBase.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseDialogs\FormDialogList.pl.resx">
-      <DependentUpon>FormDialogList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BaseDialogs\FormDialogList.resx">
-      <DependentUpon>FormDialogList.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Components\FilesSearchCriteriaPanel.resx">
       <SubType>Designer</SubType>
       <DependentUpon>FilesSearchCriteriaPanel.cs</DependentUpon>
@@ -408,6 +380,7 @@
     <None Include="Resources\folder_go.png" />
     <None Include="Resources\CD.png" />
     <None Include="Resources\database_go.png" />
+    <Content Include="ReadMe.txt" />
     <Content Include="unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

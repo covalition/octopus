@@ -6,10 +6,11 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer {
 
-    public partial class DlgSelectDrive : BaseDialogs.FormDialogBase
+    public partial class DlgSelectDrive : FormDialogBase
     {
 		public DlgSelectDrive() {
 			InitializeComponent();

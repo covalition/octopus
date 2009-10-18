@@ -4,10 +4,11 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer {
 
-    public class DlgDiscProperties : BaseDialogs.FormDialogBase
+    public class DlgDiscProperties : FormDialogBase
     {
         protected internal TextBox tbKeywords;
 		private Label label4;

@@ -7,10 +7,11 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using BlueMirror.Commons;
+using BlueMirror.Commons.Forms;
 
 namespace BlueMirrorIndexer
 {
-    public partial class DlgReadVolume : BaseDialogs.FormDialogBase
+    public partial class DlgReadVolume : FormDialogBase
     {
         public DlgReadVolume() {
             InitializeComponent();
