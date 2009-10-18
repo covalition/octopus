@@ -160,7 +160,7 @@ namespace BlueMirrorIndexer
                         updateTree();
                     else
                         updateList();
-                    Modified = true;
+                    fileOperations.Modified = true;
                     UpdateLogicalElements();
                 }
         }
@@ -188,7 +188,7 @@ namespace BlueMirrorIndexer
         }
 
         private void cmOptions_Click(object sender, EventArgs e) {
-            setOptionsDlg();
+            // setOptionsDlg();
         }
 
         private void cmHomePage_Click(object sender, EventArgs e) {
@@ -383,7 +383,7 @@ namespace BlueMirrorIndexer
 
             Application.DoEvents();
             string lastOpenedFile = Properties.Settings.Default.LastOpenedFile;
-            openFile(lastOpenedFile);
+            fileOperations.OpenFile(lastOpenedFile);
             updateControls();
         }
 
@@ -449,7 +449,7 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.FolderElementsColumnWidth = lvFolderElements.ColumnWidthArray;
                 Properties.Settings.Default.SearchResultsColumnWidth = lvSearchResults.ColumnWidthArray;
 
-                Properties.Settings.Default.LastOpenedFile = DatabaseFileName;
+                Properties.Settings.Default.LastOpenedFile = fileOperations.CurrentFilePath;
                 Properties.Settings.Default.Save();
             }
             catch (Exception ex) {
@@ -569,49 +569,6 @@ namespace BlueMirrorIndexer
             updateStrip();
         }
 
-        #region Read and Save database
-
-        private DlgProgress openProgressDialog = null;
-        long BIG_FILE_SIZE = 18000000;
-        private VolumeDatabase deserialize(string filePath) {
-            VolumeDatabase cid = null;
-            Cursor oldCursor = Cursor;
-            Cursor = Cursors.WaitCursor;
-            try {
-                try {
-                    Stream stream = new FileStream(filePath, FileMode.Open);
-                    if (stream.Length > BIG_FILE_SIZE) {
-                        StreamWithEvents streamWithEvents = new StreamWithEvents(stream);
-                        streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
-                        stream = streamWithEvents;
-                        Enabled = false;
-                        openProgressDialog = new DlgProgress("Reading File...", "Reading: " + Path.GetFileName(filePath));
-                        openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
-                    }
-                    try {
-                        IFormatter formatter = new BinaryFormatter();
-                        cid = (VolumeDatabase)formatter.Deserialize(stream);
-                    }
-                    finally {
-                        try {
-                            stream.Close();
-                        }
-                        finally {
-                            Enabled = true;
-                            closeOpenedProgressDialog();
-                        }
-                    }
-                }
-                catch /*(Exception e)*/ {
-                    //Debug.WriteLine(e.Message);
-                }
-            }
-            finally {
-                Cursor = oldCursor;
-            }
-            return cid;
-        }
-
         void closeOpenedProgressDialog() {
             if (openProgressDialog != null) {
                 openProgressDialog.Close();
@@ -626,24 +583,6 @@ namespace BlueMirrorIndexer
             }
         }
 
-        private void serialize(string filePath) {
-            Cursor oldCursor = Cursor;
-            Cursor = Cursors.WaitCursor;
-            try {
-                Stream stream = new FileStream(filePath, FileMode.Create);
-                try {
-                    IFormatter formatter = new BinaryFormatter();
-                    formatter.Serialize(stream, Database);
-                }
-                finally {
-                    stream.Close();
-                }
-            }
-            finally {
-                Cursor = oldCursor;
-            }
-        }
-
         private void saveAsCsv(string filePath) {
             try {
                 Database.SaveAsCsv(filePath);
@@ -652,8 +591,6 @@ namespace BlueMirrorIndexer
                 MessageBox.Show(string.Format(Properties.Resources.ErrorSavingFile, filePath, e.Message), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #endregion
 
         internal static VolumeDatabase Database;
 
@@ -680,7 +617,8 @@ namespace BlueMirrorIndexer
                     if (Properties.Settings.Default.AutoEject)
                         ejectCd(drive);
                     if (Properties.Settings.Default.AutosaveAfterReading)
-                        saveFile();
+                        // saveFile();
+                        fileOperations.Save();
                 }
             }
             catch (IOException e) {
@@ -735,7 +673,7 @@ namespace BlueMirrorIndexer
                         if (discToReplace != null)
                             discToReplace.RemoveFromDatabase(Database);
                         sortByLabels();
-                        Modified = true;
+                        fileOperations.Modified = true;
                     }
                 }
                 finally {
@@ -819,13 +757,13 @@ namespace BlueMirrorIndexer
             cdInDatabase.RemoveFromDatabase(Database);
             updateTree();
             UpdateLogicalElements();
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         private void deleteFolderInfo(FolderInDatabase folderInDatabase) {
             folderInDatabase.RemoveFromDatabase();
             updateTree();
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         private void deleteFileInfo(FileInDatabase fileInDatabase) {
@@ -837,7 +775,7 @@ namespace BlueMirrorIndexer
             else
                 updateList();
             UpdateLogicalElements();
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         private void deleteCompressedFile(CompressedFile compressedFile) {
@@ -845,7 +783,7 @@ namespace BlueMirrorIndexer
             // compressedFile.Parent.Files.Remove(compressedFile);
             updateTree();
             UpdateLogicalElements();
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         #region Show properties
@@ -853,7 +791,7 @@ namespace BlueMirrorIndexer
         private bool showItemProperties(ItemInDatabase itemInDatabase) {
             bool result = itemInDatabase.EditPropertiesDlg();
             if (result) {
-                Modified = true;
+                fileOperations.Modified = true;
                 UpdateLogicalElements();
             }
             return result;
@@ -961,25 +899,6 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        private bool modified = false;
-
-        [Browsable(false)]
-        public bool Modified {
-            get {
-                return modified;
-            }
-            set {
-                if (modified != value) {
-                    modified = value;
-                    btnSave.Enabled = cmSave.Enabled = value;
-                    updateTitle();
-                }
-            }
-        }
-
-        private void setOptionsDlg() {
-        }
-
         bool duringSelectAll = false;
         private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
             if (!duringSelectAll) {
@@ -1054,20 +973,8 @@ namespace BlueMirrorIndexer
             cmFindInDatabase.Enabled = cmItemPropertiesFromSearch.Enabled = lvSearchResults.SelectedIndices.Count == 1;
         }
 
-        string databaseFileName = null;
-
-        protected string DatabaseFileName {
-            get {
-                return databaseFileName;
-            }
-            set {
-                databaseFileName = value;
-                updateTitle();
-            }
-        }
-
         private void updateTitle() {
-            Text = string.Format("{0} {1} [{2}{3}]", ProductName, ProductVersion, databaseFileName == null ? "untitled" : databaseFileName, modified ? " *" : string.Empty);
+            Text = string.Format("{0} {1} [{2}{3}]", ProductName, ProductVersion, fileOperations.CurrentFilePath == null ? "untitled" : fileOperations.CurrentFilePath, fileOperations.Modified ? " *" : string.Empty);
         }
 
         # region Export
@@ -1088,116 +995,27 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        #region Save File
-
         private void cmSave_Click(object sender, EventArgs e) {
-            saveFile();
+            fileOperations.Save();
         }
 
         private void cmSaveAs_Click(object sender, EventArgs e) {
-            saveFileAs();
+            fileOperations.SaveAs();
         }
-
-        private bool saveFileWithAsk() {
-            if (modified) {
-                DialogResult dialogResult = MessageBox.Show("Database has been changed. Do you want to save the changes?", ProductName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Cancel)
-                    return false;
-                else
-                    if (dialogResult == DialogResult.Yes)
-                        return saveFile();
-            }
-            return true;
-        }
-
-        private bool saveFile() {
-            if (databaseFileName == null)
-                return saveFileAs();
-            else
-                return saveFileAs(databaseFileName);
-        }
-
-        private bool saveFileAs() {
-            SaveFileDialog sfd = new SaveFileDialog();
-            sfd.Title = Properties.Resources.SaveFileAs;
-            sfd.DefaultExt = DEF_EXT;
-            sfd.Filter = Properties.Resources.IndexerFilesFilter;
-            if (sfd.ShowDialog() == DialogResult.OK) {
-                DatabaseFileName = sfd.FileName;
-                return saveFileAs(DatabaseFileName);
-            }
-            else
-                return false;
-        }
-
-        private bool saveFileAs(string fileName) {
-            try {
-                serialize(fileName);
-                Modified = false;
-                return true;
-            }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-        }
-
-        #endregion
-
-        #region New File
 
         private void cmNew_Click(object sender, EventArgs e) {
-            if (saveFileWithAsk())
-                newFile();
-        }
-
-        private void newFile() {
-            createNewVolumeDatabase();
-            updateControls();
+            fileOperations.New();
         }
 
         private void createNewVolumeDatabase() {
-            Modified = false;
-            DatabaseFileName = null;
             Database = new VolumeDatabase(true);
         }
 
-        #endregion
-
-        #region Open File
-
         private void cmOpen_Click(object sender, EventArgs e) {
-            if (openFile()) {
-                updateControls();
-            }
+            fileOperations.Open();
         }
 
-        private bool openFile(string fileName) {
-            Database = deserialize(fileName);
-            if (Database == null) {
-                createNewVolumeDatabase();
-            }
-            else
-                DatabaseFileName = fileName;
-            Modified = false;
-            return true;
-        }
-
-        private bool openFile() {
-            if (saveFileWithAsk()) {
-                OpenFileDialog ofd = new OpenFileDialog();
-                ofd.Title = Properties.Resources.OpenFile;
-                ofd.DefaultExt = DEF_EXT;
-                ofd.Filter = Properties.Resources.IndexerFilesFilter;
-                if (ofd.ShowDialog() == DialogResult.OK)
-                    return openFile(ofd.FileName);
-            }
-            return false;
-        }
-
-        #endregion
-
-        const string DEF_EXT = "pdin";
+        const string DEF_EXT = "bmin";
 
         #region Merge File
 
@@ -1212,7 +1030,7 @@ namespace BlueMirrorIndexer
                     Database.MergeWith(cid);
                     updateTree();
                     UpdateCommands();
-                    Modified = true;
+                    fileOperations.Modified = true;
                 }
             }
         }
@@ -1228,7 +1046,7 @@ namespace BlueMirrorIndexer
         }
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e) {
-            e.Cancel = !saveFileWithAsk();
+            e.Cancel = !fileOperations.SaveWithAsk();
         }
 
         private void showError(string message) {
@@ -1501,7 +1319,7 @@ namespace BlueMirrorIndexer
                     foreach (ListViewItem lvi in selectedItems) {
                         lvFolderElements.Items.Remove(lvi);
                         lf.RemoveItem(lvi.Tag as ItemInDatabase);
-                        Modified = true;
+                        fileOperations.Modified = true;
                     }
                 }
                 finally {
@@ -1675,21 +1493,21 @@ namespace BlueMirrorIndexer
                     logicalFolder.AddItemAsFolder(item as FolderInDatabase, asName);
                     
                     rereadFolders = true;
-                    Modified = true;
+                    fileOperations.Modified = true;
                 }
                 else
                     if (intoDvdCatalog) {
                         if (item is FolderInDatabase) {
                             logicalFolder.AddItemAsDvd(item as FolderInDatabase);
                             rereadFolders = true;
-                            Modified = true;
+                            fileOperations.Modified = true;
                         }
                         // else -> nic nie dodawaj
                     }
                     else
                         if (!logicalFolder.ContainsItem(item)) {
                             logicalFolder.AddItem(item);
-                            Modified = true;
+                            fileOperations.Modified = true;
                         }
             }
             if (rereadFolders) {
@@ -1810,16 +1628,16 @@ namespace BlueMirrorIndexer
         }
 
         public void LogicalFoldersChanged() {
-            Modified = true;
+            fileOperations.Modified = true;
             updateLogicalFolders();
         }
 
         private void tvLogicalFolders_NewLogicalFolderAdded(object sender, EventArgs e) {
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         private void tvLogicalFolders_LogicalFolderUpdated(object sender, EventArgs e) {
-            Modified = true;
+            fileOperations.Modified = true;
         }
 
         private void tvLogicalFolders_LogicalFolderDeleted(object sender, EventArgs e) {
@@ -1840,8 +1658,9 @@ namespace BlueMirrorIndexer
         }
 
         # region Importing from Octopus / Blue Mirror 1.x
+
         private void cmImportFrom1_Click(object sender, EventArgs e) {
-            if (saveFileWithAsk()) {
+            if (fileOperations.SaveWithAsk()) {
                 OpenFileDialog ofd = new OpenFileDialog();
                 ofd.Title = Properties.Resources.OpenFile;
                 ofd.DefaultExt = "octopus";
@@ -1849,7 +1668,7 @@ namespace BlueMirrorIndexer
                 if (ofd.ShowDialog() == DialogResult.OK) {
                     try {
                         importFrom1(ofd.FileName);
-                        Modified = true;
+                        fileOperations.Modified = true;
                     }
                     catch (Exception ex) {
                         MessageBox.Show(string.Format("Error occurred while importing: {0}", ex.Message), ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1860,7 +1679,7 @@ namespace BlueMirrorIndexer
 
         private void importFrom1(string octopusDatabasePath) {
             using (new HourGlass()) {
-                newFile();
+                fileOperations.New();
                 BlueMirror.Importer.OctopusImporter importer = new BlueMirror.Importer.OctopusImporter();
                 Octopus.CDIndex.CdInDatabaseList octopusDatabase = importer.Deserialize(octopusDatabasePath);
                 foreach (Octopus.CDIndex.DiscInDatabase octopusDisc in octopusDatabase) {
@@ -1915,6 +1734,92 @@ namespace BlueMirrorIndexer
             newItem.LastWriteTime = octopusItem.LastWriteTime;
             newItem.Name = octopusItem.Name;
         }
+
+        #endregion
+
+        #region File operations
+
+        private void fileOperations_SaveToFile(object sender, SaveToFileEventArgs e) {
+            serialize(e.FilePath);
+        }
+
+        private void serialize(string filePath) {
+            Cursor oldCursor = Cursor;
+            Cursor = Cursors.WaitCursor;
+            try {
+                Stream stream = new FileStream(filePath, FileMode.Create);
+                try {
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(stream, Database);
+                }
+                finally {
+                    stream.Close();
+                }
+            }
+            finally {
+                Cursor = oldCursor;
+            }
+        }
+        
+        private void fileOperations_ModifiedChanged(object sender, EventArgs e) {
+            btnSave.Enabled = cmSave.Enabled = fileOperations.Modified;
+            updateTitle();
+        }
+
+        private void fileOperations_NewFile(object sender, EventArgs e) {
+            createNewVolumeDatabase();
+            updateControls();
+        }
+
+        private void fileOperations_OpenFromFile(object sender, OpenFromFileEventArgs e) {
+            Database = deserialize(e.FilePath);
+            e.FileValid = Database != null;
+            if(e.FileValid)
+                updateControls();
+        }
+
+        private DlgProgress openProgressDialog = null;
+
+        long BIG_FILE_SIZE = 18000000;
+
+        private VolumeDatabase deserialize(string filePath) {
+            VolumeDatabase cid = null;
+            using (new HourGlass()) {
+                try {
+                    Stream stream = new FileStream(filePath, FileMode.Open);
+                    if (stream.Length > BIG_FILE_SIZE) {
+                        StreamWithEvents streamWithEvents = new StreamWithEvents(stream);
+                        streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
+                        stream = streamWithEvents;
+                        Enabled = false;
+                        openProgressDialog = new DlgProgress("Reading File...", "Reading: " + Path.GetFileName(filePath));
+                        openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
+                    }
+                    try {
+                        IFormatter formatter = new BinaryFormatter();
+                        cid = (VolumeDatabase)formatter.Deserialize(stream);
+                    }
+                    finally {
+                        try {
+                            stream.Close();
+                        }
+                        finally {
+                            Enabled = true;
+                            closeOpenedProgressDialog();
+                        }
+                    }
+                }
+                catch /*(Exception e)*/ {
+                    //Debug.WriteLine(e.Message);
+                }
+            }
+            return cid;
+        }
+        
+        private void fileOperations_CurrentFilePathChanged(object sender, EventArgs e) {
+            updateTitle();
+        }
+
         #endregion
     }
 }

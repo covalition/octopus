@@ -155,61 +155,60 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj0yLjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
-        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACU
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABi
         CwAAAk1TRnQBSQFMAgEBAgEAAQQBAAEEAQABEAEAARABAAT/ASEBAAj/AUIBTQE2BwABNgMAASgDAAFA
-        AwABEAMAAQEBAAEgBgABECIAAycBOwNOAZQBYgFeAVwBzgF9AWwBWQHrAX0BbAFZAesBYgFeAVwBzgNO
-        AZQDJwE72AADCgENA04BlgGiAXoBTQH6AeEBzQG5Af8B8QHgAc4B/wH5AecB1gH/AfgB5gHUAf8B8AHd
-        AcwB/wHhAc0BuQH/AaIBegFNAfoDTgGWAwoBDcwAAwoBDQNXAbgB2QG/AaUB/wH+AfIB5AL/AecBzwH/
-        AfwB2wG7Af8B+QHTAbIB/wH2AdABrAH/AfQB0QGuAf8B9gHYAbsB/wH6AekB1wH/AdkBvwGlAf8DVwG4
-        AwoBDQgAA0ABcAFSAlQBpgFMAWcBgAHqATYBgQGrAfcBNgGBAasB9wE2AYEBqwH3ATYBgQGrAfcBNgGB
-        AasB9wE2AYEBqwH3ATYBgQGrAfcBNgGBAasB9wE2AYABqwH3AUQBcwGXAfEDTAGTiAADTgGWAdkBvwGl
-        Av8B+AHrAv8B6wHRAv8B4QHDAf8B/gHbAboB/wH7AdYBsgH/AfcB0QGsAf8B9gHOAakB/wHzAcsBpQH/
-        AfIBzQGoAf8B+gHhAcoB/wHZAb8BpQH/A04BlggAAVEBagF7AeYBlAGaAZsB8AGnAcIB2QH9AZ4B2wH0
-        Af8BlgHaAfMB/wGOAdgB8wH/AYYB1wHzAf8BeAHUAfIB/wFyAdMB8gH/AWsB0gHxAf8BZQHQAfEB/wFi
-        Ac8B8QH/Aa4B1gHkAf4BQwFxAZAB8IQAAyYBOAGxAYcBSgH9Av4B+gL/AfkB6QL/Ae8B2AL/AecBzQL/
-        AeEBwgH/AfwB3AG7Af8B+QHVAbMB/wH2AdABrAH/AfYBzQGoAf8B8wHLAaUB/wHzAc0BqQH/AfoB6gHZ
-        Af8BsQGHAUoB/QMmATgEAAE2AYYBqwH3Ae8B+gH+Af8BoQHpAfkB/wGRAeUB+AH/AYEB4QH3Af8BawHe
-        AfYB/wFcAdoB9QH/AU0B1wH0Af8BQAHTAfMB/wEyAdAB8gH/AScBzQHxAf8BHwHLAfAB/wHKAfIB+wH/
-        ATYBhgGrAfeEAANOAZYB4gHOAboB/wH3Ad4BxgL/AekB0QL/AfYB4gL/AfIB3QL/AfAB3QH/AfgB6gHZ
-        Af8B+AHmAdQB/wH7Ad8BxwH/AfUBzwGrAf8B8gHKAaQB/wHzAcwBqAH/AfgB3QHDAf8B4gHOAboB/wNO
-        AZYEAAE5AYgBsAH4AfIB+gH9Af8BswHtAfoB/wGkAekB+QH/AZUB5gH4Af8BhQHiAfcB/wFvAd4B9gH/
-        AV4B2wH1Af8BUAHXAfQB/wFCAdQB8wH/ATQB0QHyAf8BKQHOAfEB/wHMAfIB+wH/ATYBhwGrAfeEAAFi
-        AV4BWwHQAe8B4AHQAf8B5wG+AZYB/wHnAbwBlAH/AfABzAGpAf8B/gHsAdoB/wHdAcQBrAH/AXcBagFc
-        AecBdwFqAVwB5wHdAcMBqgH/AfgB3QHEAf8B9AHSAbIB/wH2AdQBswH/AfUB1gG4Af8B8QHfAc8B/wFi
-        AV4BWwHQBAABQQGNAbMB+QH2AfwB/gH/AcgB8gH8Af8BuQHvAfsB/wGsAewB+gH/AZwB6AH5Af8BiwHj
-        AfcB/wF1AeAB9gH/AWUB3AH2Af8BVgHZAfUB/wFIAdYB9AH/AT0B0wHzAf8B0AHzAfwB/wE2AYgBqwH3
-        hAABfAFtAVkB7AH1AeQB1QH/AekBvgGXAf8B6AG8AZYB/wHnAbwBlAH/AfMB3gHKAf8BdwFpAVgB5gMU
-        ARsDFAEbAXcBaQFYAeYB9gHjAdMB/wHxAc0BqwH/Ae8ByQGkAf8B7QHJAaQB/wH2AeQB0gH/AXwBbQFZ
-        AewEAAE+AZgBtAH6Af4D/wH4Af0C/wH2Af0C/wH1AfwC/wHzAfwB/gH/AdgB9gH8Af8BlAHmAfgB/wGF
-        AeMB9wH/AW8B3wH2Af8BYQHbAfUB/wFVAdgB9AH/AdcB9AH8Af8BNgGLAasB94QAAXwBbQFZAewB9QHk
-        AdUB/wHpAb8BmQH/AekBwAGZAf8B6QHBAZoB/wHzAd0ByQH/AXcBaQFYAeYDFAEbAxQBGwF3AWkBWAHm
-        AfgB6AHZAf8B8gHSAbIB/wHwAcwBqwH/AfABzAGrAf8B9gHkAdMB/wF8AW0BWQHsBAABPAGcAbQB+gHo
-        AfYB+wH/AZQB1AHvAf8BiAHOAe4B/wFsAcEB6QH/AckB6QH2Af8B8gH8Af4B/wHzAfwB/gH/AfIB/AH+
-        Af8B8AH8Af4B/wHvAfsB/gH/Ae4B+wH+Af8B/gP/ATcBjwGrAfeEAAFiAV4BWwHQAfAB4QHRAf8B6gHE
-        AaEB/wHpAcEBmwH/AekBwAGXAf8B8QHOAbIB/wHcAcMBqgH/AXcBagFcAecBdwFqAVwB5wHdAcQBrAL/
-        AfwB8wL/AfQB5QL/Ae4B2gH/AfwB5QHRAf8B8QHhAdEB/wFiAV4BWwHQBAABRwGDAZsB8gHxAfoB/QH/
-        AZQB3gH1Af8BkwHcAfQB/wGBAdUB8gH/AWMBygHtAf8BZQHLAeoB/wGFAdMB7wH/AYAB0gHvAf8BcwHQ
-        Ae8B/wFvAc8B7gH/AWsBzwHuAf8B6QH3AfsB/wE+AYcBmgHzhAADTgGWAeIBzgG6Af8B8QHSAbYB/wHr
-        AcEBmwH/AesBvwGZAv8B5AHTAv8B6AHbAf8B8wHaAccB/wH4AfEB5AL/AfgB7QL/AfcB6QL/Af4B8QL/
-        AfwB7wL/AfwB8gH/AeIBzgG6Af8DTgGWBAABQwF/AZAB8AH3AfwB/gH/AY4B5AH4Af8BkQHeAfUB/wGf
-        AeAB9QH/AawB4QH2Af8B7wH7Af4B/wH0Af0B/gH/AfMB/AH+Af8B8QH8Af4B/wHvAfsB/gH/Ae4B+wH+
-        Af8CywHNAfkBWAFlAWkB1IQAAyYBOAGxAYcBSgH9AfoB7QHhAf8B7AHHAaMC/wHsAdoF/wH3Ac0BtgH/
-        AewBvQGXAv8B9AHcA/8B9wL/AfcB6AP/AfMD/wH5Af8C/gH5Af8BsQGHAUoB/QMmATgEAAE5AZgBsAH4
-        Af0C/gH/Af4D/wL+Av8B/QH+Av8B/gP/AeoB9wH7Af8BagGqAboB+QFcAaMBuAH4AVwBowG4AfgBXAGj
-        AbgB+AFtAaYBtAH3AWEBbwF2AeEDNQFWiAADTgGWAdkBvwGlAv8B+gHwBv8B/QHzAf8B8AHBAaMB/wHu
-        AcYBoAH/Af0B8AHRA/8B/gL/Af0B8AL/Af0B8QX/AdkBvwGlAf8DTgGWCAABWQFiAWQB0AFNAaYBvgH6
-        AU8BpgG/AfoBTwGmAb8B+gFPAaYBvwH6AU4BpgG/AfoBWAFqAXAB3QMQARYDCwEPAwsBDwMLAQ8DCwEP
-        AwsBDwMDAQSIAAMKAQ0DVwG4AdkBvwGlAf8B/gH9AfwC/wHxAeQB/wHyAcoBrgH/AfIB0gGtAf8B+QHt
-        AcgD/wH3A/8B/QH/Af4B/QH8Af8B2QG/AaUB/wNXAbgDCgENzAADCgENA04BlgGiAXoBTQH6AeEBzQG5
-        Af8B8QHiAdQB/wH5AewB3wH/AfsB8wHlAf8B9AHtAeQB/wHiAc4BuwH/AaIBegFNAfoDTgGWAwoBDdgA
-        AycBOwNOAZQBYgFeAVwBzgF9AWwBWQHrAYEBawFYAe8BZQFgAVsB2QNPAZcDJwE70AABQgFNAT4HAAE+
-        AwABKAMAAUADAAEQAwABAQEAAQEFAAGAFwAD/wEAAfABDwL/BAABwAEDAv8EAAGAAQEBgAEBBAABgAEB
-        AYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQYAAYABAQQAAYABAQGA
-        AQEEAAGAAQEC/wQAAcABAwL/BAAB8AEPAv8EAAs=
+        AwABEAMAAQEBAAEgBgABECIAAycBOwNOAZQCXgFcAc4BaAFgAVkB6wFoAWABWQHrAl4BXAHOA04BlAMn
+        ATvYAAMKAQ0DTgGWAYgBcQFNAfoB4QHNAbkB/wHxAeABzgH/AfkB5wHWAf8B+AHmAdQB/wHwAd0BzAH/
+        AeEBzQG5Af8BiAFxAU0B+gNOAZYDCgENzAADCgENA1cBuAHZAb8BpQH/Af4B8gHkAv8B5wHPAf8B/AHb
+        AbsB/wH5AdMBsgH/AfYB0AGsAf8B9AHRAa4B/wH2AdgBuwH/AfoB6QHXAf8B2QG/AaUB/wNXAbgDCgEN
+        CAADQAFwAVICVAGmAVEBXAFkAeoBNgFtAYsB9wE2AW0BiwH3ATYBbQGLAfcBNgFtAYsB9wE2AW0BiwH3
+        ATYBbQGLAfcBNgFtAYsB9wE2AW0BiwH3ATYBbQGLAfcBUwFkAXUB8QNMAZOIAANOAZYB2QG/AaUC/wH4
+        AesC/wHrAdEC/wHhAcMB/wH+AdsBugH/AfsB1gGyAf8B9wHRAawB/wH2Ac4BqQH/AfMBywGlAf8B8gHN
+        AagB/wH6AeEBygH/AdkBvwGlAf8DTgGWCAABWAFhAWMB5gFqAWwBcAHwAacBtgG8Af0BngHbAfQB/wGW
+        AdoB8wH/AY4B2AHzAf8BhgHXAfMB/wFvAdQB8gH/AWkB0wHyAf8BYgHSAfEB/wFcAdAB8QH/AVkBzwHx
+        Af8BkwG7AckB/gFOAV8BagHwhAADJgE4AagBhwFAAf0C/gH6Av8B+QHpAv8B7wHYAv8B5wHNAv8B4QHC
+        Af8B/AHcAbsB/wH5AdUBswH/AfYB0AGsAf8B9gHNAagB/wHzAcsBpQH/AfMBzQGpAf8B+gHqAdkB/wGo
+        AYcBQAH9AyYBOAQAATYBeAGLAfcB7wH6Af4B/wGhAekB+QH/AZEB5QH4Af8BgQHhAfcB/wFiAd4B9gH/
+        AVMB2gH1Af8BRAHXAfQB/wE3AdMB8wH/ASkB0AHyAf8BHgHNAfEB/wEWAcsB8AH/AcoB8gH7Af8BNgF4
+        AYsB94QAA04BlgHiAc4BugH/AfcB3gHGAv8B6QHRAv8B9gHiAv8B8gHdAv8B8AHdAf8B+AHqAdkB/wH4
+        AeYB1AH/AfsB3wHHAf8B9QHPAasB/wHyAcoBpAH/AfMBzAGoAf8B+AHdAcMB/wHiAc4BugH/A04BlgQA
+        ATkBeAGTAfgB8gH6Af0B/wGzAe0B+gH/AaQB6QH5Af8BlQHmAfgB/wGFAeIB9wH/AWYB3gH2Af8BVQHb
+        AfUB/wFHAdcB9AH/ATkB1AHzAf8BKwHRAfIB/wEgAc4B8QH/AcwB8gH7Af8BNgF8AYsB94QAAl4BWwHQ
+        Ae8B4AHQAf8B5wG+AZYB/wHnAbwBlAH/AfABzAGpAf8B/gHsAdoB/wHdAcQBrAH/AmQBXAHnAmQBXAHn
+        Ad0BwwGqAf8B+AHdAcQB/wH0AdIBsgH/AfYB1AGzAf8B9QHWAbgB/wHxAd8BzwH/Al4BWwHQBAABQQGE
+        AZAB+QH2AfwB/gH/AcgB8gH8Af8BuQHvAfsB/wGsAewB+gH/AZwB6AH5Af8BiwHjAfcB/wFsAeAB9gH/
+        AVwB3AH2Af8BTQHZAfUB/wE/AdYB9AH/ATQB0wHzAf8B0AHzAfwB/wE2AX8BiwH3hAACZAFZAewB9QHk
+        AdUB/wHpAb4BlwH/AegBvAGWAf8B5wG8AZQB/wHzAd4BygH/AmEBWAHmAxQBGwMUARsCYQFYAeYB9gHj
+        AdMB/wHxAc0BqwH/Ae8ByQGkAf8B7QHJAaQB/wH2AeQB0gH/AmQBWQHsBAABRwF8AZwB+gH+A/8B+AH9
+        Av8B9gH9Av8B9QH8Av8B8wH8Af4B/wHYAfYB/AH/AZQB5gH4Af8BhQHjAfcB/wFmAd8B9gH/AVgB2wH1
+        Af8BTAHYAfQB/wHXAfQB/AH/ATYBgQGLAfeEAAJkAVkB7AH1AeQB1QH/AekBvwGZAf8B6QHAAZkB/wHp
+        AcEBmgH/AfMB3QHJAf8CYQFYAeYDFAEbAxQBGwJhAVgB5gH4AegB2QH/AfIB0gGyAf8B8AHMAasB/wHw
+        AcwBqwH/AfYB5AHTAf8CZAFZAewEAAFFAX4BnAH6AegB9gH7Af8BlAHUAe8B/wGIAc4B7gH/AWMBwQHp
+        Af8ByQHpAfYB/wHyAfwB/gH/AfMB/AH+Af8B8gH8Af4B/wHwAfwB/gH/Ae8B+wH+Af8B7gH7Af4B/wH+
+        A/8BNwGDAYsB94QAAl4BWwHQAfAB4QHRAf8B6gHEAaEB/wHpAcEBmwH/AekBwAGXAf8B8QHOAbIB/wHc
+        AcMBqgH/AmQBXAHnAmQBXAHnAd0BxAGsAv8B/AHzAv8B9AHlAv8B7gHaAf8B/AHlAdEB/wHxAeEB0QH/
+        Al4BWwHQBAABRwFqAXgB8gHxAfoB/QH/AZQB3gH1Af8BkwHcAfQB/wGBAdUB8gH/AVoBygHtAf8BXAHL
+        AeoB/wGFAdMB7wH/AYAB0gHvAf8BagHQAe8B/wFmAc8B7gH/AWIBzwHuAf8B6QH3AfsB/wFMAW8BegHz
+        hAADTgGWAeIBzgG6Af8B8QHSAbYB/wHrAcEBmwH/AesBvwGZAv8B5AHTAv8B6AHbAf8B8wHaAccB/wH4
+        AfEB5AL/AfgB7QL/AfcB6QL/Af4B8QL/AfwB7wL/AfwB8gH/AeIBzgG6Af8DTgGWBAABTgFnAWoB8AH3
+        AfwB/gH/AY4B5AH4Af8BkQHeAfUB/wGfAeAB9QH/AawB4QH2Af8B7wH7Af4B/wH0Af0B/gH/AfMB/AH+
+        Af8B8QH8Af4B/wHvAfsB/gH/Ae4B+wH+Af8CowGlAfkBWAJgAdSEAAMmATgBqAGHAUAB/QH6Ae0B4QH/
+        AewBxwGjAv8B7AHaBf8B9wHNAbYB/wHsAb0BlwL/AfQB3AP/AfcC/wH3AegD/wHzA/8B+QH/Av4B+QH/
+        AagBhwFAAf0DJgE4BAABOQF+AZMB+AH9Av4B/wH+A/8C/gL/Af0B/gL/Af4D/wHqAfcB+wH/AWoBjAGV
+        AfkBXAGNAZYB+AFcAY0BlgH4AVwBjQGWAfgBbQGJAY0B9wNhAeEDNQFWiAADTgGWAdkBvwGlAv8B+gHw
+        Bv8B/QHzAf8B8AHBAaMB/wHuAcYBoAH/Af0B8AHRA/8B/gL/Af0B8AL/Af0B8QX/AdkBvwGlAf8DTgGW
+        CAABWwJeAdABTQGQAaAB+gFNAZABoAH6AU0BkAGgAfoBTQGQAaAB+gFNAZABoAH6AVgCXgHdAxABFgML
+        AQ8DCwEPAwsBDwMLAQ8DCwEPAwMBBIgAAwoBDQNXAbgB2QG/AaUB/wH+Af0B/AL/AfEB5AH/AfIBygGu
+        Af8B8gHSAa0B/wH5Ae0ByAP/AfcD/wH9Af8B/gH9AfwB/wHZAb8BpQH/A1cBuAMKAQ3MAAMKAQ0DTgGW
+        AYgBcQFNAfoB4QHNAbkB/wHxAeIB1AH/AfkB7AHfAf8B+wHzAeUB/wH0Ae0B5AH/AeIBzgG7Af8BiAFx
+        AU0B+gNOAZYDCgEN2AADJwE7A04BlAJeAVwBzgFoAWABWQHrAWUBYgFYAe8CXgFbAdkDTwGXAycBO9AA
+        AUIBTQE+BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/8BAAHwAQ8C/wQAAcABAwL/BAABgAEB
+        AYABAQQAAYABAQGAAQEGAAGAAQEGAAGAAQEGAAGAAQEGAAGAAQEGAAGAAQEGAAGAAQEGAAGAAQEGAAGA
+        AQEEAAGAAQEBgAEBBAABgAEBAv8EAAHAAQMC/wQAAfABDwL/BAAL
 </value>
   </data>
   <metadata name="pmList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>114, 56</value>
   </metadata>
   <data name="cmItemPropertiesFromList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
@@ -242,13 +241,13 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="ilSystem.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>604, 17</value>
+    <value>17, 56</value>
   </metadata>
   <data name="ilSystem.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
   </data>
   <metadata name="pmSearchList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>105, 56</value>
+    <value>202, 56</value>
   </metadata>
   <data name="cmItemPropertiesFromSearch.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -278,7 +277,7 @@
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <metadata name="menuMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+    <value>122, 17</value>
   </metadata>
   <data name="cmNew.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 22</value>
@@ -459,7 +458,7 @@
     <value>9</value>
   </data>
   <metadata name="niBackgroundProcess.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>229, 56</value>
+    <value>326, 56</value>
   </metadata>
   <metadata name="pmIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>337, 17</value>
@@ -508,7 +507,7 @@
 </value>
   </data>
   <metadata name="pmItems.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>397, 56</value>
+    <value>494, 56</value>
   </metadata>
   <data name="cmItemPropertiesFromFolders.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt, style=Bold</value>
@@ -559,7 +558,7 @@
     <value>182</value>
   </data>
   <metadata name="pmDrop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>496, 56</value>
+    <value>17, 95</value>
   </metadata>
   <data name="cmDropFolderAsItems.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 22</value>
@@ -629,7 +628,7 @@
     <value>tvDatabaseFolderTree</value>
   </data>
   <data name="&gt;&gt;tvDatabaseFolderTree.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.TreeViewVista, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Controls.TreeViewVista, BlueMirror.Commons, Version=1.0.0.29889, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tvDatabaseFolderTree.Parent" xml:space="preserve">
     <value>scDatabase.Panel1</value>
@@ -751,7 +750,7 @@
     <value>lvDatabaseItems</value>
   </data>
   <data name="&gt;&gt;lvDatabaseItems.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.ListViewVista, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Controls.ListViewVista, BlueMirror.Commons, Version=1.0.0.29889, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvDatabaseItems.Parent" xml:space="preserve">
     <value>scDatabase.Panel2</value>
@@ -937,7 +936,7 @@
     <value>lvSearchResults</value>
   </data>
   <data name="&gt;&gt;lvSearchResults.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.ListViewVista, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Controls.ListViewVista, BlueMirror.Commons, Version=1.0.0.29889, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvSearchResults.Parent" xml:space="preserve">
     <value>searchBottomPanel</value>
@@ -991,7 +990,7 @@
     <value>filesSearchCriteriaPanel</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.FilesSearchCriteriaPanel, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirrorIndexer.Components.FilesSearchCriteriaPanel, BlueMirrorIndexer, Version=2.0.0.15, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;filesSearchCriteriaPanel.Parent" xml:space="preserve">
     <value>tpSearch</value>
@@ -1096,7 +1095,7 @@
     <value>tvLogicalFolders</value>
   </data>
   <data name="&gt;&gt;tvLogicalFolders.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.LogicalFoldersTreeView, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirrorIndexer.Components.LogicalFoldersTreeView, BlueMirrorIndexer, Version=2.0.0.15, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tvLogicalFolders.Parent" xml:space="preserve">
     <value>scFolders.Panel1</value>
@@ -1105,7 +1104,7 @@
     <value>0</value>
   </data>
   <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 0</value>
+    <value>17, 17</value>
   </metadata>
   <data name="btnNewFolder.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1272,7 +1271,7 @@
     <value>lvFolderElements</value>
   </data>
   <data name="&gt;&gt;lvFolderElements.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.Components.ListViewVista, BlueMirrorIndexer, Version=2.0.0.13, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Controls.ListViewVista, BlueMirror.Commons, Version=1.0.0.29889, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvFolderElements.Parent" xml:space="preserve">
     <value>scFolders.Panel2</value>
@@ -1401,7 +1400,7 @@
     <value>6</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 429</value>
+    <value>371, 95</value>
   </metadata>
   <data name="sbFiles.Size" type="System.Drawing.Size, System.Drawing">
     <value>51, 19</value>
@@ -1437,7 +1436,7 @@
     <value>7</value>
   </data>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>0, 24</value>
+    <value>232, 17</value>
   </metadata>
   <data name="btnNew.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -1553,6 +1552,27 @@
   <data name="&gt;&gt;toolStrip1.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
+  <metadata name="fileOperations.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 95</value>
+  </metadata>
+  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>593, 56</value>
+  </metadata>
+  <data name="openFileDialog.Filter" xml:space="preserve">
+    <value>Blue Mirror CD/DVD Indexer|*.bmin</value>
+  </data>
+  <data name="openFileDialog.Title" xml:space="preserve">
+    <value>Open File</value>
+  </data>
+  <metadata name="saveFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>242, 95</value>
+  </metadata>
+  <data name="saveFileDialog.Filter" xml:space="preserve">
+    <value>Blue Mirror CD/DVD Indexer|*.bmin</value>
+  </data>
+  <data name="saveFileDialog.Title" xml:space="preserve">
+    <value>Save File As</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1592,6 +1612,9 @@
         8ZKSCgoKCgoKCgqSkpKSkpIKCgoKCvgfAADgBwAAwAMAAIABAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAgAEAAIABAADAAwAA4AcAAPgfAAA=
 </value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>CD/DVD Index</value>
@@ -2171,6 +2194,24 @@
   </data>
   <data name="&gt;&gt;btnWhatsNew.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileOperations.Name" xml:space="preserve">
+    <value>fileOperations</value>
+  </data>
+  <data name="&gt;&gt;fileOperations.Type" xml:space="preserve">
+    <value>BlueMirror.Commons.FileOperations, BlueMirror.Commons, Version=1.0.0.29889, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Name" xml:space="preserve">
+    <value>saveFileDialog</value>
+  </data>
+  <data name="&gt;&gt;saveFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Name" xml:space="preserve">
+    <value>openFileDialog</value>
+  </data>
+  <data name="&gt;&gt;openFileDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmMain</value>
