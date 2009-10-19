@@ -104,7 +104,6 @@
     <Compile Include="Components\LogicalFoldersTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HourGlass.cs" />
     <Compile Include="VolumeDatabase.cs" />
     <Compile Include="Components\FilesSearchCriteriaPanel.cs">
       <SubType>UserControl</SubType>
