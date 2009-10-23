@@ -314,7 +314,11 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2.0.0.13
+        ///   Looks up a localized string similar to 2.0.0.14
+        ///- Name changed from &quot;Blue Mirror CD/DVD Indexer&quot;
+        ///
+        ///2.0.0.13
+        ///- Import from Octopus / Blue Mirror 1.x implemented
         ///- FIXED: Compressed files appear twice in the search result list. 
         ///
         ///2.0.0.12
@@ -323,10 +327,7 @@ namespace BlueMirrorIndexer.Properties {
         ///- Calculating CRC
         ///- Automatically add files and folders from CD/DVD when new volume is inserted into a drive
         ///- Enhanced search options
-        ///- Save, Save as, Open, and New commands are available when dealing with database file
-        ///- Opening (at start up) last closed database file
-        ///- Auto eject option
-        ///- Searching by keyword [rest of string was truncated]&quot;;.
+        ///- Save, Save as, Open, and New commands are available when dealing [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string History {
             get {
@@ -376,6 +377,26 @@ namespace BlueMirrorIndexer.Properties {
         internal static string InvalidSizeRange {
             get {
                 return ResourceManager.GetString("InvalidSizeRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Blue Mirror DVD/CD Indexer, Blue Mirror CD/DVD Indexer, Octopus
+        ///Copyright (c) 2005 - 2009 Roman Kowaliszyn
+        ///
+        ///Microsoft Reciprocal License (Ms-RL)
+        ///
+        ///This license governs use of the accompanying software. If you use the software, you accept this license. If you do not accept the license, do not use the software.
+        ///
+        ///1. Definitions
+        ///
+        ///The terms &quot;reproduce,&quot; &quot;reproduction,&quot; &quot;derivative works,&quot; and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.
+        ///
+        ///A &quot;contribution&quot; is the original softwa [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string License {
+            get {
+                return ResourceManager.GetString("License", resourceCulture);
             }
         }
         

@@ -40,9 +40,12 @@ namespace BlueMirrorIndexer
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tpChangeLog = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbLicense = new System.Windows.Forms.TextBox();
             this.tcAbout.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tpChangeLog.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -111,6 +114,7 @@ namespace BlueMirrorIndexer
             // 
             this.tcAbout.Controls.Add(this.tabPage1);
             this.tcAbout.Controls.Add(this.tpChangeLog);
+            this.tcAbout.Controls.Add(this.tabPage2);
             resources.ApplyResources(this.tcAbout, "tcAbout");
             this.tcAbout.Name = "tcAbout";
             this.tcAbout.SelectedIndex = 0;
@@ -135,6 +139,19 @@ namespace BlueMirrorIndexer
             resources.ApplyResources(this.tpChangeLog, "tpChangeLog");
             this.tpChangeLog.Name = "tpChangeLog";
             this.tpChangeLog.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.tbLicense);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbLicense
+            // 
+            resources.ApplyResources(this.tbLicense, "tbLicense");
+            this.tbLicense.Name = "tbLicense";
+            this.tbLicense.ReadOnly = true;
             // 
             // DlgAbout
             // 
@@ -166,6 +183,8 @@ namespace BlueMirrorIndexer
             this.tabPage1.PerformLayout();
             this.tpChangeLog.ResumeLayout(false);
             this.tpChangeLog.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +206,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tpChangeLog;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox tbLicense;
     }
 }

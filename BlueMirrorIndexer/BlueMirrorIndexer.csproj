@@ -26,7 +26,7 @@
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
-    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
@@ -357,9 +357,7 @@
     <None Include="Resources\CD_16.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\History.txt" />
-    <Content Include="MainIcon.ico" />
-    <None Include="License.rtf" />
+    <Content Include="History.txt" />
     <None Include="Resources\FindHS.png" />
     <Content Include="Resources\MainIcon.ico" />
   </ItemGroup>
@@ -379,6 +377,7 @@
     <None Include="Resources\folder_go.png" />
     <None Include="Resources\CD.png" />
     <None Include="Resources\database_go.png" />
+    <Content Include="License.txt" />
     <Content Include="ReadMe.txt" />
     <Content Include="unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
