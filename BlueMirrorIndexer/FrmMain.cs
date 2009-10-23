@@ -1821,5 +1821,9 @@ namespace BlueMirrorIndexer
         }
 
         #endregion
+
+        internal bool IsEmptyDatabase() {
+            return Database.IsEmpty();
+        }
     }
 }

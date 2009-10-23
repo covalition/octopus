@@ -98,5 +98,9 @@ namespace BlueMirrorIndexer
         internal void SortDiscs() {
             discs.Sort();
         }
+
+        internal bool IsEmpty() {
+            return discs.Count == 0;
+        }
     }
 }

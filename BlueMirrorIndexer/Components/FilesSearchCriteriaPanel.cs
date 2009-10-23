@@ -92,6 +92,10 @@ namespace BlueMirrorIndexer.Components
         }
 
         private void btnSearch_Click(object sender, EventArgs e) {
+            if (FrmMain.Instance.IsEmptyDatabase()) {
+                MessageBox.Show("Database is empty. Read the volume first or open database file.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
             if (searchBtnClicked != null) {
                 long? sizeFrom = null;
                 long? sizeTo = null;
