@@ -75,5 +75,20 @@ namespace BlueMirrorIndexer.Test
             Assert.AreEqual((FrmMain_Accessor.Database.GetDiscs()[1] as IFolder).Folders[1].Files[0].Name, "OpenlifeR16.4rc2.exe");
             Assert.AreEqual(((FrmMain_Accessor.Database.GetDiscs()[1] as IFolder).Folders[1].Folders[0] as FolderInDatabase).Name, "Test");
         }
+
+        /// <summary>
+        ///A test for IsEmptyDatabase
+        ///</summary>
+        [TestMethod()]
+        [DeploymentItem("BlueMirrorIndexer.exe")]
+        public void IsEmptyDatabaseTest() {
+            FrmMain_Accessor target = new FrmMain_Accessor(); // TODO: Initialize to an appropriate value
+            target.createNewVolumeDatabase();
+            bool actual = target.IsEmptyDatabase();
+            Assert.AreEqual(true, actual);
+            FrmMain_Accessor.Database.AddDisc(new DiscInDatabase());
+            actual = target.IsEmptyDatabase();
+            Assert.AreEqual(false, actual);
+        }
     }
 }

@@ -114,9 +114,11 @@ namespace BlueMirrorIndexer
             this.chSrVolume = new System.Windows.Forms.ColumnHeader();
             this.chSrPath = new System.Windows.Forms.ColumnHeader();
             this.chSrCrc = new System.Windows.Forms.ColumnHeader();
+            this.filesSearchCriteriaPanel = new BlueMirrorIndexer.Components.FilesSearchCriteriaPanel();
             this.tcBottom = new System.Windows.Forms.TabControl();
             this.tpLogicalFolders = new System.Windows.Forms.TabPage();
             this.scFolders = new System.Windows.Forms.SplitContainer();
+            this.tvLogicalFolders = new BlueMirrorIndexer.Components.LogicalFoldersTreeView();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnNewFolder = new System.Windows.Forms.ToolStripButton();
             this.btnEditFolder = new System.Windows.Forms.ToolStripButton();
@@ -150,10 +152,8 @@ namespace BlueMirrorIndexer
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
             this.fileOperations = new BlueMirror.Commons.FileOperations(this.components);
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.filesSearchCriteriaPanel = new BlueMirrorIndexer.Components.FilesSearchCriteriaPanel();
-            this.tvLogicalFolders = new BlueMirrorIndexer.Components.LogicalFoldersTreeView();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -793,6 +793,12 @@ namespace BlueMirrorIndexer
             // 
             resources.ApplyResources(this.chSrCrc, "chSrCrc");
             // 
+            // filesSearchCriteriaPanel
+            // 
+            resources.ApplyResources(this.filesSearchCriteriaPanel, "filesSearchCriteriaPanel");
+            this.filesSearchCriteriaPanel.Name = "filesSearchCriteriaPanel";
+            this.filesSearchCriteriaPanel.SearchBtnClicked += new BlueMirrorIndexer.Components.SearchEventHandler(this.filesSearchCriteriaPanel_SearchBtnClicked);
+            // 
             // tcBottom
             // 
             this.tcBottom.Controls.Add(this.tpLogicalFolders);
@@ -822,6 +828,21 @@ namespace BlueMirrorIndexer
             // scFolders.Panel2
             // 
             this.scFolders.Panel2.Controls.Add(this.lvFolderElements);
+            // 
+            // tvLogicalFolders
+            // 
+            this.tvLogicalFolders.AllowDrop = true;
+            resources.ApplyResources(this.tvLogicalFolders, "tvLogicalFolders");
+            this.tvLogicalFolders.HideSelection = false;
+            this.tvLogicalFolders.LabelEdit = true;
+            this.tvLogicalFolders.Name = "tvLogicalFolders";
+            this.tvLogicalFolders.ShowLines = false;
+            this.tvLogicalFolders.LogicalFolderDeleted += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderDeleted);
+            this.tvLogicalFolders.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragDrop);
+            this.tvLogicalFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvLogicalFolders_AfterSelect);
+            this.tvLogicalFolders.LogicalFolderUpdated += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderUpdated);
+            this.tvLogicalFolders.NewLogicalFolderAdded += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_NewLogicalFolderAdded);
+            this.tvLogicalFolders.DragOver += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragOver);
             // 
             // toolStrip2
             // 
@@ -1072,37 +1093,17 @@ namespace BlueMirrorIndexer
             this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
             this.fileOperations.CurrentFilePathChanged += new System.EventHandler(this.fileOperations_CurrentFilePathChanged);
             this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
-            // 
-            // saveFileDialog
-            // 
-            this.saveFileDialog.DefaultExt = "bmin";
-            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
+            this.fileOperations.FileChanged += new System.EventHandler(this.fileOperations_FileChanged);
             // 
             // openFileDialog
             // 
             this.openFileDialog.DefaultExt = "bmin";
             resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
-            // filesSearchCriteriaPanel
+            // saveFileDialog
             // 
-            resources.ApplyResources(this.filesSearchCriteriaPanel, "filesSearchCriteriaPanel");
-            this.filesSearchCriteriaPanel.Name = "filesSearchCriteriaPanel";
-            this.filesSearchCriteriaPanel.SearchBtnClicked += new BlueMirrorIndexer.Components.SearchEventHandler(this.filesSearchCriteriaPanel_SearchBtnClicked);
-            // 
-            // tvLogicalFolders
-            // 
-            this.tvLogicalFolders.AllowDrop = true;
-            resources.ApplyResources(this.tvLogicalFolders, "tvLogicalFolders");
-            this.tvLogicalFolders.HideSelection = false;
-            this.tvLogicalFolders.LabelEdit = true;
-            this.tvLogicalFolders.Name = "tvLogicalFolders";
-            this.tvLogicalFolders.ShowLines = false;
-            this.tvLogicalFolders.LogicalFolderDeleted += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderDeleted);
-            this.tvLogicalFolders.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragDrop);
-            this.tvLogicalFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvLogicalFolders_AfterSelect);
-            this.tvLogicalFolders.LogicalFolderUpdated += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderUpdated);
-            this.tvLogicalFolders.NewLogicalFolderAdded += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_NewLogicalFolderAdded);
-            this.tvLogicalFolders.DragOver += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragOver);
+            this.saveFileDialog.DefaultExt = "bmin";
+            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
             // 
             // FrmMain
             // 
