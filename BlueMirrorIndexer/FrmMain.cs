@@ -384,7 +384,6 @@ namespace BlueMirrorIndexer
             Application.DoEvents();
             string lastOpenedFile = Properties.Settings.Default.LastOpenedFile;
             fileOperations.OpenFile(lastOpenedFile);
-            // updateControls();
         }
 
         private void updateVolumeButtons() {
@@ -1768,14 +1767,11 @@ namespace BlueMirrorIndexer
 
         private void fileOperations_NewFile(object sender, EventArgs e) {
             createNewVolumeDatabase();
-            // updateControls();
         }
 
         private void fileOperations_OpenFromFile(object sender, OpenFromFileEventArgs e) {
             Database = deserialize(e.FilePath);
             e.FileValid = Database != null;
-            //if(e.FileValid)
-            //    updateControls();
         }
 
         private DlgProgress openProgressDialog = null;

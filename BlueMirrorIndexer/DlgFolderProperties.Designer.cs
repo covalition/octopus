@@ -25,7 +25,7 @@ namespace BlueMirrorIndexer
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.tabControl1.SuspendLayout();
+            this.tcDescription.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@ namespace BlueMirrorIndexer
             this.ClientSize = new System.Drawing.Size(650, 261);
             this.Name = "DlgFolderProperties";
             this.Text = "Folder Properties";
-            this.tabControl1.ResumeLayout(false);
+            this.tcDescription.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.ResumeLayout(false);

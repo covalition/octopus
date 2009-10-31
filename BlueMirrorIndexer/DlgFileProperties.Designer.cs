@@ -29,7 +29,7 @@ namespace BlueMirrorIndexer
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.llFileSize = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tcDescription.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +40,7 @@ namespace BlueMirrorIndexer
             // 
             // tabControl1
             // 
-            this.tabControl1.Size = new System.Drawing.Size(650, 223);
+            this.tcDescription.Size = new System.Drawing.Size(650, 223);
             // 
             // tabPage1
             // 
@@ -107,7 +107,7 @@ namespace BlueMirrorIndexer
             this.ClientSize = new System.Drawing.Size(650, 261);
             this.Name = "DlgFileProperties";
             this.Text = "File Properties";
-            this.tabControl1.ResumeLayout(false);
+            this.tcDescription.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.ResumeLayout(false);

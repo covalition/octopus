@@ -1,3 +1,7 @@
+2.0.0.17
+- 'Description' tab added for disc, folder, file properties
+- 'License' tab in about box
+
 2.0.0.14
 - Name changed from "Blue Mirror CD/DVD Indexer"
 

@@ -19,9 +19,11 @@ namespace BlueMirrorIndexer {
         private TextBox tbItemName;
         private TextBox tbPath;
         private UcItemFolderClassification ucItemFolderClassification;
-        protected internal TabControl tabControl1;
+        protected internal TabControl tcDescription;
         protected internal TabPage tabPage1;
         protected internal TabPage tabPage2;
+        private TabPage tabPage3;
+        private TextBox tbDescription;
 		private System.ComponentModel.IContainer components = null;
 
         public DlgItemProperties() {
@@ -34,6 +36,7 @@ namespace BlueMirrorIndexer {
             llVolumeUserName.Text = itemInDatabase.GetVolumeUserName();
             tbPath.Text = itemInDatabase.GetPath();
             tbKeywords.Text = itemInDatabase.Keywords;
+            tbDescription.Text = itemInDatabase.Description;
             if(itemInDatabase.LogicalFolders != null) // na wszelki wypadek
                 ucItemFolderClassification.LogicalFolders = itemInDatabase.LogicalFolders.ToArray();
             //ucItemFolderClassification.ImageList = folderImages;
@@ -71,12 +74,15 @@ namespace BlueMirrorIndexer {
             this.tbPath = new System.Windows.Forms.TextBox();
             this.tbItemName = new System.Windows.Forms.TextBox();
             this.ucItemFolderClassification = new BlueMirrorIndexer.UcItemFolderClassification();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcDescription = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tbDescription = new System.Windows.Forms.TextBox();
+            this.tcDescription.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOK
@@ -115,12 +121,8 @@ namespace BlueMirrorIndexer {
             // tbKeywords
             // 
             resources.ApplyResources(this.tbKeywords, "tbKeywords");
-            // 
-            // 
-            // 
             this.tbKeywords.Name = "tbKeywords";
             this.toolTip1.SetToolTip(this.tbKeywords, resources.GetString("tbKeywords.ToolTip"));
-            
             // 
             // label7
             // 
@@ -158,13 +160,14 @@ namespace BlueMirrorIndexer {
             this.ucItemFolderClassification.LogicalFolders = new BlueMirrorIndexer.LogicalFolder[0];
             this.ucItemFolderClassification.Name = "ucItemFolderClassification";
             // 
-            // tabControl1
+            // tcDescription
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            resources.ApplyResources(this.tabControl1, "tabControl1");
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
+            this.tcDescription.Controls.Add(this.tabPage1);
+            this.tcDescription.Controls.Add(this.tabPage2);
+            this.tcDescription.Controls.Add(this.tabPage3);
+            resources.ApplyResources(this.tcDescription, "tcDescription");
+            this.tcDescription.Name = "tcDescription";
+            this.tcDescription.SelectedIndex = 0;
             // 
             // tabPage1
             // 
@@ -187,20 +190,34 @@ namespace BlueMirrorIndexer {
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.tbDescription);
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tbDescription
+            // 
+            resources.ApplyResources(this.tbDescription, "tbDescription");
+            this.tbDescription.Name = "tbDescription";
+            // 
             // DlgItemProperties
             // 
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcDescription);
             this.Name = "DlgItemProperties";
             this.Load += new System.EventHandler(this.DlgItemProperties_Load);
             this.Controls.SetChildIndex(this.btnOK, 0);
             this.Controls.SetChildIndex(this.btnCancel, 0);
-            this.Controls.SetChildIndex(this.tabControl1, 0);
-            this.tabControl1.ResumeLayout(false);
+            this.Controls.SetChildIndex(this.tcDescription, 0);
+            this.tcDescription.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -208,6 +225,7 @@ namespace BlueMirrorIndexer {
 
         private void btnOK_Click(object sender, EventArgs e) {
             itemInDatabase.Keywords = tbKeywords.Text;
+            itemInDatabase.Description = tbDescription.Text;
             itemInDatabase.ApplyFolders(ucItemFolderClassification.LogicalFolders, true);
         }
 

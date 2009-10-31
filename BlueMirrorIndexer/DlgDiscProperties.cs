@@ -39,6 +39,8 @@ namespace BlueMirrorIndexer {
         private TabControl tcMain;
         private TabPage tabPage1;
         private TabPage tabPage2;
+        private TabPage tpDescription;
+        private TextBox tbDescription;
 		private System.ComponentModel.IContainer components = null;
 
 		public DlgDiscProperties() {
@@ -60,6 +62,7 @@ namespace BlueMirrorIndexer {
             llSize.Text = CustomConvert.ToKBAndB(discInDatabase.TotalSize);
             tbKeywords.Text = discInDatabase.Keywords;
             tbPhysicalLocation.Text = discInDatabase.PhysicalLocation;
+            tbDescription.Text = discInDatabase.Description;
             llScanned.Text = discInDatabase.Scanned.ToString();
             llLastOptions.Text = discInDatabase.GetOptionsDescription();
             llSerialNumber.Text = discInDatabase.SerialNumber;
@@ -92,7 +95,7 @@ namespace BlueMirrorIndexer {
 		private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DlgDiscProperties));
-            this.tbKeywords = new TextBox();
+            this.tbKeywords = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbPhysicalLocation = new System.Windows.Forms.TextBox();
@@ -121,9 +124,12 @@ namespace BlueMirrorIndexer {
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tpDescription = new System.Windows.Forms.TabPage();
+            this.tbDescription = new System.Windows.Forms.TextBox();
             this.tcMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tpDescription.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOK
@@ -138,13 +144,8 @@ namespace BlueMirrorIndexer {
             // tbKeywords
             // 
             resources.ApplyResources(this.tbKeywords, "tbKeywords");
-            // 
-            // 
-            // 
-            //this.tbKeywords.Border.Class = "TextBoxBorder";
             this.tbKeywords.Name = "tbKeywords";
             this.toolTip1.SetToolTip(this.tbKeywords, resources.GetString("tbKeywords.ToolTip"));
-            //this.tbKeywords.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             // 
             // label4
             // 
@@ -305,6 +306,7 @@ namespace BlueMirrorIndexer {
             // 
             this.tcMain.Controls.Add(this.tabPage1);
             this.tcMain.Controls.Add(this.tabPage2);
+            this.tcMain.Controls.Add(this.tpDescription);
             resources.ApplyResources(this.tcMain, "tcMain");
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
@@ -346,6 +348,18 @@ namespace BlueMirrorIndexer {
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tpDescription
+            // 
+            this.tpDescription.Controls.Add(this.tbDescription);
+            resources.ApplyResources(this.tpDescription, "tpDescription");
+            this.tpDescription.Name = "tpDescription";
+            this.tpDescription.UseVisualStyleBackColor = true;
+            // 
+            // tbDescription
+            // 
+            resources.ApplyResources(this.tbDescription, "tbDescription");
+            this.tbDescription.Name = "tbDescription";
+            // 
             // DlgDiscProperties
             // 
             resources.ApplyResources(this, "$this");
@@ -360,6 +374,8 @@ namespace BlueMirrorIndexer {
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tpDescription.ResumeLayout(false);
+            this.tpDescription.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -376,6 +392,7 @@ namespace BlueMirrorIndexer {
                 discInDatabase.Name = tbUserLabel.Text;
                 discInDatabase.Keywords = tbKeywords.Text;
                 discInDatabase.PhysicalLocation = tbPhysicalLocation.Text;
+                discInDatabase.Description = tbDescription.Text;
                 discInDatabase.ApplyFolders(ucItemFolderClassification.LogicalFolders, true);
             }
         }
