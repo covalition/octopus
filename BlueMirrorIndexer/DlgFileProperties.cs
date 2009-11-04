@@ -19,6 +19,8 @@ namespace BlueMirrorIndexer
             else
                 llCrc.Text = "(not computed)";
             llFileSize.Text = CustomConvert.ToKBAndB(fileInDatabase.Length);
+            llFileDescription.Text = string.IsNullOrEmpty(fileInDatabase.FileDescription) ? "(empty)" : fileInDatabase.FileDescription;
+            llFileVersion.Text = string.IsNullOrEmpty(fileInDatabase.FileVersion) ? "(empty)" : fileInDatabase.FileVersion;
         }
         
     }

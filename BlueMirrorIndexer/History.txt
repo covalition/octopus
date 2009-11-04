@@ -1,3 +1,6 @@
+2.0.0.18
+- Enhanced folder properties dialog
+
 2.0.0.17
 - 'Description' tab added for disc, folder, file properties
 - 'License' tab in about box
