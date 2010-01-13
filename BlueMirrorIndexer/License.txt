@@ -1,5 +1,5 @@
 ﻿Blue Mirror DVD/CD Indexer (Blue Mirror CD/DVD Indexer, Octopus CD/DVD Index)
-Copyright (c) 2006 - 2009 Roman Kowaliszyn
+Copyright (c) 2006 - 2010 Roman Kowaliszyn
 
 Microsoft Reciprocal License (Ms-RL)
 

@@ -447,6 +447,9 @@
   <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="textBox2.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
   <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
     <value>314, 168</value>
   </data>
@@ -629,6 +632,6 @@ Turkish: Polat Pinar</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirror.Commons.Forms.FormDialogList, BlueMirror.Commons, Version=1.0.0.25643, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Forms.FormDialogList, BlueMirror.Commons, Version=1.0.0.20347, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

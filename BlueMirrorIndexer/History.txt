@@ -1,8 +1,9 @@
-2.0.0.19
+2.0.0.20
 - FIXED: Minor bugs
+- Enhanced file/folder properties dialog box
 
 2.0.0.18
-- Enhanced file properties dialog
+- Enhanced file properties dialog box
 
 2.0.0.17
 - 'Description' tab added for disc, folder, file properties
