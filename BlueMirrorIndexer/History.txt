@@ -1,5 +1,8 @@
+2.0.0.19
+- FIXED: Minor bugs
+
 2.0.0.18
-- Enhanced folder properties dialog
+- Enhanced file properties dialog
 
 2.0.0.17
 - 'Description' tab added for disc, folder, file properties
@@ -10,7 +13,7 @@
 
 2.0.0.13
 - Import from Octopus / Blue Mirror 1.x implemented
-- FIXED: Compressed files appear twice in the search result list. 
+- FIXED: Compressed files appear twice in the search result list
 
 2.0.0.12
 - Indexing subdirectories 

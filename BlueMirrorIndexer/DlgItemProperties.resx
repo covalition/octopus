@@ -117,6 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="btnOK.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
     <value>479, 229</value>
@@ -132,6 +139,12 @@
   </data>
   <data name="&gt;&gt;btnOK.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="btnCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left</value>
+  </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>565, 229</value>
@@ -152,8 +165,11 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 16</value>
+    <value>56, 16</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 13</value>
@@ -174,13 +190,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 67</value>
+    <value>15, 69</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 13</value>
@@ -201,7 +220,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="llVolumeUserName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -209,8 +228,11 @@
   <data name="llVolumeUserName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
+  <data name="llVolumeUserName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="llVolumeUserName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 67</value>
+    <value>117, 69</value>
   </data>
   <data name="llVolumeUserName.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 13</value>
@@ -231,13 +253,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;llVolumeUserName.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 42</value>
+    <value>56, 42</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
@@ -258,9 +283,8 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tbKeywords.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
@@ -294,6 +318,9 @@
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
     <value>17, 14</value>
   </data>
@@ -322,10 +349,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="tbPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 39</value>
+    <value>120, 39</value>
   </data>
   <data name="tbPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>519, 20</value>
+    <value>516, 20</value>
   </data>
   <data name="tbPath.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -340,16 +367,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tbPath.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="tbItemName.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
   <data name="tbItemName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>117, 13</value>
+    <value>120, 13</value>
   </data>
   <data name="tbItemName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>519, 20</value>
+    <value>516, 20</value>
   </data>
   <data name="tbItemName.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
@@ -364,31 +391,55 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;tbItemName.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
-  <data name="ucItemFolderClassification.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 64</value>
   </data>
-  <data name="ucItemFolderClassification.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 35</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>618, 2</value>
   </data>
-  <data name="ucItemFolderClassification.Size" type="System.Drawing.Size, System.Drawing">
-    <value>626, 149</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
   </data>
-  <data name="ucItemFolderClassification.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;ucItemFolderClassification.Name" xml:space="preserve">
-    <value>ucItemFolderClassification</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ucItemFolderClassification.Type" xml:space="preserve">
-    <value>BlueMirrorIndexer.UcItemFolderClassification, BlueMirrorIndexer, Version=2.0.0.17, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;ucItemFolderClassification.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;ucItemFolderClassification.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="pbIcon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbIcon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 20</value>
+  </data>
+  <data name="pbIcon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pbIcon.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pbIcon.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="&gt;&gt;pbIcon.Name" xml:space="preserve">
+    <value>pbIcon</value>
+  </data>
+  <data name="&gt;&gt;pbIcon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbIcon.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;pbIcon.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -415,6 +466,30 @@
     <value>tcDescription</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ucItemFolderClassification.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ucItemFolderClassification.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 35</value>
+  </data>
+  <data name="ucItemFolderClassification.Size" type="System.Drawing.Size, System.Drawing">
+    <value>626, 149</value>
+  </data>
+  <data name="ucItemFolderClassification.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ucItemFolderClassification.Name" xml:space="preserve">
+    <value>ucItemFolderClassification</value>
+  </data>
+  <data name="&gt;&gt;ucItemFolderClassification.Type" xml:space="preserve">
+    <value>BlueMirrorIndexer.UcItemFolderClassification, BlueMirrorIndexer, Version=2.0.0.19, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ucItemFolderClassification.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;ucItemFolderClassification.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
@@ -534,6 +609,9 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>650, 261</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Item Properties</value>
   </data>
@@ -547,6 +625,6 @@
     <value>DlgItemProperties</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirror.Commons.Forms.FormDialogBase, BlueMirror.Commons, Version=1.0.0.33256, Culture=neutral, PublicKeyToken=null</value>
+    <value>BlueMirror.Commons.Forms.FormDialogBase, BlueMirror.Commons, Version=1.0.0.19993, Culture=neutral, PublicKeyToken=null</value>
   </data>
 </root>

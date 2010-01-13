@@ -35,6 +35,7 @@ namespace BlueMirrorIndexer
             this.llFileVersion = new System.Windows.Forms.Label();
             this.tcDescription.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +58,9 @@ namespace BlueMirrorIndexer
             this.tabPage1.Controls.Add(this.llCrc);
             this.tabPage1.Controls.Add(this.llFileSize);
             this.tabPage1.Size = new System.Drawing.Size(642, 197);
+            this.tabPage1.Controls.SetChildIndex(this.tbItemName, 0);
+            this.tabPage1.Controls.SetChildIndex(this.tbPath, 0);
+            this.tabPage1.Controls.SetChildIndex(this.pbIcon, 0);
             this.tabPage1.Controls.SetChildIndex(this.llFileSize, 0);
             this.tabPage1.Controls.SetChildIndex(this.llCrc, 0);
             this.tabPage1.Controls.SetChildIndex(this.label4, 0);
@@ -76,7 +80,7 @@ namespace BlueMirrorIndexer
             this.llCrc.AutoSize = true;
             this.llCrc.BackColor = System.Drawing.Color.Transparent;
             this.llCrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llCrc.Location = new System.Drawing.Point(117, 90);
+            this.llCrc.Location = new System.Drawing.Point(117, 94);
             this.llCrc.Name = "llCrc";
             this.llCrc.Size = new System.Drawing.Size(32, 13);
             this.llCrc.TabIndex = 109;
@@ -86,7 +90,7 @@ namespace BlueMirrorIndexer
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(15, 90);
+            this.label2.Location = new System.Drawing.Point(15, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 108;
@@ -96,7 +100,7 @@ namespace BlueMirrorIndexer
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(15, 115);
+            this.label4.Location = new System.Drawing.Point(15, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 110;
@@ -107,7 +111,7 @@ namespace BlueMirrorIndexer
             this.llFileSize.AutoSize = true;
             this.llFileSize.BackColor = System.Drawing.Color.Transparent;
             this.llFileSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llFileSize.Location = new System.Drawing.Point(117, 115);
+            this.llFileSize.Location = new System.Drawing.Point(117, 119);
             this.llFileSize.Name = "llFileSize";
             this.llFileSize.Size = new System.Drawing.Size(57, 13);
             this.llFileSize.TabIndex = 111;
@@ -117,7 +121,7 @@ namespace BlueMirrorIndexer
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(15, 140);
+            this.label6.Location = new System.Drawing.Point(15, 144);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 13);
             this.label6.TabIndex = 112;
@@ -128,7 +132,7 @@ namespace BlueMirrorIndexer
             this.llFileDescription.AutoSize = true;
             this.llFileDescription.BackColor = System.Drawing.Color.Transparent;
             this.llFileDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llFileDescription.Location = new System.Drawing.Point(117, 140);
+            this.llFileDescription.Location = new System.Drawing.Point(117, 144);
             this.llFileDescription.Name = "llFileDescription";
             this.llFileDescription.Size = new System.Drawing.Size(97, 13);
             this.llFileDescription.TabIndex = 113;
@@ -138,7 +142,7 @@ namespace BlueMirrorIndexer
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(15, 165);
+            this.label9.Location = new System.Drawing.Point(15, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(63, 13);
             this.label9.TabIndex = 114;
@@ -149,7 +153,7 @@ namespace BlueMirrorIndexer
             this.llFileVersion.AutoSize = true;
             this.llFileVersion.BackColor = System.Drawing.Color.Transparent;
             this.llFileVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llFileVersion.Location = new System.Drawing.Point(117, 165);
+            this.llFileVersion.Location = new System.Drawing.Point(117, 169);
             this.llFileVersion.Name = "llFileVersion";
             this.llFileVersion.Size = new System.Drawing.Size(75, 13);
             this.llFileVersion.TabIndex = 115;
@@ -164,6 +168,7 @@ namespace BlueMirrorIndexer
             this.tcDescription.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.ResumeLayout(false);
 
         }

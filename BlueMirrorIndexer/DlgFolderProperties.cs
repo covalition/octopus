@@ -13,6 +13,7 @@ namespace BlueMirrorIndexer
         public DlgFolderProperties(FolderInDatabase folderInDatabase)
             : base(folderInDatabase) {
             InitializeComponent();
+            pbIcon.Image = BlueMirror.Commons.Win32.GetFolderIcon(folderInDatabase.Name, BlueMirror.Commons.Win32.FileIconSize.Large).ToBitmap();
         }
         
     }

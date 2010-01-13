@@ -16,14 +16,16 @@ namespace BlueMirrorIndexer {
         private TextBox tbKeywords;
 		private Label label7;
         private ToolTip toolTip1;
-        private TextBox tbItemName;
-        private TextBox tbPath;
+        protected TextBox tbItemName;
+        protected TextBox tbPath;
         private UcItemFolderClassification ucItemFolderClassification;
         protected internal TabControl tcDescription;
         protected internal TabPage tabPage1;
         protected internal TabPage tabPage2;
         private TabPage tabPage3;
         private TextBox tbDescription;
+        protected PictureBox pbIcon;
+        private Panel panel1;
 		private System.ComponentModel.IContainer components = null;
 
         public DlgItemProperties() {
@@ -40,7 +42,7 @@ namespace BlueMirrorIndexer {
             if(itemInDatabase.LogicalFolders != null) // na wszelki wypadek
                 ucItemFolderClassification.LogicalFolders = itemInDatabase.LogicalFolders.ToArray();
             //ucItemFolderClassification.ImageList = folderImages;
-            
+            // pbIcon.Image = BlueMirror.Commons.Win32.GetFileIcon(itemInDatabase.Name, BlueMirror.Commons.Win32.FileIconSize.Large).ToBitmap();
             this.itemInDatabase = itemInDatabase;
 		}
 
@@ -73,14 +75,17 @@ namespace BlueMirrorIndexer {
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbPath = new System.Windows.Forms.TextBox();
             this.tbItemName = new System.Windows.Forms.TextBox();
-            this.ucItemFolderClassification = new BlueMirrorIndexer.UcItemFolderClassification();
             this.tcDescription = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pbIcon = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tbDescription = new System.Windows.Forms.TextBox();
+            this.ucItemFolderClassification = new BlueMirrorIndexer.UcItemFolderClassification();
             this.tcDescription.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -153,13 +158,6 @@ namespace BlueMirrorIndexer {
             this.tbItemName.Name = "tbItemName";
             this.tbItemName.ReadOnly = true;
             // 
-            // ucItemFolderClassification
-            // 
-            resources.ApplyResources(this.ucItemFolderClassification, "ucItemFolderClassification");
-            this.ucItemFolderClassification.BackColor = System.Drawing.Color.Transparent;
-            this.ucItemFolderClassification.LogicalFolders = new BlueMirrorIndexer.LogicalFolder[0];
-            this.ucItemFolderClassification.Name = "ucItemFolderClassification";
-            // 
             // tcDescription
             // 
             this.tcDescription.Controls.Add(this.tabPage1);
@@ -171,6 +169,8 @@ namespace BlueMirrorIndexer {
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.panel1);
+            this.tabPage1.Controls.Add(this.pbIcon);
             this.tabPage1.Controls.Add(this.tbPath);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.tbItemName);
@@ -180,6 +180,19 @@ namespace BlueMirrorIndexer {
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // pbIcon
+            // 
+            resources.ApplyResources(this.pbIcon, "pbIcon");
+            this.pbIcon.Name = "pbIcon";
+            this.pbIcon.TabStop = false;
             // 
             // tabPage2
             // 
@@ -202,6 +215,13 @@ namespace BlueMirrorIndexer {
             resources.ApplyResources(this.tbDescription, "tbDescription");
             this.tbDescription.Name = "tbDescription";
             // 
+            // ucItemFolderClassification
+            // 
+            resources.ApplyResources(this.ucItemFolderClassification, "ucItemFolderClassification");
+            this.ucItemFolderClassification.BackColor = System.Drawing.Color.Transparent;
+            this.ucItemFolderClassification.LogicalFolders = new BlueMirrorIndexer.LogicalFolder[0];
+            this.ucItemFolderClassification.Name = "ucItemFolderClassification";
+            // 
             // DlgItemProperties
             // 
             resources.ApplyResources(this, "$this");
@@ -214,6 +234,7 @@ namespace BlueMirrorIndexer {
             this.tcDescription.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbIcon)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);

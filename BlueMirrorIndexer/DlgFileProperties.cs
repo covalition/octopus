@@ -21,6 +21,7 @@ namespace BlueMirrorIndexer
             llFileSize.Text = CustomConvert.ToKBAndB(fileInDatabase.Length);
             llFileDescription.Text = string.IsNullOrEmpty(fileInDatabase.FileDescription) ? "(empty)" : fileInDatabase.FileDescription;
             llFileVersion.Text = string.IsNullOrEmpty(fileInDatabase.FileVersion) ? "(empty)" : fileInDatabase.FileVersion;
+            pbIcon.Image = BlueMirror.Commons.Win32.GetFileIcon(fileInDatabase.Name, BlueMirror.Commons.Win32.FileIconSize.Large).ToBitmap();
         }
         
     }
