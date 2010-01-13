@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="FrmMainTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Win32Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
