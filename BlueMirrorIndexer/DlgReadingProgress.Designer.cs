@@ -30,6 +30,7 @@ namespace BlueMirrorIndexer
             this.llFileCount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.llFileSize = new System.Windows.Forms.Label();
+            this.btnPause = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // llWorkStatus
@@ -38,19 +39,23 @@ namespace BlueMirrorIndexer
             this.llWorkStatus.AutoSize = false;
             this.llWorkStatus.Location = new System.Drawing.Point(10, 26);
             this.llWorkStatus.Size = new System.Drawing.Size(515, 18);
+            this.llWorkStatus.TabIndex = 1;
             // 
             // progressBar
             // 
             this.progressBar.Location = new System.Drawing.Point(10, 47);
             this.progressBar.Size = new System.Drawing.Size(513, 18);
+            this.progressBar.TabIndex = 2;
             // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(453, 170);
+            this.btnCancel.TabIndex = 13;
             // 
             // btnBackground
             // 
             this.btnBackground.Location = new System.Drawing.Point(364, 170);
+            this.btnBackground.TabIndex = 12;
             // 
             // llProgress
             // 
@@ -59,6 +64,7 @@ namespace BlueMirrorIndexer
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(10, 78);
+            this.label1.TabIndex = 3;
             // 
             // label2
             // 
@@ -76,7 +82,7 @@ namespace BlueMirrorIndexer
             this.llOperation.Location = new System.Drawing.Point(10, 6);
             this.llOperation.Name = "llOperation";
             this.llOperation.Size = new System.Drawing.Size(68, 13);
-            this.llOperation.TabIndex = 6;
+            this.llOperation.TabIndex = 0;
             this.llOperation.Text = "llOperation";
             // 
             // label3
@@ -86,7 +92,7 @@ namespace BlueMirrorIndexer
             this.label3.Location = new System.Drawing.Point(10, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Added files:";
             // 
             // llFileCount
@@ -97,7 +103,7 @@ namespace BlueMirrorIndexer
             this.llFileCount.Location = new System.Drawing.Point(86, 100);
             this.llFileCount.Name = "llFileCount";
             this.llFileCount.Size = new System.Drawing.Size(35, 13);
-            this.llFileCount.TabIndex = 10;
+            this.llFileCount.TabIndex = 6;
             this.llFileCount.Text = "0 / 0";
             // 
             // label4
@@ -107,7 +113,7 @@ namespace BlueMirrorIndexer
             this.label4.Location = new System.Drawing.Point(10, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 11;
+            this.label4.TabIndex = 7;
             this.label4.Text = "Scanned:";
             // 
             // llFileSize
@@ -118,8 +124,18 @@ namespace BlueMirrorIndexer
             this.llFileSize.Location = new System.Drawing.Point(86, 122);
             this.llFileSize.Name = "llFileSize";
             this.llFileSize.Size = new System.Drawing.Size(35, 13);
-            this.llFileSize.TabIndex = 12;
+            this.llFileSize.TabIndex = 8;
             this.llFileSize.Text = "0 / 0";
+            // 
+            // btnPause
+            // 
+            this.btnPause.Location = new System.Drawing.Point(283, 170);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(75, 23);
+            this.btnPause.TabIndex = 11;
+            this.btnPause.Text = "Pause";
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // DlgReadingProgress
             // 
@@ -130,7 +146,9 @@ namespace BlueMirrorIndexer
             this.Controls.Add(this.llFileCount);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.llFileSize);
+            this.Controls.Add(this.btnPause);
             this.Name = "DlgReadingProgress";
+            this.Controls.SetChildIndex(this.btnPause, 0);
             this.Controls.SetChildIndex(this.llFileSize, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.llFileCount, 0);
@@ -156,5 +174,6 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.Label llFileCount;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label llFileSize;
+        private System.Windows.Forms.Button btnPause;
     }
 }

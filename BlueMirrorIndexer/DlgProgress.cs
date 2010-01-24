@@ -19,11 +19,14 @@ namespace BlueMirrorIndexer
             started = DateTime.Now;
         }
 
+        string title;
         public DlgProgress(string title, string currentStatus)
             : this() {
-            Text = title;
+            this.title = title;
+            // Text = title;
             if (currentStatus != null)
                 llWorkStatus.Text = currentStatus;
+            updateTitle();
         }
 
         DateTime startShowing = DateTime.Now;
@@ -47,9 +50,14 @@ namespace BlueMirrorIndexer
                     llProgress.Text = progress.ToString() + "%";
                     if (currentStatus != null)
                         llWorkStatus.Text = currentStatus;
-                    Application.DoEvents();
+                    do {
+                        Application.DoEvents();
+                    }
+                    while (paused && !aborted);
+
                     if (aborted)
                         throw new AbortException();
+                    
                     lastTick = DateTime.Now;
 
                     TimeSpan elapsed = lastTick - started;
@@ -86,6 +94,21 @@ namespace BlueMirrorIndexer
                 FrmMain.Instance.Enabled = true;
             }
         }
+
+        bool paused = false;
+
+        protected virtual bool Paused {
+            get { return paused; }
+            set { 
+                paused = value;
+                updateTitle();
+            }
+        }
+
+        private void updateTitle() {
+            Text = title + (paused ? " [paused]" : string.Empty);
+        }
+
 
     }
 }

@@ -44,6 +44,23 @@ namespace BlueMirrorIndexer
             llOperation.Text = operation;
         }
 
+        private void btnPause_Click(object sender, EventArgs e) {
+            Paused = !Paused;
+        }
+
+        protected override bool Paused {
+            //get {
+            //    return base.Paused;
+            //}
+            set {
+                base.Paused = value;
+                if (Paused)
+                    btnPause.Text = "Resume";
+                else
+                    btnPause.Text = "Pause";
+            }
+        }
+
     }
 }
 
