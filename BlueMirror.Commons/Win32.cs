@@ -183,6 +183,9 @@ namespace BlueMirror.Commons
         public extern static bool DestroyIcon(IntPtr handle);
 
         [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        public extern static int SendMessage(IntPtr hWnd, UInt32 Msg, int wParam, IntPtr lParam);
+
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
         public extern static int SendMessage(IntPtr hWnd, UInt32 Msg, int wParam, int lParam);
 
         [DllImport("winmm.dll", EntryPoint = "mciSendStringA")]

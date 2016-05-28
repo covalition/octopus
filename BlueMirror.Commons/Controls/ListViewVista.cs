@@ -35,7 +35,7 @@ namespace BlueMirror.Commons.Controls
                 int iCount = Columns.Count;
                 int[] array = new int[iCount];
                 IntPtr ar = Marshal.AllocHGlobal(iCount * Marshal.SizeOf(typeof(int)));
-                Marshal.Copy(array, 0, ar, iCount); Win32.SendMessage(Handle, Win32.LVM_GETCOLUMNORDERARRAY, iCount, ar.ToInt32());
+                Marshal.Copy(array, 0, ar, iCount); Win32.SendMessage(Handle, Win32.LVM_GETCOLUMNORDERARRAY, iCount, ar);
                 Marshal.Copy(ar, array, 0, iCount);
                 Marshal.FreeHGlobal(ar);
                 ArrayList al = new ArrayList(array);
@@ -51,7 +51,7 @@ namespace BlueMirror.Commons.Controls
                     return;
                 IntPtr ar = Marshal.AllocHGlobal(iCount * Marshal.SizeOf(typeof(int)));
                 Marshal.Copy(array, 0, ar, iCount);
-                Win32.SendMessage(Handle, Win32.LVM_SETCOLUMNORDERARRAY, iCount, ar.ToInt32());
+                Win32.SendMessage(Handle, Win32.LVM_SETCOLUMNORDERARRAY, iCount, ar);
                 Marshal.FreeHGlobal(ar);
             }
         }
