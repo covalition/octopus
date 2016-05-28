@@ -10,20 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BlueMirrorIndexer</RootNamespace>
     <AssemblyName>BlueMirrorIndexer</AssemblyName>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
-    <SignManifests>true</SignManifests>
+    
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
-    <ManifestKeyFile>BlueMirrorIndexer_TemporaryKey.pfx</ManifestKeyFile>
+    
     <GenerateManifests>true</GenerateManifests>
-    <SignAssembly>false</SignAssembly>
+    
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
@@ -33,8 +25,7 @@
     <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <PublishUrl>ftp://ftp.componentfield.com/wwwroot/bluemirror/CdDvdIndexer/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -58,6 +49,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -384,7 +376,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BlueMirror.Commons\BlueMirror.Commons.csproj">
-      <Project>{6020286F-8C27-4E12-90B4-D3980814CB04}</Project>
+      <Project>{6020286f-8c27-4e12-90b4-d3980814cb04}</Project>
       <Name>BlueMirror.Commons</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlueMirror.Importer\BlueMirror.Importer.csproj">

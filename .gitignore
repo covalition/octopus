@@ -7,8 +7,9 @@
 /BlueMirrorIndexer/bin
 /Backup
 /Backup1
-/BlueMirrorIndexer/obj/Debug
-/BlueMirrorIndexer.Test/obj/Debug
+/BlueMirrorIndexer/obj
+/BlueMirrorIndexer.Test/obj
 *.user
-/BlueMirror.Commons/bin/Debug
-/BlueMirror.Commons/obj/Debug
+/BlueMirror.Commons/bin
+/BlueMirror.Commons/obj
+/BlueMirror.Importer/bin
