@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -29,13 +30,11 @@
     <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-    <TargetFrameworkSubset>
-    </TargetFrameworkSubset>
     <PublishUrl>ftp://ftp.componentfield.com/wwwroot/bluemirror/CdDvdIndexer/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -101,9 +100,7 @@
   <ItemGroup>
     <Compile Include="AbortException.cs" />
     <Compile Include="FolderImpl.cs" />
-    <Compile Include="Components\LogicalFoldersTreeView.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Components\LogicalFoldersTreeView.cs" />
     <Compile Include="VolumeDatabase.cs" />
     <Compile Include="Components\FilesSearchCriteriaPanel.cs">
       <SubType>UserControl</SubType>
@@ -117,51 +114,35 @@
     <Compile Include="Crc32.cs" />
     <Compile Include="DatabaseItemComparer.cs" />
     <Compile Include="DiscInDatabase.cs" />
-    <Compile Include="DlgAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgAbout.cs" />
     <Compile Include="DlgAbout.Designer.cs">
       <DependentUpon>DlgAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgDiscProperties.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgDiscProperties.cs" />
     <Compile Include="DlgReadingProgress.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DlgReadingProgress.Designer.cs">
       <DependentUpon>DlgReadingProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgReadVolume.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgReadVolume.cs" />
     <Compile Include="DlgReadVolume.Designer.cs">
       <DependentUpon>DlgReadVolume.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgSelectLogicalFolder.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgSelectLogicalFolder.cs" />
     <Compile Include="DlgSelectLogicalFolder.Designer.cs">
       <DependentUpon>DlgSelectLogicalFolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgFileProperties.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgFileProperties.cs" />
     <Compile Include="DlgFileProperties.Designer.cs">
       <DependentUpon>DlgFileProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgFolderProperties.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgFolderProperties.cs" />
     <Compile Include="DlgFolderProperties.Designer.cs">
       <DependentUpon>DlgFolderProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgItemProperties.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DlgEditLogicalFolder.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgItemProperties.cs" />
+    <Compile Include="DlgEditLogicalFolder.cs" />
     <Compile Include="DlgEditLogicalFolder.Designer.cs">
       <DependentUpon>DlgEditLogicalFolder.cs</DependentUpon>
     </Compile>
@@ -171,9 +152,7 @@
     <Compile Include="DlgProgress.Designer.cs">
       <DependentUpon>DlgProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgSelectDrive.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="DlgSelectDrive.cs" />
     <Compile Include="DlgSelectDrive.Designer.cs">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
     </Compile>
