@@ -74,7 +74,7 @@
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Library\ICSharpCode.SharpZipLib.dll</HintPath>
+      <HintPath>..\libs\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -367,7 +367,7 @@
     <None Include="Resources\database_go.png" />
     <Content Include="License.txt" />
     <Content Include="ReadMe.txt" />
-    <Content Include="unrar.dll">
+    <Content Include="..\libs\unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

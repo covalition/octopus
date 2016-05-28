@@ -17,7 +17,7 @@ using System.Collections;
  *  some time in building your own products.
  */
 
-// Modified 2009 by Blue Mirror
+// Modified 2009 by Blue Mirror Software
 
 namespace Schematrix
 {
