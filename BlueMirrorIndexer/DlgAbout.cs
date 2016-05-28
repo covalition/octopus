@@ -25,13 +25,13 @@ namespace BlueMirrorIndexer
 
         private void linkLabel1_Click(object sender, EventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "mailto:kowaliszyn@users.sourceforge.net";
+            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus/issues";
             navigate.Start();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://sourceforge.net/projects/octoindex/";
+            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus";
             navigate.Start();
         }
 
@@ -61,7 +61,7 @@ namespace BlueMirrorIndexer
 
         private void llCodePlex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            navigate.StartInfo.FileName = "http://bluemirrorsoftware.github.io/Octopus/";
             navigate.Start();
         }
 
