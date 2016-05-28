@@ -1,3 +1,6 @@
+2.0.1.0
+- Refreshed
+
 2.0.0.20
 - FIXED: Minor bugs
 - Enhanced file/folder properties dialog box

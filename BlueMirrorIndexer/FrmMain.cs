@@ -193,19 +193,19 @@ namespace BlueMirrorIndexer
 
         private void cmHomePage_Click(object sender, EventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi";
+            navigate.StartInfo.FileName = "http://bluemirrorsoftware.github.io/Octopus/";
             navigate.Start();
         }
 
         private void cmFeatureRequests_Click(object sender, EventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://www.codeplex.com/octopi/WorkItem/List.aspx";
+            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus/issues";
             navigate.Start();
         }
 
         private void cmWhatsNew_Click(object sender, EventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://develsblog.blogspot.com/";
+            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus/commits/master";
             navigate.Start();
         }
 

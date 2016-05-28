@@ -1,0 +1,16 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/BlueMirror.Importer/obj
+/BlueMirrorIndexer/bin
+/Backup
+/Backup1
+/BlueMirrorIndexer/obj
+/BlueMirrorIndexer.Test/obj
+*.user
+/BlueMirror.Commons/bin
+/BlueMirror.Commons/obj
+/BlueMirror.Importer/bin
+/setup

@@ -1,4 +1,5 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -9,53 +10,40 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BlueMirrorIndexer</RootNamespace>
     <AssemblyName>BlueMirrorIndexer</AssemblyName>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
-    <SignManifests>true</SignManifests>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
-    <ManifestKeyFile>BlueMirrorIndexer_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
-    <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
-    <TargetFrameworkSubset>
-    </TargetFrameworkSubset>
-    <PublishUrl>ftp://ftp.componentfield.com/wwwroot/bluemirror/CdDvdIndexer/</PublishUrl>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>..\..\Pages\setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Background</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
+    <UpdateInterval>14</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://www.componentfield.com/BlueMirror/CdDvdIndexer/</InstallUrl>
-    <SupportUrl>http://octopi.codeplex.com/</SupportUrl>
-    <ErrorReportUrl>http://octopi.codeplex.com/WorkItem/List.aspx</ErrorReportUrl>
-    <ProductName>Blue Mirror DVD CD Indexer 2.0</ProductName>
-    <PublisherName>Blue Mirror</PublisherName>
-    <SuiteName>CD DVD Indexer</SuiteName>
+    <InstallUrl>http://bluemirrorsoftware.github.io/Octopus/setup/</InstallUrl>
+    <SupportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</SupportUrl>
+    <ErrorReportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</ErrorReportUrl>
+    <ProductName>BlueMirror.Octopus</ProductName>
+    <PublisherName>Blue Mirror Software</PublisherName>
+    <SuiteName>BlueMirror.Octopus</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
-    <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>20</ApplicationRevision>
-    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <WebPage>install.htm</WebPage>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>2.0.1.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -319,6 +307,11 @@
     <Compile Include="StreamWithEvents.cs" />
   </ItemGroup>
   <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework Client Profile</ProductName>
@@ -332,7 +325,7 @@
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>true</Install>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
       <Visible>False</Visible>
@@ -343,11 +336,6 @@
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
@@ -384,8 +372,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BlueMirror.Commons\BlueMirror.Commons.csproj">
-      <Project>{6020286F-8C27-4E12-90B4-D3980814CB04}</Project>
+    <ProjectReference Include="..\BlueMirror.Commons\BlueMirror.Commons.csproj">
+      <Project>{6020286f-8c27-4e12-90b4-d3980814cb04}</Project>
       <Name>BlueMirror.Commons</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlueMirror.Importer\BlueMirror.Importer.csproj">
