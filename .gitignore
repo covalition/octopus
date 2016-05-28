@@ -10,3 +10,5 @@
 /BlueMirrorIndexer/obj/Debug
 /BlueMirrorIndexer.Test/obj/Debug
 *.user
+/BlueMirror.Commons/bin/Debug
+/BlueMirror.Commons/obj/Debug

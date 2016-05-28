@@ -100,7 +100,9 @@
   <ItemGroup>
     <Compile Include="AbortException.cs" />
     <Compile Include="FolderImpl.cs" />
-    <Compile Include="Components\LogicalFoldersTreeView.cs" />
+    <Compile Include="Components\LogicalFoldersTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="VolumeDatabase.cs" />
     <Compile Include="Components\FilesSearchCriteriaPanel.cs">
       <SubType>UserControl</SubType>
@@ -114,35 +116,51 @@
     <Compile Include="Crc32.cs" />
     <Compile Include="DatabaseItemComparer.cs" />
     <Compile Include="DiscInDatabase.cs" />
-    <Compile Include="DlgAbout.cs" />
+    <Compile Include="DlgAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgAbout.Designer.cs">
       <DependentUpon>DlgAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgDiscProperties.cs" />
+    <Compile Include="DlgDiscProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgReadingProgress.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DlgReadingProgress.Designer.cs">
       <DependentUpon>DlgReadingProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgReadVolume.cs" />
+    <Compile Include="DlgReadVolume.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgReadVolume.Designer.cs">
       <DependentUpon>DlgReadVolume.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgSelectLogicalFolder.cs" />
+    <Compile Include="DlgSelectLogicalFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgSelectLogicalFolder.Designer.cs">
       <DependentUpon>DlgSelectLogicalFolder.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgFileProperties.cs" />
+    <Compile Include="DlgFileProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgFileProperties.Designer.cs">
       <DependentUpon>DlgFileProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgFolderProperties.cs" />
+    <Compile Include="DlgFolderProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgFolderProperties.Designer.cs">
       <DependentUpon>DlgFolderProperties.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgItemProperties.cs" />
-    <Compile Include="DlgEditLogicalFolder.cs" />
+    <Compile Include="DlgItemProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgEditLogicalFolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgEditLogicalFolder.Designer.cs">
       <DependentUpon>DlgEditLogicalFolder.cs</DependentUpon>
     </Compile>
@@ -152,7 +170,9 @@
     <Compile Include="DlgProgress.Designer.cs">
       <DependentUpon>DlgProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="DlgSelectDrive.cs" />
+    <Compile Include="DlgSelectDrive.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgSelectDrive.Designer.cs">
       <DependentUpon>DlgSelectDrive.cs</DependentUpon>
     </Compile>
@@ -363,7 +383,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BlueMirror.Commons\BlueMirror.Commons.csproj">
+    <ProjectReference Include="..\BlueMirror.Commons\BlueMirror.Commons.csproj">
       <Project>{6020286F-8C27-4E12-90B4-D3980814CB04}</Project>
       <Name>BlueMirror.Commons</Name>
     </ProjectReference>

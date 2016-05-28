@@ -67,7 +67,7 @@
     <Shadow Include="Test References\BlueMirrorIndexer.accessor" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BlueMirror.Commons\BlueMirror.Commons.csproj">
+    <ProjectReference Include="..\BlueMirror.Commons\BlueMirror.Commons.csproj">
       <Project>{6020286F-8C27-4E12-90B4-D3980814CB04}</Project>
       <Name>BlueMirror.Commons</Name>
     </ProjectReference>

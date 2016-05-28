@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirrorIndexer", "BlueMi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Importer", "BlueMirror.Importer\BlueMirror.Importer.csproj", "{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Commons", "..\BlueMirror.Commons\BlueMirror.Commons.csproj", "{6020286F-8C27-4E12-90B4-D3980814CB04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Commons", "BlueMirror.Commons\BlueMirror.Commons.csproj", "{6020286F-8C27-4E12-90B4-D3980814CB04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirrorIndexer.Test", "BlueMirrorIndexer.Test\BlueMirrorIndexer.Test.csproj", "{1F70568C-2716-44CB-9E0C-673ABD4A01AC}"
 EndProject
