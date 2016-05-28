@@ -12,7 +12,7 @@ This application (CD/DVD cataloguer) creates indexes (table of contents) of your
 
 ## News ##
 
-The latest version 2.0.1.0 is available here: http://bluemirrorsoftware.github.io/Octopus/setup/install.htm
+The latest version 2.0.1.1 is available here: http://bluemirrorsoftware.github.io/Octopus/setup/install.htm
 
 ## Screenshots ##
 
