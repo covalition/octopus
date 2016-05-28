@@ -10,7 +10,7 @@ This application (CD/DVD cataloguer) creates indexes (table of contents) of your
 * For use: .NET Framework 4.0
 * For development: Visual Studio 2015
 
-## News ##
+## Download ##
 
 The latest version 2.0.1.1 is available here: http://bluemirrorsoftware.github.io/Octopus/setup/install.htm
 
