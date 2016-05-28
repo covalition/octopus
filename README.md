@@ -12,18 +12,23 @@ The latest version 2.0.1.0 is available here: http://bluemirrorsoftware.github.i
 ## Screenshots ##
 
 Main window:
+
 ![Main window](img/MainWindow.png)
 
 Search window:
+
 ![Search window](img/SearchWindow.png)
 
 Search window (advanced view):
+
 ![Search window (advanced view)](img/SearchWindow2.png)
 
 Read volume dialog:
+
 ![Read volume dialog](img/ReadingVolume2.png)
 
 Reading options:
+
 ![Reading options](img/ReadingOptions.png)
 
 ![Reading options](img/ReadingOptions2.png)
