@@ -1,0 +1,1 @@
+Copy all files from this folder to the target location of the setup.
