@@ -3,7 +3,12 @@ CD/DVD File Indexer
 
 ## Project Description ##
 
-This application (CD/DVD cataloguer) creates indexes (table of contents) of your floppy or CD/DVD discs. It helps you maintain and organize your collection of floppies, CDs and DVDs. It is designed to be simple, small, effective and easy to use. Written in C# with VS 2008.
+This application (CD/DVD cataloguer) creates indexes (table of contents) of your floppy or CD/DVD discs. It helps you maintain and organize your collection of floppies, CDs and DVDs. It is designed to be simple, small, effective and easy to use. Written in C#.
+
+### System Requirements ###
+
+* For use: .NET Framework 4.0
+* For development: Visual Studio 2015
 
 ## News ##
 
