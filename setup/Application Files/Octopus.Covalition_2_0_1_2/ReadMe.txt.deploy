@@ -1,0 +1,1 @@
+﻿BlueMirror.Commons.dll is available at http://bmcommons.codeplex.com/
