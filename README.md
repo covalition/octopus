@@ -1,18 +1,20 @@
-# BlueMirror.Octopus
-CD/DVD File Indexer
+# Octopus.Covalition
+File and Media Indexer
 
 ## Project Description ##
 
-This application (CD/DVD cataloguer) creates indexes (table of contents) of your floppy or CD/DVD discs. It helps you maintain and organize your collection of floppies, CDs and DVDs. It is designed to be simple, small, effective and easy to use. Written in C#.
+This application creates indexes (table of contents) of your floppies, CD/DVD disks, hard/external/network disks, pendrives and other removables media etc. It helps you organize and maintain your collection of files and provides reasonable search capabilities. It is designed to be simple, small, effective and easy to use. Written in C#.
+
+Former name: _Blue Mirror CD/DVD Indexer_.
 
 ### System Requirements ###
 
 * For use: .NET Framework 4.0
 * For development: Visual Studio 2015
 
-## Download ##
+## Installation ##
 
-The latest version 2.0.1.1 is available here: http://bluemirrorsoftware.github.io/Octopus/setup/install.htm
+You can download and install this application from: https://github.com/covalition/octopus/releases
 
 ## Screenshots ##
 
