@@ -35,11 +35,11 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://covalition.github.io/octopus/setup/</InstallUrl>
-    <SupportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</SupportUrl>
-    <ErrorReportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</ErrorReportUrl>
-    <ProductName>BlueMirror.Octopus</ProductName>
-    <PublisherName>Blue Mirror Software</PublisherName>
-    <SuiteName>BlueMirror.Octopus</SuiteName>
+    <SupportUrl>https://github.com/covalition/octopus/issues</SupportUrl>
+    <ErrorReportUrl>https://github.com/covalition/octopus/issues</ErrorReportUrl>
+    <ProductName>Octopus.Covalition</ProductName>
+    <PublisherName>Covalition</PublisherName>
+    <SuiteName>Octopus.Covalition</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
     <ApplicationRevision>2</ApplicationRevision>
