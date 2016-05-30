@@ -1793,6 +1793,7 @@ namespace BlueMirrorIndexer
                     }
                     try {
                         IFormatter formatter = new BinaryFormatter();
+                        formatter.Binder = new BMToCovDeserializationBinder();
                         cid = (VolumeDatabase)formatter.Deserialize(stream);
                     }
                     finally {

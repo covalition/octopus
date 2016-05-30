@@ -18,15 +18,13 @@ namespace BlueMirror.Importer
 
             public override Type BindToType(string assemblyName, string typeName) {
                 // Type typeToDeserialize = null;
-                if (assemblyName.StartsWith("Octopus.CDIndex")) {
-                    assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;                     }
+                if (assemblyName.StartsWith("Octopus.CDIndex"))
+                    assemblyName = System.Reflection.Assembly.GetExecutingAssembly().FullName;
                 typeName = typeName.Replace("Octopus.CDIndex, Version=", "BlueMirror.Importer, Version=");
                 return Type.GetType(String.Format("{0}, {1}", typeName, assemblyName));
                 // return typeToDeserialize;
             }
-            
         }
-
 
         public CdInDatabaseList Deserialize(string filePath) {
             CdInDatabaseList cid = null;

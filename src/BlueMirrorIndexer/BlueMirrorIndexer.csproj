@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BlueMirrorIndexer</RootNamespace>
-    <AssemblyName>BlueMirrorIndexer</AssemblyName>
+    <AssemblyName>Octopus.Covalition</AssemblyName>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
     <GenerateManifests>true</GenerateManifests>
@@ -42,8 +42,8 @@
     <SuiteName>BlueMirror.Octopus</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>2.0.1.1</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>2.0.1.2</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbortException.cs" />
+    <Compile Include="BMToCovDeserializationBinder.cs" />
     <Compile Include="FolderImpl.cs" />
     <Compile Include="Components\LogicalFoldersTreeView.cs">
       <SubType>Component</SubType>

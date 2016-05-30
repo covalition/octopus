@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BlueMirror.Octopus")]
+[assembly: AssemblyTitle("Octopus.Covalition")]
 [assembly: AssemblyDescription("DVD/CD Indexer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Blue Mirror Software")]
-[assembly: AssemblyProduct("BlueMirror.Octopus")]
-[assembly: AssemblyCopyright("Copyright © 2006 - 2016 Blue Mirror Software")]
+[assembly: AssemblyCompany("Covalition")]
+[assembly: AssemblyProduct("Octopus.Covalition")]
+[assembly: AssemblyCopyright("Copyright © 2006 - 2016 Covalition")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,6 +30,6 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("2.0.1.1")]
-[assembly: AssemblyFileVersion("2.0.1.1")]
+[assembly: AssemblyVersion("2.0.1.2")]
+[assembly: AssemblyFileVersion("2.0.1.2")]
 [assembly: NeutralResourcesLanguageAttribute("")]
