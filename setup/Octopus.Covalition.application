@@ -8,7 +8,7 @@
         <expiration maximumAge="5" unit="days" />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://bluemirrorsoftware.github.io/Octopus/setup/Octopus.Covalition.application" />
+    <deploymentProvider codebase="https://raw.githubusercontent.com/covalition/octopus/master/setup/Octopus.Covalition.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>oCvNyp9H3pgX0f9eTVX0clVXqGc=</dsig:DigestValue>
+        <dsig:DigestValue>LgbuFt5DdEnMd7T4FMPuCBeKiU4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
