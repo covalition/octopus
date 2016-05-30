@@ -34,7 +34,7 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://raw.githubusercontent.com/covalition/octopus/master/setup/</InstallUrl>
+    <InstallUrl>http://covalition.github.io/octopus/setup/</InstallUrl>
     <SupportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</SupportUrl>
     <ErrorReportUrl>https://github.com/BlueMirrorSoftware/Octopus/issues</ErrorReportUrl>
     <ProductName>BlueMirror.Octopus</ProductName>
