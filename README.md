@@ -1,4 +1,4 @@
-# BlueMirror.Octopus
+# Octopus.Covalition
 File and Media Indexer
 
 ## Project Description ##
