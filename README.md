@@ -5,14 +5,16 @@ File and Media Indexer
 
 This application creates indexes (table of contents) of your floppies, CD/DVD disks, hard/external/network disks, pendrives and other removables media etc. It helps you organize and maintain your collection of files and provides reasonable search capabilities. It is designed to be simple, small, effective and easy to use. Written in C#.
 
+Former name: _Blue Mirror CD/DVD Indexer_.
+
 ### System Requirements ###
 
 * For use: .NET Framework 4.0
 * For development: Visual Studio 2015
 
-## News ##
+## Installation ##
 
-The latest version 2.0.1.1 is available here: http://bluemirrorsoftware.github.io/Octopus/setup/install.htm
+You can download and install this application from: https://github.com/covalition/octopus/releases
 
 ## Screenshots ##
 
