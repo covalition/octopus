@@ -76,8 +76,8 @@ namespace BlueMirrorIndexer
             this.cmItemPropertiesFromFolders = new System.Windows.Forms.ToolStripMenuItem();
             this.cmFindInDatabaseFromFolders = new System.Windows.Forms.ToolStripMenuItem();
             this.cmRemoveFromFolder = new System.Windows.Forms.ToolStripMenuItem();
-            this.columnHeader16 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader17 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pmDrop = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmDropFolderAsItems = new System.Windows.Forms.ToolStripMenuItem();
             this.cmDropFoldersAsLogicalFolders = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,50 +89,52 @@ namespace BlueMirrorIndexer
             this.scDatabase = new System.Windows.Forms.SplitContainer();
             this.tvDatabaseFolderTree = new BlueMirror.Commons.Controls.TreeViewVista();
             this.lvDatabaseItems = new BlueMirror.Commons.Controls.ListViewVista();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader12 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader13 = new System.Windows.Forms.ColumnHeader();
-            this.chDescription = new System.Windows.Forms.ColumnHeader();
-            this.chDiFileVersion = new System.Windows.Forms.ColumnHeader();
-            this.chDiVolume = new System.Windows.Forms.ColumnHeader();
-            this.chDiPath = new System.Windows.Forms.ColumnHeader();
-            this.chDiCrc = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDiFileVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDiVolume = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDiPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDiCrc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tpSearch = new System.Windows.Forms.TabPage();
             this.searchBottomPanel = new System.Windows.Forms.Panel();
             this.lvSearchResults = new BlueMirror.Commons.Controls.ListViewVista();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.chSrAttributes = new System.Windows.Forms.ColumnHeader();
-            this.chSrKeywords = new System.Windows.Forms.ColumnHeader();
-            this.chSrFileExtension = new System.Windows.Forms.ColumnHeader();
-            this.chSrFileDescription = new System.Windows.Forms.ColumnHeader();
-            this.chSrFileVersion = new System.Windows.Forms.ColumnHeader();
-            this.chSrVolume = new System.Windows.Forms.ColumnHeader();
-            this.chSrPath = new System.Windows.Forms.ColumnHeader();
-            this.chSrCrc = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrAttributes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrKeywords = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrFileExtension = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrFileDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrFileVersion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrVolume = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSrCrc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.filesSearchCriteriaPanel = new BlueMirrorIndexer.Components.FilesSearchCriteriaPanel();
             this.tcBottom = new System.Windows.Forms.TabControl();
             this.tpLogicalFolders = new System.Windows.Forms.TabPage();
             this.scFolders = new System.Windows.Forms.SplitContainer();
+            this.tvLogicalFolders = new BlueMirrorIndexer.Components.LogicalFoldersTreeView();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btnNewFolder = new System.Windows.Forms.ToolStripButton();
             this.btnEditFolder = new System.Windows.Forms.ToolStripButton();
             this.btnDeleteFolder = new System.Windows.Forms.ToolStripButton();
             this.lvFolderElements = new BlueMirror.Commons.Controls.ListViewVista();
-            this.columnHeader18 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader19 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader20 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader21 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader22 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader23 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader24 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader25 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader26 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader27 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader28 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader18 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader19 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader20 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader21 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.sbFiles = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbSize = new System.Windows.Forms.ToolStripStatusLabel();
@@ -152,8 +154,6 @@ namespace BlueMirrorIndexer
             this.fileOperations = new BlueMirror.Commons.FileOperations(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.filesSearchCriteriaPanel = new BlueMirrorIndexer.Components.FilesSearchCriteriaPanel();
-            this.tvLogicalFolders = new BlueMirrorIndexer.Components.LogicalFoldersTreeView();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -161,11 +161,13 @@ namespace BlueMirrorIndexer
             this.pmIcon.SuspendLayout();
             this.pmItems.SuspendLayout();
             this.pmDrop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
             this.scMain.SuspendLayout();
             this.tcMain.SuspendLayout();
             this.tpDatabase.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scDatabase)).BeginInit();
             this.scDatabase.Panel1.SuspendLayout();
             this.scDatabase.Panel2.SuspendLayout();
             this.scDatabase.SuspendLayout();
@@ -173,6 +175,7 @@ namespace BlueMirrorIndexer
             this.searchBottomPanel.SuspendLayout();
             this.tcBottom.SuspendLayout();
             this.tpLogicalFolders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scFolders)).BeginInit();
             this.scFolders.Panel1.SuspendLayout();
             this.scFolders.Panel2.SuspendLayout();
             this.scFolders.SuspendLayout();
@@ -183,6 +186,7 @@ namespace BlueMirrorIndexer
             // 
             // pmTree
             // 
+            this.pmTree.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmTree.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmTreeItemPropertiesPopup,
             this.cmDeleteTreeItemPopup});
@@ -212,6 +216,7 @@ namespace BlueMirrorIndexer
             // 
             // pmList
             // 
+            this.pmList.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmItemPropertiesFromList,
             this.cmDeleteListItemPopup});
@@ -240,6 +245,7 @@ namespace BlueMirrorIndexer
             // 
             // pmSearchList
             // 
+            this.pmSearchList.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmSearchList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmItemPropertiesFromSearch,
             this.cmFindInDatabase});
@@ -263,6 +269,7 @@ namespace BlueMirrorIndexer
             // 
             // menuMain
             // 
+            this.menuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.volumeToolStripMenuItem,
@@ -475,6 +482,7 @@ namespace BlueMirrorIndexer
             // 
             // pmIcon
             // 
+            this.pmIcon.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmRestoreWindow});
             this.pmIcon.Name = "pmIcon";
@@ -488,6 +496,7 @@ namespace BlueMirrorIndexer
             // 
             // pmItems
             // 
+            this.pmItems.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmItems.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmItemPropertiesFromFolders,
             this.cmFindInDatabaseFromFolders,
@@ -526,6 +535,7 @@ namespace BlueMirrorIndexer
             // 
             // pmDrop
             // 
+            this.pmDrop.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.pmDrop.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmDropFolderAsItems,
             this.cmDropFoldersAsLogicalFolders,
@@ -608,12 +618,12 @@ namespace BlueMirrorIndexer
             this.tvDatabaseFolderTree.ImageList = this.ilTree;
             this.tvDatabaseFolderTree.Name = "tvDatabaseFolderTree";
             this.tvDatabaseFolderTree.ShowLines = false;
-            this.tvDatabaseFolderTree.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseUp);
-            this.tvDatabaseFolderTree.Enter += new System.EventHandler(this.tvDatabaseFolderTree_Enter);
             this.tvDatabaseFolderTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvDatabaseFolderTree_AfterSelect);
+            this.tvDatabaseFolderTree.Enter += new System.EventHandler(this.tvDatabaseFolderTree_Enter);
             this.tvDatabaseFolderTree.Leave += new System.EventHandler(this.tvDatabaseFolderTree_Leave);
-            this.tvDatabaseFolderTree.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseMove);
             this.tvDatabaseFolderTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseDown);
+            this.tvDatabaseFolderTree.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseMove);
+            this.tvDatabaseFolderTree.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseUp);
             // 
             // lvDatabaseItems
             // 
@@ -640,15 +650,15 @@ namespace BlueMirrorIndexer
             this.lvDatabaseItems.SmallImageList = this.ilSystem;
             this.lvDatabaseItems.UseCompatibleStateImageBehavior = false;
             this.lvDatabaseItems.View = System.Windows.Forms.View.Details;
+            this.lvDatabaseItems.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvDatabaseItems_ColumnClick);
             this.lvDatabaseItems.SelectedIndexChanged += new System.EventHandler(this.lvDatabaseItems_SelectedIndexChanged);
             this.lvDatabaseItems.DoubleClick += new System.EventHandler(this.lvDatabaseItems_DoubleClick);
-            this.lvDatabaseItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseUp);
-            this.lvDatabaseItems.Leave += new System.EventHandler(this.lvDatabaseItems_Leave);
             this.lvDatabaseItems.Enter += new System.EventHandler(this.lvDatabaseItems_Enter);
-            this.lvDatabaseItems.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvDatabaseItems_ColumnClick);
-            this.lvDatabaseItems.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseMove);
-            this.lvDatabaseItems.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseDown);
             this.lvDatabaseItems.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvDatabaseItems_KeyDown);
+            this.lvDatabaseItems.Leave += new System.EventHandler(this.lvDatabaseItems_Leave);
+            this.lvDatabaseItems.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseDown);
+            this.lvDatabaseItems.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseMove);
+            this.lvDatabaseItems.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvDatabaseItems_MouseUp);
             // 
             // columnHeader1
             // 
@@ -738,16 +748,16 @@ namespace BlueMirrorIndexer
             this.lvSearchResults.UseCompatibleStateImageBehavior = false;
             this.lvSearchResults.View = System.Windows.Forms.View.Details;
             this.lvSearchResults.VirtualMode = true;
+            this.lvSearchResults.CacheVirtualItems += new System.Windows.Forms.CacheVirtualItemsEventHandler(this.lvSearchResults_CacheVirtualItems);
+            this.lvSearchResults.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvSearchResults_ColumnClick);
+            this.lvSearchResults.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.lvSearchResults_RetrieveVirtualItem);
             this.lvSearchResults.SelectedIndexChanged += new System.EventHandler(this.lvSearchResults_SelectedIndexChanged);
             this.lvSearchResults.DoubleClick += new System.EventHandler(this.lvSearchResults_DoubleClick);
-            this.lvSearchResults.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseUp);
             this.lvSearchResults.Enter += new System.EventHandler(this.lvSearchResults_Enter);
-            this.lvSearchResults.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvSearchResults_ColumnClick);
-            this.lvSearchResults.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseMove);
-            this.lvSearchResults.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.lvSearchResults_RetrieveVirtualItem);
-            this.lvSearchResults.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseDown);
-            this.lvSearchResults.CacheVirtualItems += new System.Windows.Forms.CacheVirtualItemsEventHandler(this.lvSearchResults_CacheVirtualItems);
             this.lvSearchResults.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvSearchResults_KeyDown);
+            this.lvSearchResults.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseDown);
+            this.lvSearchResults.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseMove);
+            this.lvSearchResults.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvSearchResults_MouseUp);
             // 
             // columnHeader5
             // 
@@ -793,6 +803,12 @@ namespace BlueMirrorIndexer
             // 
             resources.ApplyResources(this.chSrCrc, "chSrCrc");
             // 
+            // filesSearchCriteriaPanel
+            // 
+            resources.ApplyResources(this.filesSearchCriteriaPanel, "filesSearchCriteriaPanel");
+            this.filesSearchCriteriaPanel.Name = "filesSearchCriteriaPanel";
+            this.filesSearchCriteriaPanel.SearchBtnClicked += new BlueMirrorIndexer.Components.SearchEventHandler(this.filesSearchCriteriaPanel_SearchBtnClicked);
+            // 
             // tcBottom
             // 
             this.tcBottom.Controls.Add(this.tpLogicalFolders);
@@ -823,8 +839,24 @@ namespace BlueMirrorIndexer
             // 
             this.scFolders.Panel2.Controls.Add(this.lvFolderElements);
             // 
+            // tvLogicalFolders
+            // 
+            this.tvLogicalFolders.AllowDrop = true;
+            resources.ApplyResources(this.tvLogicalFolders, "tvLogicalFolders");
+            this.tvLogicalFolders.HideSelection = false;
+            this.tvLogicalFolders.LabelEdit = true;
+            this.tvLogicalFolders.Name = "tvLogicalFolders";
+            this.tvLogicalFolders.ShowLines = false;
+            this.tvLogicalFolders.NewLogicalFolderAdded += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_NewLogicalFolderAdded);
+            this.tvLogicalFolders.LogicalFolderUpdated += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderUpdated);
+            this.tvLogicalFolders.LogicalFolderDeleted += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderDeleted);
+            this.tvLogicalFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvLogicalFolders_AfterSelect);
+            this.tvLogicalFolders.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragDrop);
+            this.tvLogicalFolders.DragOver += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragOver);
+            // 
             // toolStrip2
             // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNewFolder,
             this.btnEditFolder,
@@ -883,14 +915,14 @@ namespace BlueMirrorIndexer
             this.lvFolderElements.UseCompatibleStateImageBehavior = false;
             this.lvFolderElements.View = System.Windows.Forms.View.Details;
             this.lvFolderElements.SelectedIndexChanged += new System.EventHandler(this.lvLogicalFolderItems_SelectedIndexChanged);
-            this.lvFolderElements.DoubleClick += new System.EventHandler(this.lvLogicalFolderItems_DoubleClick);
-            this.lvFolderElements.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseUp);
-            this.lvFolderElements.Enter += new System.EventHandler(this.lvFolderElements_Enter);
             this.lvFolderElements.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvLogicalFolderItems_DragDrop);
-            this.lvFolderElements.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseMove);
-            this.lvFolderElements.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseDown);
-            this.lvFolderElements.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvFolderElements_KeyDown);
             this.lvFolderElements.DragOver += new System.Windows.Forms.DragEventHandler(this.lvLogicalFolderItems_DragOver);
+            this.lvFolderElements.DoubleClick += new System.EventHandler(this.lvLogicalFolderItems_DoubleClick);
+            this.lvFolderElements.Enter += new System.EventHandler(this.lvFolderElements_Enter);
+            this.lvFolderElements.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvFolderElements_KeyDown);
+            this.lvFolderElements.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseDown);
+            this.lvFolderElements.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseMove);
+            this.lvFolderElements.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvLogicalFolderItems_MouseUp);
             // 
             // columnHeader18
             // 
@@ -938,6 +970,7 @@ namespace BlueMirrorIndexer
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sbFiles,
             this.sbSize});
@@ -960,6 +993,7 @@ namespace BlueMirrorIndexer
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnNew,
             this.btnOpen,
@@ -1067,43 +1101,22 @@ namespace BlueMirrorIndexer
             // 
             this.fileOperations.OpenFileDialog = this.openFileDialog;
             this.fileOperations.SaveFileDialog = this.saveFileDialog;
+            this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
+            this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
             this.fileOperations.NewFile += new System.EventHandler(this.fileOperations_NewFile);
             this.fileOperations.ModifiedChanged += new System.EventHandler(this.fileOperations_ModifiedChanged);
-            this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
             this.fileOperations.CurrentFilePathChanged += new System.EventHandler(this.fileOperations_CurrentFilePathChanged);
-            this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
             this.fileOperations.FileChanged += new System.EventHandler(this.fileOperations_FileChanged);
             // 
             // openFileDialog
             // 
-            this.openFileDialog.DefaultExt = "bmin";
+            this.openFileDialog.DefaultExt = "occov";
             resources.ApplyResources(this.openFileDialog, "openFileDialog");
             // 
             // saveFileDialog
             // 
-            this.saveFileDialog.DefaultExt = "bmin";
+            this.saveFileDialog.DefaultExt = "occov";
             resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
-            // 
-            // filesSearchCriteriaPanel
-            // 
-            resources.ApplyResources(this.filesSearchCriteriaPanel, "filesSearchCriteriaPanel");
-            this.filesSearchCriteriaPanel.Name = "filesSearchCriteriaPanel";
-            this.filesSearchCriteriaPanel.SearchBtnClicked += new BlueMirrorIndexer.Components.SearchEventHandler(this.filesSearchCriteriaPanel_SearchBtnClicked);
-            // 
-            // tvLogicalFolders
-            // 
-            this.tvLogicalFolders.AllowDrop = true;
-            resources.ApplyResources(this.tvLogicalFolders, "tvLogicalFolders");
-            this.tvLogicalFolders.HideSelection = false;
-            this.tvLogicalFolders.LabelEdit = true;
-            this.tvLogicalFolders.Name = "tvLogicalFolders";
-            this.tvLogicalFolders.ShowLines = false;
-            this.tvLogicalFolders.LogicalFolderDeleted += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderDeleted);
-            this.tvLogicalFolders.DragDrop += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragDrop);
-            this.tvLogicalFolders.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvLogicalFolders_AfterSelect);
-            this.tvLogicalFolders.LogicalFolderUpdated += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_LogicalFolderUpdated);
-            this.tvLogicalFolders.NewLogicalFolderAdded += new System.EventHandler<System.EventArgs>(this.tvLogicalFolders_NewLogicalFolderAdded);
-            this.tvLogicalFolders.DragOver += new System.Windows.Forms.DragEventHandler(this.tvLogicalFolders_DragOver);
             // 
             // FrmMain
             // 
@@ -1116,10 +1129,10 @@ namespace BlueMirrorIndexer
             this.MainMenuStrip = this.menuMain;
             this.Name = "FrmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Shown += new System.EventHandler(this.FrmMain_Shown);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.pmTree.ResumeLayout(false);
             this.pmList.ResumeLayout(false);
             this.pmSearchList.ResumeLayout(false);
@@ -1130,11 +1143,13 @@ namespace BlueMirrorIndexer
             this.pmDrop.ResumeLayout(false);
             this.scMain.Panel1.ResumeLayout(false);
             this.scMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scMain)).EndInit();
             this.scMain.ResumeLayout(false);
             this.tcMain.ResumeLayout(false);
             this.tpDatabase.ResumeLayout(false);
             this.scDatabase.Panel1.ResumeLayout(false);
             this.scDatabase.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scDatabase)).EndInit();
             this.scDatabase.ResumeLayout(false);
             this.tpSearch.ResumeLayout(false);
             this.tpSearch.PerformLayout();
@@ -1144,6 +1159,7 @@ namespace BlueMirrorIndexer
             this.scFolders.Panel1.ResumeLayout(false);
             this.scFolders.Panel1.PerformLayout();
             this.scFolders.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scFolders)).EndInit();
             this.scFolders.ResumeLayout(false);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
