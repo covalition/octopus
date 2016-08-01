@@ -10,8 +10,9 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using BlueMirror.Commons;
 using BlueMirrorIndexer.Components;
+using Igorary.Forms;
+using Igorary.Forms.Components;
 using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer

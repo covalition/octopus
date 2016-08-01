@@ -1,14 +1,12 @@
 using System;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
-using System.Text;
 using System.Windows.Forms;
-using BlueMirror.Commons;
+using Igorary.Forms;
 using Igorary.Utils.Extensions;
 
-namespace BlueMirrorIndexer {
+namespace BlueMirrorIndexer
+{
 
-	[Serializable]
+    [Serializable]
 	public class FileInDatabase : ItemInDatabase {
 
 		public FileInDatabase(IFolder parent)

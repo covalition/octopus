@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.IO;
-using BlueMirror.Commons;
-using BlueMirror.Commons.Forms;
+using System.Windows.Forms;
+using Igorary.Forms;
+using Igorary.Forms.Forms;
 using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer

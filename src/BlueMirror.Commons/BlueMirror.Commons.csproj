@@ -110,11 +110,9 @@
     <Compile Include="Forms\FormExceptionHandler.Designer.cs">
       <DependentUpon>FormExceptionHandler.cs</DependentUpon>
     </Compile>
-    <Compile Include="HourGlass.cs" />
     <Compile Include="OpenFromFileEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveToFileEventArgs.cs" />
-    <Compile Include="Win32.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

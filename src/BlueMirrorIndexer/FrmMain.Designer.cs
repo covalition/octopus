@@ -151,7 +151,7 @@ namespace BlueMirrorIndexer
             this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
-            this.fileOperations = new BlueMirror.Commons.FileOperations(this.components);
+            this.fileOperations = new Igorary.Forms.Components.FileOperations(this.components);
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.pmTree.SuspendLayout();
@@ -1101,8 +1101,8 @@ namespace BlueMirrorIndexer
             // 
             this.fileOperations.OpenFileDialog = this.openFileDialog;
             this.fileOperations.SaveFileDialog = this.saveFileDialog;
-            this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
-            this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
+            this.fileOperations.SaveToFile += new System.EventHandler<Igorary.Forms.Components.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
+            this.fileOperations.OpenFromFile += new System.EventHandler<Igorary.Forms.Components.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
             this.fileOperations.NewFile += new System.EventHandler(this.fileOperations_NewFile);
             this.fileOperations.ModifiedChanged += new System.EventHandler(this.fileOperations_ModifiedChanged);
             this.fileOperations.CurrentFilePathChanged += new System.EventHandler(this.fileOperations_CurrentFilePathChanged);
@@ -1295,7 +1295,7 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton btnWhatsNew;
         private System.Windows.Forms.ToolStripMenuItem cmImportFrom1;
-        private BlueMirror.Commons.FileOperations fileOperations;
+        private Igorary.Forms.Components.FileOperations fileOperations;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
 	}

@@ -1,13 +1,10 @@
 using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
-using BlueMirror.Commons.Forms;
+using Igorary.Forms.Forms;
 using Igorary.Utils.Extensions;
 
-namespace BlueMirrorIndexer {
+namespace BlueMirrorIndexer
+{
 
     public class DlgDiscProperties : FormDialogBase
     {

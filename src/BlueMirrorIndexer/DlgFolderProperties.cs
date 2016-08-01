@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+using Igorary.Forms;
 
 namespace BlueMirrorIndexer
 {
@@ -13,7 +7,7 @@ namespace BlueMirrorIndexer
         public DlgFolderProperties(FolderInDatabase folderInDatabase)
             : base(folderInDatabase) {
             InitializeComponent();
-            pbIcon.Image = BlueMirror.Commons.Win32.GetFolderIcon(folderInDatabase.Name, BlueMirror.Commons.Win32.FileIconSize.Large).ToBitmap();
+            pbIcon.Image = Win32.GetFolderIcon(folderInDatabase.Name, Win32.FileIconSize.Large).ToBitmap();
         }
         
     }

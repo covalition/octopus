@@ -1,13 +1,8 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
-using BlueMirror.Commons.Forms;
+using System.Windows.Forms;
+using Igorary.Forms.Forms;
 
 namespace BlueMirrorIndexer
 {
