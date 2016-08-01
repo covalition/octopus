@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
@@ -31,7 +32,7 @@ namespace BlueMirrorIndexer
                     else
                         regexOptions = RegexOptions.Compiled | RegexOptions.IgnoreCase;
                     foreach(string searchingKeyword in searchingKeywordList)
-                        searchingKeywordRegexList.Add(new Regex(CustomConvert.ToRegex(searchingKeyword, true), regexOptions));
+                        searchingKeywordRegexList.Add(new Regex(searchingKeyword.ToRegex(true), regexOptions));
                 }
                 else {
                     string caseCorrectedKeywords;

@@ -1,24 +1,21 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Deployment.Application;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
+using BlueMirror.Commons;
+using BlueMirrorIndexer.Components;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
-    using Components;
-    using BlueMirror.Commons;
 
     public partial class FrmMain : Form
     {
@@ -323,7 +320,7 @@ namespace BlueMirrorIndexer
                     long sum = 0;
                     foreach (ListViewItem lvi in lvDatabaseItems.SelectedItems)
                         sum += (lvi.Tag as FileInDatabase).Length;
-                    sbSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(sum);
+                    sbSize.Text = Properties.Resources.Size + ": " + sum.ToKB();
                 }
                 else
                     if (tvDatabaseFolderTree.SelectedNode != null) {
@@ -331,7 +328,7 @@ namespace BlueMirrorIndexer
                         IFolder fid = (IFolder)tvDatabaseFolderTree.SelectedNode.Tag;
                         if (fid != null) {
                             sbFiles.Text = Properties.Resources.Files + ": " + fid.FileCount.ToString();
-                            sbSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(fid.GetFilesSize());
+                            sbSize.Text = Properties.Resources.Size + ": " + fid.GetFilesSize().ToKB();
                         }
                     }
                     else {
@@ -355,7 +352,7 @@ namespace BlueMirrorIndexer
                         if (iid is FileInDatabase)
                             sum += (iid as FileInDatabase).Length;
                 }
-                sbSize.Text = Properties.Resources.Size + ": " + CustomConvert.ToKB(sum);
+                sbSize.Text = Properties.Resources.Size + ": " + sum.ToKB();
             }
         }
 
@@ -822,7 +819,7 @@ namespace BlueMirrorIndexer
                         e.FileMask = e.FileMask.Substring(0, i) + e.FileMask.Substring(i + 2);
                 }
 
-                Regex fileMaskRegex = new Regex(CustomConvert.ToRegex(e.FileMask, e.TreatFileMaskAsWildcard), RegexOptions.Compiled | RegexOptions.IgnoreCase);
+                Regex fileMaskRegex = new Regex(e.FileMask.ToRegex(e.TreatFileMaskAsWildcard), RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
                 KeywordMatcher keywordMatcher = new KeywordMatcher(e.Keywords, e.AllKeywordsNeeded, e.CaseSensitiveKeywords, e.TreatKeywordsAsWildcard);
 

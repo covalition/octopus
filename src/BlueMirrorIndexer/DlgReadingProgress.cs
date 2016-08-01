@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
@@ -32,11 +33,11 @@ namespace BlueMirrorIndexer
                     if (FrmMain.Instance.ProgressInfo.FileCount != 0)
                         progress = (int)(runningFileCount * 100 / FrmMain.Instance.ProgressInfo.FileCount);
                 llFileCount.Text = runningFileCount + " / " + FrmMain.Instance.ProgressInfo.FileCount;
-                llFileSize.Text = CustomConvert.ToKBAndB(runningFileSize) + " / " + CustomConvert.ToKBAndB(FrmMain.Instance.ProgressInfo.FileSizeSum);
+                llFileSize.Text = runningFileSize.ToKBAndB() + " / " + FrmMain.Instance.ProgressInfo.FileSizeSum.ToKBAndB();
             }
             else {
                 llFileCount.Text = runningFileCount.ToString();
-                llFileSize.Text = CustomConvert.ToKBAndB(runningFileSize);
+                llFileSize.Text = runningFileSize.ToKBAndB();
             }
             if (progress > 100)
                 progress = 100;

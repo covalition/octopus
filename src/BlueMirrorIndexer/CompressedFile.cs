@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using ICSharpCode.SharpZipLib.Zip;
+using System.Windows.Forms;
+using BlueMirror.Commons;
+using ICSharpCode.SharpZipLib.BZip2;
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Tar;
-using ICSharpCode.SharpZipLib.BZip2;
+using ICSharpCode.SharpZipLib.Zip;
+using Igorary.Utils.Extensions;
 using Schematrix;
-using BlueMirror.Commons;
 
 namespace BlueMirrorIndexer
 {
@@ -288,7 +288,7 @@ namespace BlueMirrorIndexer
             lvi.Tag = this;
             lvi.ImageIndex = Win32.GetFileIconIndex(Name, Win32.FileIconSize.Small);
             if(Length > 0)
-                lvi.SubItems.Add(CustomConvert.ToKB(Length));
+                lvi.SubItems.Add(Length.ToKB());
             else
                 lvi.SubItems.Add(string.Empty);
             lvi.SubItems.Add(CreationTime.ToString("g"));

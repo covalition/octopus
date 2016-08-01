@@ -80,7 +80,6 @@
     <Compile Include="Controls\TreeViewVista.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Convert.cs" />
     <Compile Include="FileOperations.cs">
       <SubType>Component</SubType>
     </Compile>

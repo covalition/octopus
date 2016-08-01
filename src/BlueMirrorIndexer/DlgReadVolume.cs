@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using System.IO;
 using BlueMirror.Commons;
 using BlueMirror.Commons.Forms;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
@@ -39,8 +40,8 @@ namespace BlueMirrorIndexer
                     dlg.llCdLabel.Text = "(no label)";
                 dlg.llDriveFormat.Text = di.DriveFormat;
                 dlg.llDriveType.Text = di.DriveType.ToString();
-                dlg.llFreeSpace.Text = CustomConvert.ToKBAndB(di.TotalFreeSpace);
-                dlg.llSize.Text = CustomConvert.ToKBAndB(di.TotalSize);
+                dlg.llFreeSpace.Text = di.TotalFreeSpace.ToKBAndB();
+                dlg.llSize.Text = di.TotalSize.ToKBAndB();
                 dlg.tbKeywords.Text = string.Empty;
                 dlg.tbPhysicalLocation.Text = string.Empty;
                 dlg.cbAutoEject.Checked = Properties.Settings.Default.AutoEject;

@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Windows.Forms;
 using BlueMirror.Commons;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer {
 
@@ -75,7 +76,7 @@ namespace BlueMirrorIndexer {
             lvi.Text = Name;
             lvi.Tag = this;
             lvi.ImageIndex = Win32.GetFileIconIndex(Name, Win32.FileIconSize.Small);
-            lvi.SubItems.Add(CustomConvert.ToKB(Length));
+            lvi.SubItems.Add(Length.ToKB());
             lvi.SubItems.Add(CreationTime.ToString("g"));
             lvi.SubItems.Add(Attributes.ToString());
 
