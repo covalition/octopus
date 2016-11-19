@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Diagnostics;
-using BlueMirror.Commons.Forms;
+using Igorary.Forms.Forms;
 
-namespace BlueMirrorIndexer {
+namespace BlueMirrorIndexer
+{
     public class DlgItemProperties : FormDialogBase
     {
         protected internal Label label1;

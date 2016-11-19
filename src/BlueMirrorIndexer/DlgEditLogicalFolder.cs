@@ -1,11 +1,9 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using BlueMirror.Commons.Forms;
+using Igorary.Forms.Forms;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
@@ -113,7 +111,7 @@ namespace BlueMirrorIndexer
                 Text = string.Format("{0}: {1}", Text, toEdit.Name);
             long usedBytes = getUsedBytes();
             llFileSizeByte.Text = string.Format("{0:#,##0} B", usedBytes);
-            llFileSizeGByte.Text = CustomConvert.ToGB(usedBytes);
+            llFileSizeGByte.Text = usedBytes.ToGB();
             updateButtons();
             updateControls();
         }
@@ -136,10 +134,10 @@ namespace BlueMirrorIndexer
 
         private void updateDiscSizeInfo(long maxSizeBytes) {
             llDiscSizeByte.Text = string.Format("{0:#,##0} B", maxSizeBytes);
-            llDiscSizeGByte.Text = CustomConvert.ToGB(maxSizeBytes);
+            llDiscSizeGByte.Text = maxSizeBytes.ToGB();
             long usedBytes = getUsedBytes();
             llFreeSizeByte.Text = string.Format("{0:#,##0} B", maxSizeBytes - usedBytes);
-            llFreeSizeGByte.Text = CustomConvert.ToGB(maxSizeBytes - usedBytes);
+            llFreeSizeGByte.Text = (maxSizeBytes - usedBytes).ToGB();
             int usedPercent = maxSizeBytes == 0 ? 0 : (int)(((float)usedBytes / maxSizeBytes) * 100);
             progressBar.Value = usedPercent;
         }

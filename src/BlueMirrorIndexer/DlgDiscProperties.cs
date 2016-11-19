@@ -1,12 +1,10 @@
 using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
-using BlueMirror.Commons.Forms;
+using Igorary.Forms.Forms;
+using Igorary.Utils.Extensions;
 
-namespace BlueMirrorIndexer {
+namespace BlueMirrorIndexer
+{
 
     public class DlgDiscProperties : FormDialogBase
     {
@@ -58,8 +56,8 @@ namespace BlueMirrorIndexer {
                 llVolumeLabel.Text = discInDatabase.VolumeLabel;
             llDriveFormat.Text = discInDatabase.DriveFormat;
             llDriveType.Text = discInDatabase.DriveType.ToString();
-            llFreeSpace.Text = CustomConvert.ToKBAndB(discInDatabase.TotalFreeSpace);
-            llSize.Text = CustomConvert.ToKBAndB(discInDatabase.TotalSize);
+            llFreeSpace.Text = discInDatabase.TotalFreeSpace.ToKBAndB();
+            llSize.Text = discInDatabase.TotalSize.ToKBAndB();
             tbKeywords.Text = discInDatabase.Keywords;
             tbPhysicalLocation.Text = discInDatabase.PhysicalLocation;
             tbDescription.Text = discInDatabase.Description;

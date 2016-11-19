@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+using Igorary.Forms;
+using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {
@@ -18,10 +13,10 @@ namespace BlueMirrorIndexer
                 llCrc.Text = fileInDatabase.Crc.ToString("X");
             else
                 llCrc.Text = "(not computed)";
-            llFileSize.Text = CustomConvert.ToKBAndB(fileInDatabase.Length);
+            llFileSize.Text = fileInDatabase.Length.ToKBAndB();
             llFileDescription.Text = string.IsNullOrEmpty(fileInDatabase.FileDescription) ? "(empty)" : fileInDatabase.FileDescription;
             llFileVersion.Text = string.IsNullOrEmpty(fileInDatabase.FileVersion) ? "(empty)" : fileInDatabase.FileVersion;
-            pbIcon.Image = BlueMirror.Commons.Win32.GetFileIcon(fileInDatabase.Name, BlueMirror.Commons.Win32.FileIconSize.Large).ToBitmap();
+            pbIcon.Image = Win32.GetFileIcon(fileInDatabase.Name, Win32.FileIconSize.Large).ToBitmap();
         }
         
     }

@@ -353,7 +353,10 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 2.0.0.20
+        ///   Looks up a localized string similar to 2.0.1.0
+        ///- Refreshed
+        ///
+        ///2.0.0.20
         ///- FIXED: Minor bugs
         ///- Enhanced file/folder properties dialog box
         ///
@@ -373,7 +376,7 @@ namespace BlueMirrorIndexer.Properties {
         ///
         ///2.0.0.12
         ///- Indexing subdirectories 
-        ///- Indexing compressed files and archives: zip, r [rest of string was truncated]&quot;;.
+        ///- Indexing compressed fi [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string History {
             get {
@@ -427,8 +430,8 @@ namespace BlueMirrorIndexer.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Blue Mirror DVD/CD Indexer (Blue Mirror CD/DVD Indexer, Octopus CD/DVD Index)
-        ///Copyright (c) 2006 - 2010 Roman Kowaliszyn
+        ///   Looks up a localized string similar to BlueMirror.Octopus (CD/DVD Indexer)
+        ///Copyright (c) 2006 - 2016 Blue Mirror Software
         ///
         ///Microsoft Reciprocal License (Ms-RL)
         ///
@@ -438,7 +441,7 @@ namespace BlueMirrorIndexer.Properties {
         ///
         ///The terms &quot;reproduce,&quot; &quot;reproduction,&quot; &quot;derivative works,&quot; and &quot;distribution&quot; have the same meaning here as under U.S. copyright law.
         ///
-        ///A &quot;contribution&quot; is the o [rest of string was truncated]&quot;;.
+        ///A &quot;contribution&quot; is the original software, or any additions or  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string License {
             get {
