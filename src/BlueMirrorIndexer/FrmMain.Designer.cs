@@ -83,6 +83,25 @@ namespace BlueMirrorIndexer
             this.cmDropFoldersAsLogicalFolders = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.sbFiles = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sbSize = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnNew = new System.Windows.Forms.ToolStripButton();
+            this.btnOpen = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReadVolume = new System.Windows.Forms.ToolStripSplitButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnProperties = new System.Windows.Forms.ToolStripButton();
+            this.btnDelete = new System.Windows.Forms.ToolStripButton();
+            this.btnFindInDatabase = new System.Windows.Forms.ToolStripButton();
+            this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
+            this.fileOperations = new BlueMirror.Commons.FileOperations(this.components);
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.scMain = new System.Windows.Forms.SplitContainer();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tpDatabase = new System.Windows.Forms.TabPage();
@@ -135,25 +154,6 @@ namespace BlueMirrorIndexer
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.sbFiles = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sbSize = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnNew = new System.Windows.Forms.ToolStripButton();
-            this.btnOpen = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnReadVolume = new System.Windows.Forms.ToolStripSplitButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnProperties = new System.Windows.Forms.ToolStripButton();
-            this.btnDelete = new System.Windows.Forms.ToolStripButton();
-            this.btnFindInDatabase = new System.Windows.Forms.ToolStripButton();
-            this.btnRemoveFromFolder = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnWhatsNew = new System.Windows.Forms.ToolStripButton();
-            this.fileOperations = new BlueMirror.Commons.FileOperations(this.components);
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -161,6 +161,8 @@ namespace BlueMirrorIndexer
             this.pmIcon.SuspendLayout();
             this.pmItems.SuspendLayout();
             this.pmDrop.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).BeginInit();
             this.scMain.Panel1.SuspendLayout();
             this.scMain.Panel2.SuspendLayout();
@@ -180,8 +182,6 @@ namespace BlueMirrorIndexer
             this.scFolders.Panel2.SuspendLayout();
             this.scFolders.SuspendLayout();
             this.toolStrip2.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pmTree
@@ -566,6 +566,156 @@ namespace BlueMirrorIndexer
             this.cancelToolStripMenuItem.Image = global::BlueMirrorIndexer.Properties.Resources.agt_action_fail1;
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
             resources.ApplyResources(this.cancelToolStripMenuItem, "cancelToolStripMenuItem");
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sbFiles,
+            this.sbSize});
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
+            this.statusStrip1.Name = "statusStrip1";
+            // 
+            // sbFiles
+            // 
+            this.sbFiles.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.sbFiles.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
+            this.sbFiles.Name = "sbFiles";
+            resources.ApplyResources(this.sbFiles, "sbFiles");
+            // 
+            // sbSize
+            // 
+            this.sbSize.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
+            this.sbSize.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
+            this.sbSize.Name = "sbSize";
+            resources.ApplyResources(this.sbSize, "sbSize");
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnNew,
+            this.btnOpen,
+            this.btnSave,
+            this.toolStripSeparator2,
+            this.btnReadVolume,
+            this.toolStripSeparator3,
+            this.btnProperties,
+            this.btnDelete,
+            this.btnFindInDatabase,
+            this.btnRemoveFromFolder,
+            this.toolStripSeparator4,
+            this.btnWhatsNew});
+            resources.ApplyResources(this.toolStrip1, "toolStrip1");
+            this.toolStrip1.Name = "toolStrip1";
+            // 
+            // btnNew
+            // 
+            this.btnNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnNew.Image = global::BlueMirrorIndexer.Properties.Resources.page;
+            resources.ApplyResources(this.btnNew, "btnNew");
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Click += new System.EventHandler(this.cmNew_Click);
+            // 
+            // btnOpen
+            // 
+            this.btnOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnOpen.Image = global::BlueMirrorIndexer.Properties.Resources.folder_page;
+            resources.ApplyResources(this.btnOpen, "btnOpen");
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Click += new System.EventHandler(this.cmOpen_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSave.Image = global::BlueMirrorIndexer.Properties.Resources.disk;
+            resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Click += new System.EventHandler(this.cmSave_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // btnReadVolume
+            // 
+            this.btnReadVolume.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReadVolume.Image = global::BlueMirrorIndexer.Properties.Resources.CD;
+            resources.ApplyResources(this.btnReadVolume, "btnReadVolume");
+            this.btnReadVolume.Name = "btnReadVolume";
+            this.btnReadVolume.ButtonClick += new System.EventHandler(this.cmReadVolume_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // btnProperties
+            // 
+            this.btnProperties.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnProperties.Image = global::BlueMirrorIndexer.Properties.Resources.tag_blue_edit;
+            resources.ApplyResources(this.btnProperties, "btnProperties");
+            this.btnProperties.Name = "btnProperties";
+            this.btnProperties.Click += new System.EventHandler(this.cmProperties_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDelete.Image = global::BlueMirrorIndexer.Properties.Resources.delete;
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Click += new System.EventHandler(this.cmDelete_Click);
+            // 
+            // btnFindInDatabase
+            // 
+            this.btnFindInDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnFindInDatabase.Image = global::BlueMirrorIndexer.Properties.Resources.folder_find;
+            resources.ApplyResources(this.btnFindInDatabase, "btnFindInDatabase");
+            this.btnFindInDatabase.Name = "btnFindInDatabase";
+            this.btnFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabaseFrm_Click);
+            // 
+            // btnRemoveFromFolder
+            // 
+            this.btnRemoveFromFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRemoveFromFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_go;
+            resources.ApplyResources(this.btnRemoveFromFolder, "btnRemoveFromFolder");
+            this.btnRemoveFromFolder.Name = "btnRemoveFromFolder";
+            this.btnRemoveFromFolder.Click += new System.EventHandler(this.cmRemoveFromFolder_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
+            // 
+            // btnWhatsNew
+            // 
+            this.btnWhatsNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnWhatsNew.Image = global::BlueMirrorIndexer.Properties.Resources.world_go;
+            resources.ApplyResources(this.btnWhatsNew, "btnWhatsNew");
+            this.btnWhatsNew.Name = "btnWhatsNew";
+            this.btnWhatsNew.Click += new System.EventHandler(this.cmWhatsNew_Click);
+            // 
+            // fileOperations
+            // 
+            this.fileOperations.OpenFileDialog = this.openFileDialog;
+            this.fileOperations.SaveFileDialog = this.saveFileDialog;
+            this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
+            this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
+            this.fileOperations.NewFile += new System.EventHandler(this.fileOperations_NewFile);
+            this.fileOperations.ModifiedChanged += new System.EventHandler(this.fileOperations_ModifiedChanged);
+            this.fileOperations.CurrentFilePathChanged += new System.EventHandler(this.fileOperations_CurrentFilePathChanged);
+            this.fileOperations.FileChanged += new System.EventHandler(this.fileOperations_FileChanged);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.DefaultExt = "occov";
+            resources.ApplyResources(this.openFileDialog, "openFileDialog");
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.DefaultExt = "occov";
+            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
             // 
             // scMain
             // 
@@ -968,156 +1118,6 @@ namespace BlueMirrorIndexer
             // 
             resources.ApplyResources(this.columnHeader28, "columnHeader28");
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sbFiles,
-            this.sbSize});
-            resources.ApplyResources(this.statusStrip1, "statusStrip1");
-            this.statusStrip1.Name = "statusStrip1";
-            // 
-            // sbFiles
-            // 
-            this.sbFiles.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.sbFiles.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
-            this.sbFiles.Name = "sbFiles";
-            resources.ApplyResources(this.sbFiles, "sbFiles");
-            // 
-            // sbSize
-            // 
-            this.sbSize.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Right;
-            this.sbSize.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
-            this.sbSize.Name = "sbSize";
-            resources.ApplyResources(this.sbSize, "sbSize");
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnNew,
-            this.btnOpen,
-            this.btnSave,
-            this.toolStripSeparator2,
-            this.btnReadVolume,
-            this.toolStripSeparator3,
-            this.btnProperties,
-            this.btnDelete,
-            this.btnFindInDatabase,
-            this.btnRemoveFromFolder,
-            this.toolStripSeparator4,
-            this.btnWhatsNew});
-            resources.ApplyResources(this.toolStrip1, "toolStrip1");
-            this.toolStrip1.Name = "toolStrip1";
-            // 
-            // btnNew
-            // 
-            this.btnNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNew.Image = global::BlueMirrorIndexer.Properties.Resources.page;
-            resources.ApplyResources(this.btnNew, "btnNew");
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Click += new System.EventHandler(this.cmNew_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnOpen.Image = global::BlueMirrorIndexer.Properties.Resources.folder_page;
-            resources.ApplyResources(this.btnOpen, "btnOpen");
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Click += new System.EventHandler(this.cmOpen_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSave.Image = global::BlueMirrorIndexer.Properties.Resources.disk;
-            resources.ApplyResources(this.btnSave, "btnSave");
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Click += new System.EventHandler(this.cmSave_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // btnReadVolume
-            // 
-            this.btnReadVolume.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnReadVolume.Image = global::BlueMirrorIndexer.Properties.Resources.CD;
-            resources.ApplyResources(this.btnReadVolume, "btnReadVolume");
-            this.btnReadVolume.Name = "btnReadVolume";
-            this.btnReadVolume.ButtonClick += new System.EventHandler(this.cmReadVolume_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
-            // 
-            // btnProperties
-            // 
-            this.btnProperties.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnProperties.Image = global::BlueMirrorIndexer.Properties.Resources.tag_blue_edit;
-            resources.ApplyResources(this.btnProperties, "btnProperties");
-            this.btnProperties.Name = "btnProperties";
-            this.btnProperties.Click += new System.EventHandler(this.cmProperties_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDelete.Image = global::BlueMirrorIndexer.Properties.Resources.delete;
-            resources.ApplyResources(this.btnDelete, "btnDelete");
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Click += new System.EventHandler(this.cmDelete_Click);
-            // 
-            // btnFindInDatabase
-            // 
-            this.btnFindInDatabase.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnFindInDatabase.Image = global::BlueMirrorIndexer.Properties.Resources.folder_find;
-            resources.ApplyResources(this.btnFindInDatabase, "btnFindInDatabase");
-            this.btnFindInDatabase.Name = "btnFindInDatabase";
-            this.btnFindInDatabase.Click += new System.EventHandler(this.cmFindInDatabaseFrm_Click);
-            // 
-            // btnRemoveFromFolder
-            // 
-            this.btnRemoveFromFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRemoveFromFolder.Image = global::BlueMirrorIndexer.Properties.Resources.folder_go;
-            resources.ApplyResources(this.btnRemoveFromFolder, "btnRemoveFromFolder");
-            this.btnRemoveFromFolder.Name = "btnRemoveFromFolder";
-            this.btnRemoveFromFolder.Click += new System.EventHandler(this.cmRemoveFromFolder_Click);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            resources.ApplyResources(this.toolStripSeparator4, "toolStripSeparator4");
-            // 
-            // btnWhatsNew
-            // 
-            this.btnWhatsNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnWhatsNew.Image = global::BlueMirrorIndexer.Properties.Resources.world_go;
-            resources.ApplyResources(this.btnWhatsNew, "btnWhatsNew");
-            this.btnWhatsNew.Name = "btnWhatsNew";
-            this.btnWhatsNew.Click += new System.EventHandler(this.cmWhatsNew_Click);
-            // 
-            // fileOperations
-            // 
-            this.fileOperations.OpenFileDialog = this.openFileDialog;
-            this.fileOperations.SaveFileDialog = this.saveFileDialog;
-            this.fileOperations.SaveToFile += new System.EventHandler<BlueMirror.Commons.SaveToFileEventArgs>(this.fileOperations_SaveToFile);
-            this.fileOperations.OpenFromFile += new System.EventHandler<BlueMirror.Commons.OpenFromFileEventArgs>(this.fileOperations_OpenFromFile);
-            this.fileOperations.NewFile += new System.EventHandler(this.fileOperations_NewFile);
-            this.fileOperations.ModifiedChanged += new System.EventHandler(this.fileOperations_ModifiedChanged);
-            this.fileOperations.CurrentFilePathChanged += new System.EventHandler(this.fileOperations_CurrentFilePathChanged);
-            this.fileOperations.FileChanged += new System.EventHandler(this.fileOperations_FileChanged);
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.DefaultExt = "occov";
-            resources.ApplyResources(this.openFileDialog, "openFileDialog");
-            // 
-            // saveFileDialog
-            // 
-            this.saveFileDialog.DefaultExt = "occov";
-            resources.ApplyResources(this.saveFileDialog, "saveFileDialog");
-            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1141,6 +1141,10 @@ namespace BlueMirrorIndexer
             this.pmIcon.ResumeLayout(false);
             this.pmItems.ResumeLayout(false);
             this.pmDrop.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.scMain.Panel1.ResumeLayout(false);
             this.scMain.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scMain)).EndInit();
@@ -1152,7 +1156,6 @@ namespace BlueMirrorIndexer
             ((System.ComponentModel.ISupportInitialize)(this.scDatabase)).EndInit();
             this.scDatabase.ResumeLayout(false);
             this.tpSearch.ResumeLayout(false);
-            this.tpSearch.PerformLayout();
             this.searchBottomPanel.ResumeLayout(false);
             this.tcBottom.ResumeLayout(false);
             this.tpLogicalFolders.ResumeLayout(false);
@@ -1163,10 +1166,6 @@ namespace BlueMirrorIndexer
             this.scFolders.ResumeLayout(false);
             this.toolStrip2.ResumeLayout(false);
             this.toolStrip2.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

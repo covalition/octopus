@@ -305,7 +305,7 @@ namespace BlueMirrorIndexer.Components
             // FilesSearchCriteriaPanel
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.BtnSearch);
             this.Name = "FilesSearchCriteriaPanel";

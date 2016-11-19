@@ -367,7 +367,6 @@
     <None Include="Resources\CD.png" />
     <None Include="Resources\database_go.png" />
     <Content Include="License.txt" />
-    <Content Include="ReadMe.txt" />
     <Content Include="..\..\libs\unrar.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
