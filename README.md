@@ -9,7 +9,7 @@ Former name: _Blue Mirror CD/DVD Indexer_.
 
 ### System Requirements ###
 
-* For use: .NET Framework 4.0
+* For use: .NET Framework 4.5
 * For development: Visual Studio 2015
 
 ## Installation ##
