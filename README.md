@@ -20,22 +20,22 @@ You can download and install this application from: https://github.com/covalitio
 
 Main window:
 
-![Main window](doc/img/MainWindow.png)
+![Main window](docs/img/MainWindow.png)
 
 Search window:
 
-![Search window](doc/img/SearchWindow.png)
+![Search window](docs/img/SearchWindow.png)
 
 Search window (advanced view):
 
-![Search window (advanced view)](doc/img/SearchWindow2.png)
+![Search window (advanced view)](docs/img/SearchWindow2.png)
 
 Read volume dialog:
 
-![Read volume dialog](doc/img/ReadingVolume2.png)
+![Read volume dialog](docs/img/ReadingVolume2.png)
 
 Reading options:
 
-![Reading options](doc/img/ReadingOptions.png)
+![Reading options](docs/img/ReadingOptions.png)
 
-![Reading options](doc/img/ReadingOptions2.png)
+![Reading options](docs/img/ReadingOptions2.png)
