@@ -1,1 +1,1 @@
-Copy all files from this folder to the target location of the setup.
+The _setup.exe_ file is placed under the _Releases_ tab on _GitHub_. Other setup files are placed in _\docs\setup_ folder.
