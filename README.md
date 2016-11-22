@@ -1,5 +1,5 @@
 # Octopus.Covalition
-File and Media Indexer
+CD/DVD/HD Indexer
 
 ## Project Description ##
 
