@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Uix42zmuUHQSFdhOZ8LjlJGrY9TuxC85yQ5kd8PvunY=</dsig:DigestValue>
+        <dsig:DigestValue>NzeDjHTD6ztzVQt7GXcU6C1jNeDY0zauYGfeohgcGgk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,26 +66,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Forms.dll" size="36352">
-      <assemblyIdentity name="Igorary.Forms" version="1.0.1.27190" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Forms.dll" size="38400">
+      <assemblyIdentity name="Igorary.Forms" version="1.0.1.22029" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qRWJDapPLHfRZNO75Nc9oIkREEhnizMjJgSTVUujd48=</dsig:DigestValue>
+        <dsig:DigestValue>AGGW8fTu7i6JaYkwS1/sNq+8UrhxGuTyCfBfJqjK+bY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Utils.dll" size="8192">
-      <assemblyIdentity name="Igorary.Utils" version="1.0.1.28355" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\Igorary.Forms.resources.dll" size="4608">
+      <assemblyIdentity name="Igorary.Forms.resources" version="1.0.1.22029" language="pl" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v0F2RIw8PKdZ0LB2Y9qYg4X4NVcjSKOhWgKKbwE2FRQ=</dsig:DigestValue>
+        <dsig:DigestValue>rKI8EyRlBRXGVKOq2cknWBr1AifnJu8LV/pu7kT1iGI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Utils.dll" size="8704">
+      <assemblyIdentity name="Igorary.Utils" version="1.0.1.22029" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>3oKttt62hkjjZdmz+O5zEqAXrAHPCZuUzFM4dYU10Ug=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,7 +109,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hPt1rhfMuIg78g3ryOAIW9ff3u2t1LERoG+ZgEKZuLc=</dsig:DigestValue>
+        <dsig:DigestValue>48NZqRbDJ/77N8QL2L6aBUxPzPOUge5EtMo+01wKthc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,7 +121,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p3SGF16iyqgZp4AUGAd1rCQFW5W5dkTwulpJctXFn38=</dsig:DigestValue>
+        <dsig:DigestValue>h2uYEmBFmf/ZVCVB0R0fJ3jGY/FrywgQdwfsF0jY8as=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
