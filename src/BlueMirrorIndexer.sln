@@ -12,13 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirrorIndexer", "BlueMi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Importer", "BlueMirror.Importer\BlueMirror.Importer.csproj", "{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Forms", "..\..\Igorary\src\Igorary.Forms\Igorary.Forms.csproj", "{93E7CDDC-D960-4568-8191-282F48921D39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Forms", "..\submodules\Igorary\src\Igorary.Forms\Igorary.Forms.csproj", "{93E7CDDC-D960-4568-8191-282F48921D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Utils", "..\..\Igorary\src\Igorary.Utils\Igorary.Utils.csproj", "{2273FA24-9518-49EE-8893-E4B8D55DD692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Utils", "..\submodules\Igorary\src\Igorary.Utils\Igorary.Utils.csproj", "{2273FA24-9518-49EE-8893-E4B8D55DD692}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\Igorary\src\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{2273fa24-9518-49ee-8893-e4b8d55dd692}*SharedItemsImports = 4
+		..\submodules\Igorary\src\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{2273fa24-9518-49ee-8893-e4b8d55dd692}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
