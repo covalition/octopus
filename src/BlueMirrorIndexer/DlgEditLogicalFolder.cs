@@ -2,8 +2,8 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using Covalition.Igorary.Utils.Extensions;
 using Igorary.Forms.Forms;
-using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {

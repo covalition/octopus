@@ -1,4 +1,4 @@
-using Igorary.Utils.Extensions;
+using Covalition.Igorary.Utils.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

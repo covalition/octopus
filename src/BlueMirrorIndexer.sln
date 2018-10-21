@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5E6B202-2E94-4033-ABC6-BD439EAEA880}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueMirror.Importer", "Blue
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Forms", "..\submodules\Igorary\src\Igorary.Forms\Igorary.Forms.csproj", "{93E7CDDC-D960-4568-8191-282F48921D39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Utils", "..\submodules\Igorary\src\Igorary.Utils\Igorary.Utils.csproj", "{2273FA24-9518-49EE-8893-E4B8D55DD692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Utils", "..\submodules\Igorary\src\Igorary.Utils\Covalition.Igorary.Utils.csproj", "{2273FA24-9518-49EE-8893-E4B8D55DD692}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -44,6 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F31EF87-1819-4DAF-8E3C-F7FC6A0CD06E}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = BlueMirrorIndexer.vsmdi

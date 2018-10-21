@@ -379,9 +379,9 @@
       <Project>{93e7cddc-d960-4568-8191-282f48921d39}</Project>
       <Name>Igorary.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\submodules\Igorary\src\Igorary.Utils\Igorary.Utils.csproj">
+    <ProjectReference Include="..\..\submodules\Igorary\src\Igorary.Utils\Covalition.Igorary.Utils.csproj">
       <Project>{2273fa24-9518-49ee-8893-e4b8d55dd692}</Project>
-      <Name>Igorary.Utils</Name>
+      <Name>Covalition.Igorary.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\BlueMirror.Importer\BlueMirror.Importer.csproj">
       <Project>{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}</Project>

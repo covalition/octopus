@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
+using Covalition.Igorary.Utils.Extensions;
 using Igorary.Forms;
-using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {

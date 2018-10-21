@@ -1,11 +1,11 @@
+using Covalition.Igorary.Utils.Extensions;
+using Igorary.Forms;
+using Igorary.Forms.Forms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using Igorary.Forms;
-using Igorary.Forms.Forms;
-using Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {

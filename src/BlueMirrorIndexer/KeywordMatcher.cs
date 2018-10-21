@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
-using Igorary.Utils.Extensions;
+using Covalition.Igorary.Utils.Extensions;
 
 namespace BlueMirrorIndexer
 {

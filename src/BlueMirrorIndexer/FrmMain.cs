@@ -1,7 +1,7 @@
 using BlueMirrorIndexer.Components;
+using Covalition.Igorary.Utils.Extensions;
 using Igorary.Forms;
 using Igorary.Forms.Components;
-using Igorary.Utils.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
