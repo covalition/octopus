@@ -1,19 +1,15 @@
+using Igorary.Forms;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using BlueMirror.Commons;
-using Igorary.Forms;
+using System.Windows.Forms;
 
-namespace BlueMirrorIndexer {
+namespace BlueMirrorIndexer
+{
 
-	[Serializable]
+    [Serializable]
     public class FolderInDatabase : ItemInDatabase, IFolder
     {
 
@@ -246,6 +242,18 @@ namespace BlueMirrorIndexer {
 
         long IFolder.GetFilesSize() {
             return folderImpl.GetFilesSize();
+        }
+
+        long IFolder.GetFilesAndFoldersSize() {
+            return folderImpl.GetFilesAndFoldersSize();
+        }
+
+        IEnumerable<ChartPoint> IFolder.GetChartPoints() {
+            return folderImpl.GetChartPoints();
+        }
+
+        ChartPoint IFolder.GetChartPoint() {
+            return folderImpl.GetChartPoint();
         }
 
         public void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<FileInDatabase> listCrc, List<FileInDatabase> listNoCrc) {

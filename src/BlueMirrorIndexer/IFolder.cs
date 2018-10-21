@@ -37,26 +37,37 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        //string GetPath();
-
-        //void GetPath(List<ItemInDatabase> pathList);
-
-        //string GetVolumeUserName();
-
-        //string Name {
-        //    get;
-        //}
-
         void CopyToNode(TreeNode treeNode);
 
+        /// <summary>
+        /// Returns sum of the size of direct files only
+        /// </summary>
+        /// <returns></returns>
         long GetFilesSize();
 
         /// <summary>
-        /// Odnajduje tylko pliki (bez folderów).
+        /// Returns sum of the size of all files (in this folder and in all subfolders)
+        /// </summary>
+        long GetFilesAndFoldersSize();
+
+        /// <summary>
+        /// Insert files only (without folders)
         /// </summary>
         void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<FileInDatabase> listCrc, List<FileInDatabase> listNoCrc);
 
         void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<ItemInDatabase> list);
+
+        /// <summary>
+        /// Returns the pie chart points (files and subfolders)
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<ChartPoint> GetChartPoints();
+
+        /// <summary>
+        /// Returns the pie chart point as a whole folder
+        /// </summary>
+        /// <returns></returns>
+        ChartPoint GetChartPoint();
 
         //void RemoveFromAllLogicalFolders();
     }

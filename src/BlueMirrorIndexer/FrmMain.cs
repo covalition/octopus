@@ -1,19 +1,22 @@
+using BlueMirrorIndexer.Components;
+using Igorary.Forms;
+using Igorary.Forms.Components;
+using Igorary.Utils.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows.Forms;
-using BlueMirrorIndexer.Components;
-using Igorary.Forms;
-using Igorary.Forms.Components;
-using Igorary.Utils.Extensions;
+using Charting = System.Windows.Forms.DataVisualization.Charting;
 
 namespace BlueMirrorIndexer
 {
@@ -30,9 +33,11 @@ namespace BlueMirrorIndexer
                 Properties.Settings.Default.Updated = true;
             }
             cmScanNewMedia.Checked = Properties.Settings.Default.ScanNewMedia;
-            Text = string.Format("{0} {1}", ProductName, ProductVersion);
+            Text = string.Format("{0} {1}", ProductName, ShortProductVersion);
             btnSave.Enabled = cmSave.Enabled = false;
         }
+
+        private string ShortProductVersion => Assembly.GetExecutingAssembly().GetName().Version.ToString(3);
 
         private void updateControls() {
             updateTree();
@@ -42,7 +47,7 @@ namespace BlueMirrorIndexer
         }
 
         private void clearSearchList() {
-            searchResultList.Clear();
+            _searchResultList.Clear();
             displaySearchList();
         }
 
@@ -262,8 +267,8 @@ namespace BlueMirrorIndexer
         private ItemInDatabase getSelectedItemInSearch() {
             if (lvSearchResults.SelectedIndices.Count == 1) {
                 int index = lvSearchResults.SelectedIndices[0];
-                if ((index >= 0) && (index < searchResultList.Count))
-                    return searchResultList[index];
+                if ((index >= 0) && (index < _searchResultList.Count))
+                    return _searchResultList[index];
             }
             return null;
         }
@@ -289,7 +294,8 @@ namespace BlueMirrorIndexer
                     }
                 }
             }
-            updateStrip();
+            updateChart();
+            updateStripForFiles();
         }
 
         private void updateTree() {
@@ -310,10 +316,15 @@ namespace BlueMirrorIndexer
                 tvDatabaseFolderTree.EndUpdate();
             }
             updateList();
+            updateStripForFolder();
             updateVolumesInSearchCriterias();
         }
 
-        private void updateStrip() {
+        private void updateStripForFolder() {
+            sbFolderPath.Text = getSelectedFolder()?.FullName ?? "No folder selected.";
+        }
+
+        private void updateStripForFiles() {
             if (tcMain.SelectedTab == tpDatabase) {
                 if (lvDatabaseItems.SelectedItems.Count > 0) {
                     // selected items
@@ -344,12 +355,12 @@ namespace BlueMirrorIndexer
                     sbFiles.Text = Properties.Resources.SelectedFiles + ": " + lvSearchResults.SelectedIndices.Count.ToString();
 
                     foreach (int index in lvSearchResults.SelectedIndices) {
-                        sum += searchResultList[index].Length;
+                        sum += _searchResultList[index].Length;
                     }
                 }
                 else {
-                    sbFiles.Text = Properties.Resources.Files + ": " + searchResultList.Count.ToString();
-                    foreach (ItemInDatabase iid in searchResultList)
+                    sbFiles.Text = Properties.Resources.Files + ": " + _searchResultList.Count.ToString();
+                    foreach (ItemInDatabase iid in _searchResultList)
                         if (iid is FileInDatabase)
                             sum += (iid as FileInDatabase).Length;
                 }
@@ -437,7 +448,7 @@ namespace BlueMirrorIndexer
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e) {
             try {
-                breakCalculating = true;
+                _breakCalculating = true;
                 Properties.Settings.Default.DatabaseItemsColumnOrder = lvDatabaseItems.ColumnOrderArray;
                 Properties.Settings.Default.FolderElementsColumnOrder = lvFolderElements.ColumnOrderArray;
                 Properties.Settings.Default.SearchResultsColumnOrder = lvSearchResults.ColumnOrderArray;
@@ -459,12 +470,18 @@ namespace BlueMirrorIndexer
         #region Control events
 
         private void tvDatabaseFolderTree_AfterSelect(object sender, TreeViewEventArgs e) {
-            updateList();
-            UpdateCommands();
+            try {
+                updateList();
+                updateStripForFolder();
+                UpdateCommands();
+            }
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void lvDatabaseItems_SelectedIndexChanged(object sender, EventArgs e) {
-            updateStrip();
+            updateStripForFiles();
             UpdateCommands();
         }
 
@@ -490,26 +507,27 @@ namespace BlueMirrorIndexer
                 AcceptButton = filesSearchCriteriaPanel.BtnSearch;
             else
                 AcceptButton = null;
-            updateStrip();
+            updateStripForFiles();
         }
 
         #region Search result list virtual mode
 
-        int firstCachedItem = -1;
-        List<ListViewItem> cachedItems = null;
+        int _firstCachedItem = -1;
+        List<ListViewItem> _cachedItems = null;
+
         private void lvSearchResults_CacheVirtualItems(object sender, CacheVirtualItemsEventArgs e) {
-            firstCachedItem = e.StartIndex;
-            cachedItems = new List<ListViewItem>();
-            for (int i = firstCachedItem; i <= e.EndIndex; i++)
-                cachedItems.Add(searchResultList[i].ToListViewItem());
+            _firstCachedItem = e.StartIndex;
+            _cachedItems = new List<ListViewItem>();
+            for (int i = _firstCachedItem; i <= e.EndIndex; i++)
+                _cachedItems.Add(_searchResultList[i].ToListViewItem());
             updateSearchListImages();
         }
 
         private void lvSearchResults_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e) {
-            if ((cachedItems != null) && (e.ItemIndex - firstCachedItem < cachedItems.Count) && (e.ItemIndex - firstCachedItem >= 0))
-                e.Item = cachedItems[e.ItemIndex - firstCachedItem];
+            if ((_cachedItems != null) && (e.ItemIndex - _firstCachedItem < _cachedItems.Count) && (e.ItemIndex - _firstCachedItem >= 0))
+                e.Item = _cachedItems[e.ItemIndex - _firstCachedItem];
             else
-                e.Item = searchResultList[e.ItemIndex].ToListViewItem();
+                e.Item = _searchResultList[e.ItemIndex].ToListViewItem();
             //if (e.Item.SubItems.Count != 11)
             //    Debug.WriteLine(e.Item.Text + " " +  (e.Item.Tag as ItemInDatabase).GetCsvLine() + " " + e.Item.SubItems.Count);
         }
@@ -520,63 +538,65 @@ namespace BlueMirrorIndexer
             cmProperties_Click(sender, e);
         }
 
-        int lastColInListView = -1;
+        int _lastColInListView = -1;
+
         private void lvDatabaseItems_ColumnClick(object sender, ColumnClickEventArgs e) {
             int col = e.Column;
             bool ascending;
-            if (lastColInListView == col) {
+            if (_lastColInListView == col) {
                 ascending = false;
-                lastColInListView = -1;
+                _lastColInListView = -1;
             }
             else {
                 ascending = true;
-                lastColInListView = col;
+                _lastColInListView = col;
             }
             lvDatabaseItems.ListViewItemSorter = new DatabaseItemComparer(e.Column, ascending);
         }
 
         #endregion
 
-        IComparer<ItemInDatabase> searchListComparer = null;
-        int lastColInSearchView = -1;
+        IComparer<ItemInDatabase> _searchListComparer = null;
+        int _lastColInSearchView = -1;
+
         private void lvSearchResults_ColumnClick(object sender, ColumnClickEventArgs e) {
             int col = e.Column;
             bool ascending;
-            if (lastColInSearchView == col) {
+            if (_lastColInSearchView == col) {
                 ascending = false;
-                lastColInSearchView = -1;
+                _lastColInSearchView = -1;
             }
             else {
                 ascending = true;
-                lastColInSearchView = col;
+                _lastColInSearchView = col;
             }
-            searchListComparer = new SearchResultComparer(col, ascending);
+            _searchListComparer = new SearchResultComparer(col, ascending);
             displaySearchList();
         }
 
         private void displaySearchList() {
             lvSearchResults.VirtualListSize = 0;
-            if (searchListComparer != null)
-                searchResultList.Sort(searchListComparer);
-            lvSearchResults.VirtualListSize = searchResultList.Count;
-            updateStrip();
+            if (_searchListComparer != null)
+                _searchResultList.Sort(_searchListComparer);
+            lvSearchResults.VirtualListSize = _searchResultList.Count;
+            updateStripForFiles();
         }
 
         private void lvSearchResults_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e) {
-            updateStrip();
+            updateStripForFiles();
         }
 
         void closeOpenedProgressDialog() {
-            if (openProgressDialog != null) {
-                openProgressDialog.Close();
-                openProgressDialog = null;
+            if (_openProgressDialog != null) {
+                _openProgressDialog.Close();
+                _openProgressDialog = null;
             }
         }
 
         /// <param name="progress">0..100</param>
         void streamWithEvents_ProgressChanged(int progress) {
-            if (openProgressDialog != null) {
-                openProgressDialog.SetProgress(progress, null);
+            if (_openProgressDialog != null) {
+                _openProgressDialog.SetProgress(progress, null);
             }
         }
 
@@ -594,21 +614,19 @@ namespace BlueMirrorIndexer
         #region Read Volume
 
         private void readVolume() {
-            string drive;
-            if (selectedDrive(out drive))
+            if (selectedDrive(out string drive))
                 startReading(drive);
         }
 
-        bool duringRead = false;
+        bool _duringRead = false;
+
         private void startReading(string drive) {
-            if (duringRead)
+            if (_duringRead)
                 return;
             try {
-                duringRead = true;
+                _duringRead = true;
                 List<string> excludedElements = new List<string>();
-                LogicalFolder[] logicalFolders;
-                DiscInDatabase discToReplace;
-                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedElements, drive, out logicalFolders, this, Database, out discToReplace);
+                DiscInDatabase discInDatabase = DlgReadVolume.GetOptions(excludedElements, drive, out LogicalFolder[] logicalFolders, this, Database, out DiscInDatabase discToReplace);
                 if (discInDatabase != null) {
                     readCdOnDrive(drive, discInDatabase, excludedElements, logicalFolders, discToReplace);
                     if (Properties.Settings.Default.AutoEject)
@@ -624,7 +642,7 @@ namespace BlueMirrorIndexer
             catch (AbortException) {
             }
             finally {
-                duringRead = false;
+                _duringRead = false;
             }
         }
 
@@ -649,15 +667,15 @@ namespace BlueMirrorIndexer
                 startCalculatingProgressInfo(drive, excludedElements);
                 // bool useSize = Properties.Settings.Default.ComputeCrc || Properties.Settings.Default.BrowseInsideCompressed;
                 bool useSize = Properties.Settings.Default.ComputeCrc;
-                openProgressDialog = new DlgReadingProgress("Reading Volume...", null, useSize);
-                openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
+                _openProgressDialog = new DlgReadingProgress("Reading Volume...", null, useSize);
+                _openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
                 try {
                     if (!excludedElements.Contains(drive.ToLower())) {
                         long runningFileCount = 0;
                         long runningFileSize = 0;
                         try {
-                            discToScan.ReadFromDrive(drive, excludedElements, ref runningFileCount, ref runningFileSize, useSize, openProgressDialog as DlgReadingProgress, discToReplace);
-                            openProgressDialog.SetProgress(100, "Adding: " + discToScan.VolumeLabel);
+                            discToScan.ReadFromDrive(drive, excludedElements, ref runningFileCount, ref runningFileSize, useSize, _openProgressDialog as DlgReadingProgress, discToReplace);
+                            _openProgressDialog.SetProgress(100, "Adding: " + discToScan.VolumeLabel);
                             Database.AddDisc(discToScan);
                         }
                         catch {
@@ -674,7 +692,7 @@ namespace BlueMirrorIndexer
                     }
                 }
                 finally {
-                    breakCalculating = true;
+                    _breakCalculating = true;
                     Enabled = true;
                     closeOpenedProgressDialog();
                 }
@@ -684,12 +702,13 @@ namespace BlueMirrorIndexer
             }
         }
 
-        string calculatingDrive;
-        List<string> calculatingExcludedElements;
+        string _calculatingDrive;
+        List<string> _calculatingExcludedElements;
+
         private void startCalculatingProgressInfo(string drive, List<string> excludedFolders) {
-            calculatingDrive = drive;
-            calculatingExcludedElements = excludedFolders;
-            breakCalculating = false;
+            _calculatingDrive = drive;
+            _calculatingExcludedElements = excludedFolders;
+            _breakCalculating = false;
             ThreadStart calculateDelegate = new ThreadStart(calculateProgressInfo);
             Thread thread = new Thread(calculateDelegate);
             thread.Start();            
@@ -699,7 +718,7 @@ namespace BlueMirrorIndexer
             long fileCount = 0;
             long fileSizeSum = 0;
             try {
-                calculateProgressInfo(calculatingDrive, calculatingExcludedElements, ref fileCount, ref fileSizeSum);
+                calculateProgressInfo(_calculatingDrive, _calculatingExcludedElements, ref fileCount, ref fileSizeSum);
                 lock (this) {
                     ProgressInfo = new ProgressInfo(fileCount, fileSizeSum);
                 }
@@ -709,13 +728,14 @@ namespace BlueMirrorIndexer
             }
         }
 
-        bool breakCalculating = false;
+        bool _breakCalculating = false;
+
         private void calculateProgressInfo(string calculatingFolder, List<string> calculatingExcludedElements, ref long fileCount, ref long fileSizeSum) {
             try {
-                if (breakCalculating)
+                if (_breakCalculating)
                     throw new AbortException();
-                System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(calculatingFolder);
-                System.IO.DirectoryInfo[] subFolders = di.GetDirectories();
+                DirectoryInfo di = new DirectoryInfo(calculatingFolder);
+                DirectoryInfo[] subFolders = di.GetDirectories();
                 foreach (System.IO.DirectoryInfo subFolder in subFolders) {
                     string subFolderName = subFolder.FullName.ToLower();
                     if (!calculatingExcludedElements.Contains(subFolderName)) {
@@ -723,8 +743,8 @@ namespace BlueMirrorIndexer
                     }
                 }
 
-                System.IO.FileInfo[] filesInFolder = di.GetFiles();
-                foreach (System.IO.FileInfo fileInFolder in filesInFolder) {
+                FileInfo[] filesInFolder = di.GetFiles();
+                foreach (FileInfo fileInFolder in filesInFolder) {
                     if (!calculatingExcludedElements.Contains(fileInFolder.FullName.ToLower())) {
                         fileCount++;
                         fileSizeSum += fileInFolder.Length;
@@ -800,10 +820,10 @@ namespace BlueMirrorIndexer
 
         #region Search
 
-        private List<ItemInDatabase> searchResultList = new List<ItemInDatabase>();
+        private List<ItemInDatabase> _searchResultList = new List<ItemInDatabase>();
 
         private void filesSearchCriteriaPanel_SearchBtnClicked(object sender, SearchEventArgs e) {
-            search(e, searchResultList);
+            search(e, _searchResultList);
             displaySearchList();
         }
 
@@ -896,10 +916,11 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        bool duringSelectAll = false;
+        bool _duringSelectAll = false;
+
         private void lvSearchResults_SelectedIndexChanged(object sender, EventArgs e) {
-            if (!duringSelectAll) {
-                updateStrip();
+            if (!_duringSelectAll) {
+                updateStripForFiles();
                 UpdateCommands();
             }
         }
@@ -907,12 +928,12 @@ namespace BlueMirrorIndexer
         private void cmFindInDatabase_Click(object sender, EventArgs e) {
             if (lvSearchResults.SelectedIndices.Count == 1) {
                 int index = lvSearchResults.SelectedIndices[0];
-                ItemInDatabase itemInDatabase = searchResultList[index];
-                findInTree(itemInDatabase);
+                ItemInDatabase itemInDatabase = _searchResultList[index];
+                findInTree(itemInDatabase, true);
             }
         }
 
-        private void findInTree(ItemInDatabase itemInDatabase) {
+        private void findInTree(ItemInDatabase itemInDatabase, bool showFileList) {
             List<ItemInDatabase> pathList = new List<ItemInDatabase>();
             itemInDatabase.GetPath(pathList);
             TreeNode lastNode = null;
@@ -950,6 +971,8 @@ namespace BlueMirrorIndexer
             if (!found)
                 MessageBox.Show(Properties.Resources.FileNotFoundInDatabase, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
             else {
+                if (showFileList)
+                    tcRightHandSide.SelectedTab = tpFiles;
                 tcMain.SelectedTab = tpDatabase;
                 if (selectedItem != null) { // file found
                     lvDatabaseItems.Focus();
@@ -971,7 +994,7 @@ namespace BlueMirrorIndexer
         }
 
         private void updateTitle() {
-            Text = string.Format("{0} {1} [{2}{3}]", ProductName, ProductVersion, fileOperations.CurrentFilePath == null ? "untitled" : fileOperations.CurrentFilePath, fileOperations.Modified ? " *" : string.Empty);
+            Text = string.Format("{0} {1} [{2}{3}]", ProductName, ShortProductVersion, fileOperations.CurrentFilePath ?? "untitled", fileOperations.Modified ? " *" : string.Empty);
         }
 
         # region Export
@@ -1097,13 +1120,14 @@ namespace BlueMirrorIndexer
             }
         }
 
-        List<string> availableDrives = new List<string>();
+        List<string> _availableDrives = new List<string>();
+
         private void refreshDiscs() {
             refreshDiscs(false);
         }
 
         private void refreshDiscs(bool onDeviceArrival) {
-            lock (availableDrives) {
+            lock (_availableDrives) {
                 string addedDrive = null;
                 Cursor oldCursor = Cursor;
                 if (onDeviceArrival)
@@ -1114,11 +1138,11 @@ namespace BlueMirrorIndexer
                     foreach (DriveInfo drive in drives) {
                         if (drive.IsReady) {
                             newAvailableDrives.Add(drive.Name);
-                            if (onDeviceArrival && !availableDrives.Contains(drive.Name))
+                            if (onDeviceArrival && !_availableDrives.Contains(drive.Name))
                                 addedDrive = drive.Name;
                         }
                     }
-                    availableDrives = newAvailableDrives;
+                    _availableDrives = newAvailableDrives;
                 }
                 finally {
                     if (onDeviceArrival)
@@ -1159,8 +1183,8 @@ namespace BlueMirrorIndexer
         private void restoreWindow() {
             Show();
             niBackgroundProcess.Visible = false;
-            if (openProgressDialog != null)
-                openProgressDialog.Show();
+            if (_openProgressDialog != null)
+                _openProgressDialog.Show();
         }
 
         private void FrmMain_Shown(object sender, EventArgs e) {
@@ -1333,58 +1357,59 @@ namespace BlueMirrorIndexer
 
         #region Drag & drop
 
-        private Rectangle dragBoxFromMouseDown = Rectangle.Empty;
-        private List<ItemInDatabase> itemsToDrag = null;
+        private Rectangle _dragBoxFromMouseDown = Rectangle.Empty;
+        private List<ItemInDatabase> _itemsToDrag = null;
 
         private void lvDatabaseItems_MouseDown(object sender, MouseEventArgs e) {
             if (lvDatabaseItems.SelectedItems.Count > 0) {
-                itemsToDrag = new List<ItemInDatabase>();
+                _itemsToDrag = new List<ItemInDatabase>();
                 foreach (ListViewItem lvi in lvDatabaseItems.SelectedItems)
-                    itemsToDrag.Add(lvi.Tag as ItemInDatabase);
+                    _itemsToDrag.Add(lvi.Tag as ItemInDatabase);
                 Size dragSize = SystemInformation.DragSize;
-                dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
+                _dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
             }
             else
-                dragBoxFromMouseDown = Rectangle.Empty;
+                _dragBoxFromMouseDown = Rectangle.Empty;
         }
 
         private void tvDatabaseFolderTree_MouseDown(object sender, MouseEventArgs e) {
             if (tvDatabaseFolderTree.SelectedNode != null) {
-                itemsToDrag = new List<ItemInDatabase>();
-                itemsToDrag.Add(tvDatabaseFolderTree.SelectedNode.Tag as ItemInDatabase);
+                _itemsToDrag = new List<ItemInDatabase> {
+                    tvDatabaseFolderTree.SelectedNode.Tag as ItemInDatabase
+                };
                 Size dragSize = SystemInformation.DragSize;
-                dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
+                _dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
             }
             else
-                dragBoxFromMouseDown = Rectangle.Empty;
+                _dragBoxFromMouseDown = Rectangle.Empty;
         }
 
         private void lvSearchResults_MouseDown(object sender, MouseEventArgs e) {
             if (lvSearchResults.SelectedIndices.Count > 0) {
-                itemsToDrag = new List<ItemInDatabase>();
+                _itemsToDrag = new List<ItemInDatabase>();
                 foreach (int index in lvSearchResults.SelectedIndices)
-                    itemsToDrag.Add(searchResultList[index]);
+                    _itemsToDrag.Add(_searchResultList[index]);
                 Size dragSize = SystemInformation.DragSize;
-                dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
+                _dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
             }
             else
-                dragBoxFromMouseDown = Rectangle.Empty;
+                _dragBoxFromMouseDown = Rectangle.Empty;
         }
         
         private void lvLogicalFolderItems_MouseDown(object sender, MouseEventArgs e) {
             if (lvFolderElements.SelectedItems.Count > 0) {
-                itemsToDrag = new List<ItemInDatabase>();
+                _itemsToDrag = new List<ItemInDatabase>();
                 foreach (ListViewItem lvi in lvFolderElements.SelectedItems)
-                    itemsToDrag.Add(lvi.Tag as ItemInDatabase);
+                    _itemsToDrag.Add(lvi.Tag as ItemInDatabase);
                 Size dragSize = SystemInformation.DragSize;
-                dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
+                _dragBoxFromMouseDown = new Rectangle(new Point(e.X - (dragSize.Width / 2), e.Y - (dragSize.Height / 2)), dragSize);
             }
             else
-                dragBoxFromMouseDown = Rectangle.Empty;
+                _dragBoxFromMouseDown = Rectangle.Empty;
         }
 
         private void emptyRectangle() {
-            dragBoxFromMouseDown = Rectangle.Empty;
+            _dragBoxFromMouseDown = Rectangle.Empty;
         }
 
         private void lvDatabaseItems_MouseUp(object sender, MouseEventArgs e) {
@@ -1405,8 +1430,8 @@ namespace BlueMirrorIndexer
 
         private void startDragging(MouseEventArgs e, Control control) {
             if ((e.Button == MouseButtons.Left) || (e.Button == MouseButtons.Right)) {
-                if (dragBoxFromMouseDown != Rectangle.Empty && !dragBoxFromMouseDown.Contains(e.X, e.Y)) {
-                    /* DragDropEffects dropEffect = */ control.DoDragDrop(itemsToDrag, DragDropEffects.All | DragDropEffects.Link);
+                if (_dragBoxFromMouseDown != Rectangle.Empty && !_dragBoxFromMouseDown.Contains(e.X, e.Y)) {
+                    /* DragDropEffects dropEffect = */ control.DoDragDrop(_itemsToDrag, DragDropEffects.All | DragDropEffects.Link);
                 }
             }
         }
@@ -1516,8 +1541,7 @@ namespace BlueMirrorIndexer
         }
 
         private void startDroppingFromMenu(DragDropEffects effects) {
-            DropInfo di = pmDrop.Tag as DropInfo;
-            if (di != null) {
+            if (pmDrop.Tag is DropInfo di) {
                 pmDrop.Tag = null;
                 startDropping(di.TargetNode, effects, di.Items, di.LogicalFolder);
             }
@@ -1549,8 +1573,8 @@ namespace BlueMirrorIndexer
         private ItemInDatabase getSearchSelectedItem() {
             if (lvSearchResults.SelectedIndices.Count == 1) {
                 int index = lvSearchResults.SelectedIndices[0];
-                if ((index >= 0) && (index < searchResultList.Count))
-                    return searchResultList[index];
+                if ((index >= 0) && (index < _searchResultList.Count))
+                    return _searchResultList[index];
             }
             return null;
         }
@@ -1580,21 +1604,21 @@ namespace BlueMirrorIndexer
             if (lvFolderElements.SelectedIndices.Count == 1) {
                 ItemInDatabase itemInDatabase = getItemFromFolderElements();
                 if(itemInDatabase != null)
-                    findInTree(itemInDatabase);
+                    findInTree(itemInDatabase, true);
             }
         }
 
         private void lvSearchResults_KeyDown(object sender, KeyEventArgs e) {
             if (e.Control && e.KeyCode == Keys.A) {
                 e.SuppressKeyPress = true;
-                duringSelectAll = true;
+                _duringSelectAll = true;
                 try {
                     lvSearchResults.SelectAll();
                 }
                 finally {
-                    duringSelectAll = false;
+                    _duringSelectAll = false;
                 }
-                updateStrip();
+                updateStripForFiles();
             }
         }
 
@@ -1772,9 +1796,9 @@ namespace BlueMirrorIndexer
             e.FileValid = Database != null;
         }
 
-        private DlgProgress openProgressDialog = null;
-
-        long BIG_FILE_SIZE = 18000000;
+        private DlgProgress _openProgressDialog = null;
+        
+        private const long BIG_FILE_SIZE = 18000000;
 
         private VolumeDatabase deserialize(string filePath) {
             VolumeDatabase cid = null;
@@ -1786,8 +1810,8 @@ namespace BlueMirrorIndexer
                         streamWithEvents.ProgressChanged += new ProgressChangedEventHandler(streamWithEvents_ProgressChanged);
                         stream = streamWithEvents;
                         Enabled = false;
-                        openProgressDialog = new DlgProgress("Reading File...", "Reading: " + Path.GetFileName(filePath));
-                        openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
+                        _openProgressDialog = new DlgProgress("Reading File...", "Reading: " + Path.GetFileName(filePath));
+                        _openProgressDialog.StartShowing(new TimeSpan(0, 0, 1));
                     }
                     try {
                         IFormatter formatter = new BinaryFormatter();
@@ -1821,9 +1845,81 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        internal bool IsEmptyDatabase() {
-            return Database.IsEmpty();
+        internal bool IsEmptyDatabase() => Database.IsEmpty();
+
+        #region Chart
+
+        private int pieHitPointIndex(Charting.Chart pie, MouseEventArgs e) {
+            Charting.HitTestResult hitPiece = pie.HitTest(e.X, e.Y, Charting.ChartElementType.DataPoint);
+            if (hitPiece.PointIndex >= 0 && hitPiece.Series != null)
+                return hitPiece.PointIndex;
+
+            Charting.HitTestResult hitLegend = pie.HitTest(e.X, e.Y, Charting.ChartElementType.LegendItem);
+            if (hitLegend.PointIndex >= 0 && hitLegend.Series != null)
+                return hitLegend.PointIndex;
+
+            return -1;
         }
-        
+
+        private void chMain_MouseClick(object sender, MouseEventArgs e) {
+            int pointIndex = pieHitPointIndex(chMain, e);
+            if (pointIndex >= 0) {
+                Charting.DataPoint dp = chMain.Series[0].Points[pointIndex];
+                if (!isSelectedInTree(dp)) 
+                    findInTree((ItemInDatabase)dp.Tag, false);
+            }
+        }
+
+        private bool isSelectedInTree(Charting.DataPoint dp) => tvDatabaseFolderTree.SelectedNode?.Tag == dp.Tag;
+
+        private bool _duringChartUpdate;
+
+        private void chMain_MouseMove(object sender, MouseEventArgs e) {
+            if (!_duringChartUpdate) {
+                int pointIndex = pieHitPointIndex(chMain, e);
+                if (pointIndex >= 0 && pointIndex < chMain.Series[0].Points.Count) {
+                    Charting.DataPoint dp = chMain.Series[0].Points[pointIndex];
+                    if (!isSelectedInTree(dp)) {
+                        Cursor = Cursors.Hand;
+                        return;
+                    }
+                }
+            }
+            Cursor = Cursors.Default;
+        }
+
+        private void updateChart() {
+            _duringChartUpdate = true;
+            try {
+                Charting.DataPointCollection points = chMain.Series["Main"].Points;
+                points.Clear();
+
+                if (tvDatabaseFolderTree.SelectedNode?.Tag is IFolder fid) {
+                    Cursor c = Cursor.Current;
+                    Cursor.Current = Cursors.WaitCursor;
+                    try {
+                        IEnumerable<ChartPoint> chartPoints = fid.GetChartPoints()
+                            .Where(cp => cp.Size > 0)
+                            .OrderByDescending(cp => cp.Size);
+
+                        foreach (ChartPoint chartPoint in chartPoints) {
+                            Charting.DataPoint point = new Charting.DataPoint();
+                            point.LegendText = point.ToolTip = $"{chartPoint.Title}: {chartPoint.Size.ToKB()}";
+                            point.Tag = chartPoint.Item;
+                            point.SetValueY(chartPoint.Size);
+                            points.Add(point);
+                        }
+                    }
+                    finally {
+                        Cursor.Current = c;
+                    }
+                }
+            }
+            finally {
+                _duringChartUpdate = false;
+            }
+        }
+
+        #endregion
     }
 }

@@ -10,7 +10,7 @@ Former name: _Blue Mirror CD/DVD Indexer_.
 ### System Requirements ###
 
 * For use: .NET Framework 4.5
-* For development: Visual Studio 2015
+* For development: Visual Studio 2017
 
 ## Installation ##
 
@@ -30,7 +30,7 @@ Search window (advanced view):
 
 ![Search window (advanced view)](docs/img/SearchWindow2.png)
 
-Read volume dialog:
+The "Reading volume..." dialog box:
 
 ![Read volume dialog](docs/img/ReadingVolume2.png)
 
@@ -39,3 +39,7 @@ Reading options:
 ![Reading options](docs/img/ReadingOptions.png)
 
 ![Reading options](docs/img/ReadingOptions2.png)
+
+Basic statistics:
+
+![Basic statistics](docs/img/Statistics.png)

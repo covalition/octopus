@@ -1,49 +1,45 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using System.Threading;
-using System.Diagnostics;
 
 namespace BlueMirrorIndexer
 {
     public partial class DlgProgress : Form
     {
 
-        DateTime started;
+        DateTime _started;
+
         public DlgProgress() {
             InitializeComponent();
-            started = DateTime.Now;
+            _started = DateTime.Now;
         }
 
-        string title;
+        string _title;
+
         public DlgProgress(string title, string currentStatus)
             : this() {
-            this.title = title;
+            _title = title;
             // Text = title;
             if (currentStatus != null)
                 llWorkStatus.Text = currentStatus;
             updateTitle();
         }
 
-        DateTime startShowing = DateTime.Now;
+        DateTime _startShowing = DateTime.Now;
+
         public void StartShowing(TimeSpan wait) {
-            startShowing = startShowing + wait;
+            _startShowing = _startShowing + wait;
         }
 
-        private DateTime lastTick = DateTime.Now;
-        private bool dontShowAgain = false;
+        private DateTime _lastTick = DateTime.Now;
+        private bool _dontShowAgain = false;
         
         /// <param name="progress">0..100</param>
         public void SetProgress(int progress, string currentStatus) {
-            if (!dontShowAgain && !Visible && (startShowing <= DateTime.Now)) {
+            if (!_dontShowAgain && !Visible && (_startShowing <= DateTime.Now)) {
                 FrmMain.Instance.Enabled = false;
                 Show(FrmMain.Instance);
             }
-            TimeSpan ts = DateTime.Now - lastTick;
+            TimeSpan ts = DateTime.Now - _lastTick;
             if (ts.TotalSeconds > 0.5) {
                 if (Visible) {
                     progressBar.Value = progress;
@@ -53,14 +49,14 @@ namespace BlueMirrorIndexer
                     do {
                         Application.DoEvents();
                     }
-                    while (paused && !aborted);
+                    while (_paused && !_aborted);
 
-                    if (aborted)
+                    if (_aborted)
                         throw new AbortException();
                     
-                    lastTick = DateTime.Now;
+                    _lastTick = DateTime.Now;
 
-                    TimeSpan elapsed = lastTick - started;
+                    TimeSpan elapsed = _lastTick - _started;
                     if (progress > 0) {
                         TimeSpan estimated = new TimeSpan(0, 0, (int)(elapsed.TotalSeconds / progress * 100));
                         llElapsedTime.Text = timeToString(elapsed) + " / " + timeToString(estimated);
@@ -76,15 +72,16 @@ namespace BlueMirrorIndexer
             return time.Hours + ":" + time.Minutes.ToString("00") + ":" + time.Seconds.ToString("00");
         }
 
-        bool aborted = false;
+        bool _aborted = false;
+
         private void btnCancel_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Are you sure to cancel this operation?", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 // throw new AbortException();
-                aborted = true;
+                _aborted = true;
         }
 
         private void btnBackground_Click(object sender, EventArgs e) {
-            dontShowAgain = true;
+            _dontShowAgain = true;
             Hide();
             FrmMain.Instance.SetToBackground(Text);
         }
@@ -95,20 +92,19 @@ namespace BlueMirrorIndexer
             }
         }
 
-        bool paused = false;
+        bool _paused = false;
 
         protected virtual bool Paused {
-            get { return paused; }
+            get { return _paused; }
             set { 
-                paused = value;
+                _paused = value;
                 updateTitle();
             }
         }
 
         private void updateTitle() {
-            Text = title + (paused ? " [paused]" : string.Empty);
+            Text = _title + (_paused ? " [paused]" : string.Empty);
         }
-
 
     }
 }

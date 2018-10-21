@@ -1,6 +1,7 @@
+using Igorary.Utils.Extensions;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -10,16 +11,23 @@ namespace BlueMirrorIndexer
     class FolderImpl
     {
 
-        ItemInDatabase owner;
-        int imageIndex;
+#pragma warning disable IDE1006 // Naming Styles
+
+        readonly ItemInDatabase owner;
+        readonly int imageIndex;
+        List<FileInDatabase> files = new List<FileInDatabase>();
+        List<IFolder> folders = new List<IFolder>();
+
+#pragma warning restore IDE1006 // Naming Styles
+
         public FolderImpl(ItemInDatabase owner, int imageIndex) {
             this.owner = owner;
             this.imageIndex = imageIndex;
         }
 
-        #region Files
+        private string Name => owner.Name;
 
-        List<FileInDatabase> files = new List<FileInDatabase>();
+        #region Files
 
         public FileInDatabase[] Files {
             get { return files.ToArray(); }
@@ -45,6 +53,10 @@ namespace BlueMirrorIndexer
             get { return files.Count; }
         }
 
+        /// <summary>
+        /// Returns sum of the size of direct files only
+        /// </summary>
+        /// <returns></returns>
         public long GetFilesSize() {
             long size = 0;
             foreach (FileInDatabase fid in Files)
@@ -52,11 +64,17 @@ namespace BlueMirrorIndexer
             return size;
         }
 
+        /// <summary>
+        /// Returns sum of the size of all files (in this folder and in all subfolders)
+        /// </summary>
+        /// <returns></returns>
+        public long GetFilesAndFoldersSize() {
+            return GetFilesSize() + folders.Sum(f => f.GetFilesAndFoldersSize());
+        }
+
         #endregion
 
         #region Folders
-
-        List<IFolder> folders = new List<IFolder>();
 
         public IFolder[] Folders {
             get { return folders.ToArray(); }
@@ -104,7 +122,7 @@ namespace BlueMirrorIndexer
 
         public void InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<ItemInDatabase> list) {
 
-            if (!(owner is CompressedFile) && regex.IsMatch(owner.Name)
+            if (!(owner is CompressedFile) && regex.IsMatch(Name)
                     && ((dateFrom == null) || ((owner.CreationTime >= dateFrom) && (owner.CreationTime <= dateTo)))
                     && (keywordMatcher.IsMatch(owner.Keywords))) {
                 list.Add(owner);
@@ -135,16 +153,35 @@ namespace BlueMirrorIndexer
 
         #endregion
 
+        #region TreeNode
+
         public void CopyToNode(TreeNode treeNode) {
-            treeNode.Text = owner.Name;
+            treeNode.Text = Name;
             treeNode.Tag = owner;
             treeNode.ImageIndex = imageIndex;
             treeNode.SelectedImageIndex = imageIndex;
+            treeNode.ToolTipText = GetFilesAndFoldersSize().ToKB();
             foreach (IFolder fid in Folders) {
                 TreeNode tn = new TreeNode();
                 fid.CopyToNode(tn);
                 treeNode.Nodes.Add(tn);
             }
         }
+
+        #endregion
+
+        #region Chart
+
+        public IEnumerable<ChartPoint> GetChartPoints() {
+            yield return new ChartPoint(GetFilesSize(), $"This folder ({Name}) files", owner);
+            foreach (IFolder subfolder in folders) {
+                if(!(subfolder is CompressedFile))
+                    yield return subfolder.GetChartPoint();
+            }
+        }
+
+        public ChartPoint GetChartPoint() => new ChartPoint(GetFilesAndFoldersSize(), Name, owner);
+
+        #endregion
     }
 }

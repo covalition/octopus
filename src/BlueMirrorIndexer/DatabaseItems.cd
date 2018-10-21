@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="BlueMirrorIndexer.ItemInDatabase">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Protected" Collapsed="true" />
       <Compartment Name="Internal" Collapsed="true" />
@@ -17,7 +17,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BlueMirrorIndexer.FileInDatabase">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="1" Y="6.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Protected" Collapsed="true" />
       <Compartment Name="Internal" Collapsed="true" />
@@ -30,7 +30,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="BlueMirrorIndexer.DiscInDatabase">
-    <Position X="3.25" Y="8.25" Width="1.75" />
+    <Position X="4" Y="10.5" Width="2" />
     <Compartments>
       <Compartment Name="Protected" Collapsed="true" />
       <Compartment Name="Internal" Collapsed="true" />
@@ -44,7 +44,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BlueMirrorIndexer.LogicalFolder">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Internal" Collapsed="true" />
       <Compartment Name="Private" Collapsed="true" />
@@ -59,7 +59,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="BlueMirrorIndexer.CompressedFile">
-    <Position X="0.5" Y="10.75" Width="1.5" />
+    <Position X="1" Y="10.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Protected" Collapsed="true" />
       <Compartment Name="Internal" Collapsed="true" />
@@ -67,27 +67,41 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AoAAAAAEAkAgCFAAABAIASEAAAABQAQAAUIAFIMAEAA=</HashCode>
+      <HashCode>AoAAAAAEAkAgCFAAABAYASEAAAABQAQAI0IAFIMAEAA=</HashCode>
       <FileName>CompressedFile.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="folderImpl" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="BlueMirrorIndexer.FolderInDatabase">
-    <Position X="3" Y="4" Width="2" />
+    <Position X="4" Y="6.5" Width="2" />
     <Compartments>
       <Compartment Name="Protected" Collapsed="true" />
       <Compartment Name="Private" Collapsed="true" />
+      <Compartment Name="Internal" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AoIAAAQEAEAACFAAARAIISEAAAAAAAAAAAAABAMAEIA=</HashCode>
+      <HashCode>AoIAAAQEAEAACFAAARAYISEAAAAAAAAAIgAABAMAEIA=</HashCode>
       <FileName>FolderInDatabase.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="folderImpl" />
+    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="BlueMirrorIndexer.IFolder">
-    <Position X="5.75" Y="4.75" Width="1.5" />
+  <Class Name="BlueMirrorIndexer.FolderImpl">
+    <Position X="7.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAIAAAAEAIAAAUAAAAAQIAABAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>BAYAgAIEAMAAgUCAAAAQIAQBAAAAAAIEAABAgAAAAIA=</HashCode>
+      <FileName>FolderImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BlueMirrorIndexer.IFolder">
+    <Position X="7.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAIAAAAEAIAAAUCAAAAQIAABAAAAAAIEAAAAAAAAAIA=</HashCode>
       <FileName>IFolder.cs</FileName>
     </TypeIdentifier>
   </Interface>

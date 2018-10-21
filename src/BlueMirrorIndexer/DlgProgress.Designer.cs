@@ -59,7 +59,7 @@ namespace BlueMirrorIndexer
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(603, 95);
+            this.btnCancel.Location = new System.Drawing.Point(603, 99);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 28);
@@ -71,7 +71,7 @@ namespace BlueMirrorIndexer
             // btnBackground
             // 
             this.btnBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackground.Location = new System.Drawing.Point(484, 95);
+            this.btnBackground.Location = new System.Drawing.Point(484, 99);
             this.btnBackground.Margin = new System.Windows.Forms.Padding(4);
             this.btnBackground.Name = "btnBackground";
             this.btnBackground.Size = new System.Drawing.Size(111, 28);
@@ -130,7 +130,7 @@ namespace BlueMirrorIndexer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 130);
+            this.ClientSize = new System.Drawing.Size(719, 134);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.llElapsedTime);

@@ -320,11 +320,7 @@ namespace BlueMirrorIndexer
 
         #region IFolder Members
 
-        FileInDatabase[] IFolder.Files {
-            get { 
-                return folderImpl.Files; 
-            }
-        }
+        FileInDatabase[] IFolder.Files => folderImpl.Files;
 
         void IFolder.RemoveFromFiles(FileInDatabase file) {
             folderImpl.RemoveFromFiles(file);
@@ -334,17 +330,9 @@ namespace BlueMirrorIndexer
             folderImpl.AddToFiles(file);
         }
 
-        int IFolder.FileCount {
-            get { 
-                return folderImpl.FileCount; 
-            }
-        }
+        int IFolder.FileCount => folderImpl.FileCount;
 
-        IFolder[] IFolder.Folders {
-            get { 
-                return folderImpl.Folders; 
-            }
-        }
+        IFolder[] IFolder.Folders => folderImpl.Folders;
 
         void IFolder.RemoveFromFolders(IFolder folder) {
             folderImpl.RemoveFromFolders(folder);
@@ -354,9 +342,7 @@ namespace BlueMirrorIndexer
             folderImpl.AddToFolders(folder);
         }
 
-        long IFolder.GetFilesSize() {
-            return folderImpl.GetFilesSize();
-        }
+        long IFolder.GetFilesSize() => folderImpl.GetFilesSize();
 
         void IFolder.InsertFilesToList(Regex regex, DateTime? dateFrom, DateTime? dateTo, long? sizeFrom, long? sizeTo, KeywordMatcher keywordMatcher, List<FileInDatabase> listCrc, List<FileInDatabase> listNoCrc) {
             folderImpl.InsertFilesToList(regex, dateFrom, dateTo, sizeFrom, sizeTo, keywordMatcher, listCrc, listNoCrc);
@@ -368,6 +354,18 @@ namespace BlueMirrorIndexer
 
         void IFolder.CopyToNode(TreeNode treeNode) {
             folderImpl.CopyToNode(treeNode);
+        }
+
+        IEnumerable<ChartPoint> IFolder.GetChartPoints() {
+            return folderImpl.GetChartPoints();
+        }
+
+        long IFolder.GetFilesAndFoldersSize() {
+            return folderImpl.GetFilesAndFoldersSize();
+        }
+
+        ChartPoint IFolder.GetChartPoint() {
+            return folderImpl.GetChartPoint();
         }
 
         #endregion

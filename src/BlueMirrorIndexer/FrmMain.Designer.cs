@@ -30,6 +30,9 @@ namespace BlueMirrorIndexer
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pmTree = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmTreeItemPropertiesPopup = new System.Windows.Forms.ToolStripMenuItem();
             this.cmDeleteTreeItemPopup = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,6 +89,7 @@ namespace BlueMirrorIndexer
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.sbFiles = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbSize = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sbFolderPath = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnNew = new System.Windows.Forms.ToolStripButton();
             this.btnOpen = new System.Windows.Forms.ToolStripButton();
@@ -107,6 +111,8 @@ namespace BlueMirrorIndexer
             this.tpDatabase = new System.Windows.Forms.TabPage();
             this.scDatabase = new System.Windows.Forms.SplitContainer();
             this.tvDatabaseFolderTree = new BlueMirror.Commons.Controls.TreeViewVista();
+            this.tcRightHandSide = new System.Windows.Forms.TabControl();
+            this.tpFiles = new System.Windows.Forms.TabPage();
             this.lvDatabaseItems = new BlueMirror.Commons.Controls.ListViewVista();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -119,6 +125,8 @@ namespace BlueMirrorIndexer
             this.chDiVolume = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDiPath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDiCrc = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tpChart = new System.Windows.Forms.TabPage();
+            this.chMain = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tpSearch = new System.Windows.Forms.TabPage();
             this.searchBottomPanel = new System.Windows.Forms.Panel();
             this.lvSearchResults = new BlueMirror.Commons.Controls.ListViewVista();
@@ -173,6 +181,10 @@ namespace BlueMirrorIndexer
             this.scDatabase.Panel1.SuspendLayout();
             this.scDatabase.Panel2.SuspendLayout();
             this.scDatabase.SuspendLayout();
+            this.tcRightHandSide.SuspendLayout();
+            this.tpFiles.SuspendLayout();
+            this.tpChart.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chMain)).BeginInit();
             this.tpSearch.SuspendLayout();
             this.searchBottomPanel.SuspendLayout();
             this.tcBottom.SuspendLayout();
@@ -572,7 +584,8 @@ namespace BlueMirrorIndexer
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sbFiles,
-            this.sbSize});
+            this.sbSize,
+            this.sbFolderPath});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
             // 
@@ -589,6 +602,11 @@ namespace BlueMirrorIndexer
             this.sbSize.BorderStyle = System.Windows.Forms.Border3DStyle.Sunken;
             this.sbSize.Name = "sbSize";
             resources.ApplyResources(this.sbSize, "sbSize");
+            // 
+            // sbFolderPath
+            // 
+            this.sbFolderPath.Name = "sbFolderPath";
+            resources.ApplyResources(this.sbFolderPath, "sbFolderPath");
             // 
             // toolStrip1
             // 
@@ -758,7 +776,7 @@ namespace BlueMirrorIndexer
             // 
             // scDatabase.Panel2
             // 
-            this.scDatabase.Panel2.Controls.Add(this.lvDatabaseItems);
+            this.scDatabase.Panel2.Controls.Add(this.tcRightHandSide);
             // 
             // tvDatabaseFolderTree
             // 
@@ -768,12 +786,28 @@ namespace BlueMirrorIndexer
             this.tvDatabaseFolderTree.ImageList = this.ilTree;
             this.tvDatabaseFolderTree.Name = "tvDatabaseFolderTree";
             this.tvDatabaseFolderTree.ShowLines = false;
+            this.tvDatabaseFolderTree.ShowNodeToolTips = true;
             this.tvDatabaseFolderTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvDatabaseFolderTree_AfterSelect);
             this.tvDatabaseFolderTree.Enter += new System.EventHandler(this.tvDatabaseFolderTree_Enter);
             this.tvDatabaseFolderTree.Leave += new System.EventHandler(this.tvDatabaseFolderTree_Leave);
             this.tvDatabaseFolderTree.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseDown);
             this.tvDatabaseFolderTree.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseMove);
             this.tvDatabaseFolderTree.MouseUp += new System.Windows.Forms.MouseEventHandler(this.tvDatabaseFolderTree_MouseUp);
+            // 
+            // tcRightHandSide
+            // 
+            this.tcRightHandSide.Controls.Add(this.tpFiles);
+            this.tcRightHandSide.Controls.Add(this.tpChart);
+            resources.ApplyResources(this.tcRightHandSide, "tcRightHandSide");
+            this.tcRightHandSide.Name = "tcRightHandSide";
+            this.tcRightHandSide.SelectedIndex = 0;
+            // 
+            // tpFiles
+            // 
+            this.tpFiles.Controls.Add(this.lvDatabaseItems);
+            resources.ApplyResources(this.tpFiles, "tpFiles");
+            this.tpFiles.Name = "tpFiles";
+            this.tpFiles.UseVisualStyleBackColor = true;
             // 
             // lvDatabaseItems
             // 
@@ -853,6 +887,30 @@ namespace BlueMirrorIndexer
             // chDiCrc
             // 
             resources.ApplyResources(this.chDiCrc, "chDiCrc");
+            // 
+            // tpChart
+            // 
+            this.tpChart.Controls.Add(this.chMain);
+            resources.ApplyResources(this.tpChart, "tpChart");
+            this.tpChart.Name = "tpChart";
+            this.tpChart.UseVisualStyleBackColor = true;
+            // 
+            // chMain
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chMain.ChartAreas.Add(chartArea1);
+            resources.ApplyResources(this.chMain, "chMain");
+            legend1.Name = "Legend1";
+            this.chMain.Legends.Add(legend1);
+            this.chMain.Name = "chMain";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.CustomProperties = "PieStartAngle=270";
+            series1.Legend = "Legend1";
+            series1.Name = "Main";
+            this.chMain.Series.Add(series1);
+            this.chMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseClick);
+            this.chMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseMove);
             // 
             // tpSearch
             // 
@@ -1155,6 +1213,10 @@ namespace BlueMirrorIndexer
             this.scDatabase.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.scDatabase)).EndInit();
             this.scDatabase.ResumeLayout(false);
+            this.tcRightHandSide.ResumeLayout(false);
+            this.tpFiles.ResumeLayout(false);
+            this.tpChart.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chMain)).EndInit();
             this.tpSearch.ResumeLayout(false);
             this.searchBottomPanel.ResumeLayout(false);
             this.tcBottom.ResumeLayout(false);
@@ -1297,6 +1359,11 @@ namespace BlueMirrorIndexer
         private Igorary.Forms.Components.FileOperations fileOperations;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-	}
+        private System.Windows.Forms.TabControl tcRightHandSide;
+        private System.Windows.Forms.TabPage tpFiles;
+        private System.Windows.Forms.TabPage tpChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chMain;
+        private System.Windows.Forms.ToolStripStatusLabel sbFolderPath;
+    }
 }
 
