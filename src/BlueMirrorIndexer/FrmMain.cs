@@ -5,6 +5,7 @@ using Igorary.Forms.Components;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Deployment.Application;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -391,8 +392,19 @@ namespace BlueMirrorIndexer
             ilTree.Images.Add(Win32.GetFileIconAsImage("test.zip", Win32.FileIconSize.Small));
 
             Application.DoEvents();
-            string lastOpenedFile = Properties.Settings.Default.LastOpenedFile;
-            fileOperations.OpenFile(lastOpenedFile);
+            string fileToOpen = null;
+
+            if (ApplicationDeployment.IsNetworkDeployed) {
+                string[] activationData = AppDomain.CurrentDomain.SetupInformation.ActivationArguments.ActivationData;
+                if (activationData != null && activationData.Length > 0) {
+                    string[] args = activationData[0].Split(new char[] { ',' });
+                    if (args.Length > 0)
+                        fileToOpen = args[0];
+                }
+            }
+            if(fileToOpen == null)
+                fileToOpen = Properties.Settings.Default.LastOpenedFile;
+            fileOperations.OpenFile(fileToOpen);
         }
 
         private void updateVolumeButtons() {
