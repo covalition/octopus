@@ -96,12 +96,19 @@ namespace BlueMirrorIndexer
         }
 
         bool _paused = false;
+        DateTime? _pauseStarted = null;
 
         protected virtual bool Paused {
             get { return _paused; }
             set { 
                 _paused = value;
                 updateTitle();
+                if (_paused)
+                    _pauseStarted = DateTime.Now;
+                else if(_pauseStarted != null) {
+                    TimeSpan pauseDuration = DateTime.Now - _pauseStarted.Value;
+                    _started += pauseDuration;
+                }
             }
         }
 
