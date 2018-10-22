@@ -13,8 +13,7 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
     <GenerateManifests>true</GenerateManifests>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>covalition.pfx</AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -72,6 +71,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib">
@@ -285,6 +287,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="covalition.pfx" />
     <None Include="DatabaseItems.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

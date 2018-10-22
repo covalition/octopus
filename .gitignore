@@ -3,17 +3,9 @@
 ################################################################################
 
 *.user
-/src/.vs
-/src/BlueMirror.Importer/obj
-/src/BlueMirrorIndexer/bin
-/src/BlueMirrorIndexer/obj
-/src/BlueMirrorIndexer.Test/obj
-/src/BlueMirror.Commons/bin
-/src/BlueMirror.Commons/obj
-/src/BlueMirror.Importer/bin
+**/obj
+**/bin
 /setup
-/setup/Octopus.Covalition.application
-/setup/Application Files
-/setup/install.htm
 /docs/setup/setup.exe
 .vs
+*.pfx
