@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\MainIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Octopus.Covalition" version="2.1.0.1929" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Octopus.Covalition" version="2.1.0.2421" language="neutral" processorArchitecture="msil" />
     <commandLine file="Octopus.Covalition.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -103,25 +103,25 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Octopus.Covalition.exe" size="504320">
-      <assemblyIdentity name="Octopus.Covalition" version="2.1.0.1929" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Octopus.Covalition" version="2.1.0.2421" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7NV9GnaW6ZfqlBb+4S9SPd+p0eceuxlZEUSpVRDQLeY=</dsig:DigestValue>
+        <dsig:DigestValue>jm1vbNN50Juu8h9+TKTx4xNXxDQPoHEDMFvIa6LJQMk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\Octopus.Covalition.resources.dll" size="45056">
-      <assemblyIdentity name="Octopus.Covalition.resources" version="2.1.0.1929" language="pl" processorArchitecture="msil" />
+      <assemblyIdentity name="Octopus.Covalition.resources" version="2.1.0.2421" language="pl" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8MqFKSj+JSNiU/VkgtgqdD5xPoX1LN5svymnb0Bl9a4=</dsig:DigestValue>
+        <dsig:DigestValue>xSyGeHFiAKUKyV47mX+iZWeQmlIl3Q9aeEdZMoo/eio=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
