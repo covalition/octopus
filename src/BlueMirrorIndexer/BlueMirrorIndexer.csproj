@@ -13,7 +13,8 @@
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <ManifestCertificateThumbprint>9F32CCE415EFAB862BA059E477CDFB26D4A2ECD8</ManifestCertificateThumbprint>
     <GenerateManifests>true</GenerateManifests>
-    <AssemblyOriginatorKeyFile>covalition.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
     <ApplicationIcon>Resources\MainIcon.ico</ApplicationIcon>
     <FileUpgradeFlags>
@@ -295,7 +296,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
-    <None Include="covalition.pfx" />
     <None Include="DatabaseItems.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
