@@ -5,7 +5,6 @@ namespace BlueMirrorIndexer
 {
     public partial class DlgProgress : Form
     {
-
         DateTime _started;
 
         public DlgProgress() {
@@ -18,7 +17,6 @@ namespace BlueMirrorIndexer
         public DlgProgress(string title, string currentStatus)
             : this() {
             _title = title;
-            // Text = title;
             if (currentStatus != null)
                 llWorkStatus.Text = currentStatus;
             updateTitle();
@@ -46,7 +44,7 @@ namespace BlueMirrorIndexer
                     if (progress != null)
                         llProgress.Text = progress.Value.ToString() + "%";
                     else
-                        llProgress.Text = "[calculating...]";
+                        llProgress.Text = "(calculating...)";
                     if (currentStatus != null)
                         llWorkStatus.Text = currentStatus;
                     do {
@@ -79,7 +77,6 @@ namespace BlueMirrorIndexer
 
         private void btnCancel_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Are you sure to cancel this operation?", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                // throw new AbortException();
                 _aborted = true;
         }
 

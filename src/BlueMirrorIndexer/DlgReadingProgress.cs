@@ -44,9 +44,6 @@ namespace BlueMirrorIndexer
         }
 
         protected override bool Paused {
-            //get {
-            //    return base.Paused;
-            //}
             set {
                 base.Paused = value;
                 if (Paused)

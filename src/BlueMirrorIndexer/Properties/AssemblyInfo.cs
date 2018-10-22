@@ -11,7 +11,7 @@ using System.Resources;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Covalition")]
 [assembly: AssemblyProduct("Octopus.Covalition")]
-[assembly: AssemblyCopyright("Copyright © 2006 - 2016 Covalition")]
+[assembly: AssemblyCopyright("Copyright © 2006 - 2018 Covalition")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -30,6 +30,5 @@ using System.Resources;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("2.0.2.*")]
-//[assembly: AssemblyFileVersion("2.0.2.*")]
-[assembly: NeutralResourcesLanguageAttribute("")]
+[assembly: AssemblyVersion("2.1.0.*")]
+[assembly: NeutralResourcesLanguage("")]
