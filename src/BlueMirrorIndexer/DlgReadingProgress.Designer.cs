@@ -49,12 +49,12 @@ namespace BlueMirrorIndexer
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(453, 170);
+            this.btnCancel.Location = new System.Drawing.Point(453, 174);
             this.btnCancel.TabIndex = 13;
             // 
             // btnBackground
             // 
-            this.btnBackground.Location = new System.Drawing.Point(364, 170);
+            this.btnBackground.Location = new System.Drawing.Point(364, 174);
             this.btnBackground.TabIndex = 12;
             // 
             // llProgress
@@ -129,7 +129,8 @@ namespace BlueMirrorIndexer
             // 
             // btnPause
             // 
-            this.btnPause.Location = new System.Drawing.Point(283, 170);
+            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPause.Location = new System.Drawing.Point(283, 174);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(75, 23);
             this.btnPause.TabIndex = 11;
@@ -140,7 +141,7 @@ namespace BlueMirrorIndexer
             // DlgReadingProgress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(539, 198);
+            this.ClientSize = new System.Drawing.Size(539, 202);
             this.Controls.Add(this.llOperation);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.llFileCount);

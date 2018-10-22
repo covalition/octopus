@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>259, 418</value>
+    <value>213, 396</value>
   </data>
   <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
     <value>btnCancel</value>
@@ -148,7 +148,7 @@
     <value>Both</value>
   </data>
   <data name="tbHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 165</value>
+    <value>284, 160</value>
   </data>
   <data name="tbHistory.TabIndex" type="System.Int32, mscorlib">
     <value>111</value>
@@ -169,7 +169,7 @@
     <value>15, 25</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 3</value>
+    <value>265, 3</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>110</value>
@@ -196,7 +196,7 @@
     <value>12, 65</value>
   </data>
   <data name="llVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 17</value>
+    <value>62, 13</value>
   </data>
   <data name="llVersion.TabIndex" type="System.Int32, mscorlib">
     <value>109</value>
@@ -226,7 +226,7 @@
     <value>12, 143</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 17</value>
+    <value>52, 13</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>107</value>
@@ -246,37 +246,37 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="llSourceForge.AutoSize" type="System.Boolean, mscorlib">
+  <data name="llGithub.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="llSourceForge.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="llGithub.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="llSourceForge.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="llGithub.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 180</value>
   </data>
-  <data name="llSourceForge.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="llGithub.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
   </data>
-  <data name="llSourceForge.Size" type="System.Drawing.Size, System.Drawing">
-    <value>301, 20</value>
+  <data name="llGithub.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 16</value>
   </data>
-  <data name="llSourceForge.TabIndex" type="System.Int32, mscorlib">
+  <data name="llGithub.TabIndex" type="System.Int32, mscorlib">
     <value>108</value>
   </data>
-  <data name="llSourceForge.Text" xml:space="preserve">
-    <value>https://github.com/BlueMirrorSoftware/Octopus</value>
+  <data name="llGithub.Text" xml:space="preserve">
+    <value>https://github.com/covalition/octopus</value>
   </data>
-  <data name="&gt;&gt;llSourceForge.Name" xml:space="preserve">
-    <value>llSourceForge</value>
+  <data name="&gt;&gt;llGithub.Name" xml:space="preserve">
+    <value>llGithub</value>
   </data>
-  <data name="&gt;&gt;llSourceForge.Type" xml:space="preserve">
+  <data name="&gt;&gt;llGithub.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;llSourceForge.Parent" xml:space="preserve">
+  <data name="&gt;&gt;llGithub.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;llSourceForge.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;llGithub.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="llTitle.AutoSize" type="System.Boolean, mscorlib">
@@ -292,7 +292,7 @@
     <value>12, 9</value>
   </data>
   <data name="llTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 17</value>
+    <value>156, 13</value>
   </data>
   <data name="llTitle.TabIndex" type="System.Int32, mscorlib">
     <value>103</value>
@@ -322,7 +322,7 @@
     <value>12, 96</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>229, 17</value>
+    <value>170, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>105</value>
@@ -342,37 +342,37 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="linkLabel1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="llBugs.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="linkLabel1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="llBugs.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="llBugs.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 113</value>
   </data>
-  <data name="linkLabel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="llBugs.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
   </data>
-  <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 20</value>
+  <data name="llBugs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 16</value>
   </data>
-  <data name="linkLabel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="llBugs.TabIndex" type="System.Int32, mscorlib">
     <value>106</value>
   </data>
-  <data name="linkLabel1.Text" xml:space="preserve">
-    <value>https://github.com/BlueMirrorSoftware/Octopus/issues</value>
+  <data name="llBugs.Text" xml:space="preserve">
+    <value>https://github.com/covalition/octopus/issues</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Name" xml:space="preserve">
-    <value>linkLabel1</value>
+  <data name="&gt;&gt;llBugs.Name" xml:space="preserve">
+    <value>llBugs</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;llBugs.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;llBugs.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;linkLabel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;llBugs.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
   <data name="llCopyright.AutoSize" type="System.Boolean, mscorlib">
@@ -385,7 +385,7 @@
     <value>12, 42</value>
   </data>
   <data name="llCopyright.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 17</value>
+    <value>51, 13</value>
   </data>
   <data name="llCopyright.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
@@ -405,95 +405,71 @@
   <data name="&gt;&gt;llCopyright.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="llCodePlex.AutoSize" type="System.Boolean, mscorlib">
+  <data name="llGithubPages.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="llCodePlex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="llGithubPages.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="llCodePlex.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="llGithubPages.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 160</value>
   </data>
-  <data name="llCodePlex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="llGithubPages.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 3, 0, 0</value>
   </data>
-  <data name="llCodePlex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 20</value>
+  <data name="llGithubPages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>179, 16</value>
   </data>
-  <data name="llCodePlex.TabIndex" type="System.Int32, mscorlib">
+  <data name="llGithubPages.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
   </data>
-  <data name="llCodePlex.Text" xml:space="preserve">
-    <value>http://bluemirrorsoftware.github.io/Octopus/</value>
+  <data name="llGithubPages.Text" xml:space="preserve">
+    <value>https://covalition.github.io/octopus/</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.Name" xml:space="preserve">
-    <value>llCodePlex</value>
+  <data name="&gt;&gt;llGithubPages.Name" xml:space="preserve">
+    <value>llGithubPages</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.Type" xml:space="preserve">
+  <data name="&gt;&gt;llGithubPages.Type" xml:space="preserve">
     <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.Parent" xml:space="preserve">
+  <data name="&gt;&gt;llGithubPages.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;llCodePlex.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;llGithubPages.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="tcAbout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tcAbout</value>
+  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="&gt;&gt;tpChangeLog.Name" xml:space="preserve">
-    <value>tpChangeLog</value>
+  <data name="textBox2.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
   </data>
-  <data name="&gt;&gt;tpChangeLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>283, 149</value>
   </data>
-  <data name="&gt;&gt;tpChangeLog.Parent" xml:space="preserve">
-    <value>tcAbout</value>
+  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
   </data>
-  <data name="&gt;&gt;tpChangeLog.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tcAbout</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tcAbout.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 211</value>
-  </data>
-  <data name="tcAbout.Size" type="System.Drawing.Size, System.Drawing">
-    <value>353, 200</value>
-  </data>
-  <data name="tcAbout.TabIndex" type="System.Int32, mscorlib">
-    <value>113</value>
-  </data>
-  <data name="&gt;&gt;tcAbout.Name" xml:space="preserve">
-    <value>tcAbout</value>
-  </data>
-  <data name="&gt;&gt;tcAbout.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tcAbout.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tcAbout.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="textBox2.Text" xml:space="preserve">
+    <value>Icons:
+(c) www.famfamfam.com
+
+Translators (version 1):
+Dutch: Filip Cornelissen
+German: Clemens-Alexander Brust
+Japanese: TILT
+Portuguese (Brasil): Leonardo Frigo Da Purificação
+Russian: Boris Vasilenko
+Turkish: Polat Pinar</value>
   </data>
   <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
     <value>textBox2</value>
@@ -508,13 +484,13 @@
     <value>0</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 171</value>
+    <value>289, 155</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -534,57 +510,14 @@
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="textBox2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="textBox2.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="textBox2.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>339, 165</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="textBox2.Text" xml:space="preserve">
-    <value>Icons:
-(c) www.famfamfam.com
-
-Translators (version 1):
-Dutch: Filip Cornelissen
-German: Clemens-Alexander Brust
-Japanese: TILT
-Polish: Roman Kowaliszyn
-Portuguese (Brasil): Leonardo Frigo Da Purificação
-Russian: Boris Vasilenko
-Turkish: Polat Pinar</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tpChangeLog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 22</value>
   </data>
   <data name="tpChangeLog.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tpChangeLog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 171</value>
+    <value>290, 166</value>
   </data>
   <data name="tpChangeLog.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -617,13 +550,13 @@ Turkish: Polat Pinar</value>
     <value>0</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>320, 171</value>
+    <value>290, 166</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -643,6 +576,27 @@ Turkish: Polat Pinar</value>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="tcAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 209</value>
+  </data>
+  <data name="tcAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>297, 181</value>
+  </data>
+  <data name="tcAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="&gt;&gt;tcAbout.Name" xml:space="preserve">
+    <value>tcAbout</value>
+  </data>
+  <data name="&gt;&gt;tcAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tcAbout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tcAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tbLicense.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -656,7 +610,7 @@ Turkish: Polat Pinar</value>
     <value>Both</value>
   </data>
   <data name="tbLicense.Size" type="System.Drawing.Size, System.Drawing">
-    <value>314, 165</value>
+    <value>284, 160</value>
   </data>
   <data name="tbLicense.TabIndex" type="System.Int32, mscorlib">
     <value>112</value>
@@ -677,13 +631,13 @@ Turkish: Polat Pinar</value>
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>372, 459</value>
+    <value>295, 425</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>About</value>
@@ -692,6 +646,6 @@ Turkish: Polat Pinar</value>
     <value>DlgAbout</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>BlueMirror.Commons.Forms.FormDialogList, BlueMirror.Commons, Version=1.1.0.23824, Culture=neutral, PublicKeyToken=null</value>
+    <value>Igorary.Forms.Forms.FormDialogList, Igorary.Forms, Version=1.0.2.29992, Culture=neutral, PublicKeyToken=ac299517f03d7a97</value>
   </data>
 </root>

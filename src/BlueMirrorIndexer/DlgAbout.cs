@@ -18,15 +18,15 @@ namespace BlueMirrorIndexer
             tbLicense.Text = Properties.Resources.License;
         }
 
-        private void linkLabel1_Click(object sender, EventArgs e) {
+        private void llBugs_Click(object sender, EventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus/issues";
+            navigate.StartInfo.FileName = "https://github.com/covalition/octopus/issues";
             navigate.Start();
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void llGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "https://github.com/BlueMirrorSoftware/Octopus";
+            navigate.StartInfo.FileName = "https://github.com/covalition/octopus";
             navigate.Start();
         }
 
@@ -54,9 +54,9 @@ namespace BlueMirrorIndexer
         //    }
         //}
 
-        private void llCodePlex_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
+        private void llGithubPages_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             Process navigate = new Process();
-            navigate.StartInfo.FileName = "http://bluemirrorsoftware.github.io/Octopus/";
+            navigate.StartInfo.FileName = "https://covalition.github.io/octopus/";
             navigate.Start();
         }
 

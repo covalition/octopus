@@ -1,5 +1,5 @@
-﻿BlueMirror.Octopus (CD/DVD Indexer)
-Copyright (c) 2006 - 2016 Blue Mirror Software
+﻿octopus.covalition (CD/DVD Indexer)
+Copyright (c) 2006 - 2018 covalition
 
 Microsoft Reciprocal License (Ms-RL)
 

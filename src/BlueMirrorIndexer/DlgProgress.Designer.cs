@@ -39,10 +39,9 @@ namespace BlueMirrorIndexer
             // 
             this.llWorkStatus.AutoSize = true;
             this.llWorkStatus.BackColor = System.Drawing.Color.Transparent;
-            this.llWorkStatus.Location = new System.Drawing.Point(12, 12);
-            this.llWorkStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llWorkStatus.Location = new System.Drawing.Point(9, 10);
             this.llWorkStatus.Name = "llWorkStatus";
-            this.llWorkStatus.Size = new System.Drawing.Size(87, 17);
+            this.llWorkStatus.Size = new System.Drawing.Size(67, 13);
             this.llWorkStatus.TabIndex = 0;
             this.llWorkStatus.Text = "llWorkStatus";
             // 
@@ -50,19 +49,17 @@ namespace BlueMirrorIndexer
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 34);
-            this.progressBar.Margin = new System.Windows.Forms.Padding(4);
+            this.progressBar.Location = new System.Drawing.Point(9, 28);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(695, 22);
+            this.progressBar.Size = new System.Drawing.Size(521, 18);
             this.progressBar.TabIndex = 1;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(603, 99);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(452, 96);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 28);
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel...";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -71,10 +68,9 @@ namespace BlueMirrorIndexer
             // btnBackground
             // 
             this.btnBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBackground.Location = new System.Drawing.Point(484, 99);
-            this.btnBackground.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBackground.Location = new System.Drawing.Point(363, 96);
             this.btnBackground.Name = "btnBackground";
-            this.btnBackground.Size = new System.Drawing.Size(111, 28);
+            this.btnBackground.Size = new System.Drawing.Size(83, 23);
             this.btnBackground.TabIndex = 2;
             this.btnBackground.Text = "Background";
             this.btnBackground.UseVisualStyleBackColor = true;
@@ -85,10 +81,9 @@ namespace BlueMirrorIndexer
             this.llProgress.AutoSize = true;
             this.llProgress.BackColor = System.Drawing.Color.Transparent;
             this.llProgress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llProgress.Location = new System.Drawing.Point(113, 73);
-            this.llProgress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llProgress.Location = new System.Drawing.Point(85, 59);
             this.llProgress.Name = "llProgress";
-            this.llProgress.Size = new System.Drawing.Size(30, 17);
+            this.llProgress.Size = new System.Drawing.Size(23, 13);
             this.llProgress.TabIndex = 4;
             this.llProgress.Text = "0%";
             // 
@@ -96,10 +91,9 @@ namespace BlueMirrorIndexer
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(12, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(9, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 17);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Elapsed time:";
             // 
@@ -108,10 +102,9 @@ namespace BlueMirrorIndexer
             this.llElapsedTime.AutoSize = true;
             this.llElapsedTime.BackColor = System.Drawing.Color.Transparent;
             this.llElapsedTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.llElapsedTime.Location = new System.Drawing.Point(113, 100);
-            this.llElapsedTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.llElapsedTime.Location = new System.Drawing.Point(85, 81);
             this.llElapsedTime.Name = "llElapsedTime";
-            this.llElapsedTime.Size = new System.Drawing.Size(17, 17);
+            this.llElapsedTime.Size = new System.Drawing.Size(14, 13);
             this.llElapsedTime.TabIndex = 10;
             this.llElapsedTime.Text = "0";
             // 
@@ -119,18 +112,17 @@ namespace BlueMirrorIndexer
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 73);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(9, 59);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Progress:";
             // 
             // DlgProgress
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 134);
+            this.ClientSize = new System.Drawing.Size(539, 125);
             this.ControlBox = false;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.llElapsedTime);
@@ -142,7 +134,6 @@ namespace BlueMirrorIndexer
             this.Controls.Add(this.progressBar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DlgProgress";

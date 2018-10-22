@@ -30,9 +30,9 @@ namespace BlueMirrorIndexer
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pmTree = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmTreeItemPropertiesPopup = new System.Windows.Forms.ToolStripMenuItem();
             this.cmDeleteTreeItemPopup = new System.Windows.Forms.ToolStripMenuItem();
@@ -897,18 +897,18 @@ namespace BlueMirrorIndexer
             // 
             // chMain
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chMain.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chMain.ChartAreas.Add(chartArea3);
             resources.ApplyResources(this.chMain, "chMain");
-            legend1.Name = "Legend1";
-            this.chMain.Legends.Add(legend1);
+            legend3.Name = "Legend1";
+            this.chMain.Legends.Add(legend3);
             this.chMain.Name = "chMain";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.CustomProperties = "PieStartAngle=270";
-            series1.Legend = "Legend1";
-            series1.Name = "Main";
-            this.chMain.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.CustomProperties = "PieStartAngle=270";
+            series3.Legend = "Legend1";
+            series3.Name = "Main";
+            this.chMain.Series.Add(series3);
             this.chMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseClick);
             this.chMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseMove);
             // 

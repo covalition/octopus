@@ -11,7 +11,7 @@
     <RootNamespace>BlueMirrorIndexer</RootNamespace>
     <AssemblyName>Octopus.Covalition</AssemblyName>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <ManifestCertificateThumbprint>6AACE257760ADF7D657585A88D6211B904358622</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>9F32CCE415EFAB862BA059E477CDFB26D4A2ECD8</ManifestCertificateThumbprint>
     <GenerateManifests>true</GenerateManifests>
     <AssemblyOriginatorKeyFile>covalition.pfx</AssemblyOriginatorKeyFile>
     <TargetZone>LocalIntranet</TargetZone>
@@ -37,11 +37,11 @@
     <SupportUrl>https://github.com/covalition/octopus/issues</SupportUrl>
     <ErrorReportUrl>https://github.com/covalition/octopus/issues</ErrorReportUrl>
     <ProductName>Octopus.Covalition</ProductName>
-    <PublisherName>Covalition</PublisherName>
+    <PublisherName>covalition</PublisherName>
     <SuiteName>Octopus.Covalition</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>2.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -73,7 +73,13 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>covalition.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ICSharpCode.SharpZipLib">
@@ -390,6 +396,14 @@
       <Project>{6EE55CE2-873D-43DE-844F-D9C63E3D6F5B}</Project>
       <Name>BlueMirror.Importer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <FileAssociation Include=".occov">
+      <Visible>False</Visible>
+      <Description>Octopus File</Description>
+      <Progid>covalition.octopus.file</Progid>
+      <DefaultIcon>Resources\MainIcon.ico</DefaultIcon>
+    </FileAssociation>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

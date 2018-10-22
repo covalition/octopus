@@ -123,13 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tbKeywords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 14</value>
-  </data>
-  <data name="tbKeywords.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>307, 11</value>
   </data>
   <data name="tbKeywords.Size" type="System.Drawing.Size, System.Drawing">
-    <value>402, 22</value>
+    <value>322, 20</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tbKeywords.TabIndex" type="System.Int32, mscorlib">
@@ -157,13 +154,10 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 17</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>163, 14</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 17</value>
+    <value>129, 13</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -190,13 +184,10 @@
     <value>all</value>
   </data>
   <data name="comboOneAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>125, 14</value>
-  </data>
-  <data name="comboOneAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>100, 11</value>
   </data>
   <data name="comboOneAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>56, 21</value>
   </data>
   <data name="comboOneAll.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -217,13 +208,10 @@
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 17</value>
-  </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>9, 14</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 17</value>
+    <value>80, 13</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -244,13 +232,10 @@
     <value>4</value>
   </data>
   <data name="tbSizeTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 38</value>
-  </data>
-  <data name="tbSizeTo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>290, 30</value>
   </data>
   <data name="tbSizeTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>94, 20</value>
   </data>
   <data name="tbSizeTo.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -274,13 +259,10 @@
     <value>7</value>
   </data>
   <data name="tbSizeFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 38</value>
-  </data>
-  <data name="tbSizeFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>157, 30</value>
   </data>
   <data name="tbSizeFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>94, 20</value>
   </data>
   <data name="tbSizeFrom.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -307,13 +289,10 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 42</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>257, 34</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
+    <value>25, 13</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -337,13 +316,10 @@
     <value>True</value>
   </data>
   <data name="cbSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 41</value>
-  </data>
-  <data name="cbSize.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 33</value>
   </data>
   <data name="cbSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 21</value>
+    <value>132, 17</value>
   </data>
   <data name="cbSize.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -367,13 +343,10 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 14</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>257, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>32, 17</value>
+    <value>25, 13</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -394,13 +367,10 @@
     <value>5</value>
   </data>
   <data name="dtpDateTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>363, 9</value>
-  </data>
-  <data name="dtpDateTo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>290, 7</value>
   </data>
   <data name="dtpDateTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>94, 20</value>
   </data>
   <data name="dtpDateTo.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -418,13 +388,10 @@
     <value>3</value>
   </data>
   <data name="dtpDateFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 9</value>
-  </data>
-  <data name="dtpDateFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>157, 7</value>
   </data>
   <data name="dtpDateFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>94, 20</value>
   </data>
   <data name="dtpDateFrom.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -445,13 +412,10 @@
     <value>True</value>
   </data>
   <data name="cbDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 12</value>
-  </data>
-  <data name="cbDate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 10</value>
   </data>
   <data name="cbDate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 21</value>
+    <value>136, 17</value>
   </data>
   <data name="cbDate.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -475,13 +439,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="tbFileMask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 14</value>
-  </data>
-  <data name="tbFileMask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>73, 11</value>
   </data>
   <data name="tbFileMask.Size" type="System.Drawing.Size, System.Drawing">
-    <value>541, 22</value>
+    <value>441, 20</value>
   </data>
   <data name="tbFileMask.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -510,13 +471,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>True</value>
   </data>
   <data name="llFileMask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 17</value>
-  </data>
-  <data name="llFileMask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>9, 14</value>
   </data>
   <data name="llFileMask.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 17</value>
+    <value>54, 13</value>
   </data>
   <data name="llFileMask.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -543,13 +501,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>MiddleRight</value>
   </data>
   <data name="BtnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>814, 5</value>
-  </data>
-  <data name="BtnSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>658, 4</value>
   </data>
   <data name="BtnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 31</value>
+    <value>93, 25</value>
   </data>
   <data name="BtnSearch.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -575,6 +530,24 @@ multiple file masks, for example: "*.doc;*.xls".</value>
   <data name="tabControl2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
+  <data name="cbTreatFileMaskAsWildcard.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cbTreatFileMaskAsWildcard.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbTreatFileMaskAsWildcard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 13</value>
+  </data>
+  <data name="cbTreatFileMaskAsWildcard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 17</value>
+  </data>
+  <data name="cbTreatFileMaskAsWildcard.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cbTreatFileMaskAsWildcard.Text" xml:space="preserve">
+    <value>Treat as wildcard</value>
+  </data>
   <data name="&gt;&gt;cbTreatFileMaskAsWildcard.Name" xml:space="preserve">
     <value>cbTreatFileMaskAsWildcard</value>
   </data>
@@ -588,16 +561,13 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>0</value>
   </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 89</value>
+    <value>644, 81</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -618,16 +588,13 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>0</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 85</value>
+    <value>637, 65</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -672,16 +639,13 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>1</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage3.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 89</value>
+    <value>637, 65</value>
   </data>
   <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -714,16 +678,13 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>0</value>
   </data>
   <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage4.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 89</value>
+    <value>637, 65</value>
   </data>
   <data name="tabPage4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -780,16 +741,13 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>2</value>
   </data>
   <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 22</value>
   </data>
   <data name="tabPage5.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 89</value>
+    <value>637, 65</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -812,11 +770,8 @@ multiple file masks, for example: "*.doc;*.xls".</value>
   <data name="tabControl2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="tabControl2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="tabControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 114</value>
+    <value>652, 107</value>
   </data>
   <data name="tabControl2.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -833,39 +788,6 @@ multiple file masks, for example: "*.doc;*.xls".</value>
   <data name="&gt;&gt;tabControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="cbTreatFileMaskAsWildcard.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>649, 16</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cbTreatFileMaskAsWildcard.Text" xml:space="preserve">
-    <value>Treat as wildcard</value>
-  </data>
-  <data name="&gt;&gt;cbTreatFileMaskAsWildcard.Name" xml:space="preserve">
-    <value>cbTreatFileMaskAsWildcard</value>
-  </data>
-  <data name="&gt;&gt;cbTreatFileMaskAsWildcard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbTreatFileMaskAsWildcard.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;cbTreatFileMaskAsWildcard.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="cbTreatKeywordAsWildcard.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -873,13 +795,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>NoControl</value>
   </data>
   <data name="cbTreatKeywordAsWildcard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 47</value>
-  </data>
-  <data name="cbTreatKeywordAsWildcard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>189, 38</value>
   </data>
   <data name="cbTreatKeywordAsWildcard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 21</value>
+    <value>107, 17</value>
   </data>
   <data name="cbTreatKeywordAsWildcard.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -903,13 +822,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>True</value>
   </data>
   <data name="cbCaseSensitiveKeywords.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 47</value>
-  </data>
-  <data name="cbCaseSensitiveKeywords.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>12, 38</value>
   </data>
   <data name="cbCaseSensitiveKeywords.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 21</value>
+    <value>160, 17</value>
   </data>
   <data name="cbCaseSensitiveKeywords.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -933,13 +849,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>True</value>
   </data>
   <data name="cbDuplicates.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 12</value>
-  </data>
-  <data name="cbDuplicates.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>9, 10</value>
   </data>
   <data name="cbDuplicates.Size" type="System.Drawing.Size, System.Drawing">
-    <value>155, 21</value>
+    <value>119, 17</value>
   </data>
   <data name="cbDuplicates.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -963,13 +876,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>Top, Right</value>
   </data>
   <data name="btnUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 43</value>
-  </data>
-  <data name="btnUnselectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>550, 34</value>
   </data>
   <data name="btnUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+    <value>80, 22</value>
   </data>
   <data name="btnUnselectAll.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -993,13 +903,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>Top, Right</value>
   </data>
   <data name="btnSelectAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>687, 7</value>
-  </data>
-  <data name="btnSelectAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>550, 6</value>
   </data>
   <data name="btnSelectAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 28</value>
+    <value>80, 22</value>
   </data>
   <data name="btnSelectAll.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1059,13 +966,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
 </value>
   </data>
   <data name="lvVolumes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 7</value>
-  </data>
-  <data name="lvVolumes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 6</value>
   </data>
   <data name="lvVolumes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>670, 70</value>
+    <value>537, 57</value>
   </data>
   <metadata name="ilVolumes.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>112, 16</value>
@@ -1075,7 +979,7 @@ multiple file masks, for example: "*.doc;*.xls".</value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAADM
-        BgAAAk1TRnQBSQFMAwEBAAEUAQABFAEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
+        BgAAAk1TRnQBSQFMAwEBAAEcAQABHAEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
         ARADAAEBAQABIAYAARAmAAGtAZUBigH/Aa0BlQGKAf8BrQGVAYoB/wGtAZUBigH/Aa0BlQGKAf8BrQGV
         AYoB/+AAAa0BlQGKAf8BrQGVAYoB/wHdAdgB1AH/AecB5AHhAf8B6wHUAccB/wHpAccBuAH/AdsBvwGw
         Af8B0wHJAcIB/wGtAZUBigH/Aa0BlQGKAf/UAAGtAZUBigH/AdYBzQHIAf8B9wH2AfUJ/wH3AecB4AH/
@@ -1126,13 +1030,10 @@ multiple file masks, for example: "*.doc;*.xls".</value>
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>934, 118</value>
+    <value>754, 110</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
