@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\MainIcon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Octopus.Covalition" version="2.0.2.38169" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="Octopus.Covalition" version="2.0.2.39547" language="neutral" processorArchitecture="msil" />
     <commandLine file="Octopus.Covalition.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -49,19 +49,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LtfdVQJb4Lmryb4KMCMa6be5uyKokrj8xJaHdNe1Tvs=</dsig:DigestValue>
+        <dsig:DigestValue>waxMq7Tupp4Wcqz6J0VlKrIyXqAa+pzY/AWme24RIqA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Covalition.Igorary.Utils.dll" size="10240">
-      <assemblyIdentity name="Covalition.Igorary.Utils" version="1.0.2.37611" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Covalition.Igorary.Utils" version="1.0.2.39415" publicKeyToken="AC299517F03D7A97" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Uz73lewWJ0ye2nHXB9mclFmHIylKAPWl83mcWfFa6J4=</dsig:DigestValue>
+        <dsig:DigestValue>GK2jIUFw1vksxESKXD/z/bmquDk/n8NvCNiWI5ny1Jk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -78,50 +78,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Forms.dll" size="37888">
-      <assemblyIdentity name="Igorary.Forms" version="1.0.2.37611" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Igorary.Forms.dll" size="38400">
+      <assemblyIdentity name="Igorary.Forms" version="1.0.2.39415" publicKeyToken="AC299517F03D7A97" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>otwgBz7U7fMyGJL+kqyvwdlrLje1suYKVX85fkRMoM8=</dsig:DigestValue>
+        <dsig:DigestValue>DNd7sC8ZZ6qGb1cxHa9bB4sWlNW4lrHjQprJKG1nQI0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\Igorary.Forms.resources.dll" size="4608">
-      <assemblyIdentity name="Igorary.Forms.resources" version="1.0.2.37611" language="pl" processorArchitecture="msil" />
+      <assemblyIdentity name="Igorary.Forms.resources" version="1.0.2.39415" publicKeyToken="AC299517F03D7A97" language="pl" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0i/Kz2ApclXhchsXWsZTt9s1Chg20pW4IK5fAliVd6s=</dsig:DigestValue>
+        <dsig:DigestValue>3LcidpVA3qqO31AyRvaOPm+Nbo0wyOj/hPnOh2ZfRjk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Octopus.Covalition.exe" size="499712">
-      <assemblyIdentity name="Octopus.Covalition" version="2.0.2.38169" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Octopus.Covalition" version="2.0.2.39547" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OvKTG9YIx3ffQj7tDY/cEubE/lJRsNPTGRYyCillKhM=</dsig:DigestValue>
+        <dsig:DigestValue>hiho29Mx7Rj1CzId5lkS3x8vcWB32TRH+Jw8GuFAu/k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="pl\Octopus.Covalition.resources.dll" size="45056">
-      <assemblyIdentity name="Octopus.Covalition.resources" version="2.0.2.38169" language="pl" processorArchitecture="msil" />
+      <assemblyIdentity name="Octopus.Covalition.resources" version="2.0.2.39547" language="pl" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3BdW9osZC3FtVwIEvsppFg0+A2LDv4LbvlYRB7pum4w=</dsig:DigestValue>
+        <dsig:DigestValue>oeg2qiOsLMCqJxZaKB/j0XdnOYg1f/5PLRct5+pD3+U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
