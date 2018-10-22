@@ -17,7 +17,7 @@ namespace BlueMirrorIndexer
         }
 
         public void SetReadingProgress(long runningFileCount, long runningFileSize, string currentItemName, string operation) {
-            int progress = 0; // 0..100
+            int? progress = null; // 0..100 or "unknown"
             if (FrmMain.Instance.ProgressInfo != null) {
                 if (useSize) {
                     if (FrmMain.Instance.ProgressInfo.FileSizeSum != 0)

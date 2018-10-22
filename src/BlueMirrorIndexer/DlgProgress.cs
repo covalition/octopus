@@ -34,7 +34,7 @@ namespace BlueMirrorIndexer
         private bool _dontShowAgain = false;
         
         /// <param name="progress">0..100</param>
-        public void SetProgress(int progress, string currentStatus) {
+        public void SetProgress(int? progress, string currentStatus) {
             if (!_dontShowAgain && !Visible && (_startShowing <= DateTime.Now)) {
                 FrmMain.Instance.Enabled = false;
                 Show(FrmMain.Instance);
@@ -42,8 +42,11 @@ namespace BlueMirrorIndexer
             TimeSpan ts = DateTime.Now - _lastTick;
             if (ts.TotalSeconds > 0.5) {
                 if (Visible) {
-                    progressBar.Value = progress;
-                    llProgress.Text = progress.ToString() + "%";
+                    progressBar.Value = progress ?? 0;
+                    if (progress != null)
+                        llProgress.Text = progress.Value.ToString() + "%";
+                    else
+                        llProgress.Text = "[calculating...]";
                     if (currentStatus != null)
                         llWorkStatus.Text = currentStatus;
                     do {
