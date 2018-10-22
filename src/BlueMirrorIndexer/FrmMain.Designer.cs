@@ -30,9 +30,9 @@ namespace BlueMirrorIndexer
 		{
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pmTree = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmTreeItemPropertiesPopup = new System.Windows.Forms.ToolStripMenuItem();
             this.cmDeleteTreeItemPopup = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,6 +162,8 @@ namespace BlueMirrorIndexer
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader28 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmCheckForUpdates = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.pmTree.SuspendLayout();
             this.pmList.SuspendLayout();
             this.pmSearchList.SuspendLayout();
@@ -445,6 +447,8 @@ namespace BlueMirrorIndexer
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmCheckForUpdates,
+            this.toolStripSeparator5,
             this.homePageToolStripMenuItem,
             this.featureRequestToolStripMenuItem,
             this.whatsNewToolStripMenuItem,
@@ -897,18 +901,18 @@ namespace BlueMirrorIndexer
             // 
             // chMain
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chMain.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chMain.ChartAreas.Add(chartArea1);
             resources.ApplyResources(this.chMain, "chMain");
-            legend3.Name = "Legend1";
-            this.chMain.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chMain.Legends.Add(legend1);
             this.chMain.Name = "chMain";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.CustomProperties = "PieStartAngle=270";
-            series3.Legend = "Legend1";
-            series3.Name = "Main";
-            this.chMain.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.CustomProperties = "PieStartAngle=270";
+            series1.Legend = "Legend1";
+            series1.Name = "Main";
+            this.chMain.Series.Add(series1);
             this.chMain.MouseClick += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseClick);
             this.chMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.chMain_MouseMove);
             // 
@@ -1176,6 +1180,17 @@ namespace BlueMirrorIndexer
             // 
             resources.ApplyResources(this.columnHeader28, "columnHeader28");
             // 
+            // cmCheckForUpdates
+            // 
+            this.cmCheckForUpdates.Name = "cmCheckForUpdates";
+            resources.ApplyResources(this.cmCheckForUpdates, "cmCheckForUpdates");
+            this.cmCheckForUpdates.Click += new System.EventHandler(this.cmCheckForUpdates_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            resources.ApplyResources(this.toolStripSeparator5, "toolStripSeparator5");
+            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -1364,6 +1379,8 @@ namespace BlueMirrorIndexer
         private System.Windows.Forms.TabPage tpChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart chMain;
         private System.Windows.Forms.ToolStripStatusLabel sbFolderPath;
+        private System.Windows.Forms.ToolStripMenuItem cmCheckForUpdates;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }
 

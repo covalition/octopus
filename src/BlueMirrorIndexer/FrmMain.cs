@@ -1934,7 +1934,7 @@ namespace BlueMirrorIndexer
 
         #endregion
 
-        private void installUpdateSyncWithInfo() {
+        private void cmCheckForUpdates_Click(object sender, EventArgs e) {
             UpdateCheckInfo info = null;
 
             if (ApplicationDeployment.IsNetworkDeployed) {
@@ -1945,15 +1945,15 @@ namespace BlueMirrorIndexer
 
                 }
                 catch (DeploymentDownloadException dde) {
-                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message);
+                    MessageBox.Show("The new version of the application cannot be downloaded at this time. \n\nPlease check your network connection, or try again later. Error: " + dde.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     return;
                 }
                 catch (InvalidDeploymentException ide) {
-                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message);
+                    MessageBox.Show("Cannot check for a new version of the application. The ClickOnce deployment is corrupt. Please redeploy the application and try again. Error: " + ide.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     return;
                 }
                 catch (InvalidOperationException ioe) {
-                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message);
+                    MessageBox.Show("This application cannot be updated. It is likely not a ClickOnce application. Error: " + ioe.Message, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     return;
                 }
 
@@ -1961,7 +1961,7 @@ namespace BlueMirrorIndexer
                     Boolean doUpdate = true;
 
                     if (!info.IsUpdateRequired) {
-                        DialogResult dr = MessageBox.Show("An update is available. Would you like to update the application now?", "Update Available", MessageBoxButtons.OKCancel);
+                        DialogResult dr = MessageBox.Show("An update is available. Would you like to update the application now?", "Update Available", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                         if (!(DialogResult.OK == dr)) {
                             doUpdate = false;
                         }
@@ -1978,16 +1978,18 @@ namespace BlueMirrorIndexer
                     if (doUpdate) {
                         try {
                             ad.Update();
-                            MessageBox.Show("The application has been upgraded, and will now restart.");
+                            MessageBox.Show("The application has been upgraded, and will now restart.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Application.Restart();
                         }
                         catch (DeploymentDownloadException dde) {
-                            MessageBox.Show("Cannot install the latest version of the application. \n\nPlease check your network connection, or try again later. Error: " + dde);
+                            MessageBox.Show("Cannot install the latest version of the application. \n\nPlease check your network connection, or try again later. Error: " + dde, ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
                             return;
                         }
                     }
                 }
             }
+            else
+                MessageBox.Show("This installation is not network deployed.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
         }
     }
 }
