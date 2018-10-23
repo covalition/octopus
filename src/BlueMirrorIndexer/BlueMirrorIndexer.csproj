@@ -24,7 +24,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile />
-    <PublishUrl>..\..\docs\setup\</PublishUrl>
+    <PublishUrl>..\..\setup\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -34,7 +34,7 @@
     <UpdatePeriodically>true</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://covalition.github.io/octopus/setup/</InstallUrl>
+    <InstallUrl>http://covalition.eu/products/octopus/setup/</InstallUrl>
     <SupportUrl>https://github.com/covalition/octopus/issues</SupportUrl>
     <ErrorReportUrl>https://github.com/covalition/octopus/issues</ErrorReportUrl>
     <ProductName>Octopus.Covalition</ProductName>
@@ -42,8 +42,8 @@
     <SuiteName>Octopus.Covalition</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>2.1.0.0</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>

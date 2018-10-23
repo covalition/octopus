@@ -5,7 +5,7 @@
 *.user
 **/obj
 **/bin
-/setup
-/docs/setup/setup.exe
+setup
+!setup/README.md
 .vs
 *.pfx
