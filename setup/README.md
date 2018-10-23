@@ -1,1 +1,1 @@
-The _setup.exe_ file is placed under the _Releases_ tab on _GitHub_. Other setup files are placed in _\docs\setup_ folder.
+The _setup.exe_ file is placed under the _Releases_ tab on _GitHub_. Other setup files are placed at _covalition.eu_.
