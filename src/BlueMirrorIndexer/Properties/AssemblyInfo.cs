@@ -25,10 +25,10 @@ using System.Resources;
 
 // Version information for an assembly consists of the following four values:
 //
-//      Major Version
-//      Minor Version 
-//      Build Number
+//      Major Version (major API or Ui changes)
+//      Minor Version (new features)
+//      Build Number (bugfixes)
 //      Revision
 //
-[assembly: AssemblyVersion("2.1.0.*")]
+[assembly: AssemblyVersion("2.1.1.*")]
 [assembly: NeutralResourcesLanguage("")]
