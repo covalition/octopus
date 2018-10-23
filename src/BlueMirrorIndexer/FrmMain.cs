@@ -266,6 +266,8 @@ namespace BlueMirrorIndexer
                         }
                     }
                 }
+                else
+                    MessageBox.Show("This application is up to date.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
                 MessageBox.Show("This installation is not network deployed.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Hand);
